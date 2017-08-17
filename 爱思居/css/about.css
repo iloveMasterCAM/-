@@ -1,0 +1,102 @@
+ html,body{
+            height: 100%;
+        }
+/**{
+            font-family: 'Regular'
+        }*/
+         #banner h1,#banner p{
+            width: 65%;
+            margin: 0 auto;
+            color: #fff;
+        }
+        #banner h1{
+            margin-top: 120px;
+            
+        }
+        #banner{
+            background: url(../image/about.png) no-repeat;
+            background-size: cover;
+            height: 666px;
+            border-top: 1px solid transparent;
+            margin-top: 79px;
+        }
+        #banner .bg{
+            background: url(../image/bg.png);
+            background-repeat: repeat;
+            width: 100%;
+            height: 100%;
+             border-top: 1px solid transparent;
+        }
+
+        #centent{
+            background: #fff;
+           
+            box-shadow: 0 -33px 45px #fff;
+            border-top: 1px solid transparent;
+           
+        }
+       #centent h6{
+            font-size: 16px;
+            color: #535353;
+        }
+        #centent p{
+             font-size: 14px;
+            color: #535353;
+        }
+        #centent>div{
+            width: 60%;
+            background: #fff;
+            position: relative;
+            top: -400px;
+            left: 50%;
+            opacity: 0.85;
+             padding: 0 35px;
+             border-top: 1px solid transparent;
+        }
+        #centent>div p,#centent .bor{
+            margin-bottom: 35px;
+        }
+        #centent .bor{
+            border-top: 1px dashed #6e6e6c;
+            
+        }
+        #centent .logo{
+            margin: 40px 0 30px 0;
+        }
+        #centent .img{
+            background: url(../image/banent.png) no-repeat;
+            background-size: contain;
+            background-position: center center;
+            height: 180px;
+            width: 100%;
+        }
+        #centent li{
+            width: 31.33333333333333%;
+            float: left;
+        }
+        #centent .active{
+            margin: 0 3%;
+            
+        }
+        
+        #self p{
+            background: #4c8f41;
+            display: inline;
+            padding: 15px 45px;
+            border-radius: 40px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        #self {
+            margin-top: 100px;
+        }
+        .author p {
+            color: #313131
+        }
+        .author{
+           
+            background: #eeeeee;
+            line-height: 55px;
+          
+        }

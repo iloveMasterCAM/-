@@ -1,0 +1,332 @@
+
+ body{
+    border-bottom: 1px solid transparent;
+        position: relative;
+    }
+        /**{
+            font-family: 'Regular'
+        }*/
+
+        #centent{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #centent .warp p{
+            color: #434343
+        }
+        .Medium{
+            font-family: 'Medium';
+            font-size: 24px;
+            color: #535353;
+            margin: 55px 0 40px 0;
+        }
+        #centent input[type='text']{
+            background: #eeeeee;
+            padding-left: 5px;
+            height: 35px;
+            
+        }
+#centent input[type='submit']{
+    background: transparent
+}
+        #centent .Date{
+            background: #eeeeee;
+           
+        }
+        #box0{
+            width: 940px;
+        }
+        #centent .Date span{
+            line-height: 35px;
+            display: inline-block;
+            position: relative;
+            padding-right: 10px;
+        }
+        #centent .Date span:before{
+            content: '';
+            position: absolute;
+            height: 50%;
+            top:25%;
+            left: -5px;
+            border-left: 1px dashed #a0a0a0
+        }
+        #centent .Date input{
+            width: 55px;
+        }
+        
+        #centent .sex{
+            width: 35px;
+            height: 35px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 3px;
+            background: #eeeeee
+        }
+            #centent .sex input{
+                display: none;
+            }
+        #centent .sex span{
+            width: 100%;
+            height: 100%;
+            
+            display: inline-block;
+            border-radius: 50%;
+            background: #fff;
+            
+            
+        }
+        #centent .sex span.active{
+            background: #535353;
+            
+        }
+        #centent .sex span.active i{
+            color: #fff;
+        }
+       #centent .mar2{
+            margin: 0 30px;
+        }
+        #centent .marl{
+            margin-left: 30px;
+        }
+        #centent .marr{
+            margin-right: 30px;
+        }
+        #centent .inp160{
+            width: 160px;
+        }
+         #centent .inp200{
+            width: 200px;
+        }
+         #centent .inp280{
+            width: 280px;
+        }
+         #centent .inp600{
+            width: 600px;
+        }
+        #centent .address input{
+            width: 440px;
+        }
+        #centent .top>div{
+            margin-bottom: 20px;
+        }
+        #centent .top>div p{
+            line-height: 30px;
+        }
+        #centent .bottom{
+            margin-top: 70px;
+            
+        }
+#centent .bottom input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter:alpha(opacity=0);  
+    -webkit-opacity: 0;
+    opacity: 0;
+}
+
+        #centent .bottom>p{
+            color: #434343;
+            font-size: 18px;
+        }
+        #centent .bottom>div{
+            margin-top:30px; 
+        }
+        #centent .bottom li div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #centent .bottom li{
+            float: left;
+            height: 70px; 
+            padding-right: 20px;
+        }
+        #centent .bottom li div p i{
+            font-size: 16px;
+            color: #eeeeee;
+        }
+        #centent .bottom li i.active{
+           color: #4c8f41;
+        }
+       #centent .min{
+            width: 60px;
+        }
+         #centent .max{
+            width: 223px;
+        }
+        #centent .bor{
+            width: 1px;
+            height: 35px;
+            background: #eee;
+            position: relative;
+            display: block;
+        }
+        #centent .bor:before{
+            content: '';
+            position: absolute;
+            height: 50%;
+            top:25%;
+            left: -5px;
+            border-left: 1px dashed #a0a0a0
+        }
+        #centent .icon{
+            width: 40px;
+            height: 40px;
+            background: #eeeeee;
+            line-height: 40px;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+        }
+        
+       #centent .memo, #centent .memo textarea {
+            background: #f6f6f6;
+           box-sizing: border-box;
+           position: relative;
+        }
+        #centent .memo i{
+            position: absolute;
+            bottom: -10px;
+            color: #cfcfcf;
+            right: 0;
+            font-size: 2rem;
+        }
+        #centent .memo textarea{
+            padding: 13px;
+            height: 180px;
+            width: 100%;
+        }
+         .submit{
+             margin: 80px auto 150px auto;
+             width: 1200px;
+             text-align: right;
+        }
+         .submit i{
+            font-size: 1.7rem;
+        }
+        .submit p{
+            padding: 12px 35px;
+            border-radius: 7px;
+            display: inline;
+            font-size: 18px;
+           cursor: pointer;
+            margin-right: 1px;
+        }
+        .submit .service,.submit .applic{
+            background: #eeeeee;
+             transition: all .6s;
+        -webkit-transition: all .6s
+        }
+       
+        .submit .applic:hover,.submit .service:hover{
+            background: #4c8f41;
+            color: #fff;
+
+        }
+        #centent .warp .red{
+            color: #b40303;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        #centent .fl p{
+            line-height: 35px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            color: #535353;
+        }
+        #centent .fl p.active:before{
+            left:0;
+        }
+       
+        #centent .fl .bor_fl:before{
+            content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            background: #4c8f41;
+            position: absolute;
+            bottom: 0;
+            left: -90%;
+            transition: all .6s;
+        -webkit-transition: all .6s
+        }
+       #box0 .icon-check{
+            color: #eeeeee;
+            font-size: 1.5rem;
+           
+        }
+      
+        .box188{
+            border: 1px solid #e5e5e5
+        }
+        .box188 .box>div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .box188 .txt_box>div{
+             display: table-cell;
+            vertical-align: middle;
+        }
+         .box188 .box p{
+        word-wrap:break-word;
+             color: #535353;
+             font-size: 14px;
+        }
+       .box188 .Factor p{
+        width: 169px;
+           padding-left: 30px;
+           font-size: 16px;
+        }
+        .box188 .Description p{
+        width: 422px;
+            padding-left: 35px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+       .box188 .Poinats p{
+        width: 150px;
+           text-align: center;
+           padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .box188 .Score p{
+            width: 105px;
+            text-align: center;
+           line-height: 45px;
+        }
+        .box188 .bor-r{
+            border-right: 1px solid #e5e5e5
+        }
+        .box188 .bor-l{
+            border-left: 1px solid #e5e5e5
+        }
+        .box188 .bor-t{
+            border-top: 1px solid #e5e5e5
+        }
+        .box188 .bor-b{
+            border-bottom: 1px solid #e5e5e5
+        }
+        .box188 i{
+            font-size: 14px;
+            color: #eeeeee
+        }
+        .box188 i.active{
+            color: #4c8f41
+        }
+        #box1 .icon,#box2 .icon{
+           padding: 5px;
+            display:inline;
+        }
+     
+     .author p {
+        color: #313131
+    }
+    .author{
+        background: #eeeeee;
+        line-height: 55px;
+    }

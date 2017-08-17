@@ -1,0 +1,64 @@
+ body{
+    border-bottom: 1px solid transparent;
+    position: relative;
+    }
+   
+    .author p {
+    color: #313131
+    }
+    .author{
+    background: #eeeeee;
+    line-height: 55px;
+    }
+        /**{
+            font-family: 'Regular'
+        }*/
+        
+        #centent{
+            width: 1150px;
+            margin: 65px auto 160px auto;
+        }
+        #img img{
+            width: 210px;
+        }
+        #centent p{
+        color: #313131;
+        }
+        #centent textarea{
+            width: 580px;
+            background: #eeeeee;
+            padding-left: 5px;
+            height: 215px;
+        }
+        #centent input[type='text']{
+            background: #eeeeee;
+            width: 580px;
+            height: 40px;
+            padding-left: 5px;
+        }
+        #centent input[type='submit']{
+            width: 100%;
+            background: #4c8f41;
+            color: #fff;
+            font-size: 16px;
+            line-height: 60px;
+        }
+        #centent form p{
+            line-height: 35px;
+            
+        }
+        #centent form>div{
+            margin-top: 20px;
+            position: relative;
+        }
+        #centent form i{
+            position: absolute;
+            right: -1px;
+            bottom: 15px;
+            font-size: 50px;
+            color: #c9c9c9
+        }
+        #centent .msg p{
+            line-height: 32px;
+            font-size: 18px;
+        }

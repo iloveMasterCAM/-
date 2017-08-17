@@ -1,0 +1,98 @@
+   body{
+         border-bottom: 1px solid transparent;
+            position: relative;
+        }
+       
+       /* *{
+            font-family: 'Regular'
+        }
+        */
+        #h1{
+            font-size: 24px;
+            color: #434343;
+            margin-top: 70px;
+        }
+      
+         .author p {
+            color: #313131
+        }
+        .author{
+            background: #eeeeee;
+            line-height: 55px;
+        }
+        
+        
+        #centent{
+            width: 1150px;
+            margin: 60px auto 170px auto;
+        }
+        #centent .bor{
+            border-bottom: 1px solid #c9c9c9;
+            position: relative;
+            
+        }
+        #centent input[type='file']{
+/*            visibility:hidden*/
+            width: 40px;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        #centent>div p{
+            line-height: 25px;
+            margin-bottom: 15px;
+            color: #434343;
+        }
+        #centent .img{
+            position: relative;
+            display: inline-block;
+            padding: 5px;
+            margin-top: 80px;
+         
+            border: 1px dashed #b7b7b7
+        }
+        #centent .img input{
+            width: 100%;
+            height: 100%;
+        }
+       #centent  .img_box{
+        
+           height: 176px;
+       }
+        #centent  .img_box p{
+            color: #eeeeee;
+            font-size: 30px;
+            margin-top: 15px;
+        }
+        #centent .active{
+            background: #e5e5e5
+        }
+       #centent .red{
+            color: #ff0000;
+           line-height: 30px;
+        }
+        #centent .submit input{
+        background: #4c8f41;
+             font-size: 18px;
+        }
+        #centent .submit  i{
+            font-size: 2rem;
+        }
+        #centent .fl{
+            margin-right: 170px;
+        }
+        #centent div .box{
+            width: 300px;
+        }
+        #centent .submit{
+            background: #4c8f41;
+            display: inline-block;
+            padding: 13px 37px;
+            border-radius: 6px;
+            color: #fff;
+           margin-top: 35px;
+        }
+       #centent form{
+            margin-top: 90px;
+        }

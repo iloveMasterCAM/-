@@ -1,0 +1,125 @@
+body{
+        border-bottom: 1px solid transparent;
+        position: relative;
+        }
+
+      
+        .author p {
+        color: #313131
+        }
+        .author{
+        background: #eeeeee;
+        line-height: 55px;
+        }
+        .icon i{
+            font-size: 3rem;
+            color: #4c8f41
+        }
+        #txt{
+            margin: 55px 0 50px 0;
+        }
+        #centent{
+            width: 65%;
+            margin: 0 auto;
+            font-family: 'Regular'
+        }
+       
+        #centent p{
+            color: #535353;
+            font-size: 14px;
+            line-height: 30px;
+        }
+        
+        #centent .bor{
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px dashed #6f6f6f
+        }
+        #centent .title{
+            color: #535353;
+            font-size: 18px;
+           
+        }
+        #centent .title_{
+            font-size: 16px;
+            color: #535353
+        }
+        #centent .txt{
+            margin-bottom: 30px;
+        }
+        #centent .note {
+            margin-bottom: 70px;
+        }
+        #centent .note i{
+            display: table-cell;
+            color: #156d07;
+            font-size: 14px;
+            
+        }
+        #centent .btn p{
+            padding: 12px 37px;
+            border-radius: 6px;
+            background: #eeeeee;
+            color: #434343;
+            display: inline-block;
+            cursor: pointer;
+             transition: all .6s;
+        -webkit-transition: all .6s
+        }
+        #centent .btn i{
+            font-size: 2.5rem;
+            color: #959595;
+        }
+        #centent .btn p:hover{
+            background: #4c8f41;
+            color: #fff;
+        }
+        #centent .btn p:hover i{
+             color: #fff;
+        }
+    
+          #cooperate {
+            width: 70%;
+
+              margin: 80px auto;
+        }
+
+        #cooperate ul {
+            border: 1px solid transparent
+        }
+
+        #cooperate ul li {
+            float: left;
+               margin-bottom: 50px;
+        }
+
+        #cooperate ul div {
+            height: 64px;
+            line-height: 74px;
+            margin-bottom: 50px
+        }
+
+        #cooperate img {
+            width: 170px;
+            height: 60px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        #cooperate .title {
+            margin-bottom: 60px
+        }
+
+        #cooperate h2 {
+            font-weight: 500;
+            color: #313131
+        }
+
+        #cooperate .title p {
+            color: #313131
+        } 
+        #h1 {
+            color: #535353;
+            font-size: 24px;
+            font-family: 'Medium'
+        }

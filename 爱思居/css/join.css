@@ -1,0 +1,36 @@
+  body{
+         border-bottom: 1px solid transparent;
+            position: relative;
+        }
+        /**{
+            font-family: 'Regular'
+        }*/
+        .box{
+           width: 60%;
+            margin: 35px auto 0 auto;
+        }
+        .box p{
+            line-height: 30px;
+            color: #434343;
+            font-size: 14px;
+        }
+        .box .title{
+            line-height: 45px;
+            font-size: 18px;
+            color: #535353;
+        }
+        #h1{
+            font-size: 24px;
+            color: #434343;
+            margin-top: 70px;
+        }
+        .marb{
+            margin-bottom: 200px;
+        }
+         .author p {
+            color: #313131
+        }
+        .author{
+            background: #eeeeee;
+            line-height: 55px;
+        }

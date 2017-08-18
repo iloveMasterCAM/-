@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
      <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
-    <link href="css/public.css" rel="stylesheet"/>
+
     <link href="iconfont/iconfont.css" rel="stylesheet"/>
-    <link href="css/evaluate.css" rel="stylesheet"/>
+    
+    <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/min_evaluate.css" /><!--小于 769-->
+    <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/minpublic.css" /><!--小于 769-->
+    <link href="css/public.css" media="screen and (min-width: 770px)" rel="stylesheet"/> <!--大于 769px-->
+    <link rel="stylesheet" media="screen and (min-width: 770px)" href="css/evaluate.css" /> <!--大于 769px-->
+    
     <title>service</title>
 </head>
 <body>
@@ -349,7 +354,7 @@ insurance</p>
              </div>
             <div class="">
                 <p class="aui-margin-b-15">Study abroad</p>
-                 <ul class="clear">
+                 <ul class="clear ">
                      <li class="aui-col-xs-3">
                          <div>
                              <p class="icon">
@@ -523,7 +528,442 @@ insurance</p>
          </div>
         </form>
     </div>
-    
+ <!--移动端-->
+    <div id="mover">
+        <div class="">
+            <p class="clear">
+                <span class="aui-pull-left">ALL</span>
+                <span class="aui-pull-right"><i></i></span>
+            </p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <p class="h1 aui-text-center">SELF-ASSESSMENT</p>
+        <p class="title aui-text-center">AMS SERVICE CATEGORY</p>
+        <p class="aui-text-center">Customer registration form</p>
+        
+        <div class="box sex clear"> <!--行-->
+            <div class="aui-col-xs-8">
+                <p>Name of intermediary</p>
+                <p><input type="text" placeholder=""></p>
+            </div>
+            <div  class="aui-col-xs-4">
+                <p class="aui-padded-l-15">Miss / Mr.</p>
+                <label>
+                   <span><i class="iconfont icon-nvzhuang"></i></span>
+                    <input type="radio" name="sex">
+                </label>
+                <label>
+                 <span><i class="iconfont icon-nanzhuang"></i></span>
+                    <input type="radio" name="sex">
+                </label>
+            </div>
+        </div>
+        <div class="box clear"> <!--行-->
+            <p>Date</p>
+            <div class="clear Date aui-col-xs-10">
+                <input type="text">
+                <span>Year</span>
+                <input type="text">
+                <span>Month</span>
+                <input type="text">
+                <span>Day</span>
+            </div>
+        </div>
+        <div class="box clear Customer"> <!--行-->
+            <div class="aui-pull-left">
+                <p>Customer Number</p>
+                <p><input type="text"></p>
+            </div>
+            <div class=" aui-pull-right">
+                <p>Surname</p>
+                <p><input type="text"></p>
+            </div>
+        </div>
+        <div class="box sex clear"> <!--行-->
+            <div class="aui-col-xs-8">
+                <p class="">Name</p>
+                <p><input type="text" placeholder=""></p>
+            </div>
+            <div  class="aui-col-xs-4">
+                <p class="aui-padded-l-15">Miss / Mr.</p>
+                <label>
+                   <span><i class="iconfont icon-nvzhuang"></i></span>
+                    <input type="radio" name="sex">
+                </label>
+                <label>
+                 <span><i class="iconfont icon-nanzhuang"></i></span>
+                    <input type="radio" name="sex">
+                </label>
+            </div>
+        </div>
+        
+        <div class="box clear"> <!--行-->
+            <p>Date of birth</p>
+            <div class="clear birth aui-col-xs-10">
+              <input type="text">
+              
+                <input type="text">
+                <span>Year</span>
+                <input type="text">
+                
+                <span>Month</span>
+                
+                <input type="text">
+                <span>Day</span>
+            </div>
+        </div>
+        
+        
+      <div class="box clear Customer"> <!--行-->
+            <div class="aui-pull-left">
+                <p>Customer Number</p>
+                <p><input type="text"></p>
+            </div>
+            <div class=" aui-pull-right">
+                <p>Surname</p>
+                <p><input type="text"></p>
+            </div>
+        </div>
+         <div class="box clear Customer"> <!--行-->
+            <div class="aui-pull-left">
+                <p>Customer Number</p>
+                <p><input type="text"></p>
+            </div>
+            <div class=" aui-pull-right">
+                <p>Surname</p>
+                <p><input type="text"></p>
+            </div>
+        </div>
+        <div class="box clear ">
+            <p>Telephone number</p>
+            <p class="clear Telephone">
+                <input class="min aui-pull-left inp1" type="text">
+                <span class="aui-pull-left bor">&nbsp;</span>
+                <input class="max aui-pull-left inp2" type="text">
+            </p>
+            <p class="red">* Country number / region number</p>
+        </div>
+        <div class="box clear ">
+            <p>Telephone number</p>
+            <p class="clear Telephone">
+                <input class="min aui-pull-left inp1" type="text">
+                <span class="aui-pull-left bor">&nbsp;</span>
+                <input class="max aui-pull-left inp2" type="text">
+            </p>
+            <p class="red">* Country number / region number</p>
+        </div>
+        <div class="box clear ">
+            <p>Telephone number</p>
+            <p class="clear Telephone">
+                <input class="min aui-pull-left inp1" type="text">
+                <span class="aui-pull-left bor">&nbsp;</span>
+                <input class="max aui-pull-left inp2" type="text">
+            </p>
+            <p class="red">* Country number / region number</p>
+        </div>
+        <div class="box clear">
+            <p>Fax</p>
+            <p id="Fax"><input  type="text"></p>
+        </div>
+        <div class="box clear">
+            <p>Email</p>
+            <p><input type="text"></p>
+        </div>
+        <div class="box">
+            <p>Overseas address</p>
+            <p><input type="text"></p>
+        </div>
+        <div class="box">
+            <p>Australian address</p>
+            <p><input type="text"></p>
+        </div>
+        <p>Required service ( please tick )</p>
+        <p class="aui-padded-t-10 aui-padded-b-10">AMS Brisbane Pty Ltd</p>
+        <p class="aui-padded-b-15">Study abroad</p>
+         <ul class="clear ul">
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input class="" type="checkbox" value="Apply for a school"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Apply for a school</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="Guardian needs"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Guardian needs</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="Visa extension"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Visa extension</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="Overseas student insurance"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Overseas student 
+insurance</p>
+
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="Appeal"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Appeal</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="28 days to explain"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>28 days to explain</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="Turn schools"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Turn schools</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="Others"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Others</p>
+                 </div>
+             </li>
+        </ul>
+        <div class="textarea">
+            <textarea placeholder="Other demands"></textarea>
+            <i class="iconfont icon-textarea"></i>
+        </div>
+        <p class="aui-margin-t-15 aui-margin-b-15 aui-padded-b-15">Migration Service</p>
+         <ul class="clear ul">
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="485 Application"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>485 Application</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="132 Business Talent Visa"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>132 Business Talent Visa</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="Spouse Visa"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Spouse Visa</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="4.189/190/489 Skilled Migration Visa"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>4.189/190/489 Skilled Migration Visa</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="188 Business Innovation and Investment Visa"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>188 Business Innovation and Investment Visa</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="Parent Migration Visa"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Parent Migration Visa</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="457/TSS Working Visa"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>457/TSS Working Visa</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="457-186 TRT Visa"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>457-186 TRT Visa</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="186/187 Employer Spouse Visa"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>186/187 Employer Spouse Visa</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="Visit/Family/Business Visa"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Visit/Family/Business Visa</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-6">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                         <label>
+                            <input type="checkbox" value="AAT Appeal"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>AAT Appeal</p>
+                 </div>
+             </li>
+             <li class="aui-col-xs-">
+                 <div>
+                     <p class="icon">
+                         <i class="iconfont icon-check"></i>
+                        <label>
+                            <input type="checkbox" value="Others"/>
+                         </label>
+                     </p>
+                 </div>
+                 <div class="aui-padded-l-15">
+                     <p>Others</p>
+                 </div>
+             </li>
+
+         </ul>
+          <div class="textarea">
+            <textarea placeholder="Other demands"></textarea>
+            <i class="iconfont icon-textarea"></i>
+        </div>
+        <div class="submit clear">
+            <p class="aui-pull-left"><i class="iconfont icon-kefu"></i><span>Contact customer service</span></p>
+            
+            <p class="aui-pull-right"><i class="iconfont icon-shenqing"></i> <input type="submit" value="Application form"></p>
+        </div>
+    </div>
     <!--底部版权-->
   <div class="author">
       <p class="aui-text-center aui-font-size-12">COPYRIGHT (©) 2017 AMS immigration study  Co.,Ltd.</p>

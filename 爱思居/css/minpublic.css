@@ -460,25 +460,41 @@ pre {
     right: 0;
     bottom:0;
     opacity: 0.4;
-    z-index: 3;
+    z-index: 2;
     display: none;
 }
 
 
 #nav ul{
     position: absolute;
-    top:-280px;;
+    top:-330px;;
     left: 0;
     z-index: 3;
     width: 100%;
-    background: #fff;
+    background: #434343;
+    transition: all .6s;
+    -webkit-transition: all .6s
 }
 #nav ul li{
     line-height: 45px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #626262;
     width: 100%;
     float: none;
+}
+#nav ul li a{
+    color: #7e7e7e;
+}
+#nav ul li i{
+    color: #ffffff
+}
+
+
+#nav ul li.active{
+    background: #4e9043;
+    
+}
+#nav ul li.active a{
+    color: #fff;
     
 }
 #nav div{
@@ -497,6 +513,11 @@ pre {
     top: 0.5rem;
     left: 0.5rem;
     display: block;
+   color: #4c8f41
+}
+#nav .menu i{
+    
+     
 }
 
 

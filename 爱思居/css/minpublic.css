@@ -489,13 +489,10 @@ pre {
 }
 
 
-#nav ul li.active{
-    background: #4e9043;
-    
-}
-#nav ul li.active a{
+
+#nav ul a.active{
     color: #fff;
-    
+     background: #4e9043;
 }
 #nav div{
     text-align: center;

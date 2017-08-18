@@ -10,29 +10,29 @@ display: none;
    text-align: left;
     padding-left: 1rem;
 }
-#move{
+#mover{
     padding: 0 1rem;
     margin: 70px 0 60px 0;
 }
-#move p{
+#mover p{
 color: #434343;
     line-height: 30px;
     font-size: 15px;
 }
-#move .h1{
+#mover .h1{
     font-size: 25px;
     font-family: 'Bold';
     
 }
-#move .title{
+#mover .title{
    font-size: 18px;
     margin-bottom: 35px;
 }
-#move .max{
+#mover .max{
     font-size: 17px;
 }
 
-#move .color{
+#mover .color{
     color: #4c8f41;
     font-size: 16px;
     line-height: 35px;

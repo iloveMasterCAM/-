@@ -477,7 +477,7 @@ pre {
         color: #fff
     }
 /**/
-#phone{
+#phone,#mover,#banenr img,.guanbi,.menu_box,.mover_footer,.m_er{
     display: none;
 }
   #banner{

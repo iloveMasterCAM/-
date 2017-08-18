@@ -1,35 +1,7 @@
-#nav ul{
-    position: absolute;
-    top:-280px;;
-    left: 0;
-    z-index: 3;
-    width: 100%;
-    background: #fff;
-}
-#nav ul li{
-    line-height: 45px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-    width: 100%;
-    float: none;
-    
-}
-#nav div{
-    text-align: center;
-    float:none;
-}
-#nav img{
-    width: 80px;
-    margin: 5px auto !important;
-}
-#nav{
-    border-bottom: 1px solid #eeeeee
-}
-#nav .menu{
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    display: block;
+
+
+#banner,#centent{
+    display: none;
 }
 
 

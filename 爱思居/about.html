@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
      <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
-    <link href="css/public.css" rel="stylesheet"/>
-    <link href="css/about.css" rel="stylesheet"/>
+
+     <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/min_about.css" /><!--小于 769-->
+    <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/minpublic.css" /><!--小于 769-->
+  
+    <link href="css/public.css" media="screen and (min-width: 770px)" rel="stylesheet"/> <!--大于 769px-->
+    <link rel="stylesheet" media="screen and (min-width: 770px)" href="css/about.css" /> <!--大于 769px-->
+
+    
     <title>关于我们</title>
 </head>
 <body>
@@ -13,10 +19,8 @@
       <nav class="clear aui-white" id="nav">
           <div class="box clear">
               <div class="aui-pull-left">
-                 <a href="index.html"> <img class="aui-margin-t-15" src="image/logo.png" alt=""></a>
-                 <!--<p class="aui-pull-left">
-                    <i class="iconfont icon-menu"></i>
-                 </p>-->
+                 <a href="index.html"><p class="aui-pull-left menu"><i class="iconfont icon-menu"></i></p> <img class="aui-margin-t-15" src="image/logo.png" alt=""></a>
+               
              </div>
               <ul class="aui-pull-right">
                   <li class="aui-pull-left aui-text-center">
@@ -87,7 +91,51 @@ cooperation agencies, can do one-stop service.</p>
              </div>
          </div>
      </div>
-   
+    <!--移动端-->
+    <div id="phone" class="aui-padded-l-15 aui-padded-r-15">
+       <div class="bor">
+           <p class="aui-text-center title">About us</p>
+            <p class="aui-text-center title_0">AMS company  profile</p>
+            <p>AMS immigrant study is a registered by the Australian government professional 
+    immigration company (MARN: 1278075), with a legitimate registered immigrant 
+    agent qualification. The company's business scope includes free consultation and 
+    application of various Australian courses, Australian students to study and transfer
+    students, student visas, skilled immigrants, immigrants, family members of 
+    immigrants and work visa for China and Australia to provide "study, immigration, 
+    investment , Employment, "the one-stop service. </p>
+            <p class="aui-margin-t-15">
+                The company is headquartered in Australia's beautiful Brisbane City, and in Shang
+    hai, Beijing, Tianjin and other places are equipped with branch cooperation 
+    agencies.
+            </p>
+       </div>
+        <div class="bor">
+            <p class="">AMS advantages</p>
+            <p>AMS immigrants studying abroad is engaged in immigration business for many 
+years a professional licensed company, has a wealth of experience in various types 
+of cases. The company's chief licensed immigration agent Qin Li, has many years 
+of Australian immigration work experience, for all kinds of incurable diseases and 
+immigration policy has a unique insight and awareness; company's chief 
+consultant Wang Jing, has a wealth of experience, according to the customer's 
+Conditions,tailored to apply for study abroad, choose professional and future 
+immigration program.</p>
+        </div>
+         <div>
+            <p class="title-b">AMS BUSINESS</p>
+            <p>AMS immigrants study abroad to provide professional advice and help. Our 
+business covers a wide range, and at home and abroad have a number of 
+cooperation  agencies, can do one-stop service.</p>
+           <img src="image/banent.png" alt="">
+           <p class="aui-margin-t-15">Living in Australia, AMS helps you realize your dreams</p>
+           <img src="image/banent-1.png" alt="">
+           <p class="aui-margin-t-15">Learn in Australia and feel the Western education system</p>
+           <img src="image/banent-2.png" alt="">
+           <p class="aui-margin-t-15">Travel in Australia, touch the original Australian land</p>
+        </div>
+        <div>
+            <a class="self aui-text-center" href="">self assessment</a>
+        </div>
+    </div>
   <!--底部版权-->
   <div class="author">
       <p class="aui-text-center aui-font-size-12">COPYRIGHT (©) 2017 AMS immigration study  Co.,Ltd.</p>

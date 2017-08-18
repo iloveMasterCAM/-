@@ -477,7 +477,9 @@ pre {
         color: #fff
     }
 /**/
-
+#phone{
+    display: none;
+}
   #banner{
         margin-top: 79px;
         background: url(../image/service.png) no-repeat;
@@ -501,4 +503,11 @@ pre {
         height: 100%;
          border-top: 1px solid transparent;
         }
-
+.author p {
+            color: #313131;
+    line-height: 45px;
+        }
+        .author{
+            background: #eeeeee;
+            line-height: 55px;
+        }

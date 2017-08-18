@@ -1,0 +1,100 @@
+#cooperate,#centent,#banner,#h1,#txt{
+    display: none;
+}
+.m_h1{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Medium';
+    color: #535353;
+    margin-top: 30px;
+}
+/*
+4c8f41*/
+#mover .icon-mingpian{
+    font-size: 3rem;
+    color: #4c8f41
+}
+#mover{
+    padding: 0 1rem;
+}
+#mover .bor{
+    border-bottom: 1px dashed #7b7b7b;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+   
+}
+#mover .bold{
+    font-family: 'Bold';
+    font-size: 16px;
+    color: #535353;
+    margin-bottom: 5px;
+}
+#mover div,#mover div p{
+    color: #535353;
+    font-size: 15px;
+    line-height: 26px;
+}
+#mover .Note{
+    margin-top: 1.6rem;
+}
+#mover .Note span{
+    color: #156d07;
+    display: table-cell;
+}
+#mover .btn{
+    margin: 40px 0;
+   padding-bottom: 40px;
+     border-bottom: 1px dashed #7b7b7b;
+}
+#mover .btn p{
+    width: 60%;
+    margin: 5px auto;
+    border-radius: 6px;
+    background: #eeeeee;
+    color: #434343;
+    padding: 3px 0;
+}
+#mover .btn i{
+    font-size: 1.2rem;
+    color: #959595;
+}
+#mover .btn p:active{
+    background: #4c8f41;
+    color: #fff;
+}
+#mover .btn p:active i{
+     color: #fff;
+}
+#mover .school{
+    margin-bottom: 30px;
+}
+#mover .school img{
+    width: 90%;
+    height: 40px;
+display: block;
+    margin: 0 auto;
+}
+#mover .school .h1{
+    font-family: 'Medium';
+    font-size: 17px;
+}
+#mover .school .title{
+    font-size: 14px;
+}
+#mover .school ul{
+    padding: 20px 0;
+}
+#mover .school .swiper-pagination{
+    position: static;
+}
+#mover .school .swiper-pagination-bullet-active{
+    background: #4c8f41
+}
+#mover .school .swiper-pagination-bullet{
+    opacity: 1;
+   
+}
+#mover
+#mover
+#mover
+#mover

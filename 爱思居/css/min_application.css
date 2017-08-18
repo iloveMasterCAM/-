@@ -1,0 +1,73 @@
+#banner,.Medium,#centent{
+    display: none;
+}
+
+#mover {
+    padding: 0 1rem;
+}
+#mover .box>div{
+    display: table-cell;
+    vertical-align: middle;
+}
+#mover .wrap{
+    width: 100%;
+     border: 1px solid #e5e5e5
+}
+#mover .centent p{
+   padding: 10px 0;
+/*    min-height: 40px;*/
+}
+#mover{
+       
+    }
+    #mover .box>div{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    #mover .txt_box>div{
+         display: table-cell;
+        vertical-align: middle;
+    }
+     #mover .box p{
+        word-wrap:break-word;
+         color: #535353;
+         font-size: 14px;
+    }
+  
+   
+#mover .Description span{
+    padding-left: 10px;
+    display: inline-block;
+    width: 100%;
+    
+}
+    #mover .bor-r{
+        border-right: 1px solid #e5e5e5
+    }
+    #mover .bor-l{
+        border-left: 1px solid #e5e5e5
+    }
+    #mover .bor-t{
+        border-top: 1px solid #e5e5e5
+    }
+    #mover .bor-b{
+        border-bottom: 1px solid #e5e5e5
+    }
+    #mover i{
+        font-size: 14px;
+        color: #eeeeee
+    }
+    #mover i.active{
+        color: #4c8f41
+    }
+#mover
+#mover
+#mover
+#mover
+#mover
+#mover
+#mover
+#mover
+#mover
+#mover
+#mover

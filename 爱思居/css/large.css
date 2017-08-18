@@ -1,7 +1,9 @@
 body {
 	overflow-x: hidden;
 }
-
+#nav .menu{
+    display: none;
+}
 
 textarea{
     width: 80%;
@@ -558,9 +560,6 @@ transform:rotate(90deg);
 -moz-transform:rotate(90deg); /* Firefox */
 -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
 -o-transform:rotate(90deg); /* Opera */
-}
-.author p {
-	color: #313131
 }
 
 #footer,.author {

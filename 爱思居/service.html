@@ -6,10 +6,9 @@
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <link href="iconfont/iconfont.css" rel="stylesheet"/>
      <link href="css/public.css" rel="stylesheet"/>
-    <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/min_service.css" /><!--小于 769-->
-    <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/minpublic.css" /><!--小于 769-->
-    <link href="css/maxpublic.css" media="screen and (min-width: 770px)" rel="stylesheet"/> <!--大于 769px-->
-    <link rel="stylesheet" media="screen and (min-width: 770px)" href="css/service.css" /> <!--大于 769px-->
+     <link rel="stylesheet" href="css/minpublic.css" />
+    <link rel="stylesheet" href="css/min_service.css" />
+    
     
     <title>service</title>
 </head>
@@ -26,7 +25,7 @@
                      <img class="aui-margin-t-15" src="image/logo.png" alt="">
                   </a>
              </div>
-             <p class="aui-pull-right" id="switch">
+              <p class="aui-pull-right" id="switch">
                  <a href="">CN</a>
                  <span>/</span>
                  <a href="">EN</a>
@@ -42,7 +41,7 @@
                       <a class="" href="about.html">About</a>
                   </li>
                   <li class="aui-pull-left">
-                      <a class="active" href="service.html">Service</a>
+                      <a  class="active" href="service.html">Service</a>
                   </li>
                   <li class="aui-pull-left">
                       <a href="migration.html">Self Assessment</a>
@@ -53,79 +52,15 @@
                   <li class="aui-pull-left">
                       <a href="join_data.html">Contact</a>
                   </li>
+                  <li id="n_switch">
+                      <a class="active">EN</a>
+                      <span>/</span>
+                      <a>CN</a>
+                  </li>
               </ul>
+             
           </div>
       </nav>
-    <div id="banner">
-        <div class="bg">
-            <h1>SERVICE</h1>
-            <p>AMS service category</p>
-        </div>
-    </div>
-    <p id="h1" class="aui-text-center">AMS service category</p>
-    <div id="centent">
-        <ul class="clear">
-            <li class="aui-col-xs-4 aui-text-center">
-               
-                <p><img src="image/icon/mc.png" alt=""></p>
-                 <p class="h1">student visa</p>
-                <a href="service_data.html">
-                     <p class="aui-ellipsis-3"> Australia has a first-class quality of 
-                      education, there are 42 universities and more
-                      than 230 specialist colleges. These...</p>
-                </a>
-               
-            </li>
-             <li class="aui-col-xs-4 aui-text-center">
-               <p> <img src="image/icon/p0c.png" alt=""></p>
-                <p class="h1">working visa</p>
-                 <a href="service_data.html">
-               <p class="aui-ellipsis-3"> Australia has a first-class quality of 
-                      education, there are 42 universities and more
-                      than 230 specialist colleges. These...</p>
-                 </a>
-            </li>
-            <li class="aui-col-xs-4 aui-text-center">
-                  <p> <img src="image/icon/p3c.png" alt=""></p>
-                <p class="h1">Tourist VISA</p>
-                <a href="service_data.html">
-                 <p class="aui-ellipsis-3"> Australia has a first-class quality of 
-                      education, there are 42 universities and more
-                      than 230 specialist colleges. These...</p>
-                </a>
-            </li>
-        
-            
-           <li class="aui-col-xs-4 aui-text-center">
-                <p> <img src="image/icon/p4c.png" alt=""></p>
-                <p class="h1">Technical visa</p>
-               <a href="service_data.html">
-                 <p class="aui-ellipsis-3"> Australia has a first-class quality of 
-                      education, there are 42 universities and more
-                      than 230 specialist colleges. These...</p>
-               </a>
-            </li>
-            <li class="aui-col-xs-4 aui-text-center">
-               <p> <img src="image/icon/p1c.png" alt=""></p>
-                <p class="h1">Family visa</p>
-                <a href="service_data.html">
-                <p class="aui-ellipsis-3"> Australia has a first-class quality of 
-                      education, there are 42 universities and more
-                      than 230 specialist colleges. These...</p>
-                </a>
-            </li>
-             <li class="aui-col-xs-4 aui-text-center">
-               <p> <img src="image/icon/p2c.png" alt=""></p>
-                <p class="h1">Business investment visa</p>
-                 <a href="service_data.html">
-               <p class="aui-ellipsis-3"> Australia has a first-class quality of 
-                      education, there are 42 universities and more
-                      than 230 specialist colleges. These...</p>
-                 </a>
-            </li>
-            
-        </ul>
-    </div>
     <!--移动端-->
     <div id="mover">
         <p class="h1 aui-text-center">SERVICE</p>
@@ -191,17 +126,7 @@ and more than 230 specialist colleges.
   <script src="script/mover.js"></script>
   <script>
     
-      $("#centent ul li").on('mouseover',function(){
-   /*var src = $(this).find('img').attr('src')
-     $(this).find('img').attr('src',src.split('.').join('c.'))
-*/
-})
-$("#centent ul li").on('mouseout',function(){
- /* var src = $(this).find('img').attr('src')
-     $(this).find('img').attr('src',src.split('c.').join('.'))*/
-    
-    
-})
+   
       
     </script>
 </body>

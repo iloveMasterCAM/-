@@ -1,9 +1,7 @@
 body {
 	overflow-x: hidden;
 }
-#nav .menu{
-    display: none;
-}
+
 
 textarea{
     width: 80%;
@@ -359,8 +357,7 @@ width: 105%;
 	background: url(../image/city_bg.png) no-repeat;
 	background-size: cover;
 	height: 558px;
-	border-top: 1px solid transparent;
-    overflow: hidden;
+	border-top: 1px solid transparent
 }
 
 #footer .bg {
@@ -561,6 +558,9 @@ transform:rotate(90deg);
 -moz-transform:rotate(90deg); /* Firefox */
 -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
 -o-transform:rotate(90deg); /* Opera */
+}
+.author p {
+	color: #313131
 }
 
 #footer,.author {

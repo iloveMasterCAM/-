@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link href="../css/public.css" rel="stylesheet"/>
+    <link href="../iconfont/iconfont.css" rel="stylesheet"/>
+
+    <title>service</title>
+    <style>
+    body{
+     border-bottom: 1px solid transparent;
+        position: relative;
+    }
+    @font-face {
+    font-family: 'Medium'; /*这里是说明调用来的字体名字*/
+    src: url(../iconfont/Roboto-Medium.ttf); /*这里是字体文件路径*/
+    }
+        @font-face {
+    font-family: 'Regular'; /*这里是说明调用来的字体名字*/
+    src: url(../iconfont/Roboto-Regular.ttf); /*这里是字体文件路径*/
+    }
+        *{
+            font-family: 'Regular'
+        }
+        
+    #nav .box{
+        margin: 0 auto;
+        width: 95%
+    }
+    #nav{
+        background: #fff;
+        position: fixed;
+       left: 0;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+    }
+    #nav a {
+        line-height: 5pc;
+        width: 75pt;
+        display: block;
+        color: #535353;
+        transition: all .6s;
+        -webkit-transition: all .6s
+    }
+
+    #nav a.active,#nav a:hover {
+        background: #4c8f41;
+        color: #fff
+    }
+    #banner{
+        margin-top: 80px;
+        background: url(../image/service.png) no-repeat;
+        background-size: cover;
+        border-top: 1px solid transparent;
+        height: 210px;
+
+    }
+        #centent .fr{
+        width: 945px;
+        }
+    #banner h1,#banner p{
+        width: 1150px;
+        margin: 0 auto;
+        color: #fff;
+    }
+    #banner h1{
+        margin-top: 80px;
+
+    }
+        #banner .bg{
+            background: url(../image/bg.png);
+            background-repeat: repeat;
+            height: 100%;
+             border-top: 1px solid transparent;
+        }
+        #centent{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .Medium{
+            font-family: 'Medium';
+            font-size: 24px;
+            color: #535353;
+            margin: 55px 0 40px 0;
+        }
+        #centent input{
+            background: #eeeeee;
+            padding-left: 5px;
+            height: 35px;
+            
+        }
+        #centent .Date{
+            background: #eeeeee;
+           
+        }
+        #centent .Date span{
+            line-height: 35px;
+            display: inline-block;
+            position: relative;
+            padding-right: 10px;
+        }
+        #centent .Date span:before{
+            content: '';
+            position: absolute;
+            height: 50%;
+            top:25%;
+            left: -5px;
+            border-left: 1px dashed #a0a0a0
+        }
+        #centent .Date input{
+            width: 55px;
+        }
+        
+        #centent .sex{
+            width: 35px;
+            height: 35px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 3px;
+            background: #eeeeee
+        }
+        #centent .sex span{
+            width: 100%;
+            height: 100%;
+            
+            display: inline-block;
+            border-radius: 50%;
+            background: #fff;
+            
+            
+        }
+        #centent .sex span.active{
+            background: #535353;
+            
+        }
+        #centent .sex span.active i{
+            color: #fff;
+        }
+       #centent .mar2{
+            margin: 0 30px;
+        }
+        #centent .marl{
+            margin-left: 30px;
+        }
+        #centent .marr{
+            margin-right: 30px;
+        }
+        #centent .inp160{
+            width: 160px;
+        }
+         #centent .inp200{
+            width: 200px;
+        }
+         #centent .inp280{
+            width: 280px;
+        }
+         #centent .inp600{
+            width: 600px;
+        }
+        #centent .address input{
+            width: 440px;
+        }
+        #centent .top>div{
+            margin-bottom: 30px;
+        }
+        #centent .bottom{
+            margin-top: 70px;
+        }
+        #centent .bottom>p{
+            color: #434343;
+            font-size: 18px;
+        }
+        #centent .bottom>div{
+            margin-top:30px; 
+        }
+        #centent .bottom li div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #centent .bottom li{
+            float: left;
+            height: 70px; 
+        }
+        #centent .bottom li div p{
+            font-size: 14px;
+            color: #434343;
+        }
+        #centent .bottom li i.active{
+            display: block;
+        }
+       #centent .min{
+            width: 60px;
+        }
+         #centent .max{
+            width: 223px;
+        }
+        #centent .bor{
+            width: 1px;
+            height: 35px;
+            background: #eee;
+            position: relative;
+            display: block;
+        }
+        #centent .bor:before{
+            content: '';
+            position: absolute;
+            height: 50%;
+            top:25%;
+            left: -5px;
+            border-left: 1px dashed #a0a0a0
+        }
+        #centent .icon{
+            width: 40px;
+            height: 40px;
+            background: #eeeeee;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+       #centent .memo, #centent .memo textarea {
+            background: #f6f6f6;
+           box-sizing: border-box;
+           position: relative;
+        }
+        #centent .memo i{
+            position: absolute;
+            bottom: -10px;
+            color: #cfcfcf;
+            right: 0;
+            font-size: 2rem;
+        }
+        #centent .memo textarea{
+            padding: 13px;
+            height: 180px;
+            width: 100%;
+        }
+        #centent .submit{
+             margin: 80px 0 550px 0;
+        }
+        #centent .submit i{
+            font-size: 1.7rem;
+        }
+        #centent .submit p{
+            padding: 12px 35px;
+            border-radius: 7px;
+            display: inline;
+            font-size: 18px;
+           cursor: pointer;
+        }
+        #centent .submit .service{
+            background: #eeeeee
+        }
+        #centent .submit .applic{
+            background: #4c8f41;
+            color: #fff;
+        }
+        #centent .red{
+            color: #b40303;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        #centent .fl p{
+            line-height: 35px;
+        }
+        #centent .fl span{
+            display: inline-block;
+            line-height: 35px;
+        }
+        #centent .fl .bor_fl,#centent .fl span{
+            border-bottom: 1px solid #4c8f41
+        }
+        .icon-check{
+            color: #4c8f41;
+            font-size: 1.5rem;
+            display: none;
+        }
+        
+     .author p {
+        color: #313131
+    }
+    .author{
+        background: #eeeeee;
+        line-height: 55px;
+    }
+       
+    </style>
+</head>
+<body>
+    <!--头部-->
+    <nav class="clear aui-white" id="nav">
+          <div class="box clear">
+              <div class="aui-pull-left aui-margin-t-15">
+                 <img src="../image/logo.png" alt="">
+                 <!--<p class="aui-pull-left">
+                    <i class="iconfont icon-menu"></i>
+                 </p>-->
+             </div>
+              <ul class="aui-pull-right">
+                  <li class="aui-pull-left aui-text-center">
+                      <a class="" href="">home</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a class="" href="">About</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a href="">Service</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a href="">Evaluation</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a href="">Join</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a href="">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    <div id="banner">
+        <div class="bg">
+             <h1>Self-assessment</h1>
+            <p>AMS service category</p>
+        </div>
+    </div>
+    
+    <p class="aui-text-center Medium">Customer registration form</p>
+    <div class="clear" id="centent">
+        <div class="aui-pull-left fl">
+            <p class="bor_fl">Financial immigration ratings</p>
+            <p><span>S</span> killed Migration ratings</p>
+            <p><span>A</span>pplication form</p>
+        </div>
+        <div class="aui-pull-right fr">
+           <div class="top">
+            <div class="clear"> <!--行-->
+                 <div class="aui-pull-left">
+                    <p>Name of intermediary</p>
+                    <p>
+                        <input class="inp160" placeholder="Fill in the name area" type="text">
+                    </p>
+                </div>
+                 <div class="aui-pull-left marl">
+                    <p>Miss / Mr.</p>
+                    <div class="clear">
+                        <p class="sex aui-pull-left">
+                            <span class="active"><i class="iconfont icon-nvzhuang"></i></span>
+                        </p>
+                        <p class="sex aui-pull-left">
+                            <span><i class="iconfont icon-nanzhuang"></i></span>
+                        </p>
+                    </div>
+                </div>
+                 <div class="aui-pull-left mar2 ">
+                    <p>Date</p>
+                    <p class="clear Date">
+                        <input type="text">
+                        <span>Year</span>
+                        <input type="text">
+                        <span>Month</span>
+                        <input type="text">
+                        <span>Day</span>
+                    </p>
+                </div>
+                <div class="aui-pull-left">
+                    <p>Customer Number</p>
+                    <p>
+                        <input class="inp280" type="text">
+                    </p>
+                </div>
+            </div>
+            <div class="clear"><!--行-->
+                 <div class="aui-pull-left ">
+                    <p>Customer Number</p>
+                    <p>
+                        <input class="inp160" type="text">
+                    </p>
+                </div>
+                <div class="aui-pull-left mar2">
+                    <p>Customer Number</p>
+                    <p>
+                        <input class="inp280" type="text">
+                    </p>
+                </div>
+                <div class="aui-pull-left marr">
+                    <p>Date</p>
+                    <p class="clear Date">
+                        <input type="text">
+                        <span>Year</span>
+                        <input type="text">
+                        <span>Month</span>
+                        <input type="text">
+                        <span>Day</span>
+                    </p>
+                </div>
+                 <div class="aui-pull-left">
+                    <p>Miss / Mr.</p>
+                    <div>
+                        <div class="clear">
+                        <p class="sex aui-pull-left">
+                            <span class=""><i class="iconfont icon-nvzhuang"></i></span>
+                        </p>
+                        <p class="sex aui-pull-left">
+                            <span class="active"><i class="iconfont icon-nanzhuang"></i></span>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="clear"><!--行-->
+                <div class="aui-pull-left">
+                    <p>Customer Number</p>
+                    <p>
+                        <input class="inp200" type="text">
+                    </p>
+                </div>
+                <div class="aui-pull-left mar2">
+                    <p>Customer Number</p>
+                    <p>
+                        <input class="inp200" type="text">
+                    </p>
+                </div>
+                <div class="aui-pull-left marr">
+                    <p>Customer Number</p>
+                    <p>
+                        <input class="inp280" type="text">
+                    </p>
+                </div>
+                <div class="aui-pull-left">
+                    <p>Customer Number</p>
+                    <p>
+                        <input class="" type="text">
+                    </p>
+                </div>
+            </div>
+            <div class="clear"><!--行-->
+                <div class="aui-pull-left">
+                    <p>Customer Number</p>
+                    <p class="clear">
+                        <input class="min aui-pull-left" type="text">
+                        <span class="aui-pull-left bor"></span>
+                        <input class="max aui-pull-left" type="text">
+                    </p>
+                    <p class="red">* Country number / region number</p>
+                </div>
+                <div class="aui-pull-left mar2">
+                    <p>Customer Number</p>
+                    <p class="clear">
+                        <input class="min aui-pull-left" type="text">
+                        <span class="aui-pull-left bor"></span>
+                        <input class="max aui-pull-left" type="text">
+                    </p>
+                    <p class="red">* Country number / region number</p>
+                </div>
+                <div class="aui-pull-left">
+                    <p>Customer Number</p>
+                    <p class="clear">
+                        <input class="min aui-pull-left" type="text">
+                        <span class="aui-pull-left bor"></span>
+                        <input class="max aui-pull-left" type="text">
+                    </p>
+                    <p class="red">* Country number / region number</p>
+                </div>
+                
+            </div>
+            
+            <div class="clear"><!--行-->
+                <div class="aui-pull-left">
+                    <p>Customer Number</p>
+                    <p>
+                        <input class="inp280" type="text">
+                    </p>
+                </div>
+                <div class="aui-pull-left mar2">
+                    <p>Customer Number</p>
+                    <p>
+                        <input class="inp600" type="text">
+                    </p>
+                </div>
+            </div>
+            <div class="clear address"><!--行-->
+                <div class="aui-pull-left marr">
+                    <p>Customer Number</p>
+                    <p>
+                        <input type="text">
+                    </p>
+                </div>
+                <div class="aui-pull-left">
+                    <p>Customer Number</p>
+                    <p>
+                        <input type="text">
+                    </p>
+                </div>
+            </div>
+        </div>
+           <div class="bottom">
+             <p>Required service ( please tick )</p>
+             <p>AMS Brisbane Pty Ltd</p>
+             <div>
+                 <p class="aui-margin-b-15">Study abroad</p>
+                 <ul class="clear">
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                 </ul>
+                 <div class="memo">
+                     <textarea placeholder="Other demands"></textarea>
+                     <i class="iconfont icon-textarea"></i>
+                 </div>
+                 
+             </div>
+            <div class="">
+                <p class="aui-margin-b-15">Study abroad</p>
+                 <ul class="clear">
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                     <li class="aui-col-xs-3">
+                         <div>
+                             <p class="icon">
+                                 <i class="iconfont icon-check"></i>
+                             </p>
+                         </div>
+                         <div class="aui-padded-l-15">
+                             <p>Apply for a school</p>
+                         </div>
+                     </li>
+                 </ul>
+                 
+                 
+             </div>
+         </div>
+         
+         
+         <div class="submit aui-text-right">
+             <p class="service"><i class="iconfont icon-kefu"></i> <span>Contact customer service</span></p><p class="applic"><i class="iconfont icon-shenqing"></i> <span>Application form</span></p>
+
+         </div>
+         
+        </div>
+    </div>
+    <!--底部版权-->
+  <div class="author">
+      <p class="aui-text-center aui-font-size-12">COPYRIGHT (©) 2017 AMS immigration study  Co.,Ltd.</p>
+  </div>
+  
+  <script src="../script/jquery.js"></script>
+  <script>
+    //#centent .sex span
+      
+      $("#centent .sex span").on('click',function(){
+         var p = $(this).parent().parent()
+          p.find('.active').removeClass('active')
+//         $("#centent .sex span.active").
+         $(this).addClass('active')
+      })
+      //#centent .bottom li div p
+      
+    $("#centent .bottom .icon").on('click',function(){
+       if($(this).find('i').hasClass('active')){
+       $(this).find('i').removeClass('active')
+       }else{
+        $(this).find('i').addClass('active')
+       }
+         
+    })
+    </script>
+</body>
+</html>

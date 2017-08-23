@@ -20,7 +20,7 @@
 }
 #nav ul{
     position: absolute;
-    top:-330px;;
+    top:-380px;;
     left: 0;
     
     width: 100%;
@@ -86,4 +86,8 @@ display: none;
 }
 #n_switch a{
     display: inline-block;
+}
+ #nav ul #n_switch a.active{
+    color: #4e9043;
+     background: #434343
 }

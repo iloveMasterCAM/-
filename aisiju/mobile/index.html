@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<title>首页</title>
+   <link href="css/swiper.min.css" rel="stylesheet"/>
+    <link href="iconfont/iconfont.css" rel="stylesheet"/>
+  
+    <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/index.css" /><!--小于 769-->
+    <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/minpublic.css" /><!--小于 769-->
+    <link href="css/public.css" media="screen and (min-width: 770px)" rel="stylesheet"/> <!--大于 769px-->
+    <link rel="stylesheet" media="screen and (min-width: 770px)" href="css/large.css" /> <!--大于 769px-->
+
+</head>
+<body>
+    <!--头部-->
+      <nav class="clear aui-white" id="nav">
+          <div class="box clear">
+              <div class="aui-pull-left">
+                 <a class="menu_box">
+                     <p class="aui-pull-left menu"><i class="iconfont icon-caidan"></i></p>
+                     <img class="aui-margin-t-15" src="image/logo.png" alt="">
+                  </a>
+                  <a class="pc" href="index.html">
+                     <img class="aui-margin-t-15" src="image/logo.png" alt="">
+                  </a>
+             </div>
+              <ul class="aui-pull-right">
+                  <li class="aui-pull-left aui-text-left guanbi aui-padded-l-15">
+                      <i class="iconfont icon-guanbi"></i>
+                  </li>
+                  <li class="aui-pull-left aui-text-center active">
+                      <a class="active" href="index.html">Home</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a class="" href="about.html">About</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a href="service.html">Service</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a href="migration.html">Self Assessment</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a href="join.html">Join</a>
+                  </li>
+                  <li class="aui-pull-left aui-text-center">
+                      <a href="join_data.html">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+      <!--轮播-->
+      <div class="clear" id="banenr">
+          <div class="aui-col-xs-10 swiper">
+              <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="image/banent.png">
+                        <div class="text">
+                            <h3>Live in Australia</h3>
+                            <h3>AMS to help you realize </h3>
+                            <h3>your dreams</h3>
+                            <p class="zh">旅游在澳洲，触摸原始的澳洲大地</p>
+                            <a>
+                                <span></span>
+                               <i>VIEW MORE</i>
+                            </a>
+                        </div>
+                      </div>
+                    <div class="swiper-slide">
+                         <img src="image/banent-1.png">
+                       <div class="text">
+                            <h3>Live in Australia</h3>
+                            <h3>AMS to help you realize </h3>
+                            <h3>your dreams</h3>
+                            <p class="zh">旅游在澳洲，触摸原始的澳洲大地</p>
+                            <a>
+                                <span></span>
+                               <i>VIEW MORE</i>
+                            </a>
+                        </div>
+                      </div>
+                    <div class="swiper-slide">
+                        <img src="image/banent-2.png">
+                         <div class="text">
+                            <h3>Live in Australia</h3>
+                            <h3>AMS to help you realize </h3>
+                            <h3>your dreams</h3>
+                            <p class="zh">旅游在澳洲，触摸原始的澳洲大地</p>
+                            <a>
+                                <span></span>
+                               <i>VIEW MORE</i>
+                            </a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+              </div>
+          </div>
+          <div class="aui-col-xs-2" id="">
+              <div id="share">
+                  <h4>FOLLOW US</h4>
+                  <p>AMS Brisbane Pty Ltd</p>
+                  <div class="clear aui-margin-t-15">
+                    <a id="weixn"><i class="aui-pull-left iconfont icon-weixin"></i>
+                        <div>
+                            <p class=""> <span></span> </p>
+                            <img src="image/er.png">
+                        </div>
+                      </a>
+                     <a href="https://twitter.com/" target="_blank"> <i class="aui-pull-left iconfont icon-twitter3 active"></i></a>
+                     <a href="https://www.facebook.com/" target="_blank"> <i class="aui-pull-left iconfont icon-facebook"></i></a>
+                  </div>
+              </div>
+              <div id="msg">
+                  <h4 class="aui-margin-b-15 aui-padded-b-15">CONTACT US</h4>
+                  <p class="">
+                      <i class="iconfont icon-dizhi"></i>
+                      <span class=" aui-ellipsis-2">37/223 Calam Road, Sunnybank Hills, QLD,4109</span>
+                  </p>
+                  <p>
+                       <i class="iconfont icon-dianhua"></i>
+                      <span class=" aui-ellipsis-1">07 31914296</span>
+                  </p>
+                  <p>
+                       <i class="iconfont icon-xinfeng"></i>
+                      <span class="aui-ellipsis-1">info@amsbrisbane.com</span>
+                  </p>
+              </div>
+              <form id="memo" onsubmit="return Isubmit(this);">
+                 
+                  <h4 class="aui-ellipsis-1">MESSAGE REQUEST</h4>
+                  <div class="clear aui-margin-t-10">
+                      <p class="aui-pull-left">Name</p>
+                      <p class="aui-pull-left bor">
+                          <input name="name" type="text">
+                      </p>
+                  </div>
+                   <div class="clear aui-margin-t-10">
+                      <p  class="aui-pull-left">Phone</p>
+                      <p  class="aui-pull-left bor">
+                          <input name="tel" type="text">
+                      </p>
+                  </div>
+                   <div class="clear aui-margin-t-10">
+                      <p  class="aui-pull-left">Emali&nbsp;</p>
+                      <p  class="aui-pull-left bor">
+                          <input name="Emali" type="text">
+                      </p>
+                  </div>
+                   <div class="aui-margin-t-15">
+                      <p>Comments</p>
+                      <div class="bor">
+                          <textarea></textarea>
+                          <div class="submit aui-pull-right">
+                              <i class="iconfont icon-iconfasong"></i>
+                              <input type="submit" value="提交">
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+      <!--关于描述 -->
+      <div class="txt txt1 aui-text-center">
+          <div class="img">
+              <img src="image/a.png" alt="">
+              <p class="aui-text-right"> <span>01.</span></p>
+          </div>
+          <h1>AMS COMPANY PROFILE</h1>
+          <p> AMS immigrants to study abroad is a registered by the Australian government professional immigrants immigration </p>
+          <p>company (MARN: 1278075), with a legitimate registered immigrant agent qualifications. The company's business scope includes free consultation and </p>
+          <p>application of various Australian courses, Australian students to study and transfer students, student visas, skilled immigrants, immigrants, family </p>
+          <p>members of immigrants and work visa for China and Australia to provide "study, immigration, investment , Employment, "the one-stop service. </p>
+          <p>The company is headquartered in Australia's beautiful Brisbane City, and in Shanghai, Beijing, Tianjin and other</p>
+          <p>places are equipped with branch cooperation agencies.</p>
+          <div class="logo">
+              <a href="index.html"> <img class="aui-margin-t-15" src="image/logo.png" alt=""></a>
+          </div>
+      </div>
+    <!--签证 -->
+      <div id="AC" class="aui-text-center">
+        <div class="city">
+         <div class="bg">
+         <div class="title">
+             <p></p>
+             <h3>AMS SERVICE CATEGORY</h3>
+         </div>
+          <ul class="clear">
+            
+              <li class=" aui-col-xs-4">
+                  <p><img src="image/icon/mc.png" alt=""></p>
+                  <h3>student visa</h3>
+                  <a href="service_data.html">
+                       <p class="aui-ellipsis-3"> Australia has a first-class quality of 
+                      education, there are 42 universities and more
+                      than 230 specialist colleges. These...</p>
+                  </a>
+                  
+              </li>
+               <li class=" aui-col-xs-4">
+                 
+                  <p> <img src="image/icon/p0c.png" alt=""></p>
+                  <h3>student visa</h3>
+                  <a href="service_data.html">
+                      <p class="aui-ellipsis-3"> Australia has a first-class quality of 
+                      education, there are 42 universities and more
+                      than 230 specialist colleges. These...</p>
+                  </a>
+                 
+              </li>
+               <li class=" aui-col-xs-4">
+                 
+                  <p> <img src="image/icon/p3c.png" alt=""></p>
+                  <h3>student visa</h3>
+                <a href="service_data.html">
+                    <p class="aui-ellipsis-3"> Australia has a first-class quality of 
+                      education, there are 42 universities and more
+                      than 230 specialist colleges. These...</p>
+                  </a>
+                
+              </li>
+             
+              
+               <li class=" aui-col-xs-4">
+                  <p> <img src="image/icon/p4c.png" alt=""></p>
+                  <h3>student visa</h3>
+                <a href="service_data.html">
+                     <p class="aui-ellipsis-3"> Australia has a first-class quality of 
+                      education, there are 42 universities and more
+                      than 230 specialist colleges. These...</p>
+                 </a>
+              </li>
+               <li class=" aui-col-xs-4">
+                 
+                  <p> <img src="image/icon/p1c.png" alt=""></p>
+                  <h3>student visa</h3>
+                  <a href="service_data.html">
+                      <p class="aui-ellipsis-3"> Australia has a first-class quality of 
+                      education, there are 42 universities and more
+                      than 230 specialist colleges. These...</p>
+                  </a>
+                 
+              </li>
+               <li class=" aui-col-xs-4">
+                  <p> <img src="image/icon/p2c.png" alt=""></p>
+                  <h3>student visa</h3>
+                  <a href="">
+                      <p class="aui-ellipsis-3"> Australia has a first-class quality of 
+                      education, there are 42 universities and more
+                      than 230 specialist colleges. These...</p>
+                  </a>
+                  
+              </li>
+             
+               <div class="more">
+              <a> <span></span> <i>VIEW MORE</i></a>
+            </div>
+          </ul>
+         
+           </div>
+        </div>
+      </div>
+    <!--关于描述 -->
+        <div class="txt txt2 aui-text-center">
+          <div class="img">
+              <img src="image/s.png" alt="">
+              <p class="aui-text-right"> <span>02.</span></p>
+          </div>
+       
+          <h1>AMS COMPANY PROFILE</h1>
+          <p> AMS immigrants to study abroad is a registered by the Australian government professional immigrants immigration </p>
+          <p>company (MARN: 1278075), with a legitimate registered immigrant agent qualifications. The company's business scope includes free consultation and </p>
+          <p>application of various Australian courses, Australian students to study and transfer students, student visas, skilled immigrants, immigrants, family </p>
+          <p>members of immigrants and work visa for China and Australia to provide "study, immigration, investment , Employment, "the one-stop service. </p>
+          <p>The company is headquartered in Australia's beautiful Brisbane City, and in Shanghai, Beijing, Tianjin and other</p>
+          <p>places are equipped with branch cooperation agencies.</p>
+      </div>
+      <!--合作-->
+      <div id="cooperate">
+        <div class="aui-text-center title">
+            <h2> SCHOLL LINKS</h2>
+            <p>SCHOLL in cooperation with the AMS</p>
+        </div>
+        
+          <ul class="clear">
+                
+                     <li class="aui-col-5">
+                      <img src="image/adelaide.png" alt="">
+                      </li>
+                      <li class="aui-col-5">
+                          <img src="image/jamescook.png" alt="">
+                      </li>
+                      <li class="aui-col-5">
+                          <img src="image/the.png" alt="">
+                      </li>
+                      <li class="aui-col-5">
+                          <img src="image/griffith.png" alt="">
+                      </li>
+                      <li class="aui-col-5">
+                          <img src="image/tafe.png" alt="">
+                      </li>
+          
+           
+                  <li class="aui-col-5">
+                      <img src="image/unsw.png" alt="">
+                  </li>
+                  <li class="aui-col-5">
+                      <img src="image/cqu.png" alt="">
+                  </li>
+                  <li class="aui-col-5">
+                      <img src="image/macquarie.png" alt="">
+                  </li>
+                  <li class="aui-col-5">
+                      <img src="image/monash.png" alt="">
+                  </li>
+                  <li class="aui-col-5">
+                      <img src="image/new.png" alt="">
+                  </li>
+             
+              
+          </ul>
+      </div>
+<!--底部-->
+      <footer id="footer">
+         
+          <div class="bg">
+          <div class="bg1">
+              <div class="clear box">
+                  <div class="aui-col-xs-8 aui-pull-left">
+                  <p class="h3">CONTACT US</p>
+                  <p>AMS A professional immigrant company</p>
+                  <ul class="clear">
+  
+                      <li class="aui-col-xs-6">
+                          <div class="aui-padded-r-15">
+                               <p class="icon active"><i class="iconfont icon-home"></i></p>
+                          </div>
+                          <div class="aui-padded-l-15">
+                              <p>COMPAY:</p>
+                              <p>AMS Brisbane Pty Ltd</p>
+                          </div>
+                      </li>
+                      <li class="aui-col-xs-6">
+                          <div class="aui-padded-r-15">
+                              <p class="icon"><i class="iconfont icon-dianhua"></i></p>
+                          </div>
+                          <div class="aui-padded-l-15">
+                              <p>TELEPHONE:</p>
+                              <p>0595-123456</p>
+                          </div>
+                      </li>
+                      <li class="aui-col-xs-6">
+                         <div class="aui-padded-r-15">
+                             <p class="icon"><i class="iconfont icon-dizhi"></i></p>
+                          </div>
+                         <div class="aui-padded-l-15">
+                              <p>ADDRESS:</p>
+                              <p>37/223 Calam Road, Sunnybank Hills, QLD,4109</p>
+                          </div>
+                      </li>
+                     
+                      <li class="aui-col-xs-6">
+                          <div class="aui-padded-r-15">
+                            <p class="icon"><i class="iconfont icon-xinfeng"></i></p>
+                          </div>
+                         <div class="aui-padded-l-15">
+                              <p>E-MAIL:</p>
+                              <p>info@amsbrisbane.com</p>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+                  <form class="aui-col-xs-4 aui-pull-right input" onsubmit="return Isubmit(this);">
+                      
+                      <p class="h3">LEAVE A MESSAGE </p>
+                      <div class="clear bor">
+<!--                          <div class="aui-pull-left key"></div>-->
+                          <div class="">
+                              <input name="name" type="text" placeholder="NAME">
+                          </div>
+                      </div>
+                      <div class="clear bor">
+<!--                          <div class="aui-pull-left key"></div>-->
+                          <div class="">
+                              <input name="tel" type="text" placeholder="telephone">
+                          </div>
+                      </div>
+                      <div class="clear bor">
+<!--                          <div class="aui-pull-left key"></div>-->
+                          <div class="aui-pull-left">
+                              <input name="Email" type="text" placeholder="Email">
+                          </div>
+                      </div>
+                    <div class="bor">
+<!--                          <div class="key"></div>-->
+                          <div>
+                              <textarea placeholder="COMMENTS"></textarea>
+                                <div class="submit aui-pull-right">
+                                  <i class="iconfont icon-iconfasong"></i>
+                                  <input type="submit" value="提交">
+                              </div>
+                          </div>
+                      </div>
+                   </form>
+              </div>
+          </div>
+           
+        </div>
+      </footer>
+<!-- 固定侧边栏 -->
+       <div id="sidebarFixed">
+            <ul>
+                <li class=""><i class="iconfont icon-xiaoxi"></i></li>
+                <li class="weixin"><i class="iconfont icon-weixin1"></i>
+                    <div>
+                        <p class=""> <span></span> </p>
+                        <img src="image/er.png">
+                    </div>
+                </li>
+           </ul>
+        </div>
+    
+<!-- 移动端-->
+    <div id="mover" class="aui-padded-l-15 aui-padded-r-15">
+
+        <div class="share aui-text-center bor">
+           <div class="bor">
+               <p class="h1 bold">follow us</p>
+                <p class="title">AMS Brisbane Pty Ltd</p>
+                <div class=" icon">
+                    <a id="weixin"><i class="aui-pull-left iconfont icon-weixin"></i></a>
+                    <a href="https://twitter.com/" class="aui-margin-l-15 aui-margin-r-15"><i class="aui-pull-left iconfont icon-twitter3"></i></a>
+                    <a href="https://www.facebook.com/" id=""><i class="aui-pull-left iconfont icon-facebook"></i></a>
+                </div>
+           </div>
+            
+            <div class="clear sharetxt">
+                <p class="bold">CONTACT US</p>
+                <div class="aui-col-xs-4">
+
+                    <p><i class="iconfont icon-dizhi"></i></p>
+                    <p class="aui-ellipsis-4">37/223 Calam Road,</p>
+                   <p>Sunnybank Hills,</p>
+                   <p>QLD,4109 </p>
+                </div>
+                 <div class="aui-col-xs-4">
+                    <p><i class="iconfont icon-dianhua"></i></p>
+                    <p class="aui-ellipsis-2">07 31914296</p>
+                    
+                </div>
+                 <div class="aui-col-xs-4">
+                    <p><i class="iconfont icon-xinfeng"></i></p>
+                    <p class="aui-ellipsis-2">info@amsbrisbane.com</p>
+                </div>
+            </div>
+        </div>
+        <form class="form1 aui-text-center bor">
+            <p class="aui-margin-b-15">Message request</p>
+            <div> <input type="text" placeholder="Name"></div>
+            <div> <input type="text" placeholder="Phone"></div>
+            <div> <input type="text" placeholder="Email"></div>
+            <div><textarea placeholder="Comments"></textarea> </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <div class="m_txt bor">
+            <p class="title aui-text-center aui-margin-b-10">AMS company  profile</p>
+            <p>AMS immigrants to study abroad is a registered by the Australian government
+professional immigrants immigration company (MARN: 1278075), with a legitimate 
+registered immigrant agent qualifications. The company's business scope includes
+free consultation and application of various Australian courses, Australian 
+students to study and transfer students, student visas, skilled immigrants, 
+immigrants family members of immigrants and work visa for China and Australia 
+to provide "study, immigration, investment , Employment, "the one-stop service. 
+The company is headquartered in Australia's beautiful Brisbane City, and in 
+Shanghai, Beijing, Tianjin and other places are equipped with branch cooperation 
+agencies.</p>
+        </div>
+        
+        <div class="bor AC aui-text-center">
+            <p class="title aui-margin-b-10">AMS service category</p>
+            <ul class="clear ">
+                <a href="#" class="aui-col-xs-6 ">
+                    <p><img src="image/icon/mc.png" alt=""></p>
+                    <p class="aui-text-center title">student visa</p>
+                <p class="aui-ellipsis-3 aui-text-left txt">Australia has a first-class quality of 
+education, there are 42 universities 
+and more than 230 specialist colleges. 
+These...</p>
+                </a>
+                 <a class="aui-col-xs-6 ">
+                    <p><img src="image/icon/p0c.png" alt=""></p>
+                    <p class="aui-text-center title">working visa</p>
+                    <p class="aui-ellipsis-3 aui-text-left txt">Australia has a first-class quality of 
+education, there are 42 universities 
+and more than 230 specialist colleges. 
+These...</p>
+                 </a>
+                 <a class="aui-col-xs-6 ">
+                    <p><img src="image/icon/p3c.png" alt=""></p>
+                    <p class="aui-text-center title">Tourist VISA</p>
+                    <p class="aui-ellipsis-3 aui-text-left txt">Australia has a first-class quality of 
+education, there are 42 universities 
+and more than 230 specialist colleges. 
+These...</p>
+                 </a>
+                <a class="aui-col-xs-6 ">
+                    <p><img src="image/icon/p4c.png" alt=""></p>
+                    <p class="aui-text-center title">Technical visa</p>
+                   <p class="aui-ellipsis-3 aui-text-left txt">Australia has a first-class quality of 
+education, there are 42 universities 
+and more than 230 specialist colleges. 
+These...</p>
+                </a>
+                 <a class="aui-col-xs-6 ">
+                    <p><img src="image/icon/p1c.png" alt=""></p>
+                    <p class="aui-text-center title">Family visa</p>
+                    <p class="aui-ellipsis-3 aui-text-left txt">Australia has a first-class quality of 
+education, there are 42 universities 
+and more than 230 specialist colleges. 
+These...</p>
+                 </a>
+                <a class="aui-col-xs-6 ">
+                    <p><img src="image/icon/p2c.png" alt=""></p>
+                    <p class="aui-text-center aui-ellipsis-1 title">Business investment visa</p>
+                    <p class="aui-ellipsis-3 aui-text-left txt">Australia has a first-class quality of 
+education, there are 42 universities 
+and more than 230 specialist colleges. 
+These...</p>
+                </a>
+            </ul>
+            <div class="more">
+                VIEW MORE
+            </div>
+        </div>
+        
+        <div class="m_txt bor aui-text-center">
+            <p class="title">Self-assessment</p>
+            <p class="aui-text-left">AMS immigrants to study abroad is a registered by the Australian government
+professional immigrants immigration company (MARN: 1278075), with a legitimate 
+registered immigrant agent qualifications. The company's business scope includes
+free consultation and application of various Australian courses, Australian 
+students to study and transfer students, student visas, skilled immigrants, 
+immigrants family members of immigrants and work visa for China and Australia 
+to provide "study, immigration, investment , Employment, "the one-stop service. 
+The company is headquartered in Australia's beautiful Brisbane City, and in 
+Shanghai, Beijing, Tianjin and other places are equipped with branch cooperation 
+agencies.</p>
+        </div>
+        <div class="school aui-text-center">
+            <p class="h1">School links</p>
+            <p class="title">Schools in cooperation with the AMS</p>
+          <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul class="clear">
+                            <li class="aui-col-xs-4">
+                                <a href=""><img src="image/adelaide.png" alt=""></a>
+                            </li>
+                            <li class="aui-col-xs-4">
+                                <a href=""> <img src="image/jamescook.png" alt=""></a>
+                            </li>
+                            <li class="aui-col-xs-4">
+                                <a href=""> <img src="image/the.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul class="clear">
+                            <li class="aui-col-xs-4">
+                               <a href="">  <img src="image/macquarie.png" alt=""></a>
+                            </li>
+                            <li class="aui-col-xs-4">
+                                <a href=""> <img src="image/cqu.png" alt=""></a>
+                            </li>
+                            <li class="aui-col-xs-4">
+                                 <a href=""><img src="image/griffith.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul class="clear">
+                            <li class="aui-col-xs-4">
+                                <a href=""> <img src="image/macquarie.png" alt=""></a>
+                            </li>
+                            <li class="aui-col-xs-4">
+                                 <a href=""><img src="image/new.png" alt=""></a>
+                            </li>
+                            <li class="aui-col-xs-4">
+                                 <a href=""><img src="image/monash.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+              </div>
+            
+        </div>
+       
+    </div>
+     <div class="mover_footer ">
+            <p class="h1 aui-text-center">contact us</p>
+            <p class="aui-text-center title">AMS A professional immigrant company</p>
+            <div class="box">
+                <div><span><i class="iconfont icon-home"></i></span></div>
+                 <div class="aui-padded-l-15">
+                    <p> company：</p>
+                    <p>AMS Brisbane Pty Ltd</p>
+                </div>
+            </div>
+            <div class="box">
+                <div><span><i class="iconfont icon-dizhi"></i></span></div>
+                 <div class="aui-padded-l-15">
+                    <p>ADDRESS：</p>
+                    <p>37/223 Calam Road, Sunnybank Hills, QLD,4109</p>
+                </div>
+            </div>
+            <div class="box">
+                <div><span><i class="iconfont icon-dianhua"></i></span></div>
+                 <div class="aui-padded-l-15">
+                    <p>TELEPHONE：</p>
+                    <p>07 31914296</p>
+                </div>
+            </div>
+            <div class="box">
+               <div><span><i class="iconfont icon-xinfeng"></i></span></div>
+                <div class="aui-padded-l-15">
+                    <p>E-MAIL：</p>
+                    <p>info@amsbrisbane.com</p>
+                </div>
+            </div>
+        </div>
+    <div class="m_er">
+        <img src="image/er.png">
+    </div>
+    <!--底部版权-->
+      <div class="author">
+          <p class="aui-text-center aui-font-size-12">COPYRIGHT (©) 2017 AMS immigration study  Co.,Ltd.</p>
+      </div>
+    
+    <!--遮罩-->
+    <div id="bg"></div>
+      <script src="script/swiper.js"></script>
+      <script src="script/jquery.js"></script>
+  <script src="script/index.js"></script>
+    
+<script src="script/mover.js"></script>
+</body>
+</html>

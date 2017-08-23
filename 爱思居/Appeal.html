@@ -6,15 +6,13 @@
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <link href="iconfont/iconfont.css" rel="stylesheet"/>
      <link href="css/public.css" rel="stylesheet"/>
-     <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/min_appeal.css" />
-    <link rel="stylesheet" media="screen and (max-width: 769px)" href="css/minpublic.css" />
-    <link href="css/maxpublic.css" media="screen and (min-width: 770px)" rel="stylesheet"/> 
-    <link rel="stylesheet" media="screen and (min-width: 770px)" href="css/appeal.css" /> 
+      <link rel="stylesheet" href="css/minpublic.css" />
+      <link rel="stylesheet" href="css/min_appeal.css" /><!--小于 769-->
     <title>加入我们</title>
 </head>
 <body>
     <!--头部-->
-      <nav class="clear aui-white" id="nav">
+       <nav class="clear aui-white" id="nav">
           <div class="box clear">
               <div class="aui-pull-left">
                  <a class="menu_box aui-text-center">
@@ -25,7 +23,7 @@
                      <img class="aui-margin-t-15" src="image/logo.png" alt="">
                   </a>
              </div>
-             <p class="aui-pull-right" id="switch">
+              <p class="aui-pull-right" id="switch">
                  <a href="">CN</a>
                  <span>/</span>
                  <a href="">EN</a>
@@ -35,7 +33,7 @@
                       <p><i class="iconfont icon-guanbi"></i></p>
                   </li>
                   <li class="aui-pull-left active">
-                      <a class="" href="index.html">Home</a>
+                      <a href="index.html">Home</a>
                   </li>
                   <li class="aui-pull-left ">
                       <a class="" href="about.html">About</a>
@@ -44,7 +42,7 @@
                       <a href="service.html">Service</a>
                   </li>
                   <li class="aui-pull-left">
-                      <a href="migration.html">Self Assessment</a>
+                      <a class="active" href="migration.html">Self Assessment</a>
                   </li>
                   <li class="aui-pull-left">
                       <a href="join.html">Join</a>
@@ -52,77 +50,17 @@
                   <li class="aui-pull-left">
                       <a href="join_data.html">Contact</a>
                   </li>
+                  <li id="n_switch">
+                      <a class="active">EN</a>
+                      <span>/</span>
+                      <a>CN</a>
+                  </li>
               </ul>
+             
           </div>
       </nav>
-    <div id="banner">
-        <div class="bg">
-            <h1>SERVICE</h1>
-           <p>AMS SERVICE CATEGORY</p>
-        </div>
-    </div>
-    <p class="aui-text-center" id="h1">AAT Appeal</p>
-    <div id="centent">
-     <div>
-         <p>On July 1, 2015, the original immigration review tribunal and the Refugee Review Tribunal were merged into the AAT (Administrative Appeals Tribunal) to become a branch of its 
-subsidiary.</p>
-         <p>Most of the overseas applications submitted to students, business and tourist visas, if rejected, the applicant will have no right to appeal. The immigration officer will clearly indicate 
-whether the applicant or the guarantor has the right to appeal and the time limit for the appeal in the letter of refusal or cancellation of the visa decision.</p>
-         <p>The AAT process usually includes the following steps</p>
-     </div>
-     <div>
-    <p>1 . To submit a valid appeal application and payment of the appeal fee to the review tribunal within the prescribed time (if the appeal is successful, the review of the arbitration tribunal 
-will refund the fee; if the appeal fails, the fee will not be refunded).</p>
-    <p>2 . When you submit a valid application, AAT will send a confirmation letter to the applicant. At the same time, AAT will inform the Department of Immigration, the Department of 
-Immigration will be the applicant's application materials available to the AAT. In this way, the application will hold a valid bridge visa waiting in the territory.</p>
-    <p>3 . AAT assigns a file number to the applicant.</p>
-    <p>4 . AAT's adversaries began to hear.</p>
-    <p>5 . AAT invitees attend the hearing, or provide written material.</p>
-    <p>6 . AAT makes a decision based on the material provided and then informs the applicant in writing of the decision.</p>
-     </div>
-     <form class="clear"  enctype="multipart/form-data" method="post">
-       <div class="clear">
-        <div class="aui-pull-left fl box">
-            <div class="clear bor">
-                 <p class="aui-pull-left">Submit a screenshot : </p>
-                 <p class="aui-pull-right"><input type="file" class="file" name="updata"> <i class="iconfont icon-shangchuan"></i></p>
-             </div>
-             <div class="aui-text-center img_box active" id="img_box">
-                <div class="img_d"></div>
-                 <div class="img">
-                     <i class="iconfont icon-shangchuan1"></i><span>本地上传</span>
-                     <input class="file" type="file" name="updata">
-                 </div>
-             </div>
-             <p class="red">*Appeal failed screenshot upload PDF/JPG</p>
-<!--             <input type="hidden" name="val">-->
-        </div>
-         <div class="aui-pull-left box">
-              <div class="clear bor">
-                 <p class="aui-pull-left">Submit a screenshot : </p>
-                 <p class="aui-pull-right"><input type="file" class="file" name="updata"> <i class="iconfont icon-shangchuan"></i></p>
-             </div>
-             <div class="aui-text-center img_box">
-                <div class="img_d">
-                    
-                </div>
-                 <div class="img">
-                     <i class="iconfont icon-shangchuan1"></i><span>本地上传</span>
-                     <input type="file" class="file" name="updata">
-                 </div>
-                 <p class="aui-text-center">My passport</p>
-             </div>
-             <p class="red">*Passport photo upload PDF/JPG</p>
-<!--             <input type="hidden" name="val">-->
-         </div>
-          </div>
-         <div class="submit">
-             <i class="iconfont icon-shenqing"></i><input type="submit" value="Customer registered form
-">
-         </div>
-     </form>
-     
-    </div>
+  
+
    <!--移动端-->
    
    <div id="mover">

@@ -1,0 +1,76 @@
+/*导航*/
+  #nav .box{
+        margin: 0 auto;
+        width: 95%;
+        
+    }
+    #nav{
+        background: #fff;
+        position: fixed;
+       left: 0;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+    }
+    #nav ul a {
+        line-height: 5pc;
+        min-width: 75pt;
+        padding: 0 20px;
+        display: block;
+        color: #434343;
+        text-align: center;
+        font-size: 14px;
+        transition: all .6s;
+        -webkit-transition: all .6s
+    }
+
+    #nav a.active,#nav ul a:hover {
+        background: #4c8f41;
+        color: #fff
+    }
+#switch{
+    line-height: 5pc;
+    margin-left: 80px;
+}
+#switch a{
+    font-size: 14px;
+    display: inline;
+}
+#switch a:hover{
+    color: #4c8f41
+}
+/**/
+#phone,#mover,#banenr img,.guanbi,.menu_box,.mover_footer,.m_er,#m_more,#n_switch{
+    display: none;
+}
+  #banner{
+        margin-top: 79px;
+        background: url(../image/service.png) no-repeat;
+        background-size: cover;
+        border-top: 1px solid transparent;
+        height: 210px;
+        }
+        #banner h1,#banner p{
+        width: 65%;
+        margin: 0 auto;
+        color: #fff;
+        font-family: 'Regular';
+        }
+        #banner h1{
+        margin-top: 80px;
+        font-family: 'Bold'
+        }
+        #banner .bg{
+        background: url(../image/bg.png);
+        background-repeat: repeat;
+        height: 100%;
+         border-top: 1px solid transparent;
+        }
+.author p {
+            color: #313131;
+    line-height: 45px;
+        }
+        .author{
+            background: #eeeeee;
+            line-height: 55px;
+        }

@@ -1,0 +1,255 @@
+#share,#msg,#memo,.txt,#AC,#cooperate,#footer,#sidebarFixed,#banenr .text a{
+    display: none;
+}
+#banenr .swiper{
+    width: 100%;
+}
+#banenr{
+    margin: 70px 0 40px 0;
+}
+#banenr .swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+#banenr .text {
+   position: absolute;
+    top: 15%;
+    left: 20%;
+   text-align: center;
+   background: url(../image/bg_mover.png);
+    background-repeat: repeat;
+    width: 65%;
+    padding: 5px 15px;
+}
+#banenr .swiper-pagination{
+    display: none;
+}
+#banenr .text h3,#banenr .text p{
+    color: #fff;
+}
+/*
+535353*/
+#banenr .text p{
+    font-size: 16px;
+}
+#banenr .text h3{
+    font-size: 18px;
+}
+#mover{
+    margin-top: 0;
+}
+#mover .wrap{
+    overflow: hidden;
+}
+#mover .wrap>div,#mover form{
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+}
+.mover_footer .tran1{
+     transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+}
+.mover_footer .tran2{
+     transition: all 0.9s;
+    -webkit-transition: all 0.9s;
+}
+.mover_footer .tran3{
+     transition: all 1.2s;
+    -webkit-transition: all 1.2s;
+}
+.mover_footer .tran4{
+     transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+}
+#mover .share,#mover form,#mover .m_txt,#mover .AC,#mover .school,.mover_footer .box{
+    position: relative;
+    top: 300px;
+}
+
+#mover .bold{
+    font-family: 'Bold';
+    color: #434343;
+    font-size: 18px;
+}
+#mover p{
+    color: #434343;
+    font-size: 15px;
+}
+#mover p img{
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    opacity: 0.4;
+}
+
+#mover a:active img{
+     -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    opacity: 1;
+
+}
+
+#mover .share .icon i:active{
+    color: #4c8f41
+}
+#mover .share .icon i{
+    font-size: 2.3rem;
+    color: #535353
+}
+#mover .share .title{
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: 'Medium';
+    font-size: #535353;
+}
+#mover .share p i{
+color: #272636;
+    font-size: 1.5rem;
+}
+#mover .share .icon a{
+
+    display: inline-block;
+    
+}
+#mover .share .sharetxt{
+  margin-top: -10px;
+}
+
+#mover .form1 input[type='text'],#mover .form1 textarea{
+    background: #e5e5e5;
+    width: 100%;
+    height: 40px;
+    padding-left: 5px;
+}
+#mover .form1>div{
+    margin-bottom: 10px;
+}
+
+#mover .form1 textarea{
+    height: 250px;
+    display: block;
+}
+#mover .form1 .message{
+    font-family: 'Bold';
+    font-size: 16px;
+}
+#mover .form1 input[type='submit']{
+    width: 100%;
+    height: 40px;
+    background: #4c8f41;
+    color: #fff;
+}
+#mover .m_txt{
+    font-size: 15px;
+}
+#mover .m_txt .title{
+    font-family: 'Medium';
+    font-size: 15px;
+}
+#mover .bor{
+    border-bottom: 1px dashed #8b8b8b;
+    padding-bottom: 31px;
+    margin-bottom: 31px;
+   
+}
+#mover .AC a{
+    height: 155px;
+    padding: 0 2%;
+}
+#mover .AC .m_test{
+    overflow: hidden;
+}
+#mover .AC .title{
+    font-size: 16px;
+}
+#mover .AC .Medium{
+font-family: 'Medium';
+}
+#mover .AC .more{
+    line-height: 45px;
+     color: #fff;
+    background: #4c8f41
+}
+#mover .school img{
+    width: 90%;
+    height: 40px;
+display: block;
+    margin: 0 auto;
+}
+#mover .school .h1{
+    font-family: 'Medium';
+    font-size: 17px;
+}
+#mover .school .title{
+    font-size: 14px;
+}
+#mover .school ul{
+    padding: 20px 0;
+}
+#mover .school .swiper-pagination{
+    position: static;
+}
+#mover .school .swiper-pagination-bullet-active{
+    background: #4c8f41
+}
+#mover .school .swiper-pagination-bullet{
+    opacity: 1;
+   
+}
+.mover_footer{
+    background: #313131;
+    padding: 20px 1.5rem 30px 1.5rem;
+    overflow: hidden;
+    ;
+}
+.mover_footer p,.mover_footer i{
+    color: #fff
+}
+.mover_footer i{
+    font-size: 1.3rem;
+}
+.mover_footer .box{
+    margin-bottom: 20px;
+}
+.mover_footer .box>div{
+    display: table-cell;
+    vertical-align:top;
+}
+.mover_footer .box span{
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 40px;
+    display: block;
+}
+.mover_footer .title{
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.mover_footer .h1{
+    font-size: 18px;
+    font-family: 'Bold'
+}
+.m_er{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: none;
+   background: url(../image/bg_.png);
+    background-repeat: repeat;
+    
+    
+}
+.m_er img{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 30%;
+}
+#mover
+#mover
+#mover
+#mover

@@ -1,0 +1,47 @@
+
+
+#banner,#centent{
+    display: none;
+}
+
+
+#mover {
+    margin-top: 75px;
+}
+#mover .title{
+    font-size: 25px;
+    color: #434343;
+    font-family: 'Bold'
+}
+#mover .title_0{
+    color: #434343;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+#mover p{
+    color: #535353;
+    line-height: 26px;
+    font-size: 15px;
+}
+#mover .bor{
+    border-bottom: 1px dashed #858585;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+#mover .self{
+    width: 50%;
+    background: #4c8f41;
+    color: #fff;
+   
+    border-radius: 50px;
+    padding: 10px 0;
+    margin: 75px auto;
+}
+#mover img{
+    width: 100%;
+    margin-top: 45px;
+}
+#banenr,centent{
+display: none;
+}

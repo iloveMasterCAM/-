@@ -1,0 +1,148 @@
+#banner,.Medium,#centent{
+    display: none;
+}
+#mover{
+    margin-top: 20px;
+}
+#m_more{
+    margin: 70px 0 0 0;
+}
+#mover .box>div{
+    display: table-cell;
+    vertical-align: middle;
+}
+#mover .wrap{
+    width: 100%;
+     border: 1px solid #e5e5e5
+}
+#mover .centent p{
+   padding: 10px 0;
+/*    min-height: 40px;*/
+}
+#mover .Factor p,.Description p{
+       padding: 10px 0;
+    }
+    #mover .box>div{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    #mover .txt_box>div{
+         display: table-cell;
+        vertical-align: middle;
+    }
+     #mover .box p{
+        word-wrap:break-word;
+         color: #535353;
+         font-size: 14px;
+    }
+  
+   
+#mover .Description span{
+    padding-left: 10px;
+    display: inline-block;
+    width: 100%;
+    
+}
+    #mover .bor-r{
+        border-right: 1px solid #e5e5e5
+    }
+    #mover .bor-l{
+        border-left: 1px solid #e5e5e5
+    }
+    #mover .bor-t{
+        border-top: 1px solid #e5e5e5
+    }
+    #mover .bor-b{
+        border-bottom: 1px solid #e5e5e5
+    }
+    #mover .txt_box i{
+        font-size: 14px;
+        color: #bfbfbf
+    }
+    #mover i.active{
+        color: #4c8f41
+    }
+#mover .submit{
+    margin: 40px 0;
+}
+#mover .submit p{
+    width: 90%;
+    margin: 15px auto;
+    background: #eeeeee;
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+}
+#mover .submit p:active{
+    color: #fff;
+    background: #4c8f41;
+}
+
+#mover .submit input{
+background: transparent;
+}
+#mover .submit p span{
+    line-height: normal;
+}
+#mover .h1{
+    font-size: 25px;
+    font-family: 'Bold';
+    color: #434343;
+    margin-top: 20px;
+}
+#mover .title{
+    font-size: 18;
+    color: #434343;
+}
+#mover .p{
+    font-size: 14px;
+     color: #535353;
+    margin-top: 25px;
+     font-family: 'Medium';
+    margin-bottom: 10px;
+}
+#mover .centent p ,#mover .centent span{
+    color: #535353;
+}
+#mover .icon{
+    background: #bfbfbf;
+    padding: 5px 7px;;
+}
+
+#m_more{
+    background: #4e9043;
+    color: #fff;
+    line-height: 45px;
+    padding: 0 1rem;
+   
+    overflow: hidden;
+    transition: all 0.6s;
+    -webkit-transition: all .6s
+}
+#m_more li{
+    position: relative;
+}
+#m_more li a{
+    color: #fff;
+}
+#m_more li:before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background: #fff;
+}
+#mover .submit input{
+    background: transparent;
+}
+
+/**/
+
+
+#mover .submit
+#mover
+#mover

@@ -1,0 +1,89 @@
+#bg{
+    background: #434343;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: 2;
+    display: none;
+}
+
+#nav{
+    height: 70px;
+    line-height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+#nav ul{
+    position: absolute;
+    top:-330px;;
+    left: 0;
+    
+    width: 100%;
+    background: #434343;
+    transition: all .6s;
+    -webkit-transition: all .6s
+}
+#nav ul li{
+    line-height: 45px;
+    border-bottom: 1px solid #626262;
+    width: 100%;
+    float: none;
+    
+}
+#nav ul li a,#nav ul li span{
+    color: #7e7e7e;
+    padding-left: 1rem;
+}
+#nav ul li i{
+    color: #ffffff
+}
+#nav ul li p{
+padding-left: 1rem;
+}
+#nav ul a.active{
+    color: #fff;
+     background: #4e9043;
+}
+#nav div{
+    float:none;
+}
+#nav img{
+    width: 80px;
+    vertical-align: middle;
+    margin: 5px auto !important;
+}
+#nav{
+    border-bottom: 1px solid #eeeeee
+}
+#nav .menu{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    display: block;
+   color: #4c8f41
+}
+#mover{
+    padding: 0 1rem;
+    margin: 120px 0 60px 0;
+}
+.pc{
+display: none;
+}
+.author p {
+    color: #313131
+}
+.author{
+    background: #eeeeee;
+    line-height: 55px;
+}
+#switch{
+    display: none;
+}
+#n_switch a{
+    display: inline-block;
+}

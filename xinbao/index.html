@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信保</title>
+    <link href="css/public.css" rel="stylesheet"/>
+    <link href="iconfont/iconfont.css" rel="stylesheet"/>
+    <link href="css/swiper.min.css" rel="stylesheet"/>
+    <style>
+        body{
+            background: #fff;
+        }
+        #header{
+            background: #eeeeee;
+            line-height: 40px;
+        }
+        .wrap{
+            width: 80%;
+            margin: 0 auto;
+        }
+        #header span{
+            font-size: 14px;
+            padding: 0 7px;
+        }
+        #header i{
+            color: #d7000f;
+            right: -5px;
+            top: 45%;
+        }
+        #header a{
+             margin: 0 15px;
+            position: relative;
+        }
+        #header p{
+            position: relative;
+        }
+        #header p a:before{
+            content: '';
+            display: block;
+            height: 30%;
+            width: 1px;
+            background: #838383;
+            position: absolute;
+            right: -30%;
+            top: 35%;
+        }
+        #nav .wrap,#header .wrap{
+            min-width: 1024px;   
+        }
+        #nav .logo{
+            width: 26%;
+             line-height: 80px;
+        }
+        #nav .logo p{
+          display: inline;
+        }
+        #nav img{
+            width: 30%;
+            vertical-align: middle;
+             line-height: 80px;
+            display: inline-block;
+        }
+        #nav ul{
+           width: 74%;
+            text-align: right;
+        }
+        #nav ul li{
+            line-height: 80px;
+            display: inline-block;
+            margin: 0 2%;
+            text-align: center;
+            position: relative;
+        }
+        #nav ul li.search{
+            width: 20%;
+        }
+        #nav ul li i{
+            position: absolute;
+            
+            right: -15px;
+            top: 12%;
+            line-height: normal;
+        }
+        #nav ul li.search i{
+             position: absolute;
+            right: 3px;
+            top: 35%;
+        }
+        #nav ul li a{
+            display: inline;
+             position: relative;
+        }
+        #nav ul li input{
+        width: 100%;
+           height: 30px;
+            border-bottom: 1px solid #d2d2d2;
+            
+        }
+        #banner{
+            height: 700px;
+            background: #ccc;
+        }
+        #product{
+            position: relative;
+        }
+        #product .wrap,#star .wrap,#share .wrap{
+            width: 70%;
+            border-top: 1px solid transparent;
+        }
+        #search{
+            position: absolute;
+            top: -22%;
+            left: 15%;
+            width: 70%;
+           
+        }
+        #search .select{
+            background: #000;
+            width: 70%;
+            margin: 0 auto 25px auto;
+            padding: 30px 50px;
+        }
+        #search .select select,#search .select .input{
+            width: 40%;
+            height: 50px;
+        }
+        #search input[type='tel']{
+             padding-left: 10px;
+        }
+        #search input{
+            width: 100%;
+             height: 50px;
+        }
+        #search .submit{
+            width: 15%;
+        }
+        #search .submit input{
+            background: #d7000f;
+            color: #fff;
+        }
+        #search .select .input{
+            margin-left: 2.5%;
+        }
+        #search .select .txt{
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 18px;
+        }
+        #search .select .txt span{
+            color: #d7000f;
+            font-size: 17px;
+        }
+        #search .select .txt i{
+            margin: 0 10px;
+            font-style: normal;
+        }
+        #search ul{
+            overflow: hidden;
+            background: #eeeeee;
+        }
+        #search ul li{
+            padding: 30px;
+            cursor: pointer;
+        }
+        #search ul li>div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #search ul li:before{
+             content: '';
+            display: block;
+            height: 50%;
+            width: 1px;
+            background: #838383;
+            position: absolute;
+            right: -1px;
+            top: 25%;
+        }
+        #search ul i{
+            font-size: 50px;
+              color: #a0a0a0;
+        }
+        #search ul h3{
+            font-size: 16px;
+            color: #434343;
+           
+        }
+        #search ul p{
+            font-size: 14xp;
+            color: #a0a0a0;
+        }
+        #product .product{
+            margin-top: 170px;
+        }
+        .titleEN{
+            font-size: 20px;
+            color: #a0a0a0;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .titleEN:before{
+             content: '';
+            display: block;
+            height: 1px;
+            width: 40px;
+            background: #a0a0a0;
+            position: absolute;
+            left: 50%;
+            margin-left: -20px;
+            bottom: -5px;
+        }
+        .title{
+            font-size: 30px;
+            color: #434343;
+            font-weight: 500;
+        }
+        .product .key{
+            margin: 0 auto;
+            width: 80%;
+            background: #f6f6f6;
+            border-radius: 50px;
+            padding: 20px 0;
+            
+        }
+        .product .key span{
+            margin: 0 2%;
+            color: #636363;
+            position: relative;
+        }
+        .product .key span:before{
+              content: '';
+            display: block;
+            height: 60%;
+            width: 1px;
+            background: #dcdcdc;
+            position: absolute;
+            left: 0px;
+            margin-left: -20px;
+            top: 20%;
+        }
+        .product .key span:first-child:before{
+            width: 0px;
+        }
+        .product ul{
+            margin-top: 50px;
+        }
+        .product ul li{
+            width: 23%;
+            margin: 0 1%;
+            float: left;
+            border: 1px solid #ddd;
+            margin-bottom: 50px;
+        }
+        .product ul li img{
+            width: 100%;
+        }
+        .product ul li:hover span{
+            background: #d7000f;
+            color: #fff;
+            
+        }
+        .product ul li:hover h3{
+            color: #d7000f
+        }
+        .product ul{
+            margin-left: -1.5%;
+            margin-right: -1.5%;
+        }
+        .product ul div{
+            padding: 20px; 
+        }
+        .product ul p:before{
+             content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            background: #eeeeee;
+            position: absolute;
+            left: 0px;
+            bottom: 5px;
+        }
+        .product ul p{
+            position: relative;
+            padding: 15px 0;
+        }
+        .product ul span{
+            margin-top: 10px;
+            display: inline-block;
+            padding: 5px 15px;
+            font-size: 14px;
+            border-radius: 50px;
+            background: #eeeeee;
+            color: #434343;
+        }
+        .product .more a{
+            background: #eeeeee;
+            display: inline;
+            padding: 10px 35px;
+            border-radius: 50px;
+            
+        }
+        #star{
+            padding: 80px 0;
+            margin-top: 85px;
+            background: #f6f6f6;
+        }
+        #star .head_box,#star .txt{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #star .head{
+            width: 360px;
+            height: 360px;
+            background: #eeeeee;
+            border-radius: 50%;
+            padding-right: 15px;
+        }
+         #star .head img{
+             width: 100%;
+             height: 100%;
+              border-radius: 50%;
+            
+        }
+        #star .txt{
+            padding-left: 5%;
+            width: 700px;
+        }
+        #star .txt div p{
+            margin-right: 6%;
+            color: #838383;
+        }
+        #star .txt .address{
+            color: #d7000f;
+            font-size: 16px;
+        }
+        #star .txt h2{
+            color: #000000;
+            font-size: 30px;
+            font-weight: 500;
+        }
+         #star .txt p{
+            color: #838383
+        }
+        #star .txt .more{
+            color: #000000;
+            font-size: 15px;
+        }
+        .star img{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #f6f6f6;
+        }
+        .star img.active{
+            border: 5px solid #d7000f;
+        }
+        .star li{
+            width: 180px;
+            float: left;
+            margin: 0 5.7%;
+        }
+        .star ul ol{
+            position: absolute;
+            top: 50%;
+        }
+        .star ul{
+            margin-top: 60px;
+        }
+        .star ul ol:first-child{
+            left: 0;
+        }
+         .star ul ol:last-child{
+            right: 0;
+        }
+        .star ul li p{
+            color: #000000;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .star ul li span{
+            color: #636363;
+            font-size: 16px;
+        }
+        .star ul li:hover span{
+             color: #d7000f;
+        }
+        #share{
+            margin-top: 80px;
+            
+        }
+        #share ul{
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+         #share .wrap{
+            overflow: hidden;
+        }
+        #share ul:before{
+            content: '';
+            display: block;
+            height: 100%;
+            width: 1px;
+            background: #f2f2f2;
+            position: absolute;
+            right: -1px;
+            top: 0;
+        }
+        #share ul li>div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #share ul li{
+            padding: 20px 0;
+            border-bottom:  1px dashed #d2d2d2; 
+            
+        }
+        #share ul li img{
+            width: 75px;
+            border-radius: 50%;
+        }
+        #share ul .msg span{
+            color: #000000;
+            font-size: 16px;
+        }
+        #share .msg .time{
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        #share .title_share{
+            padding-bottom: 20px;
+            border-bottom:  1px dashed #d2d2d2;
+            position: relative;
+            padding-left: 15px;
+        }
+        #share .title_share:before{
+            content: '';
+            display: block;
+            height: 40%;
+            width: 5px;
+            background: #d7000f;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #share .title_share span{
+            color: #000000;
+            font-size: 15px;
+        }
+        
+        #adviser{
+            margin-top: 80px;
+         
+        }
+        #adviser .box{
+              background: #f6f6f6;
+            position: relative;
+        }
+         #adviser .box .box_right{
+            float: right;
+             width: 15%;
+             background: #d7000f;
+            
+             position: absolute;
+             right: 0;
+             top:0;
+             bottom: 0;
+             
+        }
+        .adviser{
+            width: 70%;
+            margin: 0 auto;
+           
+        }
+        #adviser .swiper-container{
+            height:410px;
+        }
+        #adviser .swiper-slide img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #f6f6f6
+        }
+        #adviser .swiper-slide div{
+             width: 120px;
+            float: left;
+        }
+        #adviser .msg{
+            /*background: url(img/adviser-bg.png) no-repeat;
+            background-size: 100% 100%;;*/
+            background: #d7000f;
+            
+        }
+        /*d7000f*/
+    </style>
+</head>
+<body>
+   <!--头部-->
+    <div id="header">
+       <div class="clear wrap">
+        <div class="address aui-pull-left">
+            <p><i class="iconfont icon-mp-location"></i> <span>厦门</span> <span>【切换】</span></p>
+            <div>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </div>
+        <div class="aui-pull-right clear">
+            <a class="aui-pull-left" href=""><i class="iconfont icon-vip"></i> <span>升级VIP</span></a>
+            <P class="aui-pull-left clear aui-hide">
+                <a class="aui-pull-left" href=""><span>登录</span></a>
+                <a class="aui-pull-left" href=""><span>注册</span></a>
+            </P>
+            <p class=" aui-pull-left clear">
+               
+               <a class="aui-pull-left" href=""><span>用户名</span> <i class="tr-b"></i></a>
+                <a class="aui-pull-left" href=""><i class="iconfont icon-xinxi"></i><span>消息</span> <i class="tr-b"></i></a>
+            </p>
+            <a class="aui-pull-left" href=""><i class="iconfont icon-yijianfankui"></i> <span>意见反馈</span></a>
+            <a class="aui-pull-left" href=""><i class="iconfont icon-dianhua"></i> <span>咨询热线：0592-5914297</span></a>
+           
+        </div>
+          </div>
+    </div>
+    
+    <!--导航-->
+    <nav id="nav">
+       <div class="clear wrap">
+        <div class="logo aui-pull-left">
+            <img src="img/logo.png" alt=""> <p> 选保无忧,就上信保网</p>
+           
+        </div>
+        
+        <ul class="clear aui-pull-right">
+            <li><a href="">首页</a></li>
+            <li><a href="">保险公司</a></li>
+            <li><a href="">保险产品 <i class="iconfont icon-vip"></i></a></li>
+            <li><a href="">保险顾问 <i class="iconfont icon-vip"></i></a></li>
+            <li><a href="">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">最新资讯 <i class="iconfont icon-vip"></i></a></li>
+            <li class="search">
+                <input type="text" placeholder="搜索关键字">
+                <i class="iconfont icon-vip"></i>
+            </li>
+        </ul>
+         </div>
+    </nav>
+    
+    <!--轮播-->
+    <div id="banner">
+        
+    </div>
+    <!--保险产品 -->
+    <div id="product">
+        <div class="wrap">
+         <div id="search">
+            <div class="select">
+                 <div>
+                 <p class="txt">免费保险咨询 <i>|</i> 信保网已为<span>15000000</span>人提供保险咨询</p>
+                 </div>
+                 <div class="clear">
+                    <select class="aui-pull-left">
+                        <option value="江苏 南通">江苏 南通</option>
+                        <option value="福建 厦门">福建 厦门</option>
+                        <option value="福建 福州">福建 福州</option>
+                        <option value="福建 厦门">福建 厦门</option>
+                    </select>
+                    <div class="aui-pull-left input">
+                        <input type="tel" required placeholder="填写手机号码">
+                    </div>
+                    <div class="aui-pull-right submit">
+                        <input type="submit" value="立即咨询">
+                    </div>
+                 </div>
+            </div>
+            <ul class="clear">
+                <li class="aui-col-xs-3 aui-text-center">
+                    <div>
+                        <i class="iconfont icon-vip"></i>
+                    </div>
+                    <div class="aui-text-left aui-padded-l-15">
+                        <h3>免费设计保险方案</h3>
+                        <p>根据您的需求匹配合适
+您的保险方案</p>
+                    </div>
+                </li>
+                <li class="aui-col-xs-3 aui-text-center">
+                    <div>
+                        <i class="iconfont icon-vip"></i>
+                    </div>
+                    <div class="aui-text-left aui-padded-l-15">
+                        <h3>购险抵用券</h3>
+                        <p>费尽心思只为省下更多</p>
+                    </div>
+                </li>
+              <li class="aui-col-xs-3 aui-text-center">
+                    <div>
+                        <i class="iconfont icon-vip"></i>
+                    </div>
+                    <div class="aui-text-left aui-padded-l-15">
+                        <h3>预约专家</h3>
+                        <p>匹配当地的专业规划师
+快速为您解疑</p>
+                    </div>
+                </li>
+                <li class="aui-col-xs-3 aui-text-center">
+                    <div>
+                         <i class="iconfont icon-vip"></i>
+                    </div>
+                    <div class="aui-text-left aui-padded-l-15">
+                        <h3>购险保障</h3>
+                        <p>提供百万购险保障,您的
+损失,信保来赔</p>
+                    </div>
+                </li>
+            </ul>
+         </div>
+         <div class="product">
+             <h2 class="title aui-text-center">保险产品</h2>
+             <p class="titleEN aui-text-center">Insurance products</p>
+             <div class="key aui-text-center">
+                 <span>理财险</span>
+                 <span>人寿险</span>
+                 <span>医疗险</span>
+                 <span>重疾险</span>
+                 <span>儿童险</span>
+                 <span>意外险</span>
+                 <span>养老险</span>
+                 <span>家财险</span>
+             </div>
+            <ul class="clear">
+                <li>
+                    <img src="img/product1.png" alt="">
+                    <div class="">
+                    <h3 class="">太平成长无忧终身重大疾病保险</h3>
+                    <p>具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </div>
+                </li>
+                 <li>
+                     <img src="img/product2.png" alt="">
+                   <div class="">
+                    <h3 class="">太平成长无忧终身重大疾病保险</h3>
+                    <p>具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </div>
+                </li>
+                <li class="mar2">
+                    <img src="img/product3.png" alt="">
+                   <div class="">
+                    <h3 class="">太平成长无忧终身重大疾病保险</h3>
+                    <p>具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </div>
+                </li>
+                <li class="mar">
+                    <img src="img/product4.png" alt="">
+                    <div class="">
+                    <h3 class="">太平成长无忧终身重大疾病保险</h3>
+                    <p>具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/product1.png" alt="">
+                    <div class="">
+                    <h3 class="">太平成长无忧终身重大疾病保险</h3>
+                    <p>具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </div>
+                </li>
+                 <li>
+                     <img src="img/product2.png" alt="">
+                   <div class="">
+                    <h3 class="">太平成长无忧终身重大疾病保险</h3>
+                    <p>具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </div>
+                </li>
+                <li class="mar2">
+                    <img src="img/product3.png" alt="">
+                   <div class="">
+                    <h3 class="">太平成长无忧终身重大疾病保险</h3>
+                    <p>具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </div>
+                </li>
+                <li class="mar">
+                    <img src="img/product4.png" alt="">
+                    <div class="">
+                    <h3 class="">太平成长无忧终身重大疾病保险</h3>
+                    <p>具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="more aui-text-center">
+                <a href="">VIEW MORE<i></i></a>
+            </div>
+         </div>
+        </div>
+    </div>
+   
+    <div id="star">
+        <div class="wrap">
+            <div class="head_box">
+                <p class="head">
+                     <img src="img/head.jpg" alt="">
+                </p>
+            </div>
+            <div class="txt">
+                <p class="address aui-margin-b-15">福建 · 厦门</p>
+                <h2 class="aui-margin-b-15">城市明星：<span>你好</span></h2>
+                <div class="aui-margin-b-15 clear">
+                    <p class="aui-pull-left ">
+                        电话: <span>1775****003</span>
+                    </p>
+                    <p class="aui-pull-left">
+                        从业时间: <span>2017-8-31</span>
+                    </p>
+                    <p class="aui-pull-left">
+                        职业证号: <span>356248720150356248720150</span>
+                    </p>
+                </div>
+                <p class="aui-margin-b-15">
+                    用我的专业为客户规划未来，规避风险，拿走客户的担忧是我最大的心愿。在这个帮助他人成就自己的行
+业里因客户的信任，从事了几年的保险工作下来，突然发现我所选择的工作不仅帮我完成了我的梦想，还
+让我一直在帮助别人，也可以说是在做善事，我的客户多数来自于自己的朋友以及朋友介...
+                </p>
+                <a class="aui-padded-t-15 more" href="">Read more <i class="iconfont icon-vip"></i></a>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="star">
+                <ul class="clear aui-col-xs-12">
+                    <ol><i class="iconfont icon-vip"></i></ol>
+                    <li class=" aui-text-center">
+                        <div><img class="active" src="img/head.jpg"/></div>
+                        <p>城市明星：你好</p>
+                        <span>福建 · 厦门</span>
+                    </li>
+                    <li class="aui-text-center">
+                        <div><img src="img/head.jpg"/></div>
+                        <p>城市明星：你好</p>
+                        <span>福建 · 厦门</span>
+                    </li>
+                    <li class=" aui-text-center">
+                        <div><img src="img/head.jpg"/></div>
+                        <p>城市明星：你好</p>
+                        <span>福建 · 厦门</span>
+                    </li>
+                    <li class="aui-text-center">
+                        <div><img src="img/head.jpg"/></div>
+                        <p>城市明星：你好</p>
+                        <span>福建 · 厦门</span>
+                    </li>
+                   <ol><i class="iconfont icon-vip"></i></ol>
+                </ul>
+              
+                
+            </div>
+        </div>
+    </div>
+    <!--广告-->
+    <a id="Billboard">
+        <img src="img/ad.png">
+    </a>
+    
+    <!--签单分享-->
+    <div id="share">
+        <h2 class="title aui-text-center">签单分享</h2>
+        <p class="titleEN aui-text-center">Sign sharing</p>
+        <div class="wrap clear">
+            <ul class="aui-col-xs-3 ">
+               <p class="title_share">签单分享 <span class="aui-pull-right">more <i class="iconfont icon-vip"></i></span></p>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="msg aui-margin-b-15">
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn class='aui-pull-right'><i class="iconfont icon-vip"></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p class="aui-ellipsis-2">加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="msg aui-margin-b-15">
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn class='aui-pull-right'><i class="iconfont icon-vip"></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p class="aui-ellipsis-2">加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                       <p class="msg aui-margin-b-15">
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn class='aui-pull-right'><i class="iconfont icon-vip"></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p class="aui-ellipsis-2">加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="msg aui-margin-b-15">
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn class='aui-pull-right'><i class="iconfont icon-vip"></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p class="aui-ellipsis-2">加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                       <p class="msg aui-margin-b-15">
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                           <sapn class='aui-pull-right'><i class="iconfont icon-vip"></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p class="aui-ellipsis-2">加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="aui-col-xs-3">
+               <p class="title_share">签单分享 <span class="aui-pull-right">more <i class="iconfont icon-vip"></i></span></p>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="aui-col-xs-3">
+              <p class="title_share">签单分享 <span class="aui-pull-right">more <i class="iconfont icon-vip"></i></span></p>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="aui-col-xs-3">
+              <p class="title_share">签单分享 <span class="aui-pull-right">more <i class="iconfont icon-vip"></i></span></p>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <span>中国人寿：原艳妮</span>
+                            <span class="time">10分钟前</span>
+                            <sapn ><i class="iconfont "></i> <sup>+10</sup></sapn>
+                        </p>
+                        <p>加入保险同城网的第二天，通过保险同城网客服介绍，我加了刘女士...</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <!--保险顾问-->
+    <div id="adviser" class="">
+        
+        <h2 class="title aui-text-center">保险顾问</h2>
+        <p class="titleEN aui-text-center">Insurance adviser</p>
+        <div class="box">
+    
+        <div class="adviser clear">
+        <div class="aui-col-xs-8">
+       <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide clear">
+               <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+               <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+               <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+                <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+                <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+                <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+               
+            </div>
+            <div class="swiper-slide clear">
+                <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+               <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+               <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+               <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+            </div>
+            <div class="swiper-slide clear">
+                <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+               <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+               <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你12好</p>
+               </div>
+               <div>
+                   <img src="img/head.jpg" alt="">
+                   <p>你好</p>
+               </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+        <div class="aui-col-xs-4 msg">
+            <img src="img/head.jpg" alt="">
+            <h3>销售顾问：柯经理 </h3>
+            <p>柯经理</p>
+            
+            <p class="aui-margin-t-15">工作地点：<span>江苏·苏州</span></p>
+            <p>电话：<span>18506197882</span></p>
+            <p>微信号：<span>yws0407128</span></p>
+            <p>擅长领域：<span>人寿险</span>,<span>重疾险</span>,<span>养老险</span></p>
+            <img src="img/er.jpg" alt="">
+            <p>扫一扫随时沟通</p>
+        </div>
+        </div>
+        <div class="box_right"></div>
+        </div>
+    </div>
+    <div id="what">
+         <h2>问呗</h2>
+        <p>Ask chanting</p>
+    </div>
+    <div id="news">
+        <h2>最新资讯</h2>
+        <p>Latest information</p>
+        <ul>
+            <li>
+                
+            </li>
+        </ul>
+    </div>
+    <!--合作客户-->
+    <div id="Customer">
+        <h2>合作客户</h2>
+        <p>Cooperative customer</p>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                   <ul>
+                       <li class="aui-col-5"><a href=""> <img src="" alt=""> </a></li>
+                       <li class="aui-col-5"><a href=""> <img src="" alt=""> </a></li>
+                       <li class="aui-col-5"><a href=""> <img src="" alt=""> </a></li>
+                       <li class="aui-col-5"><a href=""> <img src="" alt=""> </a></li>
+                       <li class="aui-col-5"><a href=""> <img src="" alt=""> </a></li>
+                       <li class="aui-col-5"><a href=""> <img src="" alt=""> </a></li>
+                   </ul>
+               </div>
+               <div class="swiper-slide"></div>
+               <div class="swiper-slide"></div>
+          </div>
+               <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!--友情链接-->
+    <div id="url">
+        <h2>友情链接</h2>
+        <p>
+            <a href="">保险人才网</a>
+            <a href="">惠州社保网</a>
+            <a href="">常安保险网</a>
+            <a href="">直销平台</a>
+            <a href="">保险门户</a>
+            <a href="">保险代理人资格证书查询</a>
+            <a href="">金十数据</a>
+            <a href="">保险代理公司排名</a>
+            <a href="">中衡保险公估</a>
+            <a href="">保险网</a>
+            <a href="">保险网站</a>
+            <a href="">保险代理人考试</a>
+            <a href="">保险大全</a>
+            <a href="">互联网保险平台</a>
+            <a href="">汇财吧</a>
+            <a href="">P2P网贷论坛</a>
+            <a href="">保险柜</a>
+            <span>(欢迎权重>=2的网站与我们友情链接)</span>
+            
+        </p>
+    </div>
+    <!--公司概述-->
+    <div id="summary">
+        <div>
+           <div>
+                <img src="" alt="">
+           </div>
+            <div>
+                <div class="aui-col-xs3">
+                    <p><span>2014</span>年</p>
+                    <p>公司创立</p>
+                </div>
+                 <div class="aui-col-xs3">
+                    <p><span>700</span>万</p>
+                    <p>保险代理人</p>
+                </div>
+                <div class="aui-col-xs3">
+                    <p><span>320</span>个</p>
+                    <p>信保网点城市</p>
+                </div>
+                 <div class="aui-col-xs3">
+                    <p><span>600</span>平方米</p>
+                    <p>公司占地面积</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <footer>
+       <div>
+           
+       
+        <div>
+            <img src="img/logo-footer.png" alt="">
+            <p>信保网是中国知名的保险保障服务平台，信保网隶属厦门信则通信息科技有限公司</p>
+            <a href="">Read more <i class="iconfont "></i></a>
+        </div>
+        <div>
+            <h3>信保网</h3>
+            <a href="">保险公司</a>
+            <a href="">保险产品</a>
+            <a href="">保险顾问</a>
+            <a href="">签单分享</a>
+            <a href="">我要合作</a>
+        </div>
+        <div>
+            <h3>&nbsp;</h3>
+            <a href="">FAQ</a>
+            <a href="">最新资讯</a>
+            <a href="">关于品台</a>
+            <a href="">代理人中心</a>
+        </div>
+        <div>
+            <h3>联系我们</h3>
+            <a href=""> 公司名称：<span>厦门信泽通信息科技有限公司</span></a>
+            <a href="">地址：<span>福建省厦门市湖里区蔡塘南路2号403</span></a>
+            <a href="">联系电话：<span>0592-5914297</span></a>
+            <a href="">邮箱：<span>layal@xinbao315.com</span></a>
+        </div>
+        <div>
+            <h3>分享</h3>
+            <div>
+                <i class="iconfont "></i>
+                <i class="iconfont "></i>
+                <i class="iconfont "></i>
+                <i class="iconfont "></i>
+            </div>
+        </div>
+        <div>
+            <img src="img/er.jpg" alt="">
+            <p>微信公众号二维码</p>
+        </div>
+        </div>
+        <div id="copyright">
+            COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司     沪ICP备17034135号
+        </div>
+    </footer>
+    <script src="script/jquery.js"></script>
+    <script src="script/swiper.js"></script>
+    <script>
+    
+        var mySwiper = new Swiper(".swiper-container", {
+            pagination : '.swiper-pagination',
+        });
+
+        
+    </script>
+</body>
+</html>

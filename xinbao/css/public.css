@@ -3,6 +3,12 @@
      padding: 0;
     box-sizing: border-box;
  }
+@font-face {
+    font-family: 'Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../iconfont/robotoregular-webfont.woff2') format('woff2'), url('../iconfont/robotoregular-webfont.woff') format('woff');
+}
 body,html{
     font-family: '微软雅黑'
 }
@@ -341,7 +347,14 @@ pre {
 }
 
 .aui-ellipsis-1 {
-	white-space: nowrap
+	white-space: nowrap;
+    display: -webkit-box;
+	white-space: normal!important;
+	word-wrap: break-word;
+	-webkit-line-clamp: 1;
+	-moz-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical
 }
 
 .aui-ellipsis-1,.aui-ellipsis-2 {
@@ -404,11 +417,13 @@ pre {
     
 }
 .tr-t{
-    border-bottom: 5x solid #838383;
-    border-top: 5x solid transparent;
-    border-left: 5x solid transparent;
+    border-bottom: 5px solid #838383;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     width: 0;height: 0;
     position: absolute;
+    
+   
     
 }

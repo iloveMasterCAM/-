@@ -1,0 +1,49 @@
+
+#section{
+    padding: 20px 15%;
+    margin-top:172px;
+}
+#section .com .col-md-5 img{
+    width:100%;
+    height:auto;
+}
+#section .com .col-md-7 p:nth-of-type(1){
+    font-size:16px;
+    color:#434343;
+}
+#section .com .col-md-7 p:nth-of-type(2){
+    font-size:12px;
+}
+#section .classify{
+    width:85%;
+    overflow: hidden;
+  
+}
+#section .classify hr{
+   
+    margin: 25px 0;
+     margin-left:15px;
+}
+#section .classify .col-md-10 span{
+    background-color:#eeeeee;
+    padding:2px 15px;
+    float:left;
+    margin-left:10px;
+    margin-bottom:15px;
+    color:#8f8f94;
+}
+#section .content{
+    font-size:13px;
+    line-height: 30px;
+    margin-top:20px;
+    color: #666666;
+}
+#section .back{
+    border-top:2px solid #f1f1f1;
+    width:90%;
+    margin-top:50px;
+}
+#section .back p{
+    text-align: right;
+    line-height: 80px;
+}

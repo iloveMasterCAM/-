@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>保险产品详情</title>
+	
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+<!--	<link rel="stylesheet" type="text/css" href="css/list.css">-->
+<!--	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">-->
+ <style>
+    
+     #main{
+         width: 60%;
+         min-width: 1024px;
+         margin: 140px auto 100px;
+     }
+   #sort {
+        display: inline-block;
+        overflow: hidden;
+        margin:30px 0;
+    }
+    #sort span{
+        margin-right: 45px;
+        line-height: 45px;
+        font-size: 20px;
+        color: #838383;
+        cursor: pointer;
+        position: relative;
+    }
+    #sort span:before{
+        content: '';
+        display: block;
+        height: 60%;
+        width: 1px;
+        background: #e5e5e5;
+        position: absolute;
+        left: -27px;
+        top: 20%;
+    }
+    #sort span.active{
+        color: #e7141a
+    }
+    
+     #wrap .con{
+         padding: 15px 20px; 
+         margin-bottom: 30px;
+     }
+
+
+     #wrap .con>div{
+         display: table-cell;
+         vertical-align: middle;
+     }
+     #wrap .con img{
+         width: 300px;
+     }
+      #wrap .con .txt{
+         padding-left: 40px;
+         padding-right: 50px;
+         position: relative;
+          vertical-align:top;
+     }
+     #wrap .con .txt:before{
+         content: '';
+        display: block;
+        height: 80%;
+        width: 1px;
+        background: #e5e5e5;
+        position: absolute;
+        right: 0px;
+        top: 10%;
+     }
+     #wrap .test{
+         width: 466px;
+         overflow: hidden;
+        
+     }
+     #wrap .test_box{
+         margin-bottom: 5px;
+          line-height: 30px;
+     }
+     #wrap .con h1{
+         font-size: 24px;
+         font-weight: 500;
+         margin-bottom: 15px;
+         color: #d7000f;
+     }
+     #wrap .con b{
+         color: #434343;
+         font-size: 16px;
+     }
+     #wrap .test_box span{
+         font-size: 14px;
+         color: #434343;
+     }
+     
+   
+     #wrap .MORE{
+         padding-left: 50px;
+     }
+     #wrap .MORE img{
+         width: 130px;
+     }
+     #wrap .MORE p{
+         font-size: 20px;
+         color: #838383;
+         margin-bottom: 15px;
+     }
+     #wrap .MORE .img{
+        border: 1px solid #eee         
+     }
+     #wrap .list .key{
+         width: 100px;
+         display: inline-block;
+         line-height: 35px;
+     }
+     #wrap .list .tl{
+         border-bottom: 1px solid #eee;
+         line-height: 45px;
+         color: #434343;
+         font-size: 18px;
+         margin-bottom: 15px;
+         position: relative;
+         padding-left: 15px;
+     }
+     #wrap .list .tl:before{
+          content: '';
+        display: block;
+        height: 40%;
+        width: 3px;
+        background: #d7000f;
+        position: absolute;
+        left: 0px;
+        top: 30%;
+     }
+     #wrap .list{
+         border-bottom: 1px solid #eee;
+         margin-bottom: 20px;
+         padding-bottom: 20px;
+     }
+     #wrap .list span{
+         color: #434343;
+         font-size: 14px;
+     }
+     #wrap .list .tabel{
+         width: 870px;
+         background: #fafafa;
+     }
+     #wrap .list .tabel .clear{
+         height: 65px;
+        line-height: 65px;
+         border-bottom: 1px solid #e5e5e5;
+     }
+     #wrap .list .tabel .test{
+         line-height: 25px;
+         overflow: hidden;
+         height: 55px;
+         padding: 7px 0;
+         padding-left: 20px;
+     }
+     #wrap .list .tabel .aui-col-xs-2{
+          border-right: 1px solid #e5e5e5;
+     }
+     #wrap .list .red{
+         line-height: 50px;
+         color: #d7000f
+     }
+     
+     #wrap .list .tabel_box>div{
+         display: table-cell;
+         vertical-align: middle;
+     }
+     #wrap .list .qa{
+         padding: 30px;
+         background: #f7f7f7;
+         position: relative;
+         margin-left: 30px;
+         margin-top: 30px;
+     }
+     #wrap .list .qa_txt{
+         border-bottom: 1px solid #e5e5e5;
+         padding-bottom: 15px;
+         margin-bottom: 30px;
+     }
+     #wrap .list .qa_txt p{
+         line-height: 35px;
+         color: #434343;
+         font-size: 18px;
+         font-weight: 500;
+         padding-right: 20px;
+     }
+     #wrap .list .txt{
+         
+         color: #636363;
+         padding-left: 30px;
+     }
+     #wrap .list .txt p{
+         line-height: 30px;
+     }
+     #wrap .list .redi i{
+         font-size: 2rem;
+         color: #d7000f
+     }
+     #wrap .list .redi{
+         color: #d7000f;
+         font-weight: 700;
+         line-height: 36px;
+         font-size: 18px;
+     }
+     #wrap .list .tr-l_div{
+            width: 50px;height: 50px;
+            background: #fbfbfb;
+            position: absolute;
+            top: 30%;
+            left: -25px;;
+            z-index: -3;
+           transform: rotateZ(45deg)
+        }
+     #wrap .list.bor{
+         border: none;
+     }
+     #wrap .list
+     #wrap .list
+     #wrap .list
+     #wrap .list
+     #wrap .list
+     #wrap .list
+     #wrap .list
+     #wrap .list
+     #wrap .list
+     
+     
+    </style>
+</head>
+<body>
+	<!--头部-->
+      <div id="header_box">
+    <div id="header">
+       <div class="clear wrap">
+        <div class="address aui-pull-left">
+            <p><i class="iconfont icon-mp-location"></i> <span>厦门</span> <span class="qie">【切换】</span></p>
+            <div>
+                <a href="">北京</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+            </div>
+        </div>
+        <div class="aui-pull-right clear ri">
+            <a class="aui-pull-left" href=""><i class="iconfont icon-vip"></i> <span>升级VIP</span></a>
+            <div class="aui-pull-left clear login aui-hide">
+                <a class="aui-pull-left" href=""><span>登录</span></a>
+                <a class="aui-pull-left bor" href=""><span>注册</span></a>
+            </div>
+            <div class=" aui-pull-left clear ">
+               <div class="aui-pull-left username" href=""><span>用户名</span> <i class="tr-t"></i>
+                      <p class="set">
+                         <a href="set.html">设置</a>
+                       <a href="">退出</a>
+                      </p>
+               </div>
+                <a class="aui-pull-left msg " href=""><i class="iconfont icon-xinxi"></i><span>消息</span></a>
+            </div>
+            <a class="aui-pull-left" href=""><i class="iconfont icon-yijianfankui"></i> <span>意见反馈</span></a>
+            <a class="aui-pull-left" href=""><i class="iconfont icon-dianhua"></i> <span>咨询热线：0592-5914297</span></a>
+           
+        </div>
+          </div>
+    </div>
+    <!--导航-->
+    <nav id="nav" class="aui-col-xs-12">
+       <div class="clear wrap">
+        <a href="index.html" class="logo aui-pull-left">
+            <img src="img/logo.png" alt=""> <p> 选保无忧,就上信保网</p>
+        </a>
+        
+         <ul class="clear aui-pull-right">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="comlist.html">保险公司</a></li>
+            <li class="nav_product"><a href="list.html">保险产品 <i class="iconfont icon-xiangshang"></i></a>
+                <ul>
+                    <li class="aui-text-left">
+                        <div class="aui-col-xs-4">
+                            <h3>按险种进行分类</h3>
+                            <p>
+                               <a href="">意外险</a> 
+                               <a href="">少儿险</a> 
+                               <a href="">养老险</a> 
+                               <a href="">重疾险</a> 
+                               <a href="">医疗险</a> 
+                               <a href="">人寿险</a> 
+                            </p>
+                        </div>
+                        <div class="aui-col-xs-4 bor">
+                            <h3>按人群进行分类</h3>
+                            <p>
+                                <a href="">青年</a>
+                                <a href="">老年</a>
+                                <a href="">女性</a>
+                                <a href="">少儿</a>
+                                <a href="">个人</a>
+                                <a href="">团体</a>
+                            </p>
+                        </div>
+                        <div class="aui-col-xs-4">
+                            <h3>按保险公司进行分类</h3>
+                            <p>
+                                <a href="">中国平安</a>
+                                <a href="">中国人寿</a>
+                                <a href="">太平洋保险</a>
+                                <a href="">华安保险</a>
+                                <a href="">泰康人寿</a>
+                                <a href="">富德生命人寿</a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="new"><a href="consultent.html">保险顾问 <i class="iconfont icon-xiangshang"></i></a>
+                 <ul>
+                    <li>
+                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
+                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="conduct.html">FAQ</a></li>
+            <li class="new"><a href="news_list.html">最新资讯 <i class="iconfont icon-xiangshang"></i></a>
+                <ul>
+                    <li>
+                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
+                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
+                    </li>
+                </ul>
+            </li>
+            <form class="search">
+                <input type="text" placeholder="搜索关键字" required>
+                <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
+            </form>
+        </ul>
+         </div>
+    </nav>
+    </div>
+
+    <div id="main">
+
+        
+        <div id="wrap">
+            <div class="con">
+                <div>
+                    <img src="img/product1.png" alt="">
+                </div>
+                <div class="txt">
+                    <h1>太平成长无忧终身重大疾病保险</h1>
+                    <div class="clear test_box">
+                    <p class="aui-margin-r-15 aui-padded-r-15"><b><i class="iconfont icon-duihao"></i>投保年龄：</b> <span>0-60周岁</span></p>
+                    <p class="aui-margin-r-15 aui-padded-r-15"><b><i class="iconfont icon-duihao"></i>保修期限：</b> <span>终身</span></p>
+                    <p class="aui-margin-r-15 aui-padded-r-15"><b><i class="iconfont icon-duihao"></i>适合人群：</b> <span>个人</span></p>
+                    </div>
+                   
+                    <div class="clear test_box">
+                        <p class="aui-pull-left aui-ellipsis-3">具有“重疾全面覆盖，特定加倍给付、轻症及早干预、年金自由转化，具有
+“重疾全面覆盖，特定加倍给付、轻症及早干预特定加倍  </p>
+                    </div>
+                     
+                </div>
+                <div class="MORE">
+                    <p>¥ 按需求定制</p>
+                    <p class="aui-text-right img">
+                        <img src="img/er.png" alt="">
+                    </p>
+                </div>
+            </div>
+            
+            <p id="sort">
+               <span class="active">全部</span>
+               <span>按时间</span>
+               <span>按热度</span>
+            </p>
+            <div class="list">
+                <p class="tl">产品详情</p>
+                <div class="clear">
+                    <p class="aui-pull-left aui-col-xs-2">
+                        <span class="key">投保年龄：</span>
+                        <span>0-60周岁</span>
+                    </p>
+                    <p class="aui-pull-left aui-col-xs-2">
+                         <span class="key">保险期限：</span>
+                        <span>终身</span>
+                    </p>
+                    <p class="aui-pull-left aui-col-xs-2">
+                         <span class="key">适合人群：</span>
+                        <span>个人</span>
+                    </p>
+                </div>
+                <div class="clear aui-margin-t-15">
+                    <p class="aui-pull-left key">保障范围：</p>
+                    <div class="aui-pull-left tabel">
+                        <div class="clear">
+                            <div class="aui-col-xs-2 aui-text-center">保障项目</div>
+                            <div class="aui-col-xs-2 aui-text-center">保额</div>
+                            <div class="aui-col-xs-8 aui-text-center">说明</div>
+                        </div>
+                         <div class="clear">
+                            <div class="aui-col-xs-2 aui-text-center">身故保险金</div>
+                            <div class="aui-col-xs-2 aui-text-center">有</div>
+                            <div class="aui-col-xs-8 aui-text-left aui-ellipsis-2 test">观察期外确诊合同约定的重大疾病按合同约定基本保额给付保险金。
+观察期外确诊合同约定的重大疾病按合同约定基本保额给付保险金。</div>
+                        </div>
+                        <div class="clear">
+                            <div class="aui-col-xs-2 aui-text-center">身故保险金</div>
+                            <div class="aui-col-xs-2 aui-text-center">有</div>
+                            <div class="aui-col-xs-8 aui-text-left aui-ellipsis-2 test">观察期外确诊合同约定的重大疾病按合同约定基本保额给付保险金。</div>
+                        </div>
+                        <div class="clear">
+                            <div class="aui-col-xs-2 aui-text-center">身故保险金</div>
+                            <div class="aui-col-xs-2 aui-text-center">有</div>
+                            <div class="aui-col-xs-8 aui-text-left aui-ellipsis-2 test">观察期外确诊合同约定的重大疾病按合同约定基本保额给付保险</div>
+                        </div>
+                        <div class="clear">
+                            <div class="aui-col-xs-2 aui-text-center">身故保险金</div>
+                            <div class="aui-col-xs-2 aui-text-center">有</div>
+                            <div class="aui-col-xs-8 aui-text-left aui-ellipsis-2 test">观察期外确诊合同约定的重大疾病按合同约定基本保额给付保险金。</div>
+                        </div>
+                        <div class="clear">
+                            <div class="aui-col-xs-2 aui-text-center">身故保险金</div>
+                            <div class="aui-col-xs-2 aui-text-center">有</div>
+                            <div class="aui-col-xs-8 aui-text-left aui-ellipsis-2 test">观察期外确诊合同约定的重大疾病按合同约定基本保额给付保险金。</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="clear">
+                     <span class="key">责任免除：</span>
+                    <span>常青树重大疾病保险（2016）条款 </span>
+                </div>
+                 <div class="clear">
+                   <span class="key">详细条款：</span>
+                    <span>常青树重大疾病保险（2016）条款常，青树重大疾病保险（2016）条款，常青树重大疾病保险（2016）条款，常青树重大疾病
+保险（2016）条款  </span>
+                </div>
+            </div>
+            <div class="list">
+                <p class="tl">产品详情</p>
+
+                <div class="clear">
+                    <div class="aui-pull-left tabel">
+                        <img src="img/conductdetail.png" alt="">
+                    </div>
+                </div>
+                <p class="aui-text-center red">展开全部 <i class="iconfont icon-down-trangle"></i></p>
+                
+            </div>
+            <div class="list bor">
+                <p class="tl">产品问答</p>
+              <div class="qa">
+                  <div class="clear qa_txt">
+                      <p class="aui-pull-left"><img src="img/conduct/answer.png" alt=""></p>
+                      <p class="aui-pull-left">
+                          友邦保险理赔怎么样？理赔速度快不快？
+                      </p>
+                  </div>
+                  <div class="tabel_box">
+                      <div>
+                          <img src="img/conductdetail_head.png" alt="">
+                      </div>
+                      <div class="txt">
+                          <p class="red">游客回复:</p>
+                          <p>你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能让客户的理赔款36秒
+到账再次刷新自身记录...</p>
+                      </div>
+                  </div>
+                  <p class="aui-text-right redi"><i class="iconfont icon-xiaoxi"></i>+10</p>
+                  <p class="tr-l_div"></p>
+              </div>
+                <div class="qa">
+                  <div class="clear qa_txt">
+                      <p class="aui-pull-left"><img src="img/conduct/answer.png" alt=""></p>
+                      <p class="aui-pull-left">
+                          友邦保险理赔怎么样？理赔速度快不快？
+                      </p>
+                  </div>
+                  <div class="tabel_box">
+                      <div>
+                          <img src="img/conductdetail_head.png" alt="">
+                      </div>
+                      <div class="txt">
+                          <p class="red">游客回复:</p>
+                          <p>你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能让客户的理赔款36秒
+到账再次刷新自身记录...</p>
+                      </div>
+                  </div>
+                  <p class="aui-text-right redi"><i class="iconfont icon-xiaoxi"></i>+10</p>
+                  <p class="tr-l_div"></p>
+              </div>
+              <div class="qa">
+                  <div class="clear qa_txt">
+                      <p class="aui-pull-left"><img src="img/conduct/answer.png" alt=""></p>
+                      <p class="aui-pull-left">
+                          友邦保险理赔怎么样？理赔速度快不快？
+                      </p>
+                  </div>
+                  <div class="tabel_box">
+                      <div>
+                          <img src="img/conductdetail_head.png" alt="">
+                      </div>
+                      <div class="txt">
+                          <p class="red">游客回复:</p>
+                          <p>你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能让客户的理赔款36秒
+到账再次刷新自身记录...</p>
+                      </div>
+                  </div>
+                  <p class="aui-text-right redi"><i class="iconfont icon-xiaoxi"></i>+10</p>
+                  <p class="tr-l_div"></p>
+              </div>
+              <div class="qa">
+                  <div class="clear qa_txt">
+                      <p class="aui-pull-left"><img src="img/conduct/answer.png" alt=""></p>
+                      <p class="aui-pull-left">
+                          友邦保险理赔怎么样？理赔速度快不快？
+                      </p>
+                  </div>
+                  <div class="tabel_box">
+                      <div>
+                          <img src="img/conductdetail_head.png" alt="">
+                      </div>
+                      <div class="txt">
+                          <p class="red">游客回复:</p>
+                          <p>你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能让客户的理赔款36秒
+到账再次刷新自身记录...</p>
+                      </div>
+                  </div>
+                  <p class="aui-text-right redi"><i class="iconfont icon-xiaoxi"></i>+10</p>
+                  <p class="tr-l_div"></p>
+              </div>
+            </div>
+        </div>
+        
+    </div>
+
+     <!--底部-->
+    <footer id="footer">
+       <div class="wrap clear">
+        <div class="mover">
+            <img src="img/logo-footer.png" alt="">
+            <p class="name">信保网是中国知名的保险保障服务平台，信保网隶属厦门信则通信息科技有限公司</p>
+            <a href="" class="more">Read more <i class="iconfont icon-xiangyou-page"></i></a>
+        </div>
+        <div class="FAQ mover">
+            <h3>信保网</h3>
+            <a href="">保险公司</a>
+            <a href="">保险产品</a>
+            <a href="">保险顾问</a>
+            <a href="">签单分享</a>
+            <a href="">我要合作</a>
+        </div>
+        <div class="mover">
+            <h3>&nbsp;</h3>
+            <a href="">FAQ</a>
+            <a href="">最新资讯</a>
+            <a href="">关于品台</a>
+            <a href="">代理人中心</a>
+        </div>
+        <div class="mover">
+            <h3>联系我们</h3>
+            <a href=""> 公司名称：<span>厦门信泽通信息科技有限公司</span></a>
+            <a href="">地址：<span>福建省厦门市湖里区蔡塘南路2号403</span></a>
+            <a href="">联系电话：<span>0592-5914297</span></a>
+            <a href="">邮箱：<span>layal@xinbao315.com</span></a>
+        </div>
+        <div>
+            <h3>分享</h3>
+            <div class="aui-margin-t-15 share">
+                <i class="iconfont icon-qq1"></i>
+                <i class="iconfont icon-weixin"></i>
+                <i class="iconfont icon-lianshu"></i>
+                <i class="iconfont icon-twitter"></i>
+            </div>
+        </div>
+        <div>
+            <img src="img/er.jpg" alt="">
+            <p class="aui-margin-t-15">微信公众号二维码</p>
+        </div>
+        </div>
+        <div id="copyright">
+            COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司     沪ICP备17034135号
+        </div>
+    </footer>
+    <script src="script/jquery.js"></script>
+    
+    <script>
+    
+        $(function(){
+            $("#sort span").on('click',function(){
+                 $("#sort .active").removeClass('active')
+                $(this).addClass('active')
+            })
+            $(".zan").on('click',function(){
+                $(this).addClass('active')
+            })
+        })
+        
+        
+    </script>
+</body>
+</html>

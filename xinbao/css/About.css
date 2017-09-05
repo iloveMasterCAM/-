@@ -1,0 +1,95 @@
+ #main{
+             width: 50%;
+             min-width: 1024px;
+             margin: 120px auto 170px;
+         }
+         #banner .img{
+             background: url(../img/new.png);
+             background-position: center center;
+         }
+         .txt h1{
+             color: #434343;
+             font-weight: 500;
+             font-size: 24px;
+             margin: 30px 0;
+         }
+         
+         #main .t{
+             line-height: 28px;
+             color: #838383;
+             font-size: 13px;
+         }
+         #main .t span{
+             font-weight: 600;
+         }
+         #main .txt{
+             padding-bottom: 40px;
+             border-bottom: 1px solid #f8f8f8;
+         }
+         #main .tl{
+             color: #434343;
+             font-size: 17px;
+             margin-top: 30px;
+             font-weight: 500;
+             margin-bottom: 5px;
+         }
+         #banneer_{
+             height: 500px;
+             margin-top: 40px;
+             position: relative;
+         }
+         #banneer_ div{
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             background-position: center center;
+             display: none;
+         }
+         #banneer_ div.active{
+             display:block;
+         }
+         .b_bg1{
+             background: url(../img/about.png) no-repeat;
+             background-size: cover;
+         }
+         .b_bg2{
+             background: url(../img/join.png) no-repeat;
+             background-size: cover;
+         }
+         .b_bg3{
+             background: url(../img/new-data1.png) no-repeat;
+             background-size: cover;
+         }
+          #banneer_ ol{
+            display: block;
+            position: absolute;
+            left: 10%;
+            width: 80%;
+            bottom: 15%;
+          
+        }
+        #banneer_ ol li{
+            width: 40px;
+            height: 40px;
+            line-height: 36px;
+            text-align: center;
+           border-top: 2px solid #fff;
+           border-right: 2px solid #fff;
+           border-bottom: 2px solid #fff;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            z-index: 5;
+            cursor: pointer;
+            
+        }
+        #banneer_ ol li.active{
+            border-top: 2px solid #d7000f;
+           border-right: 2px solid #d7000f;
+           border-bottom: 2px solid #d7000f;
+            color: #d7000f
+        }
+        #banneer_ ol {
+            color: #fff;
+            font-size: 16px;
+        }

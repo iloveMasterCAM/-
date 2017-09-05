@@ -1,0 +1,52 @@
+ #main{
+             width: 50%;
+             min-width: 1024px;
+             margin: 120px auto 170px;
+         }
+         #banner .img{
+             background: url(../img/Contaact.png);
+             background-position: center center;
+         }
+         #main .ul p{
+             line-height: 30px;
+             font-size: 16px;
+             margin-bottom: 5px;
+         } 
+         #main .ul{
+             margin: 0 -2.5%;
+         }
+         #main .ul li{
+             padding: 40px 35px 0;
+             height: 250px;;
+             cursor: pointer;
+             width: 20%;
+             float: left;
+             margin: 0 2.5%;
+              transition: all .6s;
+    -webkit-transition: all .6s;
+         }
+         #main .ul li:hover{
+             box-shadow: 0px 0 10px #888;
+              -webkit-transform:  scale(1.05);
+    -moz-transform:  scale(1.05);
+    transform: scale(1.05);
+            z-index: 3;
+         }
+         #main .ul i{
+             font-size: 2rem;
+             
+         }
+         #main .ul img{
+             width: 100%;
+         }
+#main .ul li:hover i{
+    color: #d7000f
+}
+#main .ul li:hover p{
+    color: #d7000f
+}
+#container{
+    width: 100%;
+    margin-top: 50px;
+    height: 600px;
+}

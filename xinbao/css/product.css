@@ -1,0 +1,180 @@
+#banner{
+             height: 450px;
+         }
+         #banner .bg_box{
+             background: url(../img/bg.png);
+             background-repeat: repeat;
+         }
+        #banner .img{
+             background: url(../img/adviser.png) no-repeat;
+            background-position: center -350px
+         }
+         #banner div{
+             height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+         #banner .txt{
+             z-index: 3;
+             
+         }
+         #banner .txt img{
+             width: 200px;
+             height: 200px;
+             border-radius: 50%;
+             
+             border: 5px solid #e7141a;
+         }
+         #banner .txt p{
+             color: #fff;
+             line-height: 30px;
+             font-size: 18px;
+             position: relative;
+         }
+         #banner .txt .firm{
+             font-size: 16px;
+         }
+         #banner .txt .name{
+             font-size: 22px;
+             font-weight: 500;
+         }
+         #banner .txt span,.an span{
+             position: absolute;
+             top: 17px;
+             right: 7px;
+             display: block;
+             width: 30px;
+             height: 30px;
+             background: url(../img/an.png) no-repeat;
+             background-size: cover;
+             z-index: 6;
+         }
+         #banner .txt .img{
+               width: 200px;
+             height: 200px;
+             margin: 80px auto 20px;
+            background: transparent;
+         }
+       
+         #nav_ad{
+             background: #eeeeee;
+             line-height: 50px;
+         }
+         #nav_ad ul{
+             width: 60%;
+             min-width: 1024px;
+             margin: 0 auto;
+         }
+         #nav_ad li{
+             width: 16.666666%;
+             position: relative;
+         }
+         #nav_ad li.active a{
+             color: #e84c56
+         }
+         #nav_ad li.active:before{
+             content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: #e84c56;
+            position: absolute;
+            right: 0px;
+            bottom:0;
+         }
+          #nav_ad li:before{
+             content: '';
+            display: none;
+            height: 2px;
+            width: 100%;
+            background: #e84c56;
+            position: absolute;
+            right: 0px;
+            bottom:0;
+         }
+         #nav_ad li:hover:before{
+               display: block;
+         }
+         #nav_ad li:hover a{
+             color: #e84c56
+         }
+        
+         #main{
+             width: 60%;
+             min-width: 1024px;
+             margin: 0 auto;
+         }
+         .product{
+             width: 90%;
+              margin: 0 auto;
+         }
+         .photo{
+             margin:30px 0;
+             padding-top: 20px;
+             border-top: 1px solid #eee;
+             line-height: 60px;
+           
+             font-size: 24px;
+             font-weight: 500;
+             color: #434343;
+         }
+         .product .box a{
+             width: 30%;
+             float: left;
+              padding: 20px 20px 30px 20px;
+             margin: 20px 1.6%;
+              transition: all .6s;
+    -webkit-transition: all .6s;
+         }
+   
+        .product .box a:hover{
+              
+             box-shadow: 0px 0 10px #888;
+              -webkit-transform:  scale(1.05);
+    -moz-transform:  scale(1.05);
+    transform: scale(1.05);
+            z-index: 3;
+         }
+         .product>div{
+             
+             margin: 0 -1.5%;
+         }
+         .product h1{
+             font-size: 20px;
+             color: #434343;
+             font-weight: 500;
+             padding: 15px 0;;
+         }
+         .product .age{
+             font-size: 13px;
+             color: #909090;
+             margin-bottom: 15px;
+         }
+         .product .money{
+             font-size: 20px;
+             font-weight: 500;
+             color: #d7000f;
+         }
+         .product img{
+            width: 100%; 
+         }
+          #paging {
+             margin: 50px 0;
+         }
+            #paging li{
+             width: 40px;
+             height: 40px;
+             display: inline-block;
+             border: 1px solid #e5e5e5;
+             background: #fff;
+             line-height: 35px;
+             color: #c4c4c4;
+             cursor: pointer;
+         } 
+         
+         #paging .active{
+          background: #e7141a;
+             color: #fff;
+         }

@@ -1,0 +1,224 @@
+
+         #banner{
+             margin-top: 122px;
+             height: 600px;
+             position: relative;
+         }
+         #banner .swiper-slide{
+              height: 600px;
+         }
+         #banner a{
+             height: 100%;
+         }
+         #banner .banner1{
+             background: url(../img/login.png) no-repeat;
+             background-size: cover;
+         }
+         #banner .banner2{
+             background: url(../img/new.png) no-repeat;
+             background-size: cover;
+         }
+         #banner .banner3{
+             background: url(../img/Contaact.png) no-repeat;
+             background-size: cover;
+         }
+           #url{
+            margin: 80px 0 100px 0;
+        }
+        #url .wrap{
+            border-top: 1px solid #e5e5e5;
+            
+        }
+        #url h2{
+            font-weight: 500;
+            color: #000000;
+            font-size: 20px;
+            margin: 50px 0 30px 0;
+        }
+        #url a{
+            display: inline;
+            margin: 0 15px;
+            line-height: 30px;
+            color: #b5b5b5;
+        }
+        #url a:first-child{
+            margin-left: 0;
+        }
+         #login{
+             position: absolute;
+             top: 100px;
+             z-index: 3;
+             right: 15%;
+            
+             padding: 20px;
+             padding-bottom: 40px;
+             background: url(../img/login_bg.png);
+             background-repeat: repeat;
+                 
+         }
+         #login input[type='text']{
+             width: 400px;
+             line-height: 50px;
+             padding-left: 10px;
+         }
+         #login div a{
+             display: inline;
+             font-size: 14px;
+         }
+         #login .login a.active{
+             color: #d7000f
+         }
+         #login .box{
+             margin-bottom: 20px;
+         }
+         #login .key{
+             border-bottom: 1px solid #fff;
+             position: relative;
+             margin-bottom: 30px;
+         }
+         #login .key p{
+             color: #434343;
+             line-height: 45px;
+             font-size: 20px;
+             font-weight: 500;
+             cursor: pointer;
+         }
+         #login .key p.active{
+             color: #d7000f
+         }
+         #login .key span{
+            display: block;
+            height: 2px;
+            width: 50%;
+             
+            background: #d7000f;
+            position: absolute;
+            right: 0px;
+            bottom:-1px;
+             transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+              
+         }
+         #login input[type='submit']{
+             background: #d7000f;
+             line-height: 50px;
+             color: #fff;
+             width: 100%;
+             font-size: 22px;
+             margin-top: 30px;
+             
+         }
+         #wx{
+              width: 400px;
+             display: none;
+             padding: 30px 0;
+         }
+         #Leaving {
+             background: #fff;
+             position: absolute;
+             top: 30%;
+             left: 50%;
+             width: 1150px;
+             padding: 70px 30px;
+             margin-left: -575px;
+             z-index: 12;
+         }
+         #Leaving i{
+             position: absolute;
+             top: 10px;
+             right: 10px;
+             cursor: pointer;
+             font-size: 2rem;
+             color: #c8c8c8;
+         }
+         #Leaving input[type='text']{
+             width: 80%;
+             border-bottom: 1px solid #eee
+         }
+         #Leaving input[type='submit']{
+             width: 200px;
+             background: #b5b5b5;
+             color: #fff;
+             text-align: center;
+             line-height: 50px;
+             font-size: 22px;
+             margin-top: 30px;
+         }
+         #Leaving .key{
+             width: 15%;
+             display: inline-block;
+             color: #838383;
+             font-size: 14px;
+         }
+         #Leaving .Leaving{
+             margin-top: 50px;
+         }
+         #Leaving .Leaving span{
+              width: 8%;
+             display: block;
+             float: left
+         }
+         #Leaving .Leaving textarea{
+             width: 92%;
+             display: block;
+             float: right;
+             height: 100px;
+              border-bottom: 1px solid #eee
+         }
+        #Leaving  .tl{
+             font-size: 24px;
+            font-weight: 500;
+            color: #434343;
+            padding-left: 15px;
+         }
+         #Leaving  .tl{
+             margin-bottom: 50px;
+             position: relative;
+         }
+         #Leaving .tl:before{
+              content: '';
+            display: block;
+            height: 60%;
+            width: 2px;
+            background: #57ab9b;
+            position: absolute;
+            left: 0px;
+            top: 20%;
+         }
+         .img_box>p{
+               font-size: 24px;
+            font-weight: 500;
+            color: #434343;
+          margin-bottom: 40px;
+             
+         }
+         #Leaving .img_box:before{
+             content: '';
+            display: block;
+            height: 90%;
+            width: 1px;
+/*            background: #eee;*/
+             border-left: 1px dashed #eee;
+            position: absolute;
+            left: 35px;
+            top: 10%;
+         }
+         #Leaving .img_box div{
+             margin-bottom: 20px;
+             padding-left: 35px;
+         }
+         #Leaving .img_box .img{
+             line-height: 105px;
+             margin: 0 25px;
+         }
+         #bg{
+             position: fixed;
+             left: 0;
+             top: 0;
+             right: 0;
+             bottom: 0;
+             background: #000;
+             opacity: 0.3;
+             z-index: 11;
+         }

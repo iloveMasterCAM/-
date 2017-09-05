@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>保险产品</title>
+	
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+<!--	<link rel="stylesheet" type="text/css" href="css/list.css">-->
+<!--	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">-->
+ <style>
+    
+     #main{
+         width: 60%;
+         min-width: 1024px;
+         margin: 140px auto 20px;
+     }
+   #sort {
+        display: inline-block;
+        overflow: hidden;
+       
+    }
+    #sort span{
+        margin-right: 45px;
+        line-height: 30px;
+        font-size: 20px;
+        color: #838383;
+        cursor: pointer;
+        position: relative;
+    }
+    #sort span:before{
+        content: '';
+        display: block;
+        height: 60%;
+        width: 1px;
+        background: #e5e5e5;
+        position: absolute;
+        left: -27px;
+        top: 20%;
+    }
+    #sort span.active{
+        color: #e7141a
+    }
+     #main .num{
+         line-height: 30px;
+         padding-bottom: 10px;
+         border-bottom: 1px solid #eeeeee;
+         margin-bottom: 20px;
+     }
+     #main .prod{
+         color: #666;
+         font-weight: 500;
+         font-size: 18px;
+         padding-left: 10px;
+         position: relative;
+     }
+     #main .prod:before{
+          content: '';
+        display: block;
+        height: 50%;
+        width: 3px;
+        background: #d7000f;
+        position: absolute;
+        left: 0px;
+        top: 25%;
+     }
+     #main .sum{
+         color: #bcbcbc;
+         font-size: 14px;
+         margin-left: 20px;
+     }
+     #main .num .search{
+         border: 1px solid #d7000f
+     }
+     #main .num .search span{
+         background: #d7000f;
+         color: #fff;
+         line-height: 30px;
+         display: inline-block;
+         padding: 0 10px;
+     }
+     #main .Label{
+         padding: 5px 0;
+     }
+     #main .Label span{
+         color: #666666;
+         font-size: 18px;
+         font-weight: 500;
+         margin-right: 40px;
+     }
+     #main .Label a{
+         display: inline-block;
+        padding: 5px 10px;
+         color: #9e9e9e;
+         font-size: 14px;
+         margin-right: 15px;
+         
+     }
+     #main .Label a.active{
+         color: #fff;
+         background: #d7000f
+     }
+     #main .Insurance{
+         margin: 10px -10px;
+         padding-bottom: 10px;
+     }
+     #main .Insurance a{
+          display: inline-block;
+        padding: 5px 10px;
+         color: #9e9e9e;
+         font-size: 14px;
+         margin-right: 15px;
+     }
+     #main .Insurance a.active{
+         color: #d7000f
+     }
+     #main .az{
+         background: #f8f8f8;
+         border-top: 2px solid #d7000f;
+         padding: 0 15px;
+         margin-top: 10px;
+         position: relative;
+     }
+     #main .az .tr-t{
+         top: -12px;
+         left: 132px;
+          border-bottom: 5px solid #d7000f;
+     }
+     #wrap{
+         width: 63%;
+         margin: 0 auto;
+         min-width: 1024px;
+     }
+     
+     
+       #star {
+         width: 100%;
+         border: 1px solid #eee;
+           padding-bottom: 30px;
+            position: relative;
+        }
+         #star ul{
+            position: relative;
+            left: 0;
+            transition: all .6s;
+    -webkit-transition: all .6s;
+        }
+        #star img{
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid #f6f6f6;
+        }
+         #star li.active img{
+            border: 5px solid #d7000f;
+        }
+        #star li.active span{
+            color: #d7000f
+        }
+         #star li{
+           width: 20%;
+            float: left;
+             position: relative;
+        }
+        #star ol{
+            position: absolute;
+            top: 45%;
+            z-index: 3;
+            background: #dcdcdc;
+            border-radius: 50%;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            height: 30px;
+        }
+        #star ol:hover{
+            background: #d7000f;
+        }
+        #star ol:hover i{
+            color: #fff;
+        }
+        #star ol i{
+            font-size: 14px;
+        }
+        #star ol.first{
+            left: 15px;
+        }
+        #star ol.last{
+            right: 15px;
+        }
+        #star ul li p{
+            color: #000000;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        #star ul li span{
+            color: #636363;
+            font-size: 16px;
+        }
+     #star .star_box{
+         width: 90%;
+         margin: 0 auto;
+         overflow: hidden;
+     }
+     #star .star_box b{
+         width: 30px;
+         height: 30px;
+         position: absolute;
+         top: 7px;
+         right: 26px;
+         
+     }
+     #star .star_box .R1{
+         background: url(img/an.png) no-repeat;
+         background-size: cover;
+     }
+     #star .star_box .R2{
+         background: url(img/an2.png) no-repeat;
+         background-size: cover;
+     }
+     #star .Recommend:before{
+          content: '';
+        display: block;
+        height: 40%;
+        width: 3px;
+        background: #d7000f;
+        position: absolute;
+        left: 15px;
+        top: 30%;
+     }
+     #star .Recommend{
+         position: relative;
+         padding: 0 15px;
+         line-height: 45px;
+         font-size: 18px;
+         color: #666666;
+         border-bottom: 1px solid #eee;
+         margin-bottom: 20px;
+     }
+     #star .Recommend span{
+         padding-left: 15px;
+     }
+     #star .huan{
+         font-size: 14px;
+     }
+     
+      #wrap .search{
+         border: 1px solid #d7000f
+     }
+     #wrap .search span{
+         background: #d7000f;
+         color: #fff;
+         line-height: 30px;
+         display: inline-block;
+         padding: 0 10px;
+         margin-right: 0;
+     }
+     #search{
+         margin: 50px 0;
+     }
+     #con .box{
+         background: #fff;
+         margin-bottom: 40px;
+         padding: 20px 0 20px 20px;
+          transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+     }
+     #con .box>div{
+         display: table-cell;
+         vertical-align: middle;
+     }
+     #con .box img{
+         width: 200px;
+         height: 200px;
+         border-radius: 50%;
+     }
+     #con .con_txt{
+         padding-left: 20px;
+     }
+     #con h1{
+         font-weight: 500;
+         font-size: 22px;
+         color: #434343;
+         
+     }
+     #con .con_txt p{
+         line-height: 35px;
+         color: #838383;
+         font-size: 16px;
+     }
+     #con .red{
+         color: #d7000f;
+     }
+     #con .con_txt sub{
+         display: inline-block;
+         width: 30px;
+         height: 30px;
+     }
+     
+     #con .con_txt .r1{
+          background: url(img/an.png) no-repeat;
+         background-size: cover;
+     }
+     #con .con_txt .r2{
+          background: url(img/an2.png) no-repeat;
+         background-size: cover;
+     }
+     #con .con_txt .r3{
+          background: url(img/an3.png) no-repeat;
+         background-size: cover;
+     }
+     #con .table{
+         background: #ededed;
+         color: #878787;
+         padding: 5px 10px;
+         margin-right: 10px;
+     }
+     #con .address{
+         color: #000;
+         position: relative;
+         padding-right: 20px;
+     }
+     #con .address:before{
+          content: '';
+        display: block;
+        height: 70%;
+        width: 1px;
+        background: #d7000f;
+        position: absolute;
+        right: 8px;
+        top: 15%;
+     }
+     #con .icon-weixin{
+         color: #000;
+     }
+     #con .icon-xiangyou2{
+         color: #dbdbdb;
+     }
+     #con .box:hover{
+          box-shadow: 0px 0 10px #888;
+            -webkit-transform:  scale(1.03);
+    -moz-transform:  scale(1.03);
+    transform: scale(1.03);
+            z-index: 3;
+     }
+     #con .box:hover .icon-xiangyou2{
+         color: #d7000f
+     }
+
+    </style>
+</head>
+<body>
+	<!--头部-->
+       <div id="header_box">
+    <div id="header">
+       <div class="clear wrap">
+        <div class="address aui-pull-left">
+            <p><i class="iconfont icon-mp-location"></i> <span>厦门</span> <span class="qie">【切换】</span></p>
+            <div>
+                <a href="">北京</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+                <a href="">南昌</a>
+            </div>
+        </div>
+        <div class="aui-pull-right clear ri">
+            <a class="aui-pull-left" href=""><i class="iconfont icon-vip"></i> <span>升级VIP</span></a>
+            <div class="aui-pull-left clear login aui-hide">
+                <a class="aui-pull-left" href=""><span>登录</span></a>
+                <a class="aui-pull-left bor" href=""><span>注册</span></a>
+            </div>
+            <div class=" aui-pull-left clear ">
+               <div class="aui-pull-left username" href=""><span>用户名</span> <i class="tr-t"></i>
+                      <p class="set">
+                         <a href="set.html">设置</a>
+                       <a href="">退出</a>
+                      </p>
+               </div>
+                <a class="aui-pull-left msg " href=""><i class="iconfont icon-xinxi"></i><span>消息</span></a>
+            </div>
+            <a class="aui-pull-left" href=""><i class="iconfont icon-yijianfankui"></i> <span>意见反馈</span></a>
+            <a class="aui-pull-left" href=""><i class="iconfont icon-dianhua"></i> <span>咨询热线：0592-5914297</span></a>
+           
+        </div>
+          </div>
+    </div>
+    <!--导航-->
+    <nav id="nav" class="aui-col-xs-12">
+       <div class="clear wrap">
+        <a href="index.html" class="logo aui-pull-left">
+            <img src="img/logo.png" alt=""> <p> 选保无忧,就上信保网</p>
+        </a>
+        
+         <ul class="clear aui-pull-right">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="comlist.html">保险公司</a></li>
+            <li class="nav_product"><a href="list.html">保险产品 <i class="iconfont icon-xiangshang"></i></a>
+                <ul>
+                    <li class="aui-text-left">
+                        <div class="aui-col-xs-4">
+                            <h3>按险种进行分类</h3>
+                            <p>
+                               <a href="">意外险</a> 
+                               <a href="">少儿险</a> 
+                               <a href="">养老险</a> 
+                               <a href="">重疾险</a> 
+                               <a href="">医疗险</a> 
+                               <a href="">人寿险</a> 
+                            </p>
+                        </div>
+                        <div class="aui-col-xs-4 bor">
+                            <h3>按人群进行分类</h3>
+                            <p>
+                                <a href="">青年</a>
+                                <a href="">老年</a>
+                                <a href="">女性</a>
+                                <a href="">少儿</a>
+                                <a href="">个人</a>
+                                <a href="">团体</a>
+                            </p>
+                        </div>
+                        <div class="aui-col-xs-4">
+                            <h3>按保险公司进行分类</h3>
+                            <p>
+                                <a href="">中国平安</a>
+                                <a href="">中国人寿</a>
+                                <a href="">太平洋保险</a>
+                                <a href="">华安保险</a>
+                                <a href="">泰康人寿</a>
+                                <a href="">富德生命人寿</a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="new"><a href="consultent.html">保险顾问 <i class="iconfont icon-xiangshang"></i></a>
+                 <ul>
+                    <li>
+                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
+                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="conduct.html">FAQ</a></li>
+            <li class="new"><a href="news_list.html">最新资讯 <i class="iconfont icon-xiangshang"></i></a>
+                <ul>
+                    <li>
+                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
+                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
+                    </li>
+                </ul>
+            </li>
+            <form class="search">
+                <input type="text" placeholder="搜索关键字" required>
+                <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
+            </form>
+        </ul>
+         </div>
+    </nav>
+    </div>
+
+    <div id="main">
+        <div class="map_box clear">
+            <p class="aui-pull-left">信保网 <i class="iconfont icon-xiangyou-page"></i></p>
+            <p class="aui-pull-left active">保险产品</p>
+        </div>
+        <div class="clear num">
+            <p class="aui-pull-left prod">保险产品</p>
+            <p class="aui-pull-left sum">共2142个产品供您选择</p>
+            <form class="aui-pull-right search_form"><input type="text" class="aui-padded-l-15" placeholder="中美国际"> <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span></form>
+        </div>
+        <div>
+            <div class="Label clear">
+                <span class="aui-pull-left">适合人群:</span>
+                <p class="aui-pull-left">
+                    <a href="" class="active">全部</a>
+                    <a href="">青年</a>
+                    <a href="" class="">中年</a>
+                    <a href="">老年</a>
+                    <a href="">少年</a>
+                    <a href="">幼儿</a>
+                </p>
+            </div>
+            <div class="Label clear">
+                <span class="aui-pull-left">保险险种:</span>
+                 <p class="aui-pull-left">
+                 <a href="" class="active">全部</a>
+                <a href="">理财险</a>
+                <a href="">人寿险</a>
+                <a href="">医疗险</a>
+                <a href="">重疾险</a>
+                <a href="">少儿险</a>
+                <a href="">意外险</a>
+                <a href="">养老险</a>
+                <a href="">家财险</a>
+                <a href="">车险</a>
+                </p>
+            </div>
+            <div class="Label clear">
+                <span class="aui-pull-left">保险公司:</span>
+                 <p class="aui-pull-left">
+                 <a href="" class="active">全部</a>
+                 <a href="">人寿保险</a>
+                 <a href="">财产保险</a>
+                 <a href="">保险代理公司</a>
+                </p>
+            </div>
+        </div>
+        <div class="az">
+           <p class=" Label">
+            <a href="" class="active">全部</a>
+            <a href="">A</a>
+            <a href="" class="">B</a>
+            <a href="">C</a>
+            <a href="">D</a>
+            <a href="">E</a>
+            <a href="">F</a>
+            <a href="">G</a>
+            <a href="">H</a>
+            <a href="">I</a>
+            <a href="">J</a>
+            <a href="">K</a>
+            <a href="">L</a>
+            <a href="">M</a>
+            <a href="">N</a>
+            <a href="">Q</a>
+            <a href="">R</a>
+            <a href="">S</a>
+            <a href="">T</a>
+            <a href="">X</a>
+            <a href="">Y</a>
+            <a href="">Z</a>
+            </p>
+            <div class="Insurance">
+                <a href="">安诚保险 </a>
+                <a href="">安联保险</a>
+                <a href="">安盛保险</a>
+                <a href="">北大方正人寿</a>
+                <a href="">百年人寿</a>
+                <a href="">长城人寿</a>
+                <a href="">长生人寿</a>
+                <a href="">东吴人寿</a>
+                <a href="">大童保险</a>
+                <a href="">德华安顾</a>
+                <a href="">都邦财险</a>
+                <a href="">大都会人寿</a>
+                <a href="">富德生命人寿</a>
+                <a href="">泛华保险</a>
+                <a href="">复星保德信</a>
+                <a href="">国华人寿</a>
+                <a href="">工银安盛人寿</a>
+                <a href="">光大永明</a>
+                <a href="">华康代理</a>
+                <a href="">华安保险</a>
+                <a href="">恒安人寿</a>
+                <a href="">汇丰人寿</a>
+                <a href="">华泰财险</a>
+                <a href="">合众人寿</a>
+                <a href="">华夏人寿</a>
+                <a href="">恒大人寿</a>
+                <a href="">华泰人寿</a>
+                <a href="">锦泰保险</a>
+                <a href="">君龙人寿</a>
+                <a href="" class="active">查看更多</a>
+            </div>
+            <i class="tr-t"></i>
+        </div>
+         </div>
+        <div id="wrap">
+            <div class="wrap" id="star">
+               <p class="Recommend"><span>顾问推荐</span> <span class="aui-pull-right huan"><i class="iconfont icon-huanyihuan"></i> 换一换 </span> </p>
+                <ol class="first"><i class="iconfont icon-xiangzuo-copy"></i></ol>
+                <div class="star_box">
+                    <ul class="clear aui-col-xs-12">
+                        <li class="aui-text-center">
+                            <div>
+                            <img class="" src="img/head.png"/>
+                            <b class="R1"></b>
+                            </div>
+                            <p>城市明星：你好</p>
+                            <span>福建 · 厦门</span>
+
+                        </li>
+                        <li class="aui-text-center">
+                            <div>
+                            <img src="img/head.png"/>
+                            <b class="R2"></b>
+                            </div>
+                            <p>城市明星：你好</p>
+                            <span>福建 · 福州</span>
+                             <input type="hidden" value="1231">
+                        </li>
+                        <li class=" aui-text-center">
+                            <div><img src="img/head.png"/><b class="R1"></b></div>
+                            <p>城市明星：信保</p>
+                            <span>福建 · 厦门</span>
+
+                        </li>
+                        <li class="aui-text-center">
+                            <div><img src="img/head.png"/><b class="R1"></b></div>
+                            <p>城市明星：你好</p>
+                            <span>福建 · 厦门</span>
+
+                        </li>
+                         <li class="aui-text-center">
+                            <div><img src="img/head.png"/><b class="R1"></b></div>
+                            <p>城市明星：你好</p>
+                            <span>福建 · 厦门</span>
+                             <input type="hidden" value="1231">
+                        </li>
+                         <li class="aui-text-center">
+                            <div><img src="img/head.png"/><b class="R1"></b></div>
+                            <p>城市明星：你好</p>
+                            <span>福建 · 厦门</span>
+
+                        </li>
+                         <li class="aui-text-center">
+                            <div><img src="img/head.png"/><b class="R1"></b></div>
+                            <p>城市明星：你好</p>
+                            <span>福建 · 厦门</span>
+
+                        </li>
+                    </ul>
+                </div>
+                <ol class="last"><i class="iconfont icon-xiangyou-page"></i></ol>
+            </div>
+            <div id="search">
+               <div id="sort">
+               <span class="active">全部</span>
+               <span>按时间</span>
+               <span>按热度</span>
+               
+            </div>
+                <form class="aui-pull-right search_form"><input type="text" class="aui-padded-l-15" placeholder="中美国际"> <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span></form>
+            </div>
+            <div id="con" class="clear">
+               
+                    <div class="aui-col-xs-6 box">
+                        <div>
+                            <img src="img/head.png" alt="">
+                        </div>
+                        <div class="con_txt">
+                            <h1><span>黄顾问</span> <sub class="r1"></sub> </h1>
+                            <p>中国平安</p>
+                            <p>
+                                <span class="address">苏州吴中区</span>
+                                <span class="aui-margin-l-10"><i class="iconfont icon-weixin"></i>hws12345</span>
+                                <span class="aui-margin-l-10"><i class="iconfont icon-dianhua-s"></i>888888888</span>
+                            </p>
+                            <p>解决问题：<span class="red">78</span>次</p>
+                            <p>擅长领域：<span class="table">社会保险</span> <span class="table">社会保险</span></p>
+                            <p class="aui-text-right"><i class="iconfont icon-xiangyou2"></i></p>
+                        </div>
+                    </div>
+                    <div class="aui-col-xs-6 box">
+                        <div>
+                            <img src="img/head.png" alt="">
+                        </div>
+                        <div class="con_txt">
+                            <h1><span>黄顾问</span> <sub class="r1"></sub> </h1>
+                            <p>中国平安</p>
+                            <p>
+                                <span class="address">苏州吴中区</span>
+                                <span class="aui-margin-l-10"><i class="iconfont icon-weixin"></i>hws12345</span>
+                                <span class="aui-margin-l-10"><i class="iconfont icon-dianhua-s"></i>888888888</span>
+                            </p>
+                            <p>解决问题：<span class="red">78</span>次</p>
+                            <p>擅长领域：<span class="table">社会保险</span> <span class="table">社会保险</span></p>
+                            <p class="aui-text-right"><i class="iconfont icon-xiangyou2"></i></p>
+                        </div>
+                    </div>
+         
+                <div class="aui-col-xs-6 box">
+                        <div>
+                            <img src="img/head.png" alt="">
+                        </div>
+                        <div class="con_txt">
+                            <h1><span>黄顾问</span> <sub class="r3"></sub> <sub class="r3"></sub> <sub class="r3"></sub></h1>
+                            <p>中国平安</p>
+                            <p>
+                                <span class="address">苏州吴中区</span>
+                                <span class="aui-margin-l-10"><i class="iconfont icon-weixin"></i>hws12345</span>
+                                <span class="aui-margin-l-10"><i class="iconfont icon-dianhua-s"></i>888888888</span>
+                            </p>
+                            <p>解决问题：<span class="red">78</span>次</p>
+                            <p>擅长领域：<span class="table">社会保险</span> <span class="table">社会保险</span></p>
+                            <p class="aui-text-right"><i class="iconfont icon-xiangyou2"></i></p>
+                        </div>
+                    </div>
+                    <div class="aui-col-xs-6 box">
+                        <div>
+                            <img src="img/head.png" alt="">
+                        </div>
+                        <div class="con_txt">
+                            <h1><span>黄顾问</span> <sub class="r1"></sub> </h1>
+                            <p>中国平安</p>
+                            <p>
+                                <span class="address">苏州吴中区</span>
+                                <span class="aui-margin-l-10"><i class="iconfont icon-weixin"></i>hws12345</span>
+                                <span class="aui-margin-l-10"><i class="iconfont icon-dianhua-s"></i>888888888</span>
+                            </p>
+                            <p>解决问题：<span class="red">78</span>次</p>
+                            <p>擅长领域：<span class="table">社会保险</span> <span class="table">社会保险</span></p>
+                            <p class="aui-text-right"><i class="iconfont icon-xiangyou2"></i></p>
+                        </div>
+                    </div>
+                
+            </div>
+            
+        </div>
+    <div id="paging">
+               <ul class="aui-text-center">
+                   <li class="active"><i class="iconfont icon-xiangzuo-copy"></i></li>
+                   <li>1</li>
+                   <li class="active">2</li>
+                   <li>3</li>
+                   <li>4</li>
+                   <li><i class="iconfont icon-xiangyou-page"></i></li>
+               </ul>
+           </div>
+     <!--底部-->
+   <footer id="footer">
+       <div class="wrap clear">
+        <div class="mover">
+            <img src="img/logo-footer.png" alt="">
+            <p class="name">信保网是中国知名的保险保障服务平台，信保网隶属厦门信则通信息科技有限公司</p>
+            <a href="" class="more">Read more <i class="iconfont icon-xiangyou-page"></i></a>
+        </div>
+        <div class="FAQ mover">
+            <h3>信保网</h3>
+            <a href="">保险公司</a>
+            <a href="">保险产品</a>
+            <a href="">保险顾问</a>
+            <a href="">签单分享</a>
+            <a href="">我要合作</a>
+        </div>
+        <div class="mover">
+            <h3>&nbsp;</h3>
+            <a href="">FAQ</a>
+            <a href="">最新资讯</a>
+            <a href="">关于品台</a>
+            <a href="">代理人中心</a>
+        </div>
+        <div class="mover">
+            <h3>联系我们</h3>
+            <p> 公司名称：<span>厦门信泽通信息科技有限公司</span> </p>
+            <p>地址：<span>福建省厦门市湖里区蔡塘南路2号403</span></p>
+            <p>联系电话：<span>0592-5914297</span></p>
+           <p>邮箱：<span>layal@xinbao315.com</span></p>
+        </div>
+        <div class="share clear">
+            <h3>分享</h3>
+            <div class="aui-margin-t-15 share">
+                <a class="qq " target='_blank' version="1.0"><i class="iconfont icon-qq1 "></i></a> 
+                 <a id="showWn" target='_blank' href="javascript:void(0)"><i class="iconfont icon-weixin "></i></a>
+                <a href="https://www.facebook.com/" target='_blank'><i class="iconfont icon-lianshu"></i></a>
+                <a href="https://twitter.com/" target='_blank'><i class="iconfont icon-twitter"></i></a>
+            </div>
+        </div>
+        <div>
+            <img src="img/er.jpg" alt="">
+            <p class="aui-margin-t-15">微信公众号二维码</p>
+        </div>
+        </div>
+        <div id="copyright">
+            COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司     沪ICP备17034135号
+        </div>
+    </footer>
+    <div id="weixin"></div>
+    <div id="weixin_bg"></div>
+     <script src="script/jquery.js"></script>
+    <script src="script/qzopensl.js"></script>
+     <script src="script/qrcode.js"></script>
+      <script src="script/public.js"></script>
+   
+    
+    <script>
+    
+        $(function(){
+            $("#sort span").on('click',function(){
+                 $("#sort .active").removeClass('active')
+                $(this).addClass('active')
+            })
+            $(".zan").on('click',function(){
+                $(this).addClass('active')
+            })
+            
+               var star_w = parseInt($("#star li").width())
+            $("#star ul").width($("#star ul li").length*star_w+'px')
+            $("#star li").width(star_w+'px')
+             $("#star li").on('click',function(){
+                 $("#star .active").removeClass('active')
+                 $(this).addClass('active')
+                
+             })
+        var on = true;
+        $("#star .first").on('click',function(){
+            romver(true)
+            
+        })
+         $("#star .last").on('click',function(){
+            romver(false)
+        })   
+       
+        function romver(index){
+            if(on){
+            if($("#star ul li").length <=5) return;
+            var n = $("#star ul li").length-5
+            var w = parseInt($("#star ul").width())
+        
+            var l = parseInt($("#star ul").css('left'))
+           
+            if(index){
+                if(l >= 0) return;
+                $("#star ul").css('left',l+star_w+'px')
+                
+            }else{
+             
+                if(Math.abs(parseInt($("#star ul").css('left')) )>= n*star_w) return;
+                 $("#star ul").css('left',l-star_w+'px')
+            }
+            on = false;
+            setTimeout(function(){
+                on = true;
+            },600)
+            }
+            
+            
+        }
+    
+         
+          })   
+        
+        
+        
+        
+    </script>
+</body>
+</html>

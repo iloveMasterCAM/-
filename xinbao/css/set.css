@@ -26,13 +26,12 @@
              color: #fff;
              font-size: 20px;
          }
-        #main input[type='text'],#main input[type='tel'],#main input[type='email'],#main input[type='tel']{
+        #main input[type='text'],#main input[type='tel'],#main input[type='email'],#main input[type='tel'],#main select{
              background: #f2f2f2;
             height: 50px;
             padding-left: 10px;
             width: 444px;
          }
-        
          #main form div>span{
              display: inline-block;
              width: 90px;
@@ -60,3 +59,13 @@
              border-radius: 50px;
              font-size: 18px;
          }
+  .select{
+    position: relative;
+}
+ .select i{
+    position: absolute;
+        top: 8px;
+    right: 5px;
+    color: #cecece;
+    font-size: 2rem;
+}

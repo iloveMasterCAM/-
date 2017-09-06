@@ -175,10 +175,11 @@
          }
          #main .img_box {
              margin:30px -1%;
+             overflow: hidden;
          }
          #main .img_box li{
              width: 23%;
-             margin: 0 1%;
+             margin: 0 1% 20px;
              float: left;
              border: 5px solid #eee;
          }
@@ -188,6 +189,7 @@
              font-weight: 500;
              color: #434343;
              font-size: 20px;
+             cursor: pointer;
          }
          #main .my>div>div{
              display: table-cell;
@@ -351,7 +353,7 @@
               background: #f6f6f6;
             padding-left: 10px;
          }
-         form input[type='submit']{
+         #form input[type='submit']{
              background: #e7141a;
              color: #fff;
              margin-top: 20px;

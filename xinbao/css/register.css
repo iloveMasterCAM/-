@@ -39,7 +39,7 @@
             border: 1px solid #eeeeee;
         }
         #txt form{
-            padding: 25px;
+            padding: 25px 0 25px 25px;
             position: relative;
         }
         #txt form div p span{
@@ -50,7 +50,7 @@
             color: #434343;
             font-size: 16px;
         }
-        #txt form div input[type='text']{
+        #txt form div input[type='text'],#txt form div select{
             width: 350px;
             background: #fafafa;
             height: 50px;
@@ -59,12 +59,28 @@
         #txt form div{
             margin-bottom: 10px;
         }
+ #txt form .select{
+    position: relative;
+}
+#txt form .select>div{
+    position: relative;
+    display: inline-block;
+}
+#txt form .select i{
+    position: absolute;
+        top: 8px;
+    right: 2%;
+    color: #cecece;
+    font-size: 2rem;
+}
+
+
        #txt form .send{
             background: #e7141a;
            color: #fff;
           height: 50px;
            line-height: 50px;
-           margin-left: 15px;
+           margin-left: 10px;
            cursor: pointer;
            display: inline-block;
            padding: 0 20px;
@@ -105,7 +121,7 @@
             padding: 0 15%;
         }
         #txt .er div a{
-            padding: 0 35px;
+            padding: 0 30px;
             line-height: 50px;
             margin-bottom: 30px;
             display: inline-block;

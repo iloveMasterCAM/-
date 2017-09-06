@@ -5,143 +5,7 @@
     <title>签单分享</title>
       <link href="iconfont/iconfont.css" rel="stylesheet"/>
      <link href="css/public.css" rel="stylesheet"/>
-     
-     <style>
-         #main{
-             width: 50%;
-             min-width: 1024px;
-             margin: 0 auto 150px;
-         }
-        #main .Label{
-             padding: 5px 0;
-            margin-bottom: 30px;
-         }
-         #main .Label span{
-             position: relative;
-             padding: 0 20px;
-             color: #838383;
-             font-size:  20px;
-         }
-         #main .Label span.active{
-             color: #e7141a
-         }
-         #main .Label span:before{
-             content: '';
-            display: block;
-            height: 50%;
-            width: 1px;
-            background: #838383;
-            position: absolute;
-            right: -1px;
-            top: 25%;;
-         }
-         #main .Label span:last-child:before{
-              display: none;
-         }
-         #main .txt{
-             width: 30%;
-             display: block;
-             margin: 0 1.6%;
-             float: left;
-             padding: 20px;
-             position: relative;
-             border: 1px solid transparent;
-             transition: all .6s;
-    -webkit-transition: all .6s;
-             background: #fff;
-             margin-bottom: 30px;
-         }
-         #main .txt:hover{
-              border: 1px solid #eee;
-              box-shadow: 0px 0 10px #888;
-              -webkit-transform:  scale(1.05);
-    -moz-transform:  scale(1.05);
-    transform: scale(1.05);
-            z-index: 3;
-         }
-         #main .txt:hover .icon-iconfontpraise{
-             color: #e7141a
-         }
-         #main .txt:hover .more {
-             display: block
-         }
-         #main .txt img{
-             width: 100%;
-         }
-         #main .zan i,#main .zan span{
-             display: block;
-         }
-         #main .zan i {
-             font-size: 1.5rem;
-             color: #838383;
-         }
-         #main tiem{
-             position: relative;
-             padding-left: 20px;
-             font-size: 13px;
-             color: #838383;
-         }
-        #main .name{
-             color: #434343;
-                font-size: 18px;
-            line-height: 30px;
-         }
-         #main .name i{
-             color: #e7141a
-         }
-         #main tiem:before{
-               content: '';
-            display: block;
-            height: 5px;
-            width: 5px;
-            background: #e7141a;
-            position: absolute;
-            left: 2px;
-            top: 40%;
-             border-radius: 50%;
-         }
-         #main .msg{
-             line-height: 25px;
-             color: #434343;
-             overflow: hidden;
-             margin-bottom: 50px;
-         }
-         #main .more{
-             font-size: 13px;
-             display: none;
-             position: absolute;
-             bottom: 20px;
-             right: 20px;
-             color: #e7141a
-         }
-         #main .more i{
-             font-size: 13px;
-         }
-         #main .box{
-             margin: 0 -1%;
-             
-         }
-         #paging li{
-             width: 40px;
-             height: 40px;
-             display: inline-block;
-             border: 1px solid #e5e5e5;
-             background: #fff;
-             line-height: 35px;
-             color: #c4c4c4;
-             cursor: pointer;
-         } 
-         
-         #paging .active{
-          background: #e7141a;
-             color: #fff;
-         }
-         #banner{
-             margin-bottom: 70px;
-         }
-         #main
-         
-    </style>
+     <link href="css/share.css" rel="stylesheet"/>
 </head>
 <body>
     <!--头部-->
@@ -192,7 +56,7 @@
                        <a href="">退出</a>
                       </p>
                </div>
-                <a class="aui-pull-left msg " href=""><i class="iconfont icon-xinxi"></i><span>消息</span></a>
+                <a class="aui-pull-left msg " href="mesage.html"><i class="iconfont icon-xinxi"></i><span>消息</span></a>
             </div>
             <a class="aui-pull-left" href=""><i class="iconfont icon-yijianfankui"></i> <span>意见反馈</span></a>
             <a class="aui-pull-left" href=""><i class="iconfont icon-dianhua"></i> <span>咨询热线：0592-5914297</span></a>
@@ -248,25 +112,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="new"><a href="consultent.html">保险顾问 <i class="iconfont icon-xiangshang"></i></a>
-                 <ul>
-                    <li>
-                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                    </li>
-                </ul>
-            </li>
+            <li class="new"><a href="consultent.html">保险顾问</a></li>
             <li><a href="share.html">签单分享</a></li>
             <li><a href="">我要合作</a></li>
             <li><a href="conduct.html">FAQ</a></li>
-            <li class="new"><a href="news_list.html">最新资讯 <i class="iconfont icon-xiangshang"></i></a>
-                <ul>
-                    <li>
-                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                    </li>
-                </ul>
-            </li>
+            <li class="new"><a href="news_list.html">最新资讯</a></li>
             <form class="search">
                 <input type="text" placeholder="搜索关键字" required>
                 <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>

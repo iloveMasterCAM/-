@@ -52,7 +52,10 @@
         left: -27px;
         top: 20%;
     }
-    #sort span.active{
+         #sort a{
+             display: inline;
+         }
+    #sort span i.active{
         color: #e7141a
     }
          #main .firm{
@@ -145,7 +148,7 @@
 </head>
 <body>
     <!--头部-->
-       <div id="header_box">
+    <div id="header_box">
     <div id="header">
        <div class="clear wrap">
         <div class="address aui-pull-left">
@@ -192,7 +195,7 @@
                        <a href="">退出</a>
                       </p>
                </div>
-                <a class="aui-pull-left msg " href=""><i class="iconfont icon-xinxi"></i><span>消息</span></a>
+                <a class="aui-pull-left msg " href="mesage.html"><i class="iconfont icon-xinxi"></i><span>消息</span></a>
             </div>
             <a class="aui-pull-left" href=""><i class="iconfont icon-yijianfankui"></i> <span>意见反馈</span></a>
             <a class="aui-pull-left" href=""><i class="iconfont icon-dianhua"></i> <span>咨询热线：0592-5914297</span></a>
@@ -249,25 +252,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="new"><a href="consultent.html">保险顾问 <i class="iconfont icon-xiangshang"></i></a>
-                 <ul>
-                    <li>
-                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                    </li>
-                </ul>
-            </li>
+            <li class="new"><a href="consultent.html">保险顾问</a></li>
             <li><a href="share.html">签单分享</a></li>
             <li><a href="">我要合作</a></li>
             <li><a href="conduct.html">FAQ</a></li>
-            <li class="new"><a href="news_list.html">最新资讯 <i class="iconfont icon-xiangshang"></i></a>
-                <ul>
-                    <li>
-                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                    </li>
-                </ul>
-            </li>
+            <li class="new"><a href="news_list.html">最新资讯</a></li>
             <form class="search">
                 <input type="text" placeholder="搜索关键字" required>
                 <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
@@ -276,8 +265,6 @@
          </div>
     </nav>
     </div>
-
-    
       <div id="banner">
           <div class="img"></div>
           <div class="bg"></div>
@@ -288,12 +275,13 @@
         <p class="titleEN aui-text-center">Insurance company</p>
         <div id="search">
                <div id="sort">
-               <span class="active">全部</span>
-               <span>FGHJK</span>
-               <span>ABCDE</span>
-               <span>LMNPQ</span>
-               <span>RSTUV</span>
-               <span>WXYZ</span>
+               <span><i class="active">全部</i></span>
+                <span> <i>A</i> <i>B</i> <i>C</i> <i>D</i> <i>E</i>  </span>
+                <span> <i>F</i> <i>G</i> <i>H</i> <i>J</i> <i>K</i>  </span>
+                <span> <i>L</i> <i>M</i> <i>N</i> <i>P</i> <i>Q</i> </span>
+               <span> <i>R </i> <i> S</i> <i> T</i> <i>U </i> <i> V</i> </span>
+              <span> <i>W</i> <i>X</i> <i>Y</i> <i>Z</i></span>
+              
             </div>
                 <form class="aui-pull-right search_form"><input type="text" class="aui-padded-l-15" placeholder="中美国际"> <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span></form>
             </div>
@@ -425,14 +413,14 @@
     </footer>
     <div id="weixin"></div>
     <div id="weixin_bg"></div>
+ <script src="script/jquery.js"></script>
     <script src="script/qzopensl.js"></script>
-     <script src="script/qrcode.js"></script>
-    <script src="script/jquery.js"></script>
+    <script src="script/qrcode.js"></script>
     <script src="script/public.js"></script>
     <script>
     
         $(function(){
-            $("#sort span").on('click',function(){
+            $("#sort i").on('click',function(){
                  $("#sort .active").removeClass('active')
                 $(this).addClass('active')
             })

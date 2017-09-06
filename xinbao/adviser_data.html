@@ -56,7 +56,7 @@
                        <a href="">退出</a>
                       </p>
                </div>
-                <a class="aui-pull-left msg " href=""><i class="iconfont icon-xinxi"></i><span>消息</span></a>
+                <a class="aui-pull-left msg " href="mesage.html"><i class="iconfont icon-xinxi"></i><span>消息</span></a>
             </div>
             <a class="aui-pull-left" href=""><i class="iconfont icon-yijianfankui"></i> <span>意见反馈</span></a>
             <a class="aui-pull-left" href=""><i class="iconfont icon-dianhua"></i> <span>咨询热线：0592-5914297</span></a>
@@ -113,25 +113,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="new"><a href="consultent.html">保险顾问 <i class="iconfont icon-xiangshang"></i></a>
-                 <ul>
-                    <li>
-                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                    </li>
-                </ul>
-            </li>
+            <li class="new"><a href="consultent.html">保险顾问</a></li>
             <li><a href="share.html">签单分享</a></li>
             <li><a href="">我要合作</a></li>
             <li><a href="conduct.html">FAQ</a></li>
-            <li class="new"><a href="news_list.html">最新资讯 <i class="iconfont icon-xiangshang"></i></a>
-                <ul>
-                    <li>
-                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                    </li>
-                </ul>
-            </li>
+            <li class="new"><a href="news_list.html">最新资讯</a></li>
             <form class="search">
                 <input type="text" placeholder="搜索关键字" required>
                 <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
@@ -154,12 +140,12 @@
     </div>
     <div id="nav_ad">
         <ul class="clear">
-            <li class="aui-pull-left aui-text-center active"><a href="">首页</a></li>
-            <li class="aui-pull-left aui-text-center"><a href="">关于我</a></li>
-            <li class="aui-pull-left aui-text-center"><a href="">保险产品</a></li>
-            <li class="aui-pull-left aui-text-center"><a href="">保险资讯</a></li>
-            <li class="aui-pull-left aui-text-center"><a href="">投保咨询</a></li>
-            <li class="aui-pull-left aui-text-center"><a href="">保险加盟</a></li>
+            <li class="aui-pull-left aui-text-center "><a href='index.html'>首页</a></li>
+            <li class="aui-pull-left aui-text-center active"><a href="adviser_data.html">关于我</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="product.html">保险产品</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="news.html">保险资讯</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="consult.html">投保咨询</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="league.html">保险加盟</a></li>
         </ul>
     </div>
     <div id="main">
@@ -188,11 +174,23 @@
                     <li><img src="img/honor.png" alt=""></li>
                     <li><img src="img/honor.png" alt=""></li>
                     <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
+                    <li><img src="img/honor.png" alt=""></li>
                     
                 </ul>
             </div>
            
-            <p class="aui-text-center more">更多<i class="iconfont icon-down-trangle"></i></p>
+            <p class="aui-text-center more"><span>更多</span><i class="iconfont icon-down-trangle"></i></p>
         </div>
         <div class="my">
             <p class="tle">关于我</p>
@@ -224,7 +222,7 @@
                 
             </div>
            
-              <p class="aui-text-center more">收齐<i class="iconfont icon-xiangshang"></i></p>
+              <p class="aui-text-center more">更多<i class="iconfont icon-xiangshang"></i></p>
         </div>
         <div class="product">
             <p class="tle">保险产品</p>
@@ -366,9 +364,45 @@
     </footer>
     <div id="weixin"></div>
     <div id="weixin_bg"></div>
+<script src="script/jquery.js"></script>
     <script src="script/qzopensl.js"></script>
-     <script src="script/qrcode.js"></script>
-    <script src="script/jquery.js"></script>
+    <script src="script/qrcode.js"></script>
     <script src="script/public.js"></script>
+
+
+    <script>
+        
+        $(function() {
+           var HonorH = parseInt($(".Honor .img_box").height())
+           var myh = parseInt($(".my .img_box").height())
+           $(".Honor .img_box").height($(".Honor .img_box li").outerHeight()+'px')
+           $(".my .img_box").height($(".my .img_box li").outerHeight()+'px')
+            
+            $(".Honor .more").on('click',function(){
+                mover(this,HonorH)
+            })
+            
+            $(".my .more").on('click',function(){
+                mover(this,myh)
+            })
+            function mover(o,maxH){
+                
+                 var p = $(o).parent();
+                var h = parseInt(p.find('.img_box').height()); 
+                var minh = parseInt(p.find('.img_box li').outerHeight())
+                if( h > minh){
+                    p.find('.img_box').animate({height: minh+'px'}, "slow");
+                    $(o).html('<span>更多</span><i class="iconfont icon-down-trangle"></i>')
+                }else{
+                    p.find('.img_box').animate({height: maxH+'px'}, "slow");
+                    $(o).html('<span>收起</span><i class="iconfont icon-xiangshang"></i>')
+                }
+                
+            }
+            
+            
+        })
+
+    </script>
 </body>
 </html>

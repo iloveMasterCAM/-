@@ -6,349 +6,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
-<!--	<link rel="stylesheet" type="text/css" href="css/list.css">-->
-<!--	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">-->
- <style>
-    
-     #main{
-         width: 60%;
-         min-width: 1024px;
-         margin: 140px auto 20px;
-     }
-   #sort {
-        display: inline-block;
-        overflow: hidden;
-       
-    }
-    #sort span{
-        margin-right: 45px;
-        line-height: 30px;
-        font-size: 20px;
-        color: #838383;
-        cursor: pointer;
-        position: relative;
-    }
-    #sort span:before{
-        content: '';
-        display: block;
-        height: 60%;
-        width: 1px;
-        background: #e5e5e5;
-        position: absolute;
-        left: -27px;
-        top: 20%;
-    }
-    #sort span.active{
-        color: #e7141a
-    }
-     #main .num{
-         line-height: 30px;
-         padding-bottom: 10px;
-         border-bottom: 1px solid #eeeeee;
-         margin-bottom: 20px;
-     }
-     #main .prod{
-         color: #666;
-         font-weight: 500;
-         font-size: 18px;
-         padding-left: 10px;
-         position: relative;
-     }
-     #main .prod:before{
-          content: '';
-        display: block;
-        height: 50%;
-        width: 3px;
-        background: #d7000f;
-        position: absolute;
-        left: 0px;
-        top: 25%;
-     }
-     #main .sum{
-         color: #bcbcbc;
-         font-size: 14px;
-         margin-left: 20px;
-     }
-     #main .num .search{
-         border: 1px solid #d7000f
-     }
-     #main .num .search span{
-         background: #d7000f;
-         color: #fff;
-         line-height: 30px;
-         display: inline-block;
-         padding: 0 10px;
-     }
-     #main .Label{
-         padding: 5px 0;
-     }
-     #main .Label span{
-         color: #666666;
-         font-size: 18px;
-         font-weight: 500;
-         margin-right: 40px;
-     }
-     #main .Label a{
-         display: inline-block;
-        padding: 5px 10px;
-         color: #9e9e9e;
-         font-size: 14px;
-         margin-right: 15px;
-         
-     }
-     #main .Label a.active{
-         color: #fff;
-         background: #d7000f
-     }
-     #main .Insurance{
-         margin: 10px -10px;
-         padding-bottom: 10px;
-     }
-     #main .Insurance a{
-          display: inline-block;
-        padding: 5px 10px;
-         color: #9e9e9e;
-         font-size: 14px;
-         margin-right: 15px;
-     }
-     #main .Insurance a.active{
-         color: #d7000f
-     }
-     #main .az{
-         background: #f8f8f8;
-         border-top: 2px solid #d7000f;
-         padding: 0 15px;
-         margin-top: 10px;
-         position: relative;
-     }
-     #main .az .tr-t{
-         top: -12px;
-         left: 132px;
-          border-bottom: 5px solid #d7000f;
-     }
-     #wrap{
-         width: 63%;
-         margin: 0 auto;
-         min-width: 1024px;
-     }
-     
-     
-       #star {
-         width: 100%;
-         border: 1px solid #eee;
-           padding-bottom: 30px;
-            position: relative;
-        }
-         #star ul{
-            position: relative;
-            left: 0;
-            transition: all .6s;
-    -webkit-transition: all .6s;
-        }
-        #star img{
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 5px solid #f6f6f6;
-        }
-         #star li.active img{
-            border: 5px solid #d7000f;
-        }
-        #star li.active span{
-            color: #d7000f
-        }
-         #star li{
-           width: 20%;
-            float: left;
-             position: relative;
-        }
-        #star ol{
-            position: absolute;
-            top: 45%;
-            z-index: 3;
-            background: #dcdcdc;
-            border-radius: 50%;
-            width: 30px;
-            line-height: 30px;
-            text-align: center;
-            height: 30px;
-        }
-        #star ol:hover{
-            background: #d7000f;
-        }
-        #star ol:hover i{
-            color: #fff;
-        }
-        #star ol i{
-            font-size: 14px;
-        }
-        #star ol.first{
-            left: 15px;
-        }
-        #star ol.last{
-            right: 15px;
-        }
-        #star ul li p{
-            color: #000000;
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        #star ul li span{
-            color: #636363;
-            font-size: 16px;
-        }
-     #star .star_box{
-         width: 90%;
-         margin: 0 auto;
-         overflow: hidden;
-     }
-     #star .star_box b{
-         width: 30px;
-         height: 30px;
-         position: absolute;
-         top: 7px;
-         right: 26px;
-         
-     }
-     #star .star_box .R1{
-         background: url(img/an.png) no-repeat;
-         background-size: cover;
-     }
-     #star .star_box .R2{
-         background: url(img/an2.png) no-repeat;
-         background-size: cover;
-     }
-     #star .Recommend:before{
-          content: '';
-        display: block;
-        height: 40%;
-        width: 3px;
-        background: #d7000f;
-        position: absolute;
-        left: 15px;
-        top: 30%;
-     }
-     #star .Recommend{
-         position: relative;
-         padding: 0 15px;
-         line-height: 45px;
-         font-size: 18px;
-         color: #666666;
-         border-bottom: 1px solid #eee;
-         margin-bottom: 20px;
-     }
-     #star .Recommend span{
-         padding-left: 15px;
-     }
-     #star .huan{
-         font-size: 14px;
-     }
-     
-      #wrap .search{
-         border: 1px solid #d7000f
-     }
-     #wrap .search span{
-         background: #d7000f;
-         color: #fff;
-         line-height: 30px;
-         display: inline-block;
-         padding: 0 10px;
-         margin-right: 0;
-     }
-     #search{
-         margin: 50px 0;
-     }
-     #con .box{
-         background: #fff;
-         margin-bottom: 40px;
-         padding: 20px 0 20px 20px;
-          transition: all .6s;
-    -webkit-transition: all .6s;
-    -moz-transition: all .6s;
-     }
-     #con .box>div{
-         display: table-cell;
-         vertical-align: middle;
-     }
-     #con .box img{
-         width: 200px;
-         height: 200px;
-         border-radius: 50%;
-     }
-     #con .con_txt{
-         padding-left: 20px;
-     }
-     #con h1{
-         font-weight: 500;
-         font-size: 22px;
-         color: #434343;
-         
-     }
-     #con .con_txt p{
-         line-height: 35px;
-         color: #838383;
-         font-size: 16px;
-     }
-     #con .red{
-         color: #d7000f;
-     }
-     #con .con_txt sub{
-         display: inline-block;
-         width: 30px;
-         height: 30px;
-     }
-     
-     #con .con_txt .r1{
-          background: url(img/an.png) no-repeat;
-         background-size: cover;
-     }
-     #con .con_txt .r2{
-          background: url(img/an2.png) no-repeat;
-         background-size: cover;
-     }
-     #con .con_txt .r3{
-          background: url(img/an3.png) no-repeat;
-         background-size: cover;
-     }
-     #con .table{
-         background: #ededed;
-         color: #878787;
-         padding: 5px 10px;
-         margin-right: 10px;
-     }
-     #con .address{
-         color: #000;
-         position: relative;
-         padding-right: 20px;
-     }
-     #con .address:before{
-          content: '';
-        display: block;
-        height: 70%;
-        width: 1px;
-        background: #d7000f;
-        position: absolute;
-        right: 8px;
-        top: 15%;
-     }
-     #con .icon-weixin{
-         color: #000;
-     }
-     #con .icon-xiangyou2{
-         color: #dbdbdb;
-     }
-     #con .box:hover{
-          box-shadow: 0px 0 10px #888;
-            -webkit-transform:  scale(1.03);
-    -moz-transform:  scale(1.03);
-    transform: scale(1.03);
-            z-index: 3;
-     }
-     #con .box:hover .icon-xiangyou2{
-         color: #d7000f
-     }
-
-    </style>
+	<link rel="stylesheet" type="text/css" href="css/consultent.css">
 </head>
 <body>
 	<!--头部-->
@@ -399,7 +57,7 @@
                        <a href="">退出</a>
                       </p>
                </div>
-                <a class="aui-pull-left msg " href=""><i class="iconfont icon-xinxi"></i><span>消息</span></a>
+                <a class="aui-pull-left msg " href="mesage.html"><i class="iconfont icon-xinxi"></i><span>消息</span></a>
             </div>
             <a class="aui-pull-left" href=""><i class="iconfont icon-yijianfankui"></i> <span>意见反馈</span></a>
             <a class="aui-pull-left" href=""><i class="iconfont icon-dianhua"></i> <span>咨询热线：0592-5914297</span></a>
@@ -456,25 +114,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="new"><a href="consultent.html">保险顾问 <i class="iconfont icon-xiangshang"></i></a>
-                 <ul>
-                    <li>
-                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                    </li>
-                </ul>
-            </li>
+            <li class="new"><a href="consultent.html">保险顾问</a></li>
             <li><a href="share.html">签单分享</a></li>
             <li><a href="">我要合作</a></li>
             <li><a href="conduct.html">FAQ</a></li>
-            <li class="new"><a href="news_list.html">最新资讯 <i class="iconfont icon-xiangshang"></i></a>
-                <ul>
-                    <li>
-                        <a href="">行业资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                        <a href="">平台资讯 <i class="iconfont icon-xiangyou-page"></i></a>
-                    </li>
-                </ul>
-            </li>
+            <li class="new"><a href="news_list.html">最新资讯</a></li>
             <form class="search">
                 <input type="text" placeholder="搜索关键字" required>
                 <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
@@ -660,7 +304,7 @@
             </div>
             <div id="con" class="clear">
                
-                    <div class="aui-col-xs-6 box">
+                    <a class="aui-col-xs-6 box" href='adviser_data.html'>
                         <div>
                             <img src="img/head.png" alt="">
                         </div>
@@ -676,8 +320,8 @@
                             <p>擅长领域：<span class="table">社会保险</span> <span class="table">社会保险</span></p>
                             <p class="aui-text-right"><i class="iconfont icon-xiangyou2"></i></p>
                         </div>
-                    </div>
-                    <div class="aui-col-xs-6 box">
+                    </a>
+                    <a class="aui-col-xs-6 box" href='adviser_data.html'>
                         <div>
                             <img src="img/head.png" alt="">
                         </div>
@@ -693,9 +337,9 @@
                             <p>擅长领域：<span class="table">社会保险</span> <span class="table">社会保险</span></p>
                             <p class="aui-text-right"><i class="iconfont icon-xiangyou2"></i></p>
                         </div>
-                    </div>
+                    </a>
          
-                <div class="aui-col-xs-6 box">
+                <a class="aui-col-xs-6 box" href='adviser_data.html'>
                         <div>
                             <img src="img/head.png" alt="">
                         </div>
@@ -711,8 +355,8 @@
                             <p>擅长领域：<span class="table">社会保险</span> <span class="table">社会保险</span></p>
                             <p class="aui-text-right"><i class="iconfont icon-xiangyou2"></i></p>
                         </div>
-                    </div>
-                    <div class="aui-col-xs-6 box">
+                    </a>
+                    <a class="aui-col-xs-6 box" href='adviser_data.html'>
                         <div>
                             <img src="img/head.png" alt="">
                         </div>
@@ -728,7 +372,7 @@
                             <p>擅长领域：<span class="table">社会保险</span> <span class="table">社会保险</span></p>
                             <p class="aui-text-right"><i class="iconfont icon-xiangyou2"></i></p>
                         </div>
-                    </div>
+                    </a>
                 
             </div>
             
@@ -793,10 +437,10 @@
     </footer>
     <div id="weixin"></div>
     <div id="weixin_bg"></div>
-     <script src="script/jquery.js"></script>
+<script src="script/jquery.js"></script>
     <script src="script/qzopensl.js"></script>
-     <script src="script/qrcode.js"></script>
-      <script src="script/public.js"></script>
+    <script src="script/qrcode.js"></script>
+    <script src="script/public.js"></script>
    
     
     <script>

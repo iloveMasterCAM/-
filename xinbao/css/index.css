@@ -27,11 +27,13 @@ body{
             margin: 0 auto 25px auto;
             padding: 3%;
         }
+
         #search .select select,#search .select .input{
             width: 40%;
             height: 50px;
+            background-color: #fff;
         }
-        #search input[type='tel']{
+        #search input[type='tel'], #search .select select{
              padding-left: 10px;
         }
         #search input{
@@ -270,6 +272,17 @@ body{
             color: #000000;
             font-size: 30px;
             font-weight: 500;
+            position: relative;;
+        }
+        #star .txt h2:before{
+             content: '';
+            display: block;
+            height: 2px;
+            width: 80px;
+            background: #a0a0a0;
+            position: absolute;
+            left:-140px;
+            top: 100%;
         }
         #star .txt p{
             color: #838383;
@@ -978,7 +991,7 @@ body{
         .ad_side{
             position: fixed;
             left: 0;
-            display: none;
+            /*display: none;*/
             z-index: 10;
         }
         .ad_side a{

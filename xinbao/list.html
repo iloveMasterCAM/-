@@ -7,6 +7,105 @@
 	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<link rel="stylesheet" type="text/css" href="css/list.css">
+	<style>
+    
+        #Leaving {
+             background: #fff;
+             width: 1150px;
+             padding: 70px 30px;
+             margin-left: -575px;
+            
+         }
+         #Leaving i{
+             position: absolute;
+             top: 10px;
+             right: 10px;
+             cursor: pointer;
+             font-size: 2rem;
+             color: #c8c8c8;
+         }
+         #Leaving input[type='text']{
+             width: 80%;
+             border-bottom: 1px solid #eee
+         }
+         #Leaving input[type='submit']{
+             width: 200px;
+             background: #b5b5b5;
+             color: #fff;
+             text-align: center;
+             line-height: 50px;
+             font-size: 22px;
+             margin-top: 30px;
+         }
+         #Leaving .key{
+             width: 15%;
+             display: inline-block;
+             color: #838383;
+             font-size: 14px;
+         }
+         #Leaving .Leaving{
+             margin-top: 50px;
+         }
+         #Leaving .Leaving span{
+              width: 8%;
+             display: block;
+             float: left
+         }
+         #Leaving .Leaving textarea{
+             width: 92%;
+             display: block;
+             float: right;
+             height: 100px;
+              border-bottom: 1px solid #eee
+         }
+        #Leaving  .tl{
+             font-size: 24px;
+            font-weight: 500;
+            color: #434343;
+            padding-left: 15px;
+         }
+         #Leaving  .tl{
+             margin-bottom: 50px;
+             position: relative;
+         }
+         #Leaving .tl:before{
+              content: '';
+            display: block;
+            height: 60%;
+            width: 2px;
+            background: #57ab9b;
+            position: absolute;
+            left: 0px;
+            top: 20%;
+         }
+         .img_box>p{
+               font-size: 24px;
+            font-weight: 500;
+            color: #434343;
+          margin-bottom: 40px;
+             
+         }
+         #Leaving .img_box:before{
+             content: '';
+            display: block;
+            height: 90%;
+            width: 1px;
+/*            background: #eee;*/
+             border-left: 1px dashed #eee;
+            position: absolute;
+            left: 35px;
+            top: 10%;
+         }
+         #Leaving .img_box div{
+             margin-bottom: 20px;
+             padding-left: 35px;
+         }
+         #Leaving .img_box .img{
+             line-height: 105px;
+             margin: 0 25px;
+         }
+        
+    </style>
 </head>
 <body>
    <!--头部-->
@@ -127,9 +226,6 @@
          </div>
     </nav>
     </div>
-
-    
-    
     <div id="main">
         <div class="map_box clear">
             <p class="aui-pull-left">信保网 <i class="iconfont icon-xiangyou-page"></i></p>
@@ -394,6 +490,61 @@
                    <li><i class="iconfont icon-xiangyou-page"></i></li>
                </ul>
            </div>
+           
+    <div id="plan">
+        <p>asdf</p>
+        <div id="Leaving" class="clear">
+        <form class="aui-col-xs-6">
+            <p class="tl">留言</p>
+            <div class="clear">
+                <div class="aui-col-xs-6">
+                    <span class="key">姓名:</span>
+                    <input type="text" required>
+                </div>
+                <div class="aui-col-xs-6">
+                    <span class="key">电话:</span>
+                    <input type="text" required>
+                </div>
+            </div>
+            <div class="Leaving">
+                <span class="key">留言</span>
+                <textarea></textarea>
+            </div>
+            <div class="aui-text-right">
+                <input type="submit" value="提交">
+            </div>
+        </form>
+        <div class="aui-col-xs-6 img_box">
+             <p class="aui-text-center">只需三步，享受专属定制！</p>
+             <div class="clear">
+                 <div class="aui-pull-left">
+                     <img src="img/phone.png" alt="">
+                     <p>电话沟通了解需求</p>
+                 </div>
+                 <div class="aui-pull-left img">
+                     <img src="img/Leaving1.png" alt="">
+                 </div>
+                 <div class="aui-pull-left">
+                     <img src="img/Customized.png" alt="">
+                     <p>制定保险计划书</p>
+                 </div>
+             </div>
+             <div class="clear">
+                 <div class="aui-pull-left">
+                     <img src="img/Communication.png" alt="">
+                     <p>面对面沟通,个性化定制</p>
+                 </div>
+                 <div class="aui-pull-left">
+                     <img src="img/Leaving2.png" alt="">
+                 </div>
+             </div>
+        </div>
+        
+        <i class="iconfont icon-x"></i>
+    </div>
+    </div>  
+           
+           
      <!--底部-->
       <footer id="footer">
        <div class="wrap clear">

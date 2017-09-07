@@ -114,7 +114,9 @@ pre {
 	box-sizing: border-box;
 	outline: 0;
 	-webkit-user-select: none;
-	-webkit-tap-highlight-color: transparent
+	-moz-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent
 }
 
 .aui-text-left {

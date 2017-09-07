@@ -1,0 +1,199 @@
+#main{
+         width: 60%;
+         min-width: 1024px;
+         margin: 140px auto 100px;
+     }
+   #sort {
+        display: inline-block;
+        overflow: hidden;
+        margin:30px 0;
+    }
+    #sort span{
+        margin-right: 45px;
+        line-height: 45px;
+        font-size: 20px;
+        color: #838383;
+        cursor: pointer;
+        position: relative;
+    }
+    #sort span:before{
+        content: '';
+        display: block;
+        height: 60%;
+        width: 1px;
+        background: #e5e5e5;
+        position: absolute;
+        left: -27px;
+        top: 20%;
+    }
+    #sort span.active{
+        color: #e7141a
+    }
+     #main .num{
+         line-height: 30px;
+         padding-bottom: 10px;
+         border-bottom: 1px solid #eeeeee;
+         margin-bottom: 20px;
+     }
+     #main .prod{
+         color: #666;
+         font-weight: 500;
+         font-size: 18px;
+         padding-left: 10px;
+         position: relative;
+     }
+     #main .prod:before{
+          content: '';
+        display: block;
+        height: 50%;
+        width: 3px;
+        background: #d7000f;
+        position: absolute;
+        left: 0px;
+        top: 25%;
+     }
+     #main .sum{
+         color: #bcbcbc;
+         font-size: 14px;
+         margin-left: 20px;
+     }
+     #main .search_form{
+         border: 1px solid #d7000f
+     }
+     #main .search_form span{
+         background: #d7000f;
+         color: #fff;
+         line-height: 30px;
+         display: inline-block;
+         padding: 0 10px;
+     }
+     #main .Label{
+         padding: 5px 0;
+     }
+     #main .Label span{
+         color: #666666;
+         font-size: 18px;
+         font-weight: 500;
+         margin-right: 40px;
+     }
+     #main .Label a{
+         display: inline-block;
+        padding: 5px 10px;
+         color: #9e9e9e;
+         font-size: 14px;
+         margin-right: 15px;
+         
+     }
+     #main .Label a.active{
+         color: #fff;
+         background: #d7000f
+     }
+     #main .Insurance{
+         margin: 10px -10px;
+         padding-bottom: 10px;
+     }
+     #main .Insurance a{
+          display: inline-block;
+        padding: 5px 10px;
+         color: #9e9e9e;
+         font-size: 14px;
+         margin-right: 15px;
+     }
+     #main .Insurance a.active{
+         color: #d7000f
+     }
+     #main .az{
+         background: #f8f8f8;
+         border-top: 2px solid #d7000f;
+         padding: 0 15px;
+         margin-top: 10px;
+         position: relative;
+     }
+     #main .az .tr-t{
+         top: -12px;
+         left: 132px;
+          border-bottom: 5px solid #d7000f;
+     }
+     
+     #wrap .con{
+        
+         padding: 15px 20px; 
+         margin-bottom: 30px;
+         transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+     }
+     #wrap .con:hover{
+          box-shadow: 0px 0 10px #888;
+            -webkit-transform:  scale(1.03);
+    -moz-transform:  scale(1.03);
+    transform: scale(1.03);
+            z-index: 3;
+     }
+     #wrap .con:hover h1{
+         color: #d7000f
+     }
+     #wrap .con:hover .MORE i{
+         color: #d7000f
+     }
+    
+     #wrap .con>div{
+         display: table-cell;
+         vertical-align: middle;
+     }
+     #wrap .con img{
+         width: 300px;
+     }
+     #wrap .con .txt{
+         padding-left: 40px;
+         padding-right: 50px;
+         position: relative;
+     }
+     #wrap .con .txt:before{
+         content: '';
+        display: block;
+        height: 80%;
+        width: 1px;
+        background: #e5e5e5;
+        position: absolute;
+        right: 0px;
+        top: 10%;
+     }
+     #wrap .test{
+         width: 466px;
+         overflow: hidden;
+        
+     }
+     #wrap .test_box{
+         margin-bottom: 5px;
+          line-height: 30px;
+     }
+     #wrap .con h1{
+         font-size: 24px;
+         font-weight: 500;
+         margin-bottom: 15px;
+         color: #434343;
+     }
+     #wrap .con b{
+         color: #434343;
+         font-size: 16px;
+     }
+     #wrap .test_box span{
+         font-size: 14px;
+         color: #434343;
+     }
+     #wrap .data{
+         color: #d7000f;
+     }
+     #wrap .MORE i{
+         font-size: 3.3rem;
+     }
+     #wrap .MORE{
+         padding-left: 50px;
+     }
+     #wrap .MORE p{
+         font-size: 20px;
+         color: #838383;
+         margin-bottom: 35px;
+     }
+ 

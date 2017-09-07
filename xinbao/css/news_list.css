@@ -1,0 +1,103 @@
+  #main{
+             width: 50%;
+             min-width: 1024px;
+             margin: 120px auto 170px;
+         }
+     
+       #main .Label span{
+             position: relative;
+             margin-right: 20px;
+           color: #a1a1a1;
+           font-size: 12px;
+             
+         }
+         #main .Label span:before{
+             content: '';
+            display: block;
+            height: 60%;
+            width: 1px;
+            background: #a1a1a1;
+            position: absolute;
+            right: -12px;
+            top: 20%;;
+         }
+         #main .Label span:last-child:before{
+              display: none;
+         }
+         #main .li{
+             padding: 20px;
+             margin-bottom: 20px;
+             border:1px solid transparent;
+             border-bottom: 1px solid #f5f5f5;
+             transition: all .6s;
+    -webkit-transition: all .6s;
+         }
+         #main .li:hover{
+              border: 1px solid #f5f5f5;
+             box-shadow: 0px 0 10px #888;
+              -webkit-transform:  scale(1.05);
+    -moz-transform:  scale(1.05);
+    transform: scale(1.05);
+            z-index: 3;
+         }
+         #main .li:hover h4{
+             color: #e7141a
+         }
+         #main .li>div{
+             display: table-cell;
+             vertical-align: middle;
+         }
+         #main .li img{
+             width: 200px;
+         }
+         #main .text{
+             width: 360px;
+             line-height: 25px;
+         }
+         #main .text_box{
+             padding-left: 20px;
+         }
+         #main .text_box h4{
+             color: #000;
+             font-size: 18px;
+             font-weight: 500;
+         }
+         #main .time{
+             margin-bottom: 22px;
+         }
+         #main .into i{
+             font-size: 1.8rem;
+             color: #e5e5e5;
+             position: relative;
+         }
+         #main .into{
+             padding-left: 30px;
+         }
+         #main .into i:after{
+             content: '';
+            display: block;
+            height: 80%;
+            width: 1px;
+            background: #e5e5e5;
+            position: absolute;
+            left: -12px;
+            top: 10%;;
+         }
+         #paging{
+             margin-top: 100px;
+         }
+          #paging li{
+             width: 40px;
+             height: 40px;
+             display: inline-block;
+             border: 1px solid #e5e5e5;
+             background: #fff;
+             line-height: 35px;
+             color: #c4c4c4;
+             cursor: pointer;
+         } 
+         
+         #paging .active{
+          background: #e7141a;
+             color: #fff;
+         }

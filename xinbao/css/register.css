@@ -1,0 +1,134 @@
+.wrap_box{
+          
+            width: 65%;
+            margin: 155px auto;
+            min-width: 1024px;
+        }
+        .map_box{
+            margin-bottom: 35px;
+        }
+        .map_box p{
+            font-size: 18px;
+        }
+        .map_box i{
+            margin: 0 10px;
+        }
+        .map_box p.active,.map_box p.active i{
+            color: #e7141a
+        }
+        #reg{
+/*            margin-bottom: */
+           /* position: relative;
+            bottom: -1px;*/
+            background: #fff
+        }
+        #reg div{
+            padding: 15px 25px;
+            cursor: pointer;
+        }
+        #reg div.active{
+            border-left: 1px solid #eeeeee;
+            border-top: 1px solid #eeeeee;
+            border-right: 1px solid #eeeeee;
+             position: relative;
+            bottom: -1px;
+            background: #fff;
+            color: #e7141a;
+        }
+        #txt{
+            border: 1px solid #eeeeee;
+        }
+        #txt form{
+            padding: 25px 0 25px 25px;
+            position: relative;
+        }
+        #txt form div p span{
+            color: #e7141a
+        }
+        #txt form div p{
+            line-height: 40px;
+            color: #434343;
+            font-size: 16px;
+        }
+        #txt form div input[type='text'],#txt form div select{
+            width: 350px;
+            background: #fafafa;
+            height: 50px;
+            padding-left: 15px;
+        }
+        #txt form div{
+            margin-bottom: 10px;
+        }
+ #txt form .select{
+    position: relative;
+}
+#txt form .select>div{
+    position: relative;
+    display: inline-block;
+}
+#txt form .select i{
+    position: absolute;
+        top: 8px;
+    right: 2%;
+    color: #cecece;
+    font-size: 2rem;
+}
+
+
+       #txt form .send{
+            background: #e7141a;
+           color: #fff;
+          height: 50px;
+           line-height: 50px;
+           margin-left: 10px;
+           cursor: pointer;
+           display: inline-block;
+           padding: 0 20px;
+        }
+        #txt form .checkbox{
+            margin: 30px 0;
+        }
+        #txt form input[type='submit']{
+             background: #e7141a;
+            color: #fff;
+            width: 350px;
+            display: inline-block;
+            line-height: 50px;
+            font-size: 24px;
+        }
+        #txt form:before{
+             content: '';
+            display: block;
+            height: 90%;
+            width: 1px;
+            background: #eeeeee;
+            position: absolute;
+            right: -15px;
+            top: 5%;
+        }
+        #txt .er{
+            height: 100%;
+            padding: 120px 40px;
+        }
+        #txt .er .clear{
+            border-bottom: 1px solid #eee;
+            margin-bottom: 80px;
+        }
+        #txt .er img{
+            border: 1px solid #eeeeee;
+        }
+        #txt .er .box{
+            padding: 0 15%;
+        }
+        #txt .er div a{
+            padding: 0 30px;
+            line-height: 50px;
+            margin-bottom: 30px;
+            display: inline-block;
+            color: #434343;
+            font-size: 16px;
+        }
+        #txt .er div a.active{
+            border: 1px solid #e7141a;
+            color: #e7141a;
+        }

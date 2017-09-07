@@ -1,0 +1,75 @@
+#main{
+             width: 60%;
+             margin: 222px auto 100px;
+             padding: 40px 5% 70px;
+             border: 1px solid #eeeeee;
+             min-width: 1024px;
+         }
+         #main .msg>div{
+             display:table-cell;
+            vertical-align: middle;
+         }
+         #main .msg img{
+             width: 300px;
+         }
+         #main .txt{
+             margin-bottom: 40px;
+            line-height: 30px;
+         }
+         #main .msg{
+             padding-bottom: 50px;
+             margin-bottom: 50px;
+             border-bottom: 1px solid #e5e5e5
+         }
+         #main .msg_txt{
+             padding-left: 40px;
+             
+         }
+         #main .msg_txt h2{
+             font-size: 18px;
+            
+         }
+         #main .mra{
+             margin-bottom: 15px;
+             line-height: 35px;
+             width: 270px;
+         }
+         #main .name{
+             border-bottom: 1px solid #eee
+         }
+         #main .label{
+              margin-top: 20px;
+         }
+         #main .label span{
+             background: #dcdcdc;
+             color: #fff;
+             border-radius: 30px;
+             padding: 7px 20px;
+            
+         }
+         #main .label span.active{
+             background: #e7141a;
+         }
+         #main .nice{
+             padding-left: 180px
+         }
+         #main .nice>p{
+             padding: 15px 30px;
+             border: 1px solid #f0f0f0;
+             border-radius: 50%;
+             
+         }
+         #main .nice i,#main .nice span{
+             display: block;
+             color: #e7141a;
+         }
+         #main .nice span{
+             font-size: 18px;
+         }
+         #main .nice i {
+             font-size: 3rem;
+            
+         }
+         #main .bor{
+              border-bottom: 1px solid #e5e5e5
+         }

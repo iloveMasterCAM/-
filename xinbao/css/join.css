@@ -1,0 +1,38 @@
+#main{
+             width: 50%;
+             min-width: 1024px;
+             margin: 120px auto 170px;
+         }
+         #banner .img{
+             background: url(../img/join.png)
+         }
+         #main .wrap h4{
+             color: #e71b1c;
+             font-size: 20px;
+             line-height: 35px;
+             border-bottom: 1px solid #eeeeee;
+             width: 250px;
+             margin-bottom: 25px;
+         }
+         #main .tl{
+             color: #434343;
+             font-size: 14px;
+             font-weight: 600;
+             margin-bottom: 10px;
+         }
+         #main .test{
+             color: #838383;
+             font-size: 13px;
+             line-height: 30px;
+         }
+         #main .txt{
+             margin-bottom: 25px;
+         }
+         #main .wrap{
+             border-bottom: 1px solid #eeeeee;
+             margin-bottom: 50px;
+             width: 100%;
+         }
+         #main .wrap:last-child{
+              border-bottom: none;
+         }

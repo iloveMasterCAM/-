@@ -1,0 +1,190 @@
+ #main{
+             width: 50%;
+             min-width: 1024px;
+             margin:0 auto;
+         }
+         #banner{
+             height: 450px;
+         }
+         #banner .bg_box{
+             background: url(../img/bg.png);
+             background-repeat: repeat;
+         }
+        #banner .img{
+             background: url(../img/adviser.png) no-repeat;
+            background-position: center -350px
+         }
+         #banner div{
+             height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+         #banner .txt{
+             z-index: 3;
+             
+         }
+         #banner .txt img{
+             width: 200px;
+             height: 200px;
+             border-radius: 50%;
+             
+             border: 5px solid #e7141a;
+         }
+         #banner .txt p{
+             color: #fff;
+             line-height: 30px;
+             font-size: 18px;
+             position: relative;
+         }
+         #banner .txt .firm{
+             font-size: 16px;
+         }
+         #banner .txt .name{
+             font-size: 22px;
+             font-weight: 500;
+         }
+         #banner .txt span,.an span{
+             position: absolute;
+             top: 17px;
+             right: 7px;
+             display: block;
+             width: 30px;
+             height: 30px;
+             background: url(../img/an.png) no-repeat;
+             background-size: cover;
+             z-index: 6;
+         }
+         #banner .txt .img{
+               width: 200px;
+             height: 200px;
+             margin: 80px auto 15px;
+            background: transparent;
+         }
+       
+         #nav_ad{
+             background: #eeeeee;
+             line-height: 50px;
+         }
+         #nav_ad ul{
+             width: 60%;
+             min-width: 1024px;
+             margin: 0 auto;
+         }
+         #nav_ad li{
+             width: 16.666666%;
+             position: relative;
+         }
+         #nav_ad li.active a{
+             color: #e84c56
+         }
+         #nav_ad li.active:before{
+             content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: #e84c56;
+            position: absolute;
+            right: 0px;
+            bottom:0;
+         }
+          #nav_ad li:before{
+             content: '';
+            display: none;
+            height: 2px;
+            width: 100%;
+            background: #e84c56;
+            position: absolute;
+            right: 0px;
+            bottom:0;
+         }
+         #nav_ad li:hover:before{
+               display: block;
+         }
+         #nav_ad li:hover a{
+             color: #e84c56
+         }
+          .map_box{
+            margin:35px 0;
+        }
+        .map_box p{
+            font-size: 18px;
+        }
+        .map_box i{
+            margin: 0 10px;
+        }
+        .map_box p.active,.map_box p.active i{
+            color: #e7141a
+        }
+        
+         #main .box{
+             padding: 30px 30px 40px 60px;
+             position: relative;
+             margin-bottom: 20px;
+              transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+         }
+      
+         #main .box:hover{
+             box-shadow: 0px 0 10px #888;
+              -webkit-transform:  scale(1.05);
+    -moz-transform:  scale(1.05);
+    transform: scale(1.05);
+            z-index: 3;
+         }
+         #main .box:hover h1{
+             color: #e7141a
+         }
+         #main .box:hover i{
+             display: block;
+         }
+         #main .box:hover .more{
+             color: #e7141a;
+         }
+         #main .box h1{
+             font-size: 24px;
+             color: #434343;
+             font-weight: 500;
+         }
+         #main .box .txt{
+             width: 800px;
+             line-height: 30px;
+         } 
+         #main .box time{
+             line-height: 40px;
+             color: #aeaeae;
+             font-size: 20px;
+         }
+         #main .box i{
+             position: absolute;
+             right: 30px;
+             bottom: 50px;
+             color: #e7141a;
+             font-size: 1.3rem;
+             display: none;
+         }
+         #main .box .more{
+              color: #434343;
+             font-size: 16px;
+         }
+         #paging {
+             margin: 50px 0;
+             margin-top: 100px;
+         }
+            #paging li{
+             width: 40px;
+             height: 40px;
+             display: inline-block;
+             border: 1px solid #e5e5e5;
+             background: #fff;
+             line-height: 35px;
+             color: #c4c4c4;
+             cursor: pointer;
+         } 
+         
+         #paging .active{
+          background: #e7141a;
+             color: #fff;
+         }

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>信保</title>
+    <link href="css/public.css" rel="stylesheet"/>
+    <link href="css/swiper.min.css" rel="stylesheet"/>
+    <link href="iconfont/iconfont.css" rel="stylesheet"/>
+    <style>
+        #nav{
+            background: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 75px;
+            line-height: 50px;
+            border-bottom: 1px solid #eee;
+        }
+        #nav .logo{
+            
+            position: absolute;
+            margin: 0;
+            text-align: center;
+            white-space: nowrap;
+            right: 5rem;
+            left: 5rem;
+            top: 10px;
+            width: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            z-index: 2;
+        }
+        #nav img{
+            display: inline-block;
+            height: 50px;
+        }
+        #nav p{
+            line-height: 75px;
+        }
+        #nav p i{
+            color: #231815;
+            font-size: 1.4rem;
+        }
+    
+        #banner{
+            margin-top: 75px;
+        }
+        #banner a{
+             position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom: 0;
+            background-size: contain;
+            background-position: center center;
+        }
+        #banner .swiper-slide>p{
+            height: 0;
+            margin-top: 60%;
+        }
+        #banner .bg1{
+            background: url(img/new.png) no-repeat;
+              background-size: cover;
+            background-position: center center;
+        }
+         #banner .bg2{
+            
+             background: url(img/Contaact.png) no-repeat;
+             background-size: cover;
+            background-position: center center;
+        }
+         #banner .bg3{
+            background: url(img/news.png) no-repeat;
+              background-size: cover;
+            background-position: center center;
+        }
+        #banner a p{
+            color: #fff;
+            position: relative;
+            z-index: 3;
+        }
+        #banner .tl{
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 8%;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        #banner .tlen{
+            font-size:18px;
+            color: #fff;
+            font-family: 'Regular'
+        }
+        #banner .bg_b{
+              position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom: 0;
+            background: url(img/bg_1.png);
+            background-repeat: repeat;
+            z-index: 1;
+        }
+        #banner .bg_{
+              position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom: 0;
+             background: url(img/bg.png);
+            background-repeat: repeat;
+            z-index: 2;
+        }
+        #product{
+            padding: 0 0.5rem;
+        }
+        
+        #product ul li{
+            width: 48%;
+            margin: 0 1%;
+            float: left;
+            border: 1px solid #ddd;
+            margin-bottom: 50px;
+        }
+        #product ul li img{
+            width: 100%;
+        }
+        #product ul h3{
+            font-weight: 500;
+            font-size: 16px;
+        }
+        #product ul li:hover span{
+            background: #d7000f;
+            color: #fff;
+            
+        }
+        #product ul li:hover h3{
+            color: #d7000f
+        }
+        #product ul li div{
+            padding: 0 15px;
+        }
+    
+        #product ul .txt{
+            position: relative;
+            margin: 10px 0;
+            overflow: hidden;
+            
+        }
+        #product ul span{
+            margin: 10px 0; 
+            display: inline-block;
+            padding: 5px 9px;
+     
+            font-size: 14px;
+            border-radius: 50px;
+            background: #eeeeee;
+            color: #434343;
+        }
+        #product ul .bor{
+            border-top: 1px solid #eee;
+        }
+           #star{
+            padding: 30px 0;
+       
+            background: #f6f6f6;
+           
+        }
+        #star .head_box,#star .txt{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #star .head_box{
+            padding-left: 15px;
+        }
+        #star .head{
+            width: 120px;
+            height: 120px;
+            background: #eeeeee;
+            border-radius: 50%;
+           
+        }
+        #star .head img{
+             width: 100%;
+             height: 100%;
+              border-radius: 50%;
+            position: relative;
+            left: -5px;
+        }
+        #star .txt{
+            padding-left: 5%;
+            width: 700px;
+        }
+        #star .txt div p{
+            margin-right: 6%;
+            color: #838383;
+        }
+        #star .txt .address{
+            color: #d7000f;
+            font-size: 16px;
+        }
+        #star .txt h2{
+            color: #000000;
+            font-size: 30px;
+            font-weight: 500;
+            position: relative;
+            font-size: 15px;
+        }
+        #star .txt h2:before{
+             content: '';
+            display: block;
+            height: 1px;
+            width: 55px;
+            background: #a0a0a0;
+            position: absolute;
+            left:-65px;
+            top: 50%;
+        }
+        #star .txt p{
+            color: #838383;
+             line-height: 25px;
+        }
+        #star .txt .more{
+            color: #000000;
+            font-size: 15px;
+        }
+        #star .star{
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .star ul{
+            position: relative;
+            left: 0;
+            margin-top: 60px;
+            transition: all .6s;
+    -webkit-transition: all .6s;
+        }
+        .star img{
+            width: 100%;
+             margin: 0 auto;
+            border-radius: 50%;
+            border: 5px solid #f6f6f6;
+        }
+        .star li.active img{
+            border: 5px solid #d7000f;
+        }
+        .star li.active span{
+            color: #d7000f
+        }
+        .star li{
+           width: 27%;
+          display: inline-block;
+        }
+        #star ol{
+            position: absolute;
+            top: 45%;
+            z-index: 3;
+            border-radius: 50%;
+           
+            text-align: center;
+            height: 30px;
+        }
+        #star ol:hover{
+            background: #d7000f;
+        }
+        #star ol:hover i{
+            color: #fff;
+        }
+        #star ol i{
+            font-size: 14px;
+        }
+        #star ol:first-child{
+            left: 0;
+        }
+        #star  ol:last-child{
+            right: 0;
+        }
+        #star .wrap{
+            position: relative;
+        }
+        .star ul li p{
+            color: #000000;
+            font-size: 14px;
+            
+        }
+        .star ul li span{
+            color: #636363;
+            font-size: 12px;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <nav id="nav" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left"><i class="iconfont icon-caidan"></i></p>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+       <p class="aui-pull-right aui-margin-l-15"><i class="iconfont icon-haoyouxingming"></i></p>
+       <p class="aui-pull-right"><i class="iconfont icon-fangdajing"></i></p>
+    </nav>
+    <div id="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a class="bg1 aui-text-center" href="">
+                    <p class="tl">专业定制适合你的保险方案</p>
+                    <p class="tlen">PROFESSIONALLY TAILORED FOR YOURINSURANCE PROGRAM</p>
+                    <p class="bg_b"></p>
+                    <p class="bg_"></p>
+                </a> <p></p> </div>
+                <div class="swiper-slide"><a class="bg2 aui-text-center" href=""></a> <p></p></div>
+                <div class="swiper-slide"><a class="bg3 aui-text-center" href="">
+                     <p class="tl">专业定制适合你的保险方案</p>
+                    <p class="tlen">PROFESSIONALLY TAILORED FOR YOURINSURANCE PROGRAM</p>
+                    
+                </a><p></p></div>
+              
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    
+    <p><span>免费保险咨询 </span> 信保网已为<i>15000000</i>人提供保险咨询</p>
+    
+    <form>
+        
+        <div>
+            <select>
+            <option value="江苏 南通">江苏 南通</option>
+            <option value="江苏 南通">江苏 南通</option>
+            <option value="江苏 南通">江苏 南通</option>
+            <option value="江苏 南通">江苏 南通</option>
+            </select>
+        </div>
+        <div>
+            <input type="text" required>
+        </div>
+        <div>
+            <input type="submit" value="立即咨询">
+        </div>
+    </form>
+    
+    <div>
+        <div>
+            <div><i class="iconfot "></i></div>
+            <div>
+                <h1>免费设计保险方案</h1>
+                <p>根据您的需求匹配合适您的保险方案</p>
+            </div>
+        </div>
+        <div>
+            <div><i class="iconfot "></i></div>
+            <div>
+                <h1>免费设计保险方案</h1>
+                <p>根据您的需求匹配合适您的保险方案</p>
+            </div>
+        </div>
+        <div>
+            <div><i class="iconfot "></i></div>
+            <div>
+                <h1>免费设计保险方案</h1>
+                <p>根据您的需求匹配合适您的保险方案</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="product">
+         <h2 class="title aui-text-center">保险产品</h2>
+        <p class="titleEN aui-text-center">Insurance products</p>
+        <ul class="clear">
+            <li>
+                <img src="img/product1.png" alt="">
+                <div class="">
+                <h3 class="aui-ellipsis-1">太平成长无忧终身重大疾病保险</h3>
+                <p class="aui-ellipsis-2 txt">具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                    <p class="bor">
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </p>
+                </div>
+            </li>
+             <li>
+                <img src="img/product1.png" alt="">
+                <div class="">
+                <h3 class="aui-ellipsis-1">太平成长无忧终身重大疾病保险</h3>
+                <p class="aui-ellipsis-2 txt">具有“重疾全面覆盖，a特定加倍给付、轻症及早干预、年金自由转化</p>
+                    <p class="bor">
+                        <span>中国太平</span>
+                        <span>重疾险</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <div class="aui-text-center">
+            <a class="MORE" href="">VIEW MORE <i class="iconfont icon-iconfontright"></i> </a>
+        </div>
+    </div>
+    
+      <div id="star">
+        <div class="wrap">
+            <div class="head_box">
+                <p class="head">
+                     <img src="img/star_head.png" alt="">
+                </p>
+               
+            </div>
+            <div class="txt">
+                <p class="address aui-margin-b-15">江苏 · 苏州 </p>
+                <h2 class="aui-margin-b-10">城市明星：朱经理</h2>
+                <div class="aui-margin-b-10 clear">
+                    <p class=" aui-ellipsis-1">
+                        电话: <span>1775****003</span>
+                    </p>
+                    <p class="aui-ellipsis-1">
+                        从业时间: <span>2017-8-31</span>
+                    </p>
+                    <p class="aui-ellipsis-1"> 职业证号: 3562487201503562 48720 150</p>
+                </div>
+                <a class=" more" href="">Read more <i class="iconfont icon-iconfontright"></i></a>
+            </div>
+        </div>
+        
+        <div class="wrap">
+           <ol><i class="iconfont icon-xiangzuo"></i></ol>
+            <div class="star">
+                <ul class="clear aui-text-center aui-col-xs-12">
+                    <li class="aui-text-center">
+                        <div><img class="" src="img/star_head.png"/></div>
+                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                        <span>江苏 · 苏州 </span>
+                        <input type="hidden" value="1231">
+                    </li>
+                    <li class="aui-text-center">
+                        <div><img src="img/star_head.png"/></div>
+                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                        <span>福建 · 福州</span>
+                         <input type="hidden" value="1231">
+                    </li>
+                    <li class=" aui-text-center">
+                        <div><img src="img/star_head.png"/></div>
+                        <p class="aui-ellipsis-1">城市明星:信保</p>
+                        <span>江苏 · 苏州 </span>
+                         <input type="hidden" value=" 用我的专业为客户规划未来，规避风险，拿走客户的担忧是我最大的心愿。在这个帮助他人成就自己的行
+业里因客户的信任，从事了几年的保险工作下来，突然发现我所选择的工作不仅帮我完成了我的梦想，还
+让我一直在帮助别人，也可以说是在做善事，我的客户多数来自于自己的朋友以及朋友介">
+                    </li>
+                    <li class="aui-text-center">
+                        <div><img src="img/star_head.png"/></div>
+                        <p>城市明星：朱经理</p>
+                        <span>江苏 · 苏州 </span>
+                         <input type="hidden" value=" 用我的专业为客户规划未来，规避风险，拿走客户的担忧是我最大的心愿。在这个帮助他人成就自己的行
+业里因客户的信任，从事了几年的保险工作下来，突然发现我所选择的工作不仅帮我完成了我的梦想，还
+让我一直在帮助别人，也可以说是在做善事，我的客户多数来自于自己的朋友以及朋友介">
+                    </li>
+                     <li class="aui-text-center">
+                        <div><img src="img/star_head.png"/></div>
+                        <p>城市明星：朱经理</p>
+                        <span>江苏 · 苏州 </span>
+                         <input type="hidden" value="1231">
+                    </li>
+                     <li class="aui-text-center">
+                        <div><img src="img/star_head.png"/></div>
+                        <p>城市明星：朱经理</p>
+                        <span>江苏 · 苏州 </span>
+                         <input type="hidden" value=" 用我的专业为客户规划未来，规避风险，拿走客户的担忧是我最大的心愿。在这个帮助他人成就自己的行
+业里因客户的信任，从事了几年的保险工作下来，突然发现我所选择的工作不仅帮我完成了我的梦想，还
+让我一直在帮助别人，也可以说是在做善事，我的客户多数来自于自己的朋友以及朋友介">
+                    </li>
+                     <li class="aui-text-center">
+                        <div><img src="img/star_head.png"/></div>
+                        <p>城市明星：朱经理</p>
+                        <span>江苏 · 苏州 </span>
+                         <input type="hidden" value="1231">
+                    </li>
+                </ul>
+            </div>
+            <ol><i class="iconfont icon-iconfontright"></i></ol>
+        </div>
+    </div>
+    
+    <script src="script/jquery.js"></script>
+    <script src="script/swiper.js"></script>
+    
+    <script>
+    
+          var mySwiper = new Swiper ('.swiper-container', {
+            // 如果需要分页器
+            pagination: '.swiper-pagination',
+
+          })   
+        
+    </script>
+    
+</body>
+</html>

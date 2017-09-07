@@ -367,7 +367,10 @@ pre {
 .aui-col-5 {
 	width: 20%
 }
-
+.aui-ellipsis-1,.aui-ellipsis-2 {
+	overflow: hidden;
+	text-overflow: ellipsis
+}
 .aui-ellipsis-1 {
 	white-space: nowrap;
     display: -webkit-box;
@@ -379,10 +382,7 @@ pre {
 	-moz-box-orient: vertical
 }
 
-.aui-ellipsis-1,.aui-ellipsis-2 {
-	overflow: hidden;
-	text-overflow: ellipsis
-}
+
 
 .aui-ellipsis-2 {
 	display: -webkit-box;
@@ -452,7 +452,7 @@ pre {
     background: #d7000f;
 }
   .titleEN{
-            font-size: 14px;
+            font-size: 15px;
             color: #a0a0a0;
             margin-bottom: 40px;
             position: relative;
@@ -471,7 +471,7 @@ pre {
             bottom: -5px;
         }
         .title{
-            font-size: 18px;
+            font-size: 25px;
             color: #434343;
             font-weight: 500;
             margin-bottom: 5px;
@@ -479,7 +479,7 @@ pre {
 
 .MORE{
     background: #eeeeee;
-    width: 50%;
+    width: 60%;
     display: inline-block;
     border-radius: 50px;
     text-align: center;
@@ -490,3 +490,10 @@ pre {
     color: #434343;
     font-size: 14px;
 }
+ #copyright{
+            background: #242222;
+            text-align: center;
+            font-size: 14px;
+            color: #838383;
+           padding: 10px 0;
+        }

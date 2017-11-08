@@ -5,46 +5,11 @@
      <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title>信保</title>
-    <link href="css/public.css" rel="stylesheet"/>
     <link href="css/swiper.min.css" rel="stylesheet"/>
     <link href="iconfont/iconfont.css" rel="stylesheet"/>
+     <link href="css/public.css" rel="stylesheet"/>
     <style>
-        #nav{
-            background: #fff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            width: 100%;
-            height: 75px;
-            line-height: 50px;
-            border-bottom: 1px solid #eee;
-        }
-        #nav .logo{
-            
-            position: absolute;
-            margin: 0;
-            text-align: center;
-            white-space: nowrap;
-            right: 5rem;
-            left: 5rem;
-            top: 10px;
-            width: auto;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            z-index: 2;
-        }
-        #nav img{
-            display: inline-block;
-            height: 50px;
-        }
-        #nav p{
-            line-height: 75px;
-        }
-        #nav p i{
-            color: #231815;
-            font-size: 1.4rem;
-        }
+       
     
         #banner{
             margin-top: 75px;
@@ -115,9 +80,7 @@
             background-repeat: repeat;
             z-index: 2;
         }
-        #product{
-            padding: 0 0.5rem;
-        }
+        
         #product ul li{
             width: 48%;
             margin: 0 1%;
@@ -207,8 +170,11 @@
             color: #434343;
             font-weight: 500;
         }
-        #star .txt .address, #adviser .txt .address{
+        #star .txt .address{
             color: #d7000f;
+            font-size: 16px;
+        }
+        #adviser .txt .address{
             font-size: 16px;
         }
         #star .txt h2,#adviser .txt h2{
@@ -505,15 +471,15 @@
         }
         #url{
             width: 93%;
-           margin: 0 auto;
+           margin: 30px auto;
             padding-top: 40px;
             border-top: 1px solid #eee;
-            margin-top: 40px;
+           
         }
         #url a,#url span{
             display: inline;
             padding-right: 15px;
-            line-height: 35px;
+            line-height: 30px;
             color: #b5b5b5;
             font-size: 14px;
         }
@@ -681,17 +647,88 @@
         .swiper-pagination-bullet-active{
             background: #d7000f
         }
+
+      
+        #weixin{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                z-index: 15;
+                margin: -75px 0 0 -75px;
+        }
+        #step2
+        #step2
+        #step2
+        #step2
+        #step2
+        #step2
     </style>
 </head>
 <body>
-    <nav id="nav" class="aui-padded-l-15 aui-padded-r-15">
-        <p class="aui-pull-left"><i class="iconfont icon-caidan"></i></p>
+    <!-- 头部 -->
+    <nav id="nav_box" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left caidan"><i class="iconfont icon-caidan"></i></p>
         <div class="logo">
             <img src="img/logo.png" alt="">
         </div>
-       <p class="aui-pull-right aui-margin-l-15"><i class="iconfont icon-haoyouxingming"></i></p>
-       <p class="aui-pull-right"><i class="iconfont icon-fangdajing"></i></p>
+       <a href='set.html' class="aui-pull-right aui-margin-l-15"><i class="iconfont icon-haoyouxingming"></i></a>
+       <p class="aui-pull-right aui-margin-l-15"><i class="iconfont icon-fangdajing fangdajing"></i></p>
+        
+    <div id="nav_all">
+        <ul id="step1" class="aui-padded-r-15 aui-padded-l-15">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="inscompany.html">保险公司 </a></li>
+            <li class="person">保险产品<i class="iconfont icon-down-trangle"></i></li>
+            <li><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="ask.html">ＦＡＱ</a></li>
+            <li><a href="news.html">最新资讯</a></li>
+            <li><a href="About.html">关于平台</a></li>
+        </ul>
+        <div id="step2" class="aui-padded-l-15 aui-padded-r-15">
+            <p class="aui-margin-t-15"><i class="iconfont icon-xiangzuo retu"></i></p>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按险种进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">意外险</a>
+                    <a  class="aui-col-xs-4">少儿险</a>
+                    <a  class="aui-col-xs-4">养老险</a>
+                    <a  class="aui-col-xs-4">重疾险</a>
+                    <a  class="aui-col-xs-4">医疗险</a>
+                    <a  class="aui-col-xs-4">人寿险</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按人群分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">青年</a>
+                    <a  class="aui-col-xs-4">老年</a>
+                    <a  class="aui-col-xs-4">女性</a>
+                    <a  class="aui-col-xs-4">少儿</a>
+                    <a  class="aui-col-xs-4">个人</a>
+                    <a  class="aui-col-xs-4">团体</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按保险公司进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">中国平安</a>
+                    <a  class="aui-col-xs-4">中国人寿</a>
+                    <a  class="aui-col-xs-4">太平洋保险</a>
+                    <a  class="aui-col-xs-4">华安保险</a>
+                    <a  class="aui-col-xs-4">泰康保险</a>
+                    <a  class="aui-col-xs-4">富德生命人寿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="search" class="aui-text-center">
+        <input type="" name="" placeholder="搜索关键词">
+        <span><i class="iconfont icon-fangdajing"></i> <input type="submit" name=""></span>
+    </form>
     </nav>
+
     <div id="banner">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -739,7 +776,7 @@
         </div>
     </form>
     
-    <div id="guarantee">
+     <div id="guarantee">
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide aui-text-center">
@@ -762,7 +799,7 @@
         </div>
         <div class="swiper-slide aui-text-center">
             <div class="box">
-                <div><i class="iconfont icon-zhuanjiazhuye"></i></div>
+                <div class="icon"><i class="iconfont icon-zhuanjiazhuye"></i></div>
                  <div class="txt aui-text-left">
                     <h1>免费设计保险方案</h1>
                     <p>根据您的需求匹配合适您的保险方案</p>
@@ -770,23 +807,22 @@
             </div>
             
         </div>
-        <div class="swiper-slide">
+      <div class="swiper-slide aui-text-center">
             <div class="box">
-                <div><i class="iconfont icon-bao"></i></div>
-                <div>
+                <div class="icon"><i class="iconfont icon-bao"></i></div>
+                <div class="txt aui-text-left">
                     <h1>免费设计保险方案</h1>
                     <p>根据您的需求匹配合适您的保险方案</p>
                 </div>
             </div>
+            
+            
         </div>
     </div>
     <div class="swiper-button-prev"><i class="iconfont icon-xiangzuo"></i></div>
     <div class="swiper-button-next"><i class="iconfont icon-iconfontright"></i></div>
     </div>
-       
- 
-        
-    </div>
+    </div> 
     
     <div id="product">
          <h2 class="title aui-text-center">保险产品</h2>
@@ -851,68 +887,92 @@
             </div>
             <div class="txt">
                 <p class="address aui-margin-b-15">江苏 · 苏州 </p>
-                <h2 class="aui-margin-b-10">城市明星：朱经理</h2>
+                <h2 class="aui-margin-b-10">城市明星：<span class="name">朱经理</span></h2>
                 <div class="aui-margin-b-10 clear">
                     <p class=" aui-ellipsis-1">
-                        电话: <span>1775****003</span>
+                        电话: <span class="tel">1775****003</span>
                     </p>
                     <p class="aui-ellipsis-1">
-                        从业时间: <span>2017-8-31</span>
+                        从业时间: <span class="time">2017-8-31</span>
                     </p>
-                    <p class="aui-ellipsis-1"> 职业证号: 3562487201503562 48720 150</p>
+                    <p class="aui-ellipsis-1"> 职业证号: <span class="order">3562487201503562 48720 150</span></p>
                 </div>
                 <a class=" more" href="">Read more <i class="iconfont icon-iconfontright"></i></a>
             </div>
         </div>
         <div class="aui-margin-t-15 aui-padded-t-15">
-          <div class="swiper-container">
+         <div class="swiper-container">
             <div class="swiper-wrapper star">
                 <ul class="swiper-slide aui-text-center">
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                       <p class="aui-ellipsis-1">城市明星: <span class="name">朱经理</span> </p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                        <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="order" value="3562487201503562 48720 15">
+                       <input type="hidden" class="time" value="2017-8-31">
                     </li>
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                       <p class="aui-ellipsis-1">城市明星: <span class="name">朱经理</span> </p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                         <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="order" value="3562487201503562 48720 15">
+                       <input type="hidden" class="time" value="2017-8-31">
                     </li>
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                       <p class="aui-ellipsis-1">城市明星: <span class="name">朱经理</span> </p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                        <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="order" value="3562487201503562 48720 15">
+                       <input type="hidden" class="time" value="2017-8-31">
                     </li>
                 </ul>
                 <ul class="swiper-slide aui-text-center">
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                        <p class="aui-ellipsis-1">城市明星: <span class="name">朱经理</span> </p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                      
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="order" value="3562487201503562 48720 15">
+                       <input type="hidden" class="time" value="2017-8-31">
                     </li>
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                       <p class="aui-ellipsis-1">城市明星: <span class="name">朱经理</span> </p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                        <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="order" value="3562487201503562 48720 15">
+                       <input type="hidden" class="time" value="2017-8-31">
                     </li>
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                        <p class="aui-ellipsis-1">城市明星: <span class="name">朱经理</span> </p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                         <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="order" value="3562487201503562 48720 15">
+                       <input type="hidden" class="time" value="2017-8-31">
                     </li>
                 </ul>
             </div>
             
-            <!-- 如果需要导航按钮 -->
+           
             <div class="swiper-button-prev"><i class="iconfont icon-xiangzuo"></i></div>
             <div class="swiper-button-next"><i class="iconfont icon-iconfontright"></i></div>
-        </div>
+        </div> 
          <div class="aui-text-center">
             <a class="MORE" href="">VIEW MORE <i class="iconfont icon-iconfontright"></i> </a>
         </div>
@@ -1210,74 +1270,104 @@
                 </p>
             </div>
             <div class="txt">
-                <h2 class="">销售顾问：柯经理 </h2>
-                <p class="aui-margin-b-15">中国平安保险代理人</p>
+                <h2 class="">销售顾问：<span class="name">坷经理</span> </h2>
+                <p class="aui-margin-b-15 position">中国平安保险代理人</p>
                 <div class="aui-margin-b-10 clear">
                    <p class=" aui-ellipsis-1">
-                        工作地点: <span>江苏 苏州</span>
+                        工作地点: <span class="address">江苏 苏州</span>
                     </p>
                     <p class=" aui-ellipsis-1">
-                        电话: <span>1775****003</span>
+                        电话: <span class="tel">1775****003</span>
                     </p>
                     <p class=" aui-ellipsis-1">
-                        微信号: <span>wx12151</span>
+                        微信号: <span class="weixin">wx12151</span>
                     </p>
                     <p class="aui-ellipsis-1">
-                        擅长领域: <span>人寿险、重疾险、养老险</span>
+                        擅长领域: <span class="field">人寿险、重疾险、养老险</span>
                     </p>
                 </div>
-               
+            
             </div>
         </div>
         <div class="banner">
-          <div class="swiper-container">
+         <div class="swiper-container">
             <div class="swiper-wrapper star">
                 <ul class="swiper-slide aui-text-center">
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                        <p class="aui-ellipsis-1">城市明星:<span class="name">朱经理</span></p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                        <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="weix" value="121651">
+                       <input type="hidden" class="field" value="人寿险,重疾险,养老险">
+                       <input type="hidden" class="wximg" value="img/er.jpg">
                     </li>
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                        <p class="aui-ellipsis-1">城市明星:<span class="name">朱经理</span></p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                        <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="weix" value="121651">
+                       <input type="hidden" class="field" value="人寿险,重疾险,养老险">
+                       <input type="hidden" class="wximg" value="img/er.jpg">
                     </li>
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                       <p class="aui-ellipsis-1">城市明星:<span class="name">朱经理</span></p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                        <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="weixin" value="121651">
+                       <input type="hidden" class="field" value="人寿险,重疾险,养老险">
+                       <input type="hidden" class="wximg" value="img/er.jpg">
                     </li>
                 </ul>
                 <ul class="swiper-slide aui-text-center">
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                       <p class="aui-ellipsis-1">城市明星:<span class="name">朱经理</span></p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                        <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="weix" value="121651">
+                       <input type="hidden" class="field" value="人寿险,重疾险,养老险">
+                       <input type="hidden" class="wximg" value="img/er.jpg">
                     </li>
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                        <p class="aui-ellipsis-1">城市明星:<span class="name">朱经理</span></p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                       <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="weix" value="121651">
+                       <input type="hidden" class="field" value="人寿险,重疾险,养老险">
+                       <input type="hidden" class="wximg" value="img/er.jpg">
                     </li>
-                     <li class="aui-text-center">
+                     <li class="aui-text-center li">
                         <div><img class="" src="img/star_head.png"/></div>
-                        <p class="aui-ellipsis-1">城市明星:朱经理</p>
+                        <p class="aui-ellipsis-1">城市明星:<span class="name">朱经理</span></p>
                         <span>江苏 · 苏州 </span>
-                        <input type="hidden" value="1231">
+                        <input type="hidden" class="position" value="中国人寿保险代理人">
+                       <input type="hidden" class="address" value="福建·泉州">
+                       <input type="hidden" class="tel" value="17750877003">
+                       <input type="hidden" class="weix" value="121651">
+                       <input type="hidden" class="field" value="人寿险,重疾险,养老险">
+                       <input type="hidden" class="wximg" value="img/er.jpg">
                     </li>
                 </ul>
             </div>
             
-            <!-- 如果需要导航按钮 -->
+         
             <div class="swiper-button-prev"><i class="iconfont icon-xiangzuo"></i></div>
             <div class="swiper-button-next"><i class="iconfont icon-iconfontright"></i></div>
-        </div>
+        </div> 
          <div class="aui-text-center">
             <a class="MORE" href="">VIEW MORE <i class="iconfont icon-iconfontright"></i> </a>
         </div>
@@ -1506,7 +1596,8 @@
     </div>
     <!--底部-->
     
-    
+    <div id="bg"></div>
+    <div id="weixin"></div>
     <footer id="footer" class="aui-text-center">
         <h1>联系我们</h1>
         <p>公司名称：厦门信泽通信息科技有限公司</p>
@@ -1515,10 +1606,11 @@
         <p>邮箱：layal@xinbao315.com</p>
         <img src="img/er.png" alt="">
         <div class="aui-text-center icon">
-            <a href=""><i class="iconfont icon-qq"></i></a>
-            <a href=""><i class="iconfont icon-wechat-copy"></i></a>
-            <a href=""><i class="iconfont icon-lianshu"></i></a>
-            <a href=""><i class="iconfont icon-twitter"></i></a>
+            <a id="qq" target='_blank' version="1.0"><i class="iconfont icon-qq"></i></a> 
+             <a id="showWn" target='_blank' href="javascript:void(0)"><i class="iconfont icon-wechat-copy "></i></a>
+            <a href="https://www.facebook.com/" target='_blank'><i class="iconfont icon-lianshu"></i></a>
+            <a href="https://twitter.com/" target='_blank'><i class="iconfont icon-twitter"></i></a>
+
         </div>
          <div id="copyright" class="aui-padded-l-15 aui-padded-r-15">
             COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司   沪ICP备17034135号
@@ -1527,20 +1619,24 @@
     
     <script src="script/jquery.js"></script>
     <script src="script/swiper.js"></script>
+    <script src="script/public.js"></script>
+    <script src="script/qzopensl.js"></script>
+    <script src="script/qrcode.js"></script>
     
     <script>
     
-          var mySwiper = new Swiper ('.swiper-container', {
+          var mySwiper = new Swiper ('#adviser .swiper-container,#guarantee .swiper-container,#star .swiper-container', {
             // 如果需要分页器
             nextButton: '.swiper-button-next',
-              prevButton: '.swiper-button-prev',
+            prevButton: '.swiper-button-prev',
+            
+          })   
+          
+        var asdf = new Swiper ('#banner .swiper-container,#Customer .swiper-container', {
             pagination: '.swiper-pagination',
 
           })   
-          
           $(function(){
-              
-      
              $(".star li").on('click',function(){
                  $(".star .active").removeClass('active')
                  $(this).addClass('active')
@@ -1551,10 +1647,71 @@
                  otxt.find('h2').text($(this).find('p').text())
                  otxt.find('.msg').text($(this).find('input').val())
              })
-            
-          
+
+             $("#adviser .li").on('click',function(){
+                 tab('#adviser',this)
+             })
               
-          })
+              $("#star .li").on('click',function(){
+                 tab('#star',this)
+             })
+              
+              
+              function tab(o,th){
+                  
+                  $(o+" .swiper-slide .active").removeClass('active')
+                    $(th).find('img').addClass('active')
+                    $(o+" .txt .head").attr('src',$(th).find('img').attr('src'))
+                    $(o+" .txt .name").text($(th).find('.name').text())
+                    $(o+" .txt .position").text($(th).find('.position').val())
+                    $(o+" .txt .address").text($(th).find('.address').val())
+                    $(o+" .txt .field").text($(th).find('.field').val())
+                    $(o+" .txt .weixin").text($(th).find('.weixin').val())
+                    $(o+" .txt .tel").text($(th).find('.tel').val())
+                    $(o+" .txt .order").text($(th).find('.order').val())
+                    $(o+" .txt .time").text($(th).find('.time').val())
+                
+              }
+              
+    
+              
+          var p = {
+              url: 'http://pan.baidu.com/',
+              showcount: '1',/*是否显示分享总数,显示：'1'，不显示：'0' */
+              desc: '信保网',/*默认分享理由(可选)*/
+             summary: '信保网',/*分享摘要(可选)*/
+             title: '信保网',/*分享标题(可选)*/
+             site: '',/*分享来源 如：腾讯网(可选)*/
+             pics: '', /*分享图片的路径(可选)*/
+             style: '101',
+             width: 199,
+             height: 30
+         };
+         var s = [];
+         for (var i in p) {
+             s.push(i + '=' + encodeURIComponent(p[i] || ''));
+         }
+
+        var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?'+s.join('&')
+
+        $("#qq").attr('href',url)
+    
+    var qr_coder = new QRCoder($('#weixin'));
+    $('#showWn').click(function(){
+        
+        $("#bg,#weixin").show();
+        $('#weixin').html("generating");
+        qr_coder.setMode(1);
+        qr_coder.draw('https://www.baidu.com/', 'h','img/er_wein.png', function(data){
+        });
+    });
+$("#bg").on('click',function(){
+    $("#bg,#weixin").hide();
+        
+})
+
+
+        })
           
         
     </script>

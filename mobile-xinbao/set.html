@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title>设置</title>
     <link href="iconfont/iconfont.css" rel="stylesheet"/>
@@ -10,126 +10,345 @@
     
     <style>
     
+        .input{
+            
+           width: 100%;
+        }
         input[type='text']{
             line-height: 50px;
             background: #eee;
-           width: 100%;
+            margin-bottom: 15px;
+            padding-left: 10px;
         }
         #form>.clear{
             line-height: 50px;
+            
         }
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        #form
-        
+        #form .key{
+            color: #434343;
+            font-size: 14px;
+        }
+         .tl{
+            font-size: 22px;
+            font-weight: 500;
+            color: #434343;
+             margin-top: 100px;
+             margin-bottom: 50px;
+        }
+        #head{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        #head img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        #head .bg_{
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+        }
+        #head p{
+            line-height: 150px;
+            width: 100%;
+            position: absolute;
+             top: 0;
+            left: 0;
+            z-index: 2;
+            color: #fff;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        #head input{
+            position: absolute;
+            left: 30px;
+            opacity: 0;
+            width: 100px;
+        }
+        #form label{
+           
+        }
+        #form label input{
+            opacity: 0;
+        }
+        #form label span{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+              border-radius: 50%;
+            position: relative;
+            top: 5px;
+            border: 1px solid #535353;
+            position: relative;
+        }
+        #form label span.active:before{
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+              border-radius: 50%;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            background: #535353
+        }
+        #form .select{
+            position: relative;
+            height: 50px;
+        }
+        #form .select ul{
+            background: #eee;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        #form .select li{
+            line-height: 50px;
+            padding-left: 15px;
+            border-bottom: 1px solid #e5e5e5
+        }
+        #form .select ul li:last-child{
+            border: none;
+        }
+        #form .select i{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+        }
+        #form .select ul li.active{
+            background: #d7000f;
+            color: #fff;
+        }
+        #form input[type='submit']{
+              background: #d7000f;
+            color: #fff;
+            width: 100%;
+            margin: 50px auto;
+            
+        }
+       
+        #address select{
+            padding-right: 0;
+            background-color: #eee;
+           
+            display: block;
+            margin-bottom: 15px;
+            width: 33.3333333%;
+            float: left;
+            padding-left: 5%;
+        }
+        #address option{
+             text-align: center;;
+        }
     </style>
 </head>
 <body>
-    <p>账号设置</p>
+ <!-- 头部 -->
+    <nav id="nav_box" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left caidan"><i class="iconfont icon-caidan"></i></p>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+       <a href='set.html' class="aui-pull-right aui-margin-l-15"><i class="iconfont icon-haoyouxingming"></i></a>
+        
+    <div id="nav_all">
+        <ul id="step1" class="aui-padded-r-15 aui-padded-l-15">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="inscompany.html">保险公司 </a></li>
+            <li class="person">保险产品<i class="iconfont icon-down-trangle"></i></li>
+            <li><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="ask.html">ＦＡＱ</a></li>
+            <li><a href="news.html">最新资讯</a></li>
+            <li><a href="About.html">关于平台</a></li>
+        </ul>
+        <div id="step2" class="aui-padded-l-15 aui-padded-r-15">
+            <p class="aui-margin-t-15"><i class="iconfont icon-xiangzuo retu"></i></p>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按险种进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">意外险</a>
+                    <a  class="aui-col-xs-4">少儿险</a>
+                    <a  class="aui-col-xs-4">养老险</a>
+                    <a  class="aui-col-xs-4">重疾险</a>
+                    <a  class="aui-col-xs-4">医疗险</a>
+                    <a  class="aui-col-xs-4">人寿险</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按人群分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">青年</a>
+                    <a  class="aui-col-xs-4">老年</a>
+                    <a  class="aui-col-xs-4">女性</a>
+                    <a  class="aui-col-xs-4">少儿</a>
+                    <a  class="aui-col-xs-4">个人</a>
+                    <a  class="aui-col-xs-4">团体</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按保险公司进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">中国平安</a>
+                    <a  class="aui-col-xs-4">中国人寿</a>
+                    <a  class="aui-col-xs-4">太平洋保险</a>
+                    <a  class="aui-col-xs-4">华安保险</a>
+                    <a  class="aui-col-xs-4">泰康保险</a>
+                    <a  class="aui-col-xs-4">富德生命人寿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="search" class="aui-text-center">
+        <input type="" name="" placeholder="搜索关键词">
+        <span><i class="iconfont icon-fangdajing"></i> <input type="submit" name=""></span>
+    </form>
+    </nav>
+     
+    <p class="tl aui-text-center">账号设置</p>
     
     <form id="form" class="aui-padded-l-15 aui-padded-r-15">
-        <div>
-        <img src="" alt="">
-        <div></div>
-        <p>更换头像 <input type="file"></p>
+        <div id="head" class="aui-text-center">
+            <img src="img/product3.png" alt="">
+            <div class="bg_"></div>
+            <p class="aui-text-center">更换头像 <input type="file"></p>
         </div>
         <div class="clear">
-        <p class="aui-col-xs-3 aui-text-right">
+        <p class="aui-col-xs-3 aui-text-right key">
             真实姓名：
         </p>
         <p class="aui-col-xs-9">
-            <input type="text">
+            <input class="input" type="text">
         </p>
         </div>
         <div class="clear">
-        <p class="aui-col-xs-3 aui-text-right">
+        <p class="aui-col-xs-3 aui-text-right key">
             性别：
         </p>
-        <p class="aui-col-xs-9">
-          <label><input type="radio" name="sex">男</label>
-          <label><input type="radio" name="sex">女</label>
+        <p class="aui-col-xs-9" id="sex">
+          <label class="aui-margin-r-15"><input type="radio"  name="sex">  <span></span> 男</label>
+          <label><input type="radio" checked name="sex"> <span class="active"></span> 女</label>
         </p>
         </div>
         <div class="clear">
-        <p class="aui-col-xs-3 aui-text-right">
+        <p class="aui-col-xs-3 aui-text-right key">
             工作地区：
         </p>
-        <div class="aui-col-xs-9">
-           <p class="clear">
-               <input type="text" class="aui-col-xs-4">
-               <span class="aui-col-xs-2">省</span>
-               <input type="text" class="aui-col-xs-4">
-               <span class="aui-col-xs-2">市</span>
-           </p>
-           <p class="clear">
-               <input type="text" class="aui-col-xs-10">
-               <span class="aui-col-xs-2">区</span>
-           </p>
+
+        <div class="aui-col-xs-9" id="address">
+            <div data-toggle="distpicker" class="clear">
+              <select data-province="---- 选择省 ----"></select>
+              <select data-city="---- 选择市 ----"></select>
+              <select data-district="---- 选择区 ----"></select>
+            </div>
         </div>
+
         </div>
         <div class="clear">
-        <p class="aui-col-xs-3 aui-text-right">
+        <p class="aui-col-xs-3 aui-text-right key">
             手机号：
         </p>
         <p class="aui-col-xs-9">
-            <input type="text">
+            <input class="input" type="text">
         </p>
         </div>
         <div class="clear">
-        <p class="aui-col-xs-3 aui-text-right">
+        <p class="aui-col-xs-3 aui-text-right key">
             邮箱：
         </p>
         <p class="aui-col-xs-9">
-            <input type="text">
+            <input class="input" type="text">
         </p>
         </div>
         <div class="clear">
-        <p class="aui-col-xs-3 aui-text-right">
+        <p class="aui-col-xs-3 aui-text-right key">
             微信号：
         </p>
         <p class="aui-col-xs-9">
-            <input type="text">
+            <input class="input" type="text">
         </p>
         </div>
-        <div class="select">
-         <ul class="aui-col-xs-12">
-             <li class="val">中国人寿</li>
-             <li>中国人寿</li>
-             <li class="active">中国人寿</li>
-             <li>中国人寿</li>
-             <i class="tr-b"></i>
-         </ul>
+        <div>
+            <p class="aui-col-xs-3 aui-text-right key">
+                所属公司：
+            </p>
+             <div id="select" class="select aui-col-xs-9">
+             <ul class="aui-col-xs-12">
+                 <li class="val">中国人寿</li>
+                 <li>中国平安</li>
+                 <li class="">中国人寿</li>
+                 <li>中国人寿</li>
+                 <i class="iconfont icon-down-trangle"></i>
+             </ul>
           <input type="hidden" value="">
         </div>
-        <div>
-            <input type="submit" value="提交">
         </div>
+        <div class="clear">
+        <p class="aui-col-xs-3 aui-text-right key">
+            &nbsp;
+        </p>
+        <p class="aui-col-xs-9">
+            <input type="submit" value="提交">
+        </p>
+        </div>
+        
     </form>
+      <div id="copyright" class="aui-padded-l-15 aui-padded-r-15">
+            COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司   沪ICP备17034135号
+    </div>
+    <div id="bg"></div>
     
+    
+    <script src="script/jquery.js"></script>
+    <script src='script/public.js'></script>
+    <script src="script/distpicker.data.js"></script>
+      <script src="script/distpicker.js"></script>
+      <!-- <script src="script/main.js"></script> -->
+    <script>
+    
+        $(function(){
+            
+            $("#sex label").on('click',function(){
+                $("#sex .active").removeClass('active')
+                $(this).find('span').addClass('active')
+            })
+            var h = $("#select ul").height();
+           $("#select ul").height('50px')
+            $("#select li").on('click',function(){
+                if($(this).hasClass('val')){
+                    if($("#select ul").height() >50){
+                         $("#select ul").height('50px')
+                    }else{
+                         $("#select ul").height(h+'px')
+                    }
+                   
+                    return;
+                };
+                
+                $("#select .active").removeClass('active')
+                $(this).addClass('active')
+               $("#select .val").text($("#select .active").text())
+                $("#select input").val($("#select .active").text())
+                
+                
+            })
+            
+            
+        })
+        
+    </script>
 </body>
 </html>

@@ -1,0 +1,95 @@
+ #main{
+            
+             margin: 100px auto 30px;
+         }
+       
+         
+         #main .txt{
+             width: 48%;
+             display: block;
+            margin: 0 1%;
+             float: left;
+          
+             position: relative;
+             border: 1px solid transparent;
+          
+             margin-bottom: 30px;
+         }
+        
+        
+         #main .txt img{
+             width: 100%;
+         }
+         #main .zan i,#main .zan span{
+             display: block;
+         }
+         #main .zan i {
+             font-size: 1.5rem;
+             color: #838383;
+         }
+         #main tiem{
+             position: relative;
+             padding-left: 20px;
+             font-size: 13px;
+             color: #838383;
+         }
+        #main .name{
+             color: #434343;
+            font-size: 14px;
+            line-height: 25px;
+         }
+         #main .name i{
+             color: #e7141a
+         }
+         #main tiem:before{
+               content: '';
+            display: block;
+            height: 5px;
+            width: 5px;
+            background: #e7141a;
+            position: absolute;
+            left: 2px;
+            top: 40%;
+             border-radius: 50%;
+         }
+         #main .msg{
+             line-height: 25px;
+             color: #434343;
+             overflow: hidden;
+             font-size: 13px;
+             margin-bottom: 20px;
+         }
+         #main .more{
+             font-size: 13px;
+             display: none;
+             position: absolute;
+             bottom: 20px;
+             right: 20px;
+             color: #e7141a
+         }
+         #main .more i{
+             font-size: 13px;
+         }
+         #main .box{
+             margin: 0 -1%;
+             
+         }
+         #paging li{
+             width: 40px;
+             height: 40px;
+             display: inline-block;
+             border: 1px solid #e5e5e5;
+             background: #fff;
+             line-height: 35px;
+             color: #c4c4c4;
+             cursor: pointer;
+         } 
+         
+         #paging .active{
+          background: #e7141a;
+             color: #fff;
+         }
+         #banner{
+             margin-bottom: 70px;
+         }
+         #main

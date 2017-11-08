@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<title>产品详情</title>
+	<link rel="stylesheet" type="text/css" href="css/aui.2.0.css">
+	<link href="css/public.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<style type="text/css">
+		body{
+			background-color: #fff;
+		}
+		
+
+		
+		#product .cheractor{
+			font-size: 12px;
+			border-bottom:1px solid #f1f1f1;
+			padding:15px 0;
+		}
+		#product .cheractor span{
+			color:16px;
+			font-weight: bold;
+			color:#202020;
+		}
+        #product .con>div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #product img{
+            width: 100px;
+        }
+       #product .er{
+            width: 60px;
+        }
+        #product p{
+            font-size: 0.6rem;
+        }
+        #product .red{
+            color: #e72221;
+        }
+		#classify{
+			text-align: center;
+		}
+		#classify div>div:nth-of-type(1){
+			border-left:none;
+		}
+		#classify  div>div{
+			font-size:14px;
+			text-align: center;
+			border-left:1px solid #f1f1f1;
+            display: inline-block;
+            padding: 0 10px;
+		}
+		#classify .active{
+			color:#d7000f;
+		}
+		#detail p:nth-of-type(1) span,#eg p:nth-of-type(1) span,#asking p:nth-of-type(1) span,#form1>p:nth-of-type(1) span{
+			color:#202020;
+			font-size:16px;
+			border-left:3px solid #d7000f;
+			padding-left:20px;
+		}
+		#detail .row1 .aui-col-xs-4{
+			font-size:12px;
+			color:#434343;
+		}
+		#detail .row2 .center{
+			font-size:12px;
+			text-align: center;
+			height:40px !important;
+			background-color:#eeeeee;
+			line-height: 40px !important;
+		}
+		#detail .row2 .aui-col-xs-3{
+			border-left:none !important;
+
+		}
+		#detail .row2 .aui-col-xs-3,#detail .row2 .aui-col-xs-1{
+			text-align: center;
+			line-height: 100px;
+		}
+		#detail .row2 .aui-col-xs-3,#detail .row2 .aui-col-xs-1,#detail .row2 .aui-col-xs-8{
+			height: 100px;
+			padding:5px 0;
+			font-size: 12px;
+			border-left:1px solid #e5e5e5;
+			border-bottom:1px solid #e5e5e5;
+			display: flex;
+			align-items: center;
+			justify-content: center
+		}
+		#detail .row2 .aui-col-xs-8{
+			font-size: 12px;
+			padding-left:5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#detail .chu{
+			line-height: 50px;
+			color:#202020;
+		}
+		#detail .row4{
+			
+			padding: 10px 0;
+		}
+        #detail .baolk{
+            color: #434343;
+        }
+		#detail .row4 .aui-col-xs-3,#detail .row4 .aui-col-xs-9{
+			font-size:14px;
+		}
+        #eg .img{
+            overflow: hidden;
+        }
+        #eg img {
+            width: 100%;
+        }
+        #eg .red{
+            color: #d7000f
+        }
+		#asking ul li {
+			border-bottom: 1px solid #f1f1f1;
+			padding:15px 0;
+		}
+		#asking ul li p:nth-of-type(1){
+			line-height: 40px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+            color: #434343;
+		}
+		#asking ul li p:nth-of-type(1) img{
+			width:20px;
+			height:20px;
+			margin-right: 10px;
+			vertical-align: middle;
+			border-radius: 3px;
+		}
+		#asking ul li p:nth-of-type(1) span{
+			font-size:16px;
+			color:#202020;
+			border-left:none;
+			padding-left:0;
+		}
+		#asking ul li .aui-col-xs-3 img{
+			width: 100%;
+			height:auto;
+		}
+		#asking ul li .aui-col-xs-9{
+			padding-left:10px;
+		}
+		#asking ul li .aui-col-xs-9 p:nth-of-type(1){
+			font-size:16px;
+			color:#d7000f;
+			line-height: 16px;
+			margin-bottom: 5px;
+		}
+		#asking ul li .aui-col-xs-9 p:nth-of-type(2){
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+		    color: #636363;
+        }
+		#asking ul li .aui-col-xs-9 p:nth-of-type(3){
+			text-align: right;
+			color:#d7000f;
+		}
+		#asking ul li .aui-col-xs-9 p:nth-of-type(3) i{
+			font-size:24px;
+		}
+		#asking ul li .aui-col-xs-9 p:nth-of-type(3) span{
+			font-size:20px;
+			font-weight: bold;
+		}
+        #table {
+            background: #fafafa;
+        }
+        #table .active{
+            background: #eee;
+        }
+        #table>div{
+            border-bottom: 1px solid #e5e5e5;
+        }
+        #table>div>div{
+            display: table-cell;
+            vertical-align: middle;
+           border-right: 1px solid #e5e5e5;
+        }
+        #table>div .w6{
+            border: none;
+        }
+        #table .w6 {
+           
+        }
+        .form input[type='text'],.form input[type='password'],.form input[type='tel']{
+            width: 100%;
+            height: 50px;
+            background: #eee;
+            padding-left: 10px;
+        }
+        .form div p span{
+            color: #d7000f;
+        }
+        .form .send{
+            background: #d7000f;
+            color: #fff;
+            line-height: 50px;
+            display: inline-block;
+            width: 30%;
+            text-align: center;
+            float: right;
+        }
+        .form input[class='order']{
+            width: 65%;
+            float: left;
+        }
+        .form .key{
+            margin: 20px 0 15px 0;
+            color: #434343;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .form .select{
+            background: #eee;
+            position: relative;
+        }
+        .form .select li{
+            line-height: 50px;
+            padding-left: 15px;
+            color: #434343;
+            font-weight: 500;
+            font-size: 16px;
+             border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .form .select ul li:last-child{
+            border: none;
+        }
+        .form .select li.active{
+            background: #d7000f;
+            color: #fff;
+        }
+        .form .select .tr-b{
+            top: 20px;
+            right: 15px;
+        }
+        .form .select ul{
+            overflow: hidden;
+           
+        }
+        .form input[type='submit']{
+            background: #d7000f;
+            width: 100%;
+            color: #fff;
+            line-height: 50px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+        .form textarea{
+              background: #eee;
+            height: 200px;
+            padding: 5px 0 0 5px;
+        }
+        #classify.fixed{
+            position: fixed;
+            width: 100%;
+            top:75px;
+            z-index: 5;
+           height: 45px;
+            padding-top: 10px;
+            background: #fff;
+        }
+        #table
+        #table
+        #table
+        #table
+        #table
+        #table
+        #table
+        #table
+	</style>
+</head>
+<body>
+ <!-- 头部 -->
+    <nav id="nav_box" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left caidan"><i class="iconfont icon-caidan"></i></p>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+      
+        
+    <div id="nav_all">
+        <ul id="step1" class="aui-padded-r-15 aui-padded-l-15">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="inscompany.html">保险公司 </a></li>
+            <li class="person">保险产品<i class="iconfont icon-down-trangle"></i></li>
+            <li><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="ask.html">ＦＡＱ</a></li>
+            <li><a href="news.html">最新资讯</a></li>
+            <li><a href="About.html">关于平台</a></li>
+        </ul>
+        <div id="step2" class="aui-padded-l-15 aui-padded-r-15">
+            <p class="aui-margin-t-15"><i class="iconfont icon-xiangzuo retu"></i></p>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按险种进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">意外险</a>
+                    <a  class="aui-col-xs-4">少儿险</a>
+                    <a  class="aui-col-xs-4">养老险</a>
+                    <a  class="aui-col-xs-4">重疾险</a>
+                    <a  class="aui-col-xs-4">医疗险</a>
+                    <a  class="aui-col-xs-4">人寿险</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按人群分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">青年</a>
+                    <a  class="aui-col-xs-4">老年</a>
+                    <a  class="aui-col-xs-4">女性</a>
+                    <a  class="aui-col-xs-4">少儿</a>
+                    <a  class="aui-col-xs-4">个人</a>
+                    <a  class="aui-col-xs-4">团体</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按保险公司进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">中国平安</a>
+                    <a  class="aui-col-xs-4">中国人寿</a>
+                    <a  class="aui-col-xs-4">太平洋保险</a>
+                    <a  class="aui-col-xs-4">华安保险</a>
+                    <a  class="aui-col-xs-4">泰康保险</a>
+                    <a  class="aui-col-xs-4">富德生命人寿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="search" class="aui-text-center">
+        <input type="" name="" placeholder="搜索关键词">
+        <span><i class="iconfont icon-fangdajing"></i> <input type="submit" name=""></span>
+    </form>
+    </nav>
+    <div id="mainall"></div>
+	<div id="product" class="aui-content-padded">
+		<div class="aui-row con" >
+			<div class="img">
+				<img src="img/product1.png">
+			</div>
+			<div class="aui-padded-l-10">
+				<p>太平成长无忧终身重大疾病保险</p>
+				<p>投保年龄：<span class="red">0-60周岁</span></p>
+				<p>适合人群：<span class="red">个人</span></p>
+				<p>保险期限：<span class="red">终身</span></p>
+			</div>
+			<div class="aui-padded-l-10">
+				<p class="aui-font-size-12 red">￥按需定制</p>
+				<img class="er" src="img/er_.png">
+			</div>
+		</div>
+		<p class="cheractor"><span>产品特色：</span>具有“重疾全面覆盖，特定加倍给付、轻症及早干预、年金自由转化，具有“重疾全面覆盖，特定加倍给付、轻症及早干预特定加倍给付、轻症及早干特定加倍给付、轻症及早干。</p>
+	</div>
+	<div id="classify">
+		<div class="aui-row">
+			<div class=" active">
+				产品详情
+			</div>
+			<div class="">
+				投保案例
+			</div>
+			<div class="">
+				产品问答
+			</div>
+			<div class="">
+				我要提问
+			</div>
+		</div>
+	</div>
+	<div id="detail" class="aui-content-padded list1">
+		<p><span>产品详情</span></p>
+		<div class="aui-row row1 aui-margin-b-15 aui-margin-t-10">
+			<div class="aui-col-xs-4">
+				投保年龄：0-60周岁
+			</div>
+			<div class="aui-col-xs-4">
+				适合人群：个人
+			</div>
+			<div class="aui-col-xs-4">
+				保险期限：终身
+			</div>
+		</div>
+		<p class="baolk aui-padded-b-10">保障范围：</p>
+		<div id="table">
+		        
+		    <div class=" clear aui-text-center active">
+		        <div class="w4">
+		           <p> 保障项目</p>
+		        </div>
+		        <div class="w2">
+		           <p> 保额</p>
+		        </div>
+		        <div class="w6">
+		            <p> 保额</p>
+		        </div>
+		    </div>
+		    <div class=" clear aui-text-center">
+		       <div class="w4">
+		           <p>身故保险金</p>
+		        </div>
+		        <div class="w2">
+		           <p>有</p>
+		        </div>
+		        <div class="w6">
+		            <p>观察期外确诊合同约定的重大疾病按合同约定基本保额
+给付保险金。观察期外确诊合同约定的重大疾病按合同
+约定基本保额给付保险金。</p>
+		        </div>
+		    </div>
+		     <div class=" clear aui-text-center">
+		       <div class="w4">
+		           <p>身故保险金</p>
+		        </div>
+		        <div class="w2">
+		           <p>有</p>
+		        </div>
+		        <div class="w6">
+		            <p>观察期外确诊合同约定的重大疾病按合同约定基本保额
+给付保险金。</p>
+		        </div>
+		    </div>
+		  <div class=" clear aui-text-center">
+		       <div class="w4">
+		           <p>身故保险金</p>
+		        </div>
+		        <div class="w2">
+		           <p>有</p>
+		        </div>
+		        <div class="w6">
+		            <p>观察期外确诊合同约定的重大疾病按合同约定基本保额
+给付保险金。</p>
+		        </div>
+		    </div>
+		    <div class="clear aui-text-center">
+		       <div class="w4">
+		           <p>身故保险金</p>
+		        </div>
+		        <div class="w2">
+		           <p>有</p>
+		        </div>
+		        <div class="w6">
+		            <p>观察期外确诊合同约定的重大疾病按合同约定基本保额
+给付保险金。</p>
+		        </div>
+		    </div>
+		</div>
+		<div class="aui-row row4">
+			<div class="aui-col-xs-3 baolk">
+				责任免除：
+			</div>
+			<div class="aui-col-xs-9 baolk">
+				常青树重大疾病保险（2016）条款 
+			</div>
+		</div>
+		<div class="aui-row row4">
+			<div class="aui-col-xs-3 baolk">
+				详细条款：
+			</div>
+			<div class="aui-col-xs-9 baolk">
+				常青树重大疾病保险（2016）条款常，青树重大疾病保险（2016）条款，常青树重大疾病保险（2016）条款，常青树重大疾病保险2016条款  
+			</div>
+		</div>
+	</div>
+	<div id="eg" class="aui-content-padded list2">
+		<p><span>投保案例</span></p>
+        <div class="img">
+            <img src="img/conductdetail.png" alt="">
+            <img src="img/conductdetail.png" alt="">
+            <img src="img/conductdetail.png" alt="">
+        </div>
+		<div class="aui-text-center red" id="red"><span>展开全部</span><i class="iconfont icon-down-trangle"></i></div>
+	</div>
+	<div id="asking" class="aui-content-padded list3">
+		<p><span>产品问答</span></p>
+		<ul>
+			<li>
+				<p><img src="img/answer.png"> <span>咨询：</span>友邦保险理赔怎么样？理赔速度快不快...</p>
+				<div class="aui-row">
+					<div class="aui-col-xs-3">
+						<img src="img/product1.png">
+					</div>
+					<div class="aui-col-xs-9">
+						<p>游客回复</p>
+						<p>你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录...</p>
+						<p><i class="iconfont icon-xiaoxi"></i> <span>+10</span></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<p><img src="img/answer.png"> <span>咨询：</span>友邦保险理赔怎么样？理赔速度快不快...</p>
+				<div class="aui-row">
+					<div class="aui-col-xs-3">
+						<img src="img/product1.png">
+					</div>
+					<div class="aui-col-xs-9">
+						<p>游客回复</p>
+						<p>你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录...</p>
+						<p><i class="iconfont icon-xiaoxi"></i> <span>+10</span></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<p><img src="img/answer.png"> <span>咨询：</span>友邦保险理赔怎么样？理赔速度快不快...</p>
+				<div class="aui-row">
+					<div class="aui-col-xs-3">
+						<img src="img/product1.png">
+					</div>
+					<div class="aui-col-xs-9">
+						<p>游客回复</p>
+						<p>你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录...</p>
+						<p><i class="iconfont icon-xiaoxi"></i> <span>+10</span></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<p><img src="img/answer.png"> <span>咨询：</span>友邦保险理赔怎么样？理赔速度快不快...</p>
+				<div class="aui-row">
+					<div class="aui-col-xs-3">
+						<img src="img/product1.png">
+					</div>
+					<div class="aui-col-xs-9">
+						<p>游客回复</p>
+						<p>你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录...</p>
+						<p><i class="iconfont icon-xiaoxi"></i> <span>+10</span></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<p><img src="img/answer.png"> <span>咨询：</span>友邦保险理赔怎么样？理赔速度快不快...</p>
+				<div class="aui-row">
+					<div class="aui-col-xs-3">
+						<img src="img/product1.png">
+					</div>
+					<div class="aui-col-xs-9">
+						<p>游客回复</p>
+						<p>你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录...</p>
+						<p><i class="iconfont icon-xiaoxi"></i> <span>+10</span></p>
+					</div>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<form class="form aui-padded-l-15 aui-padded-r-15" id="form1">
+       <p><span>我要提问</span></p>
+        <div>
+            <p class="key"> <span>*</span>留言：</p>
+            <p>
+               <textarea></textarea>
+            </p>
+        </div>
+       
+        <div>
+            <p class="key"><span>*</span> 姓名：</p>
+            <p>
+                <input type="password" required placeholder="">
+            </p>
+        </div>
+        <div>
+            <p class="key"> <span>*</span> 电话</p>
+            <p>
+                <input type="text" required placeholder="">
+            </p>
+        </div>
+         <div>
+            <p class="key"> <span>*</span> 手机验证码</p>
+            <p class="clear">
+                <input class="order" type="text" required placeholder="获取验证码"> <span class="send">获取验证码</span>
+            </p>
+        </div>
+        
+        <div>
+            <input type="submit" value="提交">
+        </div>
+    </form>
+	<div id="bg"></div>
+	  <script src="script/jquery.js"></script>
+    <script src='script/public.js'></script>
+	<script src="script/jquery.js"></script>
+	
+	<script>
+    var w = Math.abs($("#table").width());
+        $("#table .w4 p").width(w*0.3)
+        $("#table .w2 p").width(w*0.2)
+        $("#table .w6 p").width(w*0.5)
+        $("#table .w6 p").css({paddingRight:'5px',paddingLeft:'5px',paddingBottom:'5px',paddingTop:'5px'})
+        
+        
+         $("#classify div div").on('click',function(){
+                 $("#classify .active").removeClass('active')
+                $(this).addClass('active')
+                
+                var index = $(this).index()
+            switch(index){
+                    case 0:
+                    $('body,html').animate({ scrollTop: $(".list1").offset().top-50});
+                break;
+                    case 1:
+                   $('body,html').animate({ scrollTop: $(".list2").offset().top-90});
+                break;
+                    case 2:
+                    $('body,html').animate({ scrollTop: $(".list3").offset().top-90});
+                break;
+                     case 3:
+                    $('body,html').animate({ scrollTop: $(".form").offset().top-100});
+                break;
+               }
+            
+            })
+            
+            var h =  $("#eg  .img").height();
+            $("#eg  .img").height(parseInt($("#eg  .img").height())/3+'px')
+            var on = true;;
+            $("#red").on('click',function(){
+                if(on){
+                    $("#eg  .img").height(h+'px')
+                    $("#red span").text('收起')
+                   }else{
+                  $("#eg  .img").height(parseInt($("#eg  .img").height())/3+'px')
+                        $("#red span").text('展开全部')
+                   }
+                on = !on;
+                
+            })
+          $(window).on('scroll',function(){
+                console.log($(window).scrollTop())
+                if ($(window).scrollTop()>216){
+                    $("#classify").addClass('fixed')
+                }else{
+                    $("#classify").removeClass('fixed')
+                }
+            })
+
+        
+    </script>
+	
+</body>
+</html>

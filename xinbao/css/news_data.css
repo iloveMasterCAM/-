@@ -52,6 +52,9 @@
                margin-right: 20px;
              position: relative;
          }
+#main .share a{
+    display: inline;;
+}
          #main .share i{
              margin-right: 15px;
              font-size: 1.1rem;

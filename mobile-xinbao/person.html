@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<title>保险顾问个人主页</title>
+	<link rel="stylesheet" type="text/css" href="css/aui.2.0.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<link href="css/public.css" rel="stylesheet"/>
+	<style type="text/css">
+	body{
+		background-color:#fff;
+	}
+	
+	.message p:nth-of-type(1),.ranking p:nth-of-type(1),.aboutme p:nth-of-type(1),.photo p:nth-of-type(1),.product p:nth-of-type(1),.ask p:nth-of-type(1),.ask1 p:nth-of-type(1){
+		font-size:18px;
+		border-bottom: 1px solid #f1f1f1;
+		padding-bottom: 15px;
+	}
+	.message .name{
+		line-height: 40px;
+	}
+	.message .name i{
+		font-size:20px;
+		vertical-align: middle;
+		color:#f5c607;
+	}
+	.message{
+		line-height: 25px;
+	}
+	.message .mes{
+		line-height: 30px;
+	}
+        .message .mes span{
+            margin-right: 10px;
+            display: inline-block;
+            color: #666;
+        }
+	.message .mes .aui-col-xs-3:nth-of-type(1) i{
+		color:#e7141a;
+	}
+	.message .mes .aui-col-xs-3,.message .mes .aui-col-xs-6{
+		font-size:12px;
+	}
+	.message .icon-gongjuxiang,.message .icon-renzhizige, .mes i{
+		color:#e7141a;
+	}
+	.ranking .rankimg{
+		width:100%;
+	    height: 140px;
+		margin:15px 0;
+        background: url(img/message.jpg);
+        background-size: contain;
+        background-position: center center;
+        background-repeat:no-repeat;
+	}
+	.ranking .aui-col-xs-3{
+		padding:0 5px;
+	}
+	.ranking .aui-col-xs-3 img{
+		width:100%;
+		height:auto;
+		border:2px solid #eeeeee;
+	}
+	.ranking .more,.photo .more{
+		line-height: 50px;
+		text-align: center;
+		margin-top:30px;
+	}
+	.ranking .more span,.photo .more span{
+		border:1px solid #f1f1f1;
+		border-radius: 25px;
+		padding:10px 50px;
+	}
+	.aboutme .aui-col-xs-3 img{
+		width:100%;
+		height:auto;
+		margin-top: 25px;
+	}
+	.aboutme .aui-col-xs-9{
+		padding-left:15px;
+	}
+	.aboutme .aui-col-xs-9 p:nth-of-type(1){
+		font-size:16px;
+		color:#202020;
+		line-height: 40px;
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.aboutme .aui-col-xs-9 p:nth-of-type(5){
+		margin-top:10px;
+	}
+	.aboutme .aui-col-xs-9 p:nth-of-type(5),.aboutme .aui-col-xs-9 p:nth-of-type(6){
+		color:#202020;
+		line-height: 25px;
+	}
+	.photo .aui-col-xs-4{
+		padding:0 5px;
+		margin-top: 10px;
+	}
+	.photo .aui-col-xs-4 img{
+		width:100%;
+		height:auto;
+	}
+	.product .aui-col-xs-6 p:nth-of-type(1){
+		font-size:16px;
+		line-height: 30px;
+		padding-bottom: 0;
+		border-bottom: none;
+		color:#202020;
+	}
+	.product .aui-col-xs-6{
+		padding:0 5px;
+		margin-top:10px;
+	}
+	.product .aui-col-xs-6>div{
+		border:1px solid #f1f1f1;
+		padding:10px;
+	}
+        .product .aui-col-xs-6>div img{
+            width: 100%;
+        }
+	.product .aui-col-xs-6 p:nth-of-type(2),.product .aui-col-xs-6 p:nth-of-type(3){
+		font-size:12px;
+		line-height: 25px;
+	}
+	.product .aui-col-xs-6 p:nth-of-type(4) span:nth-of-type(1){
+		font-size: 16px;
+		color:#d7000f;
+	}
+	.product .aui-col-xs-6 p:nth-of-type(4) span:nth-of-type(2){
+		font-size: 14px;
+		float:right;
+		border-left:1px solid #f1f1f1;
+		padding-left:10px;
+	}
+	.product .more,.ask .more{
+		line-height: 50px;
+		text-align: center;
+		margin-top:30px;
+	}
+	.product .more span,.ask .more span{
+		border:1px solid #f1f1f1;
+		border-radius: 25px;
+		padding:10px 50px;
+		background-color: #eeeeee;
+	}
+	.ask ul li{
+		padding:20px 0;
+		border-bottom: 1px dashed #f1f1f1
+	}
+	.ask ul li p:nth-of-type(1){
+		padding-bottom: 0;
+		border-bottom: none;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+	}
+	.ask ul li p:nth-of-type(1) span{
+		font-size: 16px;
+		color:#202020;
+	}
+	.ask ul li p:nth-of-type(2){
+		font-size: 12px;
+		color:#d7000f;
+		line-height: 40px;
+
+	}
+	.ask1 .pro{
+		font-size:16px;
+		line-height: 50px;
+		color:#202020;
+	}
+	.ask1 .pro i{
+		font-size:24px;
+		color:#d7000f;
+		margin-right:15px;
+	}
+	.ask1 input{
+		background-color: #eeeeee;
+        padding-left: 10px;
+	}
+	.ask1 textarea{
+		background-color: #eeeeee;
+        padding-left: 10px;
+        padding-top: 5px;
+	}
+    
+	.submit input{
+		text-align: center;
+		margin: 40px 0;
+	}
+	.submit input{
+		background-color: #d7000f;
+		color:#fff;
+		font-size: 18px;
+		border-radius: 25px;
+		padding:10px 100px;
+	}
+	#mainall{
+		margin-top: 74px;
+	}
+        
+        #ranking .aui-col-xs-4,#photo .aui-col-xs-4{
+            overflow: hidden;
+        }  
+        #ranking .box img{
+            width: 100%;
+        }
+        #ranking .box{
+            position: relative;
+        }
+        #ranking .box.active:before{
+           content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #000;
+            opacity: 0.3;
+            display: block;
+        }
+        #Magnifier{
+    width:90%;
+    height: 200px;
+    background: #000;
+    position: fixed;
+    top: 50%;
+    z-index: 15;
+    margin-top: -100px;
+    margin-left: 5%;
+    display: none;
+}
+#Magnifier>div{
+     width:100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+#Magnifier li{
+    position: absolute;
+    top: 45%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+     background: url(../img/bg_1.png);
+    background-repeat: repeat;
+    line-height: 30px;
+    text-align: center;
+}
+#Magnifier li i{
+    font-size: 20px;
+    color: #fff;
+}
+#Magnifier .first{
+    left: 5px;
+}
+#Magnifier .last{
+    right: 5px;
+}
+#Magnifier_bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.7;
+    display: none;
+    z-index: 14;
+}
+        #photo img{
+            height: 100px;;
+        }
+	</style>
+</head>
+<body> <!-- 头部 -->
+    <nav id="nav_box" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left caidan"><i class="iconfont icon-caidan"></i></p>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+       <a href='set.html' class="aui-pull-right aui-margin-l-15"><i class="iconfont icon-haoyouxingming"></i></a>
+        
+    <div id="nav_all">
+        <ul id="step1" class="aui-padded-r-15 aui-padded-l-15">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="inscompany.html">保险公司 </a></li>
+            <li class="person">保险产品<i class="iconfont icon-down-trangle"></i></li>
+            <li><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="ask.html">ＦＡＱ</a></li>
+            <li><a href="news.html">最新资讯</a></li>
+            <li><a href="About.html">关于平台</a></li>
+        </ul>
+        <div id="step2" class="aui-padded-l-15 aui-padded-r-15">
+            <p class="aui-margin-t-15"><i class="iconfont icon-xiangzuo retu"></i></p>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按险种进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">意外险</a>
+                    <a  class="aui-col-xs-4">少儿险</a>
+                    <a  class="aui-col-xs-4">养老险</a>
+                    <a  class="aui-col-xs-4">重疾险</a>
+                    <a  class="aui-col-xs-4">医疗险</a>
+                    <a  class="aui-col-xs-4">人寿险</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按人群分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">青年</a>
+                    <a  class="aui-col-xs-4">老年</a>
+                    <a  class="aui-col-xs-4">女性</a>
+                    <a  class="aui-col-xs-4">少儿</a>
+                    <a  class="aui-col-xs-4">个人</a>
+                    <a  class="aui-col-xs-4">团体</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按保险公司进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">中国平安</a>
+                    <a  class="aui-col-xs-4">中国人寿</a>
+                    <a  class="aui-col-xs-4">太平洋保险</a>
+                    <a  class="aui-col-xs-4">华安保险</a>
+                    <a  class="aui-col-xs-4">泰康保险</a>
+                    <a  class="aui-col-xs-4">富德生命人寿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="search" class="aui-text-center">
+        <input type="" name="" placeholder="搜索关键词">
+        <span><i class="iconfont icon-fangdajing"></i> <input type="submit" name=""></span>
+    </form>
+    </nav>
+   	<div id="mainall"></div>
+	<div id="nav">
+      <ul class="clear">
+          <li class="active">
+              <a href="person.html">首页</a>
+          </li>
+          <li>
+              <a href="product.html">保险产品</a>
+          </li>
+          <li>
+              <a href="insuranceask.html">保险资讯</a>
+          </li>
+          <li>
+              <a href="consult.html">保险咨询</a>
+          </li>
+          <li>
+              <a href="league.html">保险加盟</a>
+          </li>
+      </ul>
+  </div>
+	<div id="head" class="aui-text-center">
+      <img src="img/head.png" alt="">
+      <p class="name">黄辉</p>
+      <p class="address"><i class="iconfont icon-mp-location"></i> 江苏·苏州 </p>
+      <p class="firms">中国平安</p>
+  </div>
+	<div class="message aui-content-padded">
+		<p>个人信息</p>
+		<div class="name">黄辉 <i class="iconfont icon-juchanghuangguan"></i></div>
+		<div class="mes clear">
+			
+			    <span><i class="iconfont icon-mp-location"></i> 江苏苏州</span>
+			    <span><i class="iconfont icon-wechat-copy"></i> hsw12345</span>
+			    <span id="phone"> 17750877003</span>
+			
+		</div>
+		<p>机构：中国平安保险有限公司</p>
+		<p>职位：中国平安保险代理人</p>
+		<p><i class="iconfont icon-renzhizige"></i> 资格证号：8888888888888</p>
+		<p><i class="iconfont icon-gongjuxiang"></i> 执业年限：10年</p>
+	</div>
+	<div class="ranking aui-content-padded" id="ranking">
+		<p>个人荣誉</p>
+		<div class="rankimg"></div>
+		<div class="swiper-container swiper-container-horizontal">
+        <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+            <div class="swiper-slide swiper-slide-active box active"><img src="img/message1.jpg"></div>
+            <div class="swiper-slide swiper-slide-next box"><img src="img/message1.jpg"></div>
+            <div class="swiper-slide box" ><img src="img/message1.jpg"></div>
+           <div class="swiper-slide box" ><img src="img/message1.jpg"></div>
+           <div class="swiper-slide box" ><img src="img/message1.jpg"></div>
+           <div class="swiper-slide box" ><img src="img/message1.jpg"></div>
+           <div class="swiper-slide box" ><img src="img/message1.jpg"></div>
+           <div class="swiper-slide box" ><img src="img/message1.jpg"></div>
+        </div>
+    </div>
+		
+		
+	</div>
+	<div class="aboutme aui-content-padded">
+		<p>关于我</p>
+		<div class="aui-row">
+			<div class="aui-col-xs-3">
+				<img src="img/message2.jpg">
+			</div>
+			<div class="aui-col-xs-9">
+				<p>你好！我是黄辉</p>
+				<p>设计经验：十年以上</p>
+				<p>擅长领域：养老险</p>
+				<p>所在地：广东 广州</p>
+				<p>个人简介</p>
+				<p>本公司是壹家致力於房地產開發商，商業投資商、酒店、娛樂休閒會所、別墅豪宅、商業空間、公共空間等。</p>
+			</div>
+		</div>
+	</div>
+	<div class="photo aui-content-padded" id="photo">
+		<p>相册</p>
+		<div class="aui-row clear">
+			<div class="aui-col-xs-4 box">
+				<img src="img/message3.jpg">
+			</div>
+			<div class="aui-col-xs-4 box">
+				<img src="img/product1.png">
+			</div>
+			<div class="aui-col-xs-4 box">
+				<img src="img/message3.jpg">
+			</div>
+			<div class="aui-col-xs-4 box">
+				<img src="img/product1.png">
+			</div>
+			<div class="aui-col-xs-4 box">
+				<img src="img/message3.jpg">
+			</div>
+			<div class="aui-col-xs-4 box">
+				<img src="img/product1.png">
+			</div>
+			<div class="aui-col-xs-4 box">
+				<img src="img/message3.jpg">
+			</div>
+			<div class="aui-col-xs-4 box">
+				<img src="img/product1.png">
+			</div>
+		</div>
+		<div class="more"><span>收起 <i class="iconfont icon-xiangshang"></i></span></div>
+	</div>
+	<div class="product">
+		<p class="aui-padded-l-15">保险产品</p>
+		<div class="aui-row">
+			<a class="aui-col-xs-6">
+				<div>
+					<img src="img/3cca134b63330ed7d134e92e71d5b16d_139ce872-5c32-4469-95c1-d6b3a5451bde.png">
+					<p>老年综合医疗保险</p>
+					<p>投保年龄：50~80周岁</p>
+					<p>保险期限：1年</p>
+					<p><span>￥48</span><span>MORE<i class="iconfont icon-iconfontright"></i></span></p>
+				</div>
+			</a>
+			<a class="aui-col-xs-6">
+				<div>
+					<img src="img/3cca134b63330ed7d134e92e71d5b16d_139ce872-5c32-4469-95c1-d6b3a5451bde.png">
+					<p>老年综合医疗保险</p>
+					<p>投保年龄：50~80周岁</p>
+					<p>保险期限：1年</p>
+					<p><span>￥48</span><span>MORE<i class="iconfont icon-iconfontright"></i></span></p>
+				</div>
+			</a>
+			<a class="aui-col-xs-6">
+				<div>
+					<img src="img/3cca134b63330ed7d134e92e71d5b16d_139ce872-5c32-4469-95c1-d6b3a5451bde.png">
+					<p>老年综合医疗保险</p>
+					<p>投保年龄：50~80周岁</p>
+					<p>保险期限：1年</p>
+					<p><span>￥48</span><span>MORE<i class="iconfont icon-iconfontright"></i></span></p>
+				</div>
+			</a>
+			<a class="aui-col-xs-6">
+				<div>
+					<img src="img/3cca134b63330ed7d134e92e71d5b16d_139ce872-5c32-4469-95c1-d6b3a5451bde.png">
+					<p>老年综合医疗保险</p>
+					<p>投保年龄：50~80周岁</p>
+					<p>保险期限：1年</p>
+					<p><span>￥48</span><span>MORE<i class="iconfont icon-iconfontright"></i></span></p>
+				</div>
+			</a>
+		</div>
+		<div class="aui-text-center aui-margin-t-15">
+                <a class="MORE" href="">VIEW MORE <i class="iconfont icon-iconfontright"></i> </a>
+            </div>
+	</div>
+	<div class="ask aui-content-padded">
+		<p>保险咨询</p>
+		<ul>
+			<li>
+				<p><span>北大方正人寿保单变更流程：</span>北大方北大方正人寿保单变更流程北大方北大方正人寿保单变更流程北大方北大..</p>
+				<p><time>2017/7/6</time></p>
+			</li>
+			<li>
+				<p><span>北大方正人寿保单变更流程：</span>北大方北大方正人寿保单变更流程北大方北大方正人寿保单变更流程北大方北大..</p>
+				<p><time>2017/7/6</time></p>
+			</li>
+			<li>
+				<p><span>北大方正人寿保单变更流程：</span>北大方北大方正人寿保单变更流程北大方北大方正人寿保单变更流程北大方北大..</p>
+				<p><time>2017/7/6</time></p>
+			</li>
+		</ul>
+		<div class="aui-text-center aui-margin-t-15">
+                <a class="MORE" href="">VIEW MORE <i class="iconfont icon-iconfontright"></i> </a>
+            </div>
+	</div>
+	<form class="ask1 aui-content-padded">
+		<p>保险咨询</p>
+		<p class="pro"><i class="iconfont icon-geren1"></i>姓名</p>
+		<input type="text" />
+		<p class="pro"><i class="iconfont icon-dianhua-1"></i>电话号码</p>
+		<input type="number" />
+		<p class="pro"><i class="iconfont icon-message"></i>留言</p>
+		<textarea rows="6"></textarea>
+		<div class="submit aui-text-center">
+		    <input type="submit" value="提交">
+	    </div>
+	</form>
+	<div id="bg"></div>
+  <div id="Magnifier">
+       <div>
+           
+       </div>
+        <ol>
+            <li class="first"><i class="iconfont icon-xiangzuo"></i></li>
+            <li class="last"><i class="iconfont icon-iconfontright"></i></li>
+        </ol>
+    </div>
+       <div id="Magnifier_bg"></div>
+	  <script src="script/jquery.js"></script>
+	  <script src="script/swiper.js"></script>
+    <script src='script/public.js'></script>
+    
+    <script>
+        
+        
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 3,
+        paginationClickable: true,
+        spaceBetween: 5
+    });
+    
+        
+       $(function() {
+           var Hphoto = parseInt($("#photo .aui-row").height())
+           var Hranking = parseInt($("#ranking .aui-row").height())
+      
+           $("#photo .aui-row").height($("#photo .aui-row .box").outerHeight()+'px')
+           $("#ranking .aui-row").height($("#ranking .aui-row .box").outerHeight()+'px')
+            
+            $("#ranking .more").on('click',function(){
+                mover(this,Hranking)
+            })
+            $("#photo .more").on('click',function(){
+                mover(this,Hphoto)
+            })
+           var phone = $("#phone").text()
+           $("#phone").html("<i class='iconfont icon-dianhua-s'></i>" +phone.replace(/(\d{3})\d{4}(\d{4})/,'$1****$2'))
+            function mover(o,maxH){
+                 var p = $(o).parent();
+                var h = parseInt(p.find('.aui-row').height()); 
+                var minh = parseInt(p.find('.box').outerHeight())
+                if( h > minh){
+                    p.find('.aui-row').animate({height: minh+'px'}, "slow");
+                    $(o).html('<span>更多 <i class="iconfont icon-down-trangle"></i></span>')
+                }else{
+                    p.find('.aui-row').animate({height: maxH+'px'}, "slow");
+                    $(o).html('<span>收起 <i class="iconfont icon-xiangshang"></i> </span>')
+                }
+                
+            }
+           $("#ranking .box").on('click',function(){
+               $("#ranking .box").removeClass('active')
+               $(this).addClass('active')
+           })
+            $("#ranking .box img").on('click',function(){
+            var src = $(this).attr('src');
+                $("#ranking .rankimg").css({background:'url('+src+')',backgroundRepeat:'no-repeat',backgroundPosition:'center center',backgroundSize:'contain'})
+            })
+            
+           
+            var imgarrr = [],index;
+          
+            $("#photo .box").on('click',function(){
+                var index = $(this).index();
+                Magnifier(imgarrr,index)
+            })
+           
+             $("#photo .box img").each(function(){
+               
+                 imgarrr.push($(this).attr('src'))
+             })
+            
+            function Magnifier(o,i){
+                index = i
+                 $("#Magnifier,#Magnifier_bg").show();
+                  $("#Magnifier>div").css({background:'url('+o[i]+')',backgroundRepeat:'no-repeat',backgroundPosition:'center center',backgroundSize:'contain'})
+            }
+            $("#Magnifier .first").on('click',function(){
+               
+              
+                    index--;
+                if(index == -1){
+                    index = imgarrr.length-1;
+                }
+               if(imgarrr[index]){
+                    Magnifier(imgarrr,index)
+               }
+                
+            })
+             $("#Magnifier .last").on('click',function(){
+                  index++;
+                 if(index == imgarrr.length){
+                     index = 0;
+                 }
+                if(imgarrr[index]){
+                    Magnifier(imgarrr,index)
+               }
+                
+            })
+            $("#Magnifier_bg").on('click',function(){
+                 $("#Magnifier,#Magnifier_bg").hide();
+            })
+           
+        })
+
+        
+        
+    </script>
+    
+</body>
+</html>

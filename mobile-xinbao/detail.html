@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<title>详情</title>
+	<link rel="stylesheet" type="text/css" href="css/aui.2.0.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<style>
+	body{
+		background-color:#fff;
+	}
+	header img{
+		height:25px;
+		width:auto;
+		margin:10px 0;
+	}
+	#section{
+		padding-top:10px;
+	}
+	#section .aui-list:before,#list .aui-list:before{
+		height:0;
+	}
+	#section .aui-list .aui-list-item-media img,#list .aui-list .aui-list-item-media img{
+		border-radius:50%;
+	}
+	#section .aui-list .aui-list-item-title img,#list .aui-list .aui-list-item-title img{
+		width:20px;
+		height: 20px;
+		border-radius: 3px;
+		vertical-align:middle;
+		margin-right:15px;
+	}
+	#section .aui-list .aui-list-item-media,#list .aui-list .aui-list-item-media{
+		display: block;
+	}
+	#section .aui-list .aui-list-item-media p,#list .aui-list .aui-list-item-media p{
+		text-align: center;
+		margin-top:5px;
+		position:relative;
+	}
+	#section .aui-list .aui-list-item-media p:after{
+		content:"";
+		width:20%;
+		height:2px;
+		background-color: #e7141a;
+		display: block;
+		position: absolute;
+		top:auto;
+		right:auto;
+		left:40%;
+		bottom:-5px;
+	}
+	#section .aui-list .aui-list-item-text p i:nth-of-type(1){
+		color:#e7141a;
+	}
+	#section .aui-list .aui-list-item-text p i:nth-of-type(3){
+		font-size:18px;
+		color:#e7141a;
+		vertical-align: middle;
+	}
+	#section .aui-list .aui-list-item-text p{
+		line-height: 35px;
+	}
+	#section .aui-list .aui-list-item-text p span{
+		background-color:#eeeeee;
+		padding:5px 15px;
+		margin-right:10px;
+	}
+	#section .aui-media-list .aui-list-item{
+		padding-bottom: 20px;
+	}
+	#classify{
+		padding:0 20% 15px 20%;
+	}
+	#classify .aui-col-xs-4.active{
+		
+		color:#e7141a;
+	}
+	#classify .aui-col-xs-4{
+		text-align: center;
+		font-size:14px;
+		color:#838383;
+		border-left:1px solid #dddddd;
+	}
+        #classify .aui-col-xs-4:first-child{
+         border: none;   
+        }
+	#list .aui-list .aui-list-item-title{
+		color:#e7141a;
+		font-size:14px;
+	}
+	#list .aui-list .aui-info>div{
+		font-size:12px;
+	}
+	#list .aui-list .aui-info .help{
+		border:1px solid #dddddd;
+		color:#e7141a;
+		padding:0 6px;
+		line-height:26px;
+	}
+	#list .aui-list .aui-list-item{
+		padding:20px 0;
+	}
+	#count{
+		padding:40px 0;
+		text-align: center;
+	}
+	#count span{
+		border:1px solid #f1f1f1;
+		display: inline-block;
+		width:30px;
+		height: 30px;
+		line-height: 30px;
+	}
+	#count .active{
+		background-color:#e7141a;
+		color:#fff;
+	}
+	</style>
+</head>
+<body>
+ <!-- 头部 -->
+    <nav id="nav_box" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left caidan"><i class="iconfont icon-caidan"></i></p>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+    <div id="nav_all">
+        <ul id="step1" class="aui-padded-r-15 aui-padded-l-15">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="inscompany.html">保险公司 </a></li>
+            <li class="person">保险产品<i class="iconfont icon-down-trangle"></i></li>
+            <li><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="ask.html">ＦＡＱ</a></li>
+            <li><a href="news.html">最新资讯</a></li>
+            <li><a href="About.html">关于平台</a></li>
+        </ul>
+        <div id="step2" class="aui-padded-l-15 aui-padded-r-15">
+            <p class="aui-margin-t-15"><i class="iconfont icon-xiangzuo retu"></i></p>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按险种进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">意外险</a>
+                    <a  class="aui-col-xs-4">少儿险</a>
+                    <a  class="aui-col-xs-4">养老险</a>
+                    <a  class="aui-col-xs-4">重疾险</a>
+                    <a  class="aui-col-xs-4">医疗险</a>
+                    <a  class="aui-col-xs-4">人寿险</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按人群分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">青年</a>
+                    <a  class="aui-col-xs-4">老年</a>
+                    <a  class="aui-col-xs-4">女性</a>
+                    <a  class="aui-col-xs-4">少儿</a>
+                    <a  class="aui-col-xs-4">个人</a>
+                    <a  class="aui-col-xs-4">团体</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按保险公司进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">中国平安</a>
+                    <a  class="aui-col-xs-4">中国人寿</a>
+                    <a  class="aui-col-xs-4">太平洋保险</a>
+                    <a  class="aui-col-xs-4">华安保险</a>
+                    <a  class="aui-col-xs-4">泰康保险</a>
+                    <a  class="aui-col-xs-4">富德生命人寿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="search" class="aui-text-center">
+        <input type="" name="" placeholder="搜索关键词">
+        <span><i class="iconfont icon-fangdajing"></i> <input type="submit" name=""></span>
+    </form>
+    </nav>
+	<div id="mainall"></div>
+	<section id="section">
+		<div class="aui-content aui-margin-b-15">
+    		<ul class="aui-list aui-media-list">
+    		 	<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img src="img/star_head.png">
+		                    <p>赵先生</p>
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-text">
+		                        <div class="aui-list-item-title"><img src="img/answer.png"/>友邦保险理赔怎么样？理赔速度快不快？</div>
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                        <p><i class="iconfont icon-mp-location"></i> 江苏<i class="iconfont icon-dian"></i>苏州 <i class="iconfont icon-jiaji-copy"></i> 2017-9-3</p>
+		                        
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                    	<p><span>养老险</span><span>中国太平</span></p>
+		                    </div>
+		                    <div class="aui-info aui-margin-t-5" style="padding:0">
+		                        <div class="aui-info-item">
+		                           友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔友邦保险理赔怎么样
+		                            </div>
+		                    </div>
+		                </div>
+		            </div>
+	        	</li>
+	    	</ul>
+		</div>    
+	</section>
+	<div id="classify">
+		<div class="aui-row">
+			<div class="aui-col-xs-4 active">
+				全部
+			</div>
+			<div class="aui-col-xs-4">
+				按时间
+			</div>
+			<div class="aui-col-xs-4">
+				按热度
+			</div>
+		</div>
+	</div>
+	<div id="list" class="aui-padded-l-15">
+		<div class="aui-content aui-margin-b-15">
+    		<ul class="aui-list aui-media-list">
+    		 	<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img src="img/star_head.png">
+		                    <p>赵先生</p>
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-text">
+		                        <div class="aui-list-item-title"><img src="img/answer.png"/>安徽 <i class="iconfont icon-quan"></i> 芜湖</div>
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                        你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电
+								”，也真的快如“闪电”。2015年，太平人寿的“先赔后核”功能
+								让客户的理赔款36秒到账再次刷新自身记录，2015年，太平人寿的
+								“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录2015
+								年。
+		                    </div>
+		                    <div class="aui-info aui-margin-t-5" style="padding:0">
+		                        <div class="aui-info-item">
+		                            <span>回答时间:30分钟前</span>
+		                            </div>
+		                        <div class="aui-info-item help"><span><i class="iconfont icon-dianzan"></i>&nbsp;有帮助 88</span></div>
+		                    </div>
+		                </div>
+		            </div>
+	        	</li>
+	        	<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img src="img/star_head.png">
+		                    <p>赵先生</p>
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-text">
+		                        <div class="aui-list-item-title"><img src="img/answer.png"/>安徽 <i class="iconfont icon-quan"></i> 芜湖</div>
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                        你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电
+								”，也真的快如“闪电”。2015年，太平人寿的“先赔后核”功能
+								让客户的理赔款36秒到账再次刷新自身记录，2015年，太平人寿的
+								“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录2015
+								年。
+		                    </div>
+		                    <div class="aui-info aui-margin-t-5" style="padding:0">
+		                        <div class="aui-info-item">
+		                            <span>回答时间:30分钟前</span>
+		                            </div>
+		                        <div class="aui-info-item help"><span><i class="iconfont icon-dianzan"></i>&nbsp;有帮助 88</span></div>
+		                    </div>
+		                </div>
+		            </div>
+	        	</li>
+	        	<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img src="img/star_head.png">
+		                    <p>赵先生</p>
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-text">
+		                        <div class="aui-list-item-title"><img src="img/answer.png"/>安徽 <i class="iconfont icon-quan"></i> 芜湖</div>
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                        你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电
+								”，也真的快如“闪电”。2015年，太平人寿的“先赔后核”功能
+								让客户的理赔款36秒到账再次刷新自身记录，2015年，太平人寿的
+								“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录2015
+								年。
+		                    </div>
+		                    <div class="aui-info aui-margin-t-5" style="padding:0">
+		                        <div class="aui-info-item">
+		                            <span>回答时间:30分钟前</span>
+		                            </div>
+		                        <div class="aui-info-item help"><span><i class="iconfont icon-dianzan"></i>&nbsp;有帮助 88</span></div>
+		                    </div>
+		                </div>
+		            </div>
+	        	</li>
+	        	<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img src="img/star_head.png">
+		                    <p>赵先生</p>
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-text">
+		                        <div class="aui-list-item-title"><img src="img/answer.png"/>安徽 <i class="iconfont icon-quan"></i> 芜湖</div>
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                        你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电
+								”，也真的快如“闪电”。2015年，太平人寿的“先赔后核”功能
+								让客户的理赔款36秒到账再次刷新自身记录，2015年，太平人寿的
+								“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录2015
+								年。
+		                    </div>
+		                    <div class="aui-info aui-margin-t-5" style="padding:0">
+		                        <div class="aui-info-item">
+		                            <span>回答时间:30分钟前</span>
+		                            </div>
+		                        <div class="aui-info-item help"><span><i class="iconfont icon-dianzan"></i>&nbsp;有帮助 88</span></div>
+		                    </div>
+		                </div>
+		            </div>
+	        	</li>
+	        	<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img src="img/star_head.png">
+		                    <p>赵先生</p>
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-text">
+		                        <div class="aui-list-item-title"><img src="img/answer.png"/>安徽 <i class="iconfont icon-quan"></i> 芜湖</div>
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                        你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电
+								”，也真的快如“闪电”。2015年，太平人寿的“先赔后核”功能
+								让客户的理赔款36秒到账再次刷新自身记录，2015年，太平人寿的
+								“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录2015
+								年。
+		                    </div>
+		                    <div class="aui-info aui-margin-t-5" style="padding:0">
+		                        <div class="aui-info-item">
+		                            <span>回答时间:30分钟前</span>
+		                            </div>
+		                        <div class="aui-info-item help"><span><i class="iconfont icon-dianzan"></i>&nbsp;有帮助 88</span></div>
+		                    </div>
+		                </div>
+		            </div>
+	        	</li>
+	        	<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img src="img/star_head.png">
+		                    <p>赵先生</p>
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-text">
+		                        <div class="aui-list-item-title"><img src="img/answer.png"/>安徽 <i class="iconfont icon-quan"></i> 芜湖</div>
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                        你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电
+								”，也真的快如“闪电”。2015年，太平人寿的“先赔后核”功能
+								让客户的理赔款36秒到账再次刷新自身记录，2015年，太平人寿的
+								“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录2015
+								年。
+		                    </div>
+		                    <div class="aui-info aui-margin-t-5" style="padding:0">
+		                        <div class="aui-info-item">
+		                            <span>回答时间:30分钟前</span>
+		                            </div>
+		                        <div class="aui-info-item help"><span><i class="iconfont icon-dianzan"></i>&nbsp;有帮助 88</span></div>
+		                    </div>
+		                </div>
+		            </div>
+	        	</li>
+	        	<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img src="img/star_head.png">
+		                    <p>赵先生</p>
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-text">
+		                        <div class="aui-list-item-title"><img src="img/answer.png"/>安徽 <i class="iconfont icon-quan"></i> 芜湖</div>
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                        你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电
+								”，也真的快如“闪电”。2015年，太平人寿的“先赔后核”功能
+								让客户的理赔款36秒到账再次刷新自身记录，2015年，太平人寿的
+								“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录2015
+								年。
+		                    </div>
+		                    <div class="aui-info aui-margin-t-5" style="padding:0">
+		                        <div class="aui-info-item">
+		                            <span>回答时间:30分钟前</span>
+		                            </div>
+		                        <div class="aui-info-item help"><span><i class="iconfont icon-dianzan"></i>&nbsp;有帮助 88</span></div>
+		                    </div>
+		                </div>
+		            </div>
+	        	</li>
+	        	<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img src="img/star_head.png">
+		                    <p>赵先生</p>
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-text">
+		                        <div class="aui-list-item-title"><img src="img/answer.png"/>安徽 <i class="iconfont icon-quan"></i> 芜湖</div>
+		                    </div>
+		                    <div class="aui-list-item-text">
+		                        你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪电
+								”，也真的快如“闪电”。2015年，太平人寿的“先赔后核”功能
+								让客户的理赔款36秒到账再次刷新自身记录，2015年，太平人寿的
+								“先赔后核”功能让客户的理赔款36秒到账再次刷新自身记录2015
+								年。
+		                    </div>
+		                    <div class="aui-info aui-margin-t-5" style="padding:0">
+		                        <div class="aui-info-item">
+		                            <span>回答时间:30分钟前</span>
+		                            </div>
+		                        <div class="aui-info-item help"><span><i class="iconfont icon-dianzan"></i>&nbsp;有帮助 88</span></div>
+		                    </div>
+		                </div>
+		            </div>
+	        	</li>
+	    	</ul>
+		</div>  
+	</div>
+	</div>
+    <div id="paging">
+    <ul class="aui-text-center">
+       <li class="active"><i class="iconfont icon-xiangzuo"></i></li>
+       <li>1</li>
+       <li class="active">2</li>
+       <li>3</li>
+       <li>4</li>
+       <li><i class="iconfont icon-iconfontright"></i></li>
+    </ul>
+    </div>
+	 <div id="copyright" class="aui-padded-l-15 aui-padded-r-15">
+            COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司   沪ICP备17034135号
+    </div>
+    <div id="bg"></div>
+	<script src="script/jquery.js"></script>
+    <script src="script/public.js"></script>
+	<script>
+    
+        $("#classify div div").on('click',function(){
+            $("#classify .active").removeClass('active')
+            $(this).addClass('active')
+        })
+        
+    </script>
+</body>
+</html>

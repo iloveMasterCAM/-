@@ -1,6 +1,6 @@
 #main{
             
-             width: 50%;
+             width: 60%;
              min-width: 1024px;
              margin: 222px auto 170px;
          }
@@ -25,20 +25,29 @@
          #main .head p{
              color: #fff;
              font-size: 20px;
+             position: relative;
          }
+        #main .head p input{
+            position: absolute;
+            top: 80px;
+            left: 50px;
+            opacity: 0;
+            filter: Alpha(opacity=0);
+            line-height: normal;
+        }
         #main input[type='text'],#main input[type='tel'],#main input[type='email'],#main input[type='tel'],#main select{
              background: #f2f2f2;
             height: 50px;
             padding-left: 10px;
             width: 444px;
          }
-         #main form div>span{
+          #form div>span{
              display: inline-block;
              width: 90px;
              text-align: left;
              
          }
-         #main form>div{
+          #form>div{
              margin-bottom: 25px;
          }
         
@@ -59,6 +68,7 @@
              border-radius: 50px;
              font-size: 18px;
          }
+
   .select{
     position: relative;
 }
@@ -68,4 +78,7 @@
     right: 5px;
     color: #cecece;
     font-size: 2rem;
+}
+#main .rl{
+    margin-right: 20%
 }

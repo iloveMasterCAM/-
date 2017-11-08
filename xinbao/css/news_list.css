@@ -1,5 +1,5 @@
   #main{
-             width: 50%;
+             width: 60%;
              min-width: 1024px;
              margin: 120px auto 170px;
          }
@@ -63,7 +63,8 @@
              font-weight: 500;
          }
          #main .time{
-             margin-bottom: 22px;
+             margin-bottom: 45px;
+             font-size: 18px;
          }
          #main .into i{
              font-size: 1.8rem;
@@ -71,7 +72,7 @@
              position: relative;
          }
          #main .into{
-             padding-left: 30px;
+             padding-left: 90px;
          }
          #main .into i:after{
              content: '';

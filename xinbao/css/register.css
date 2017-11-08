@@ -49,8 +49,9 @@
             line-height: 40px;
             color: #434343;
             font-size: 16px;
+            font-weight: 500
         }
-        #txt form div input[type='text'],#txt form div select{
+        #txt form div input[type='text'], #txt form div input[type='password'],#txt form div select{
             width: 350px;
             background: #fafafa;
             height: 50px;
@@ -131,4 +132,7 @@
         #txt .er div a.active{
             border: 1px solid #e7141a;
             color: #e7141a;
+        }
+        #normal{
+            display: none;;
         }

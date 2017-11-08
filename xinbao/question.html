@@ -5,9 +5,8 @@
 	<title>问题</title>
 	
 	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
-<!--	<link rel="stylesheet" type="text/css" href="css/conduct.css">-->
-<!--	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">-->
 	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<style>
         #section{
             width: 60%;
@@ -21,9 +20,8 @@
             position: relative;
         }
         #section .head{
-             width: 220px;
-            height: 220px;
-            border-radius: 50%;
+             width: 130px;
+            height: 130px;
             margin-bottom: 10px;
         }
        
@@ -38,9 +36,10 @@
             width: 700px;
             line-height: 30px;
             color: #838383;
-            font-size: 16px;
-            padding-bottom: 30px;
+            font-size: 14px;
+            margin-bottom: 10px;
             padding-left: 15px;
+            overflow: hidden;
         }
         #section .text{
             padding-left: 40px;
@@ -64,7 +63,7 @@
             padding:25px;
         }
         #section .text_box>div{
-              border-bottom: 1px solid #e5e5e5;
+             
             margin-bottom: 15px;
         }
        
@@ -97,9 +96,10 @@
             display: inline-block;
             color: #838383;
             font-size: 16px;
-            padding: 5px 10px;
+            padding: 0 10px;
             cursor: pointer;
             font-weight: 500;
+            line-height: 33px;
         }
         #section .zan.active{
              color: #e7141a;;
@@ -150,12 +150,15 @@
         }
         #box{
             padding-bottom: 65px;
-             border-bottom: 1px solid #eeeeee;
+           
         }
         #box .txt{
             width: 400px;
             overflow: hidden;
             padding-bottom: 0;
+        }
+        #box .head{
+            border-radius: 50%;
         }
         #box .time{
             float: right;
@@ -189,42 +192,197 @@
             margin-bottom: 0;
            
         }
+        #con{
+            background: #f6f6f6;
+            padding-left: 40px;
+            padding-bottom: 20px;
+        }
     </style>
 </head>
 <body>
 	<!--头部-->
-       <div id="header_box">
+      <div id="header_box">
     <div id="header">
        <div class="clear wrap">
         <div class="address aui-pull-left">
             <p><i class="iconfont icon-mp-location"></i> <span>厦门</span> <span class="qie">【切换】</span></p>
-            <div>
-                <a href="">北京</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
+             <div>
+              <ul class="clear">
+                  <li class="active">热门城市</li>
+                  <li>ABCD</li>
+                  <li>FGHJ</li>
+                  <li>KLMN</li>
+                  <li>QSTW</li>
+                  <li>XYZ</li>
+              </ul>
+               <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+                <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+                <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+                <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+                <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+               <div class="city active">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
             </div>
         </div>
         <div class="aui-pull-right clear ri">
@@ -249,17 +407,30 @@
           </div>
     </div>
     <!--导航-->
-    <nav id="nav" class="aui-col-xs-12">
+   <nav id="nav" class="aui-col-xs-12">
        <div class="clear wrap">
         <a href="index.html" class="logo aui-pull-left">
             <img src="img/logo.png" alt=""> <p> 选保无忧,就上信保网</p>
         </a>
-        
          <ul class="clear aui-pull-right">
             <li><a href="index.html">首页</a></li>
             <li><a href="comlist.html">保险公司</a></li>
-            <li class="nav_product"><a href="list.html">保险产品 <i class="iconfont icon-xiangshang"></i></a>
-                <ul>
+            <li class="nav_product"><a href="list.html">保险产品 <i class="iconfont icon-xiangshang"></i></a></li>
+            <li class="new"><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="conduct.html">FAQ</a></li>
+            <li class="new"><a href="news_list.html">最新资讯</a></li>
+            <form class="search">
+                <input type="text" placeholder="搜索关键字" required>
+                <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
+            </form>
+        </ul>
+        <p class="aui-pull-right caidan"><i class="iconfont icon-caidan"></i></p>
+        </div>
+    </nav>
+    
+    <ul class="animated bounce" id="nav_product">
                     <li class="aui-text-left">
                         <div class="aui-col-xs-4">
                             <h3>按险种进行分类</h3>
@@ -296,24 +467,11 @@
                         </div>
                     </li>
                 </ul>
-            </li>
-            <li class="new"><a href="consultent.html">保险顾问</a></li>
-            <li><a href="share.html">签单分享</a></li>
-            <li><a href="">我要合作</a></li>
-            <li><a href="conduct.html">FAQ</a></li>
-            <li class="new"><a href="news_list.html">最新资讯</a></li>
-            <form class="search">
-                <input type="text" placeholder="搜索关键字" required>
-                <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
-            </form>
-        </ul>
-         </div>
-    </nav>
     </div>
 
     
     <div id="section">
-    	<div id="box">
+    	<div id="box" class="wow fadeInUp" data-wow-duration="1s">
     	    <div  class="label box" >
     	        <div class="head_box">
     	            <img class="head" src="img/head.png" alt="">
@@ -323,12 +481,12 @@
     	        </div>
     	        <div class="text_box">
                   <div class="clear">
-                      <p class="aui-pull-left"><img src="img/conduct/answer.png" alt=""></p>
+                      <p class="aui-pull-left"><img src="img/wen.png" alt=""></p>
     	            <p class="txt aui-ellipsis-1 aui-text-left aui-pull-left">样友邦保险理赔怎么样友邦保险理赔怎么样,理赔友邦保样,理赔友邦保3 </p>
     	               <p class="time"><spa><i class="iconfont icon-mp-location"></i>江苏 · 苏州</spa> <span><i class="iconfont icon-jiaji-copy"></i>2017-5-23</span></p>
                   </div>
                    <p class="t"> 样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔友邦保险理赔怎么样,理赔友邦保险理赔
-理赔友邦保险理赔怎么样... </p>
+理赔友邦保险理赔怎么样 </p>
                    <p class="lebal aui-pull-left"><span>养老险</span><span>中国太平</span> </p>
     	           <p class="tr-l_div"></p>
     	        </div>
@@ -336,14 +494,14 @@
     	    </div>
     	</div>
 
-    	<div>
+    	<div id="con">
            
-           <p id="sort">
+           <p id="sort" class="wow fadeInUp" data-wow-duration="1s">
                <span class="active">全部</span>
                <span>按时间</span>
                <span>按热度</span>
            </p>
-    	    <div  class="label box">
+    	    <div class="label box wow fadeInUp" data-wow-duration="1s">
     	        <div class="head_box">
     	            <img class="head" src="img/news_head.png" alt="">
     	            <p class=" aui-text-center">
@@ -352,17 +510,18 @@
     	        </div>
     	        <div class="text_box">
                   <div class="clear ">
-                      <p class="aui-pull-left"><img src="img/conduct/answer.png" alt=""></p>
-    	            <p class="txt aui-ellipsis-3 aui-text-left aui-pull-left">样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔友邦保险理赔怎么样,理赔友邦保险理赔
-理赔友邦保险理赔怎么样...  <span class="address">江苏 · 苏州</span> </p>
+                     
+    	            <p class="txt aui-ellipsis-3 aui-text-left aui-pull-left">样友邦保险理赔怎么样友邦保险理赔怎么样友邦样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔友邦保险理赔怎么样样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔友邦保险理赔怎么样样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔友邦保险理赔怎么样保险理赔怎么样友邦保险理赔友邦保险理赔怎么样,理赔友邦保险理赔
+理赔友邦保险理赔怎么样  </p>
                   </div>
-                   <p> <time>问答时间: <span>30分钟前</span>  </time></p>
-                   <p class="zan active aui-pull-right"> <i class="iconfont icon-iconfontpraise"></i> <span>有帮助80</span> </p>
+                   <p class="clear"> <span class="address aui-margin-r-15">江苏 · 苏州</span> <time>问答时间:<span>30分钟前</span></time>   <span class="zan active aui-pull-right"> <i class="iconfont icon-iconfontpraise"></i> <i>有帮助80</i> </span>
+                   </p>
+                 
     	           <p class="tr-l_div"></p>
     	        </div>
     	    </div>
     	    
-    	     <div class="label box">
+    	     <div class="label box wow fadeInUp" data-wow-duration="1s">
     	        <div class="head_box">
     	            <img class="head" src="img/news_head.png" alt="">
     	            <p class=" aui-text-center">
@@ -371,17 +530,17 @@
     	        </div>
     	        <div class="text_box">
                   <div class="clear ">
-                      <p class="aui-pull-left"><img src="img/conduct/answer.png" alt=""></p>
+                     
     	            <p class="txt aui-ellipsis-3 aui-text-left aui-pull-left">样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔友邦保险理赔怎么样,理赔友邦保险理赔
-理赔友邦保险理赔怎么样...  <span>江苏 · 苏州</span> </p>
+理赔友邦保险理赔怎么样  </p>
                   </div>
-                   <p> <time>问答时间: <span>30分钟前</span>  </time></p>
-                   <p class="zan  aui-pull-right"> <i class="iconfont icon-iconfontpraise"></i> <span>有帮助80</span> </p>
+                   <p class="clear"> <span class="address aui-margin-r-15">江苏 · 苏州</span> <time>问答时间:<span>30分钟前</span></time>   <span class="zan  aui-pull-right"> <i class="iconfont icon-iconfontpraise"></i> <i>有帮助80</i> </span>
+                   </p>
+                 
     	           <p class="tr-l_div"></p>
     	        </div>
-    	         
     	    </div>
-    	    <div class="label box">
+    	   <div class="label box wow fadeInUp" data-wow-duration="1s">
     	        <div class="head_box">
     	            <img class="head" src="img/news_head.png" alt="">
     	            <p class=" aui-text-center">
@@ -390,18 +549,35 @@
     	        </div>
     	        <div class="text_box">
                   <div class="clear ">
-                      <p class="aui-pull-left"><img src="img/conduct/answer.png" alt=""></p>
+                     
     	            <p class="txt aui-ellipsis-3 aui-text-left aui-pull-left">样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔友邦保险理赔怎么样,理赔友邦保险理赔
-理赔友邦保险理赔怎么样...  <span>江苏 · 苏州</span> </p>
+理赔友邦保险理赔怎么样  </p>
                   </div>
-                   <p> <time>问答时间: <span>30分钟前</span>  </time></p>
-                   <p class="zan  aui-pull-right"> <i class="iconfont icon-iconfontpraise"></i> <span>有帮助80</span> </p>
+                   <p class="clear"> <span class="address aui-margin-r-15">江苏 · 苏州</span> <time>问答时间:<span>30分钟前</span></time>   <span class="zan  aui-pull-right"> <i class="iconfont icon-iconfontpraise"></i> <i>有帮助80</i> </span>
+                   </p>
     	           <p class="tr-l_div"></p>
     	        </div>
-    	         
     	    </div>
-    	</div>
-    	<div id="paging">
+    	    <div class="label box wow fadeInUp" data-wow-duration="1s">
+    	        <div class="head_box">
+    	            <img class="head" src="img/news_head.png" alt="">
+    	            <p class=" aui-text-center">
+    	                <span>江苏苏州</span>
+    	            </p>
+    	        </div>
+    	        <div class="text_box">
+                  <div class="clear ">
+                     
+    	            <p class="txt aui-ellipsis-3 aui-text-left aui-pull-left">样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔怎么样友邦保险理赔友邦保险理赔怎么样,理赔友邦保险理赔
+理赔友邦保险理赔怎么样  </p>
+                  </div>
+                   <p class="clear"> <span class="address aui-margin-r-15">江苏 · 苏州</span> <time>问答时间:<span>30分钟前</span></time>   <span class="zan  aui-pull-right"> <i class="iconfont icon-iconfontpraise"></i> <i>有帮助80</i> </span>
+                   </p>
+    	           <p class="tr-l_div"></p>
+    	        </div>
+    	    </div>
+    	    
+    	    <div id="paging">
                <ul class="aui-text-center">
                    <li class="active"><i class="iconfont icon-xiangzuo-copy"></i></li>
                    <li>1</li>
@@ -411,6 +587,41 @@
                    <li><i class="iconfont icon-xiangyou-page"></i></li>
                </ul>
            </div>
+    	</div>
+    	
+    </div>
+     <!--则边栏-->
+    <div id="side" class="">
+        <ul>
+            <li><i class="iconfont icon-qq"></i>
+                <ul>
+                    <li>QQ在线对话</li>
+                </ul>
+            </li>
+            <li><i class="iconfont icon-xiaoxi1"></i>
+                <ul>
+                   <form>
+                       <p class="aui-text-left bor">投诉电话：0592-5914297</p>
+                       <p class="aui-text-left">投诉建议</p>
+                        <textarea></textarea>
+                        <p class="aui-text-right"><input type="submit" value="提交"></p>
+                   </form>
+                </ul>
+            </li>
+            <li><i class="iconfont icon-fankui"></i>
+                <ul class="liuyan">
+                   <form>
+                        <p class="aui-text-left">留言</p>
+                        <textarea></textarea>
+                         <p class="aui-text-right"><input type="submit" value="提交"></p>
+                   </form>
+                </ul>
+            </li>
+            <li class="return">
+                <p><i class="iconfont icon-xiangshang"></i></p>
+                <p>置顶</p>
+              </li>
+        </ul>
     </div>
      <!--底部-->
        <footer id="footer">
@@ -462,11 +673,12 @@
     </footer>
     <div id="weixin"></div>
     <div id="weixin_bg"></div>
-     <script src="script/jquery.js"></script>
+    <script src="script/jquery.js"></script>
     <script src="script/qzopensl.js"></script>
-     <script src="script/qrcode.js"></script>
-      <script src="script/public.js"></script>
-    
+    <script src="script/qrcode.js"></script>
+    <script src="script/public.js"></script>
+    <script src="script/wow.min.js"></script>
+    <script src="script/wow_main.js"></script>
     <script>
     
         $(function(){

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<title>保险公司</title>
+	<link rel="stylesheet" type="text/css" href="css/aui.2.0.css">
+	<link href="css/public.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<style type="text/css">
+		body{
+			background-color:#fff;
+		}
+		.faq{
+			font-size: 20px;
+			color:#202020;
+			text-align: center;
+			margin-top:30px;
+			line-height: 40px;
+		}
+		.ask{
+			font-size: 16px;
+			text-align: center;
+			position:relative;
+		}
+		.ask:after{
+			content:"";
+			width:8%;
+			height:1px;
+			background-color: #dddddd;
+			display: block;
+			position: absolute;
+			top:auto;
+			right:auto;
+			left:46%;
+			bottom:-5px;
+		}
+		#classify{
+			width: 95%;
+			margin:0 auto;
+			border-top: 2px solid #d7000f;
+		}
+		#classify a{
+			padding: 5px 6px;
+		
+			display: inline-block;;
+		}
+		#list .aui-col-xs-6{
+			padding:0 5px;
+		}
+		#list .aui-col-xs-6 img{
+			width:100%;
+			height:auto;
+		}
+		#list .aui-col-xs-6 p:nth-of-type(1){
+			line-height: 35px;
+			padding:0 10px;
+		}
+		#list .aui-col-xs-6{
+			margin-bottom:30px;
+		}
+		#list .aui-col-xs-6 p:nth-of-type(1) span{
+			font-size:16px;
+		}
+		#list .aui-col-xs-6 p:nth-of-type(1) i{
+			float:right;
+		}
+		#list .aui-col-xs-6 p:nth-of-type(2){
+			border-bottom: 1px solid transparent;
+			padding:0 10px;
+			font-size: 12px;
+		}
+		#list .aui-col-xs-6 p:nth-of-type(2) i{
+			color:#d7000f;
+		}
+		#list .active img{
+			box-shadow: 0 0 2px 2px #f1f1f1;
+		}
+		#list .active p:nth-of-type(1){
+			color:#d7000f;
+		}
+		#list .active p:nth-of-type(2){
+			border-bottom-color: #d7000f;
+		}
+		#count{
+		padding:40px 0;
+		text-align: center;
+		}
+		#count span{
+			border:1px solid #f1f1f1;
+			display: inline-block;
+			width:30px;
+			height: 30px;
+			line-height: 30px;
+		}
+		#count .active{
+			background-color:#e7141a;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+ <!-- 头部 -->
+    <nav id="nav_box" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left caidan"><i class="iconfont icon-caidan"></i></p>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+       <p class="aui-pull-right aui-margin-l-15"><i class="iconfont icon-fangdajing fangdajing"></i></p>
+        
+    <div id="nav_all">
+        <ul id="step1" class="aui-padded-r-15 aui-padded-l-15">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="inscompany.html">保险公司 </a></li>
+            <li class="person">保险产品<i class="iconfont icon-down-trangle"></i></li>
+            <li><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="ask.html">ＦＡＱ</a></li>
+            <li><a href="news.html">最新资讯</a></li>
+            <li><a href="About.html">关于平台</a></li>
+        </ul>
+        <div id="step2" class="aui-padded-l-15 aui-padded-r-15">
+            <p class="aui-margin-t-15"><i class="iconfont icon-xiangzuo retu"></i></p>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按险种进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">意外险</a>
+                    <a  class="aui-col-xs-4">少儿险</a>
+                    <a  class="aui-col-xs-4">养老险</a>
+                    <a  class="aui-col-xs-4">重疾险</a>
+                    <a  class="aui-col-xs-4">医疗险</a>
+                    <a  class="aui-col-xs-4">人寿险</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按人群分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">青年</a>
+                    <a  class="aui-col-xs-4">老年</a>
+                    <a  class="aui-col-xs-4">女性</a>
+                    <a  class="aui-col-xs-4">少儿</a>
+                    <a  class="aui-col-xs-4">个人</a>
+                    <a  class="aui-col-xs-4">团体</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按保险公司进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">中国平安</a>
+                    <a  class="aui-col-xs-4">中国人寿</a>
+                    <a  class="aui-col-xs-4">太平洋保险</a>
+                    <a  class="aui-col-xs-4">华安保险</a>
+                    <a  class="aui-col-xs-4">泰康保险</a>
+                    <a  class="aui-col-xs-4">富德生命人寿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="search" class="aui-text-center">
+        <input type="" name="" placeholder="搜索关键词">
+        <span><i class="iconfont icon-fangdajing"></i> <input type="submit" name=""></span>
+    </form>
+    </nav>
+    <div id="mainall">
+    	
+    
+	<h2 class="title aui-text-center">保险公司</h2>
+    <p class="titleEN aui-text-center">Insurance company</p>
+	<div id="classify">
+		<a href="">全部</a>
+		<a href="">A</a>
+		<a href="">B</a>
+		<a href="">C</a>
+		<a href="">D</a>
+		<a href="">E</a>
+		<a href="">F</a>
+		<a href="">G</a>
+		<a href="">H</a>
+		<a href="">I</a>
+		<a href="">J</a>
+		<a href="">K</a>
+		<a href="">L</a>
+		<a href="">M</a>
+		<a href="">N</a>
+		<a href="">O</a>
+		<a href="">P</a>
+		<a href="">Q</a>
+		<a href="">R</a>
+		<a href="">S</a>
+		<a href="">T</a>
+		<a href="">U</a>
+		<a href="">V</a>
+		<a href="">W</a>
+		<a href="">X</a>
+		<a href="">Y</a>
+		<a href="">Z</a>
+	</div>
+	<div id="list" class="aui-content-padded">
+		<div class="aui-row">
+			<a href="firms.html" class="aui-col-xs-6 active">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+			<a href="firms.html" class="aui-col-xs-6">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+			<a href="firms.html" class="aui-col-xs-6">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+			<a href="firms.html" class="aui-col-xs-6">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+			<a href="firms.html" class="aui-col-xs-6">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+			<a href="firms.html" class="aui-col-xs-6">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+			<a href="firms.html" class="aui-col-xs-6">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+			<a href="firms.html" class="aui-col-xs-6">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+			<a href="firms.html" class="aui-col-xs-6">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+			<a href="firms.html" class="aui-col-xs-6">
+				<img src="img/renshou.png">
+				<p><span>中国人寿</span> <i class="iconfont icon-xiangyou1"></i></p>
+				<p>社会保险<i class="iconfont icon-dian"></i>理财保险</p>
+			</a>
+		</div>
+	</div>
+	</div>
+<div id="paging">
+        <ul class="aui-text-center">
+           <li class="active"><i class="iconfont icon-xiangzuo"></i></li>
+           <li>1</li>
+           <li class="active">2</li>
+           <li>3</li>
+           <li>4</li>
+           <li><i class="iconfont icon-iconfontright"></i></li>
+        </ul>
+        </div>
+        <div id="bg"></div>
+	 <div id="copyright" class="aui-padded-l-15 aui-padded-r-15">
+            COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司   沪ICP备17034135号
+        </div>
+	<script src="script/jquery.js"></script>
+    <script src="script/public.js"></script>
+	<script>
+    
+        $("#list div div").on('click',function(){
+            $("#list div .active").removeClass('active')
+            $(this).addClass('active')
+        })
+        
+        
+    </script>
+</body>
+</html>

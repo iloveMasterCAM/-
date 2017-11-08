@@ -8,188 +8,214 @@
     <link href="iconfont/iconfont.css" rel="stylesheet"/>
     <link href="css/public.css" rel="stylesheet"/>
     <style>
-        .form input[type='text'],.form input[type='tel']{
-            width: 100%;
-            height: 50px;
-            background: #eee;
-            padding-left: 10px;
+       body, html{
+            height: 100%;
         }
-        .form div p span{
-            color: #d7000f;
+        #login_box{
+            background: url(img/login.png) no-repeat;
+            background-size: cover;
+            background-position: left center;
+            height: 100%;
         }
-        .form .send{
-            background: #d7000f;
-            color: #fff;
-            line-height: 50px;
-            display: inline-block;
-            width: 30%;
-            text-align: center;
-            float: right;
-        }
-        .form input[class='order']{
-            width: 65%;
-        }
-        .form .key{
-            margin: 20px 0 15px 0;
-            color: #434343;
-            font-weight: 500;
-            font-size: 16px;
-        }
-        .form .select{
-            background: #eee;
+        #login{
+             padding: 20px;
+            padding-bottom: 30px;
+             background: url(img/login_bg.png);
+             background-repeat: repeat;
             position: relative;
-        }
-        .form .select li{
-            line-height: 50px;
-            padding-left: 15px;
-            color: #434343;
-            font-weight: 500;
-            font-size: 16px;
-             border-bottom: 1px solid #e5e5e5;
-        }
-        
-        .form .select ul li:last-child{
-            border: none;
-        }
-        .form .select li.active{
-            background: #d7000f;
-            color: #fff;
-        }
-        .form .select .tr-b{
-            top: 20px;
-            right: 15px;
-        }
-        .form .select ul{
-            overflow: hidden;
-            height: 50px;
-        }
-        .form input[type='submit']{
-            background: #d7000f;
-            width: 100%;
-            color: #fff;
-            line-height: 50px;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-        .head{
-            width: 95%;
-            border-bottom: 1px solid #eee;
-        }
-        .head span{
-            margin-right: 20px;
-            line-height: 40px;
-            position: relative;
-            font-size: 16px;
-        }
-        .head .bor:before{
-             content: '';
+            top:50px;
+         }
+         #login input[type='text']{
+             width: 100%;
+             line-height: 50px;
+             padding-left: 10px;
+         }
+         #login div a{
+             display: inline;
+             font-size: 14px;
+         }
+         #login .login a.active{
+             color: #d7000f
+         }
+         #login .box{
+             margin-bottom: 15px;
+         }
+         #login .key{
+             border-bottom: 1px solid #fff;
+             position: relative;
+             margin-bottom: 15px;
+         }
+         #login .key p{
+             color: #434343;
+             line-height: 45px;
+             font-size: 18px;
+             font-weight: 500;
+             cursor: pointer;
+         }
+         #login .key p.active{
+             color: #d7000f
+         }
+         #login .key span{
             display: block;
-            height: 50%;
-            width: 1px;
-            background: #a0a0a0;
+            height: 2px;
+            width: 50%;
+             
+            background: #d7000f;
             position: absolute;
-            right: -13px;
-            top: 25%;
+            right: 0px;
+            bottom:-1px;
+             transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+              
+         }
+         #login input[type='submit']{
+             background: #d7000f;
+             line-height: 50px;
+             color: #fff;
+             width: 100%;
+             font-size: 18px;
+             margin-top: 5px;
+             
+         }
+         #wx{
+              width: 100%;
+             display: none;
+             padding: 10px 0;
+         }
+        #wx img{
+            width: 100%;
         }
-        .head span.active{
-            color: #d7000f;
-           
-        }
-   
+    #mainall{
+        margin-top: 74px;
+    }
     </style>
 </head>
 <body>
-   <div class="aui-padded-l-15 aui-padded-r-15">
-       
-  
-    <div class="head">
-        <span class="bor active">保险代理人注册</span>
-        <span class="">普通用户注册</span>
-    </div>
-    <form class="form aui-hide">
-        <div>
-            <p class="key"> <span>*</span> 手机号</p>
-            <p>
-                <input type="tel" required placeholder="请输入11位手机号码">
-            </p>
+     <!-- 头部 -->
+    <nav id="nav_box" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left caidan"><i class="iconfont icon-caidan"></i></p>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
         </div>
-        <div>
-            <p class="key"> <span>*</span> 手机验证码</p>
-            <p>
-                <input class="order" type="text" required placeholder="获取验证码"> <span class="send">获取验证码</span>
-            </p>
-        </div>
-        <div>
-            <p class="key"><span>*</span> 输入密码</p>
-            <p>
-                <input type="text" required placeholder="长度为6-20个字母、数字">
-            </p>
-        </div>
-        <div>
-            <p class="key"> <span>*</span> 确认密码</p>
-            <p>
-                <input type="text" required placeholder="长度为6-20个字母、数字">
-            </p>
-        </div>
-        <div>
-            <p class="key"><span>*</span> 姓名</p>
-            <p>
-                <input type="text" required placeholder="请输入11位手机号码">
-            </p>
-        </div>
-        <div>
-            <p class="key"> <span>*</span> 所属公司</p>
-           <div class="select">
-             <ul class="aui-col-xs-12">
-                 <li class="val">中国人寿</li>
-                 <li>中国人寿</li>
-                 <li class="active">中国人寿</li>
-                 <li>中国人寿</li>
-                 <i class="tr-b"></i>
-             </ul>
-              <input type="hidden" value="">
-           </div>
-        </div>
+       <a href='set.html' class="aui-pull-right aui-margin-l-15"><i class="iconfont icon-haoyouxingming"></i></a>
         
-        <div>
-            <input type="submit" value="立即注册">
+    <div id="nav_all">
+        <ul id="step1" class="aui-padded-r-15 aui-padded-l-15">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="inscompany.html">保险公司 </a></li>
+            <li class="person">保险产品<i class="iconfont icon-down-trangle"></i></li>
+            <li><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="ask.html">ＦＡＱ</a></li>
+            <li><a href="news.html">最新资讯</a></li>
+            <li><a href="About.html">关于平台</a></li>
+        </ul>
+        <div id="step2" class="aui-padded-l-15 aui-padded-r-15">
+            <p class="aui-margin-t-15"><i class="iconfont icon-xiangzuo retu"></i></p>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按险种进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">意外险</a>
+                    <a  class="aui-col-xs-4">少儿险</a>
+                    <a  class="aui-col-xs-4">养老险</a>
+                    <a  class="aui-col-xs-4">重疾险</a>
+                    <a  class="aui-col-xs-4">医疗险</a>
+                    <a  class="aui-col-xs-4">人寿险</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按人群分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">青年</a>
+                    <a  class="aui-col-xs-4">老年</a>
+                    <a  class="aui-col-xs-4">女性</a>
+                    <a  class="aui-col-xs-4">少儿</a>
+                    <a  class="aui-col-xs-4">个人</a>
+                    <a  class="aui-col-xs-4">团体</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按保险公司进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">中国平安</a>
+                    <a  class="aui-col-xs-4">中国人寿</a>
+                    <a  class="aui-col-xs-4">太平洋保险</a>
+                    <a  class="aui-col-xs-4">华安保险</a>
+                    <a  class="aui-col-xs-4">泰康保险</a>
+                    <a  class="aui-col-xs-4">富德生命人寿</a>
+                </div>
+            </div>
         </div>
+    </div>
+    <form id="search" class="aui-text-center">
+        <input type="" name="" placeholder="搜索关键词">
+        <span><i class="iconfont icon-fangdajing"></i> <input type="submit" name=""></span>
     </form>
-     <form class="form " id="normal">
-        <div>
-            <p class="key"> <span>*</span> 手机号</p>
-            <p>
-                <input type="tel" required placeholder="请输入11位手机号码">
-            </p>
+    </nav>
+    <div id="mainall"></div>
+   <div class="aui-padded-l-15 aui-padded-r-15" id="login_box">
+      <div id="login">
+            <div class="clear aui-text-center box key">
+                <p class="aui-col-xs-6">微信登录</p>
+                <p class="aui-col-xs-6 active">账号登录</p>
+                <span></span>
+            </div>
+            <div id="wx" class=" aui-text-center">
+                <p><img src="img/er.png" alt=""></p>
+            </div>
+            <form class="" id="form">
+                 <div class="box">
+                    <input type="text" required placeholder="用户名/手机号/邮箱">
+                </div>
+                <div class="box">
+                    <p><input type="text" required placeholder="密码"></p>
+                    <p class="aui-text-right aui-padded-t-15">忘记密码？</p>
+                </div>
+                <div  class="box">
+                    <input type="submit" value="登录">
+                </div>
+                <div class="aui-text-center login">
+                    <a href="">还没有注册？</a>
+                    <a href="" class="active">立即注册</a>
+                </div>
+            </form>
         </div>
-        <div>
-            <p class="key"> <span>*</span> 手机验证码</p>
-            <p>
-                <input class="order" type="text" required placeholder="获取验证码"> <span class="send">获取验证码</span>
-            </p>
-        </div>
-        <div>
-            <p class="key"><span>*</span> 输入密码</p>
-            <p>
-                <input type="text" required placeholder="长度为6-20个字母、数字">
-            </p>
-        </div>
-        <div>
-            <p class="key"> <span>*</span> 确认密码</p>
-            <p>
-                <input type="text" required placeholder="长度为6-20个字母、数字">
-            </p>
-        </div>
-        <div>
-            <p class="key"><span>*</span> 姓名</p>
-            <p>
-                <input type="text" required placeholder="请输入11位手机号码">
-            </p>
-        </div>
-        <div>
-            <input type="submit" value="立即注册">
-        </div>
-    </form>
-     </div>
+    </div>
+    <div id="bg"></div>
+    <div id="copyright" class="aui-padded-l-15 aui-padded-r-15">
+            COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司   沪ICP备17034135号
+    </div>
+      <script src="script/jquery.js"></script>
+    <script src="script/public.js"></script>
+    <script>
+
+        
+    
+            $(function(){
+            $("#login .key p").on('click',function(){
+                var index = $(this).index();
+                $("#login .key .active").removeClass('active')
+                if(index == 0){
+                    $('#wx').show();
+                    $('#form').hide();
+                   
+                }else{
+                     
+                    $('#form').show();
+                    $('#wx').hide();
+                }
+                $(this).addClass('active')
+            })
+            $("#Leaving>i").on('click',function(){
+                $("#Leaving,#bg").hide()
+            })
+            
+        })
+
+
+        
+    </script>
 </body>
 </html>

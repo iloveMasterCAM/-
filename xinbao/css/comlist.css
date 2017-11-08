@@ -1,142 +1,135 @@
-
-#banner img{
-    width:100%;
-    margin-top:122px;
-}
-#section{
-    padding:20px 10%;
-}
-#section .p1{
-    font-size:14px;
-    text-align: center;
-    line-height: 20px;
-    margin:0;
-}
-#section .p4{
-    margin-bottom:50px;
-}
-#section .p4 span{
-    display: inline-block;
-    width:20px;
-    border-bottom:2px solid #f1f1f1; 
-    margin-top:5px;
-}
-#section .p2{
-    margin-top:30px;
-}
-#section .p3{
-    line-height: 25px;
-}
-#section .p3 span:first-child{
-    padding-left:0;
-    border:0;
-    color:#fa0c0c;
-}
-#section .p3 span{
-    margin-right:20px;
-    padding-left:20px;
-    border-left:1px solid #f1f1f1;
-    cursor: pointer;
-}
-#section .icon-fangdajing{
-    background-color:#fa0c0c;
-    color:#fff;
-    padding:1px 10px;
-    font-size:12px;
-    float:right;
-    cursor:pointer;
-}
-#section .serch{
-    border: 1px solid #fa0c0c;
-    line-height: 25px;
-    float:right;
-    font-size:12px;
-    padding-left: 5px;
-    
-}
-#section .list{
-    padding:30px 0;
-    overflow: hidden;
-}
-#section .list .icon-dian-copy-copy-copy{
-    color:#fa0c0c;
-}
-#section .list li{
-    float:left;
-    margin-left:30px;
-    padding-bottom: 30px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    border-bottom: 3px solid transparent;
-}
-#section .list li:hover .list_p1{
-    color:#d8000f;
-}
-#section .list li:hover img{
-    box-shadow: 2px 2px 3px 3px #f1f1f1;
-}
-#section .list li img{
-    width:300px;
-    height:auto;
-    border: 1px solid #f1f1f1;
-}
-#section .list li .list_p1{
-    line-height: 30px;
-    text-align: left;
-    padding:0 10px;
-    margin:0;
-}
-#section .list li .list_p1 i{
-    float:right;
-}
-#section .list li .list_p2{
-    text-align: left;
-    margin:0 10px;
-    font-size:12px;
-    
-}
-#section .list li:hover{
-    border-bottom: 3px solid #fa0c0c;
-}
-/*#section .list .col-md-4 {
-    text-align: center;
-}
-#section .list .col-md-4 img{
-    width:250px;
-    height:auto;
-    border: 1px solid #f1f1f1;
-}
-#section .list .col-md-4 .list_p1{
-    line-height: 30px;
-    text-align: left;
-    padding:0 30px;
-    margin:0;
-}
-#section .list .col-md-4 .list_p1 i{
-    float:right;
-}
-#section .list .col-md-4 .list_p2{
-    text-align: left;
-    margin:0 30px;
-    font-size:12px;
-    border-bottom: 3px solid #fa0c0c;
-}
-#section .list .col-md-4 .list_p2 i{
-    color:#fa0c0c;
-}
-*/
-#section .page{
-    text-align:center;
-    line-height: 25px;
-    padding:100px 0;
-}
-#section .page i{
-    border:1px solid #f1f1f1;
-    width:25px;
-    display: inline-block;
-}
-#section .page span{
-    border:1px solid #f1f1f1;
-    display: inline-block;
-    width:25px;
-}
+ #banner .img{
+             background: url('../img/comlist.png') no-repeat;
+         }
+         #main{
+             width: 60%;
+             min-width: 1024px;
+             margin: 110px auto 100px;
+         }
+         #search{
+             margin: 50px 0;
+         }
+         #main .search{
+         border: 1px solid #d7000f
+     }
+     #main .search span{
+         background: #d7000f;
+         color: #fff;
+         line-height: 30px;
+         display: inline-block;
+         padding: 0 10px;
+         margin-right: 0;
+     }
+          #sort {
+        display: inline-block;
+        overflow: hidden;
+       
+    }
+    #sort span{
+        margin-right: 45px;
+        line-height: 30px;
+        font-size: 20px;
+        color: #838383;
+        cursor: pointer;
+        position: relative;
+    }
+    #sort span:before{
+        content: '';
+        display: block;
+        height: 60%;
+        width: 1px;
+        background: #e5e5e5;
+        position: absolute;
+        left: -27px;
+        top: 20%;
+    }
+         #sort a{
+             display: inline;
+         }
+    #sort span i.active{
+        color: #e7141a
+    }
+         #main .firm{
+             margin: 0 -1.7%;
+         }
+         #main .firm img{
+            height: 100px;
+            
+         }
+         #main .firm .firm_box{
+             width: 30%;
+             margin: 0 1.6%;
+             float: left;
+             margin-bottom: 35px;
+            border-bottom: 2px solid transparent;
+         }
+          #main .img_box{
+             padding: 20px;
+              border: 1px solid #eee;
+               transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+         }
+         #main .txt{
+             padding-left: 20px;
+             margin: 20px 0 30px 0;
+              position: relative;
+         }
+         #main .lebel{
+             margin-right: 20px;
+             font-size: 16px;
+             position: relative;
+         }
+         #main .lebel_p{
+             font-size: 16px;
+         }
+         #main .lebel:before{
+             content: '';
+            display: block;
+            height: 5px;
+            width: 5px;
+             border-radius: 50%;
+            background: #d7000f;
+            position: absolute;
+            right: -13px;
+            top: 40%;
+         }
+         #main .lebel:last-child:before{
+             display: none;
+         }
+         #main .red{
+             color: #434343;
+             margin-bottom: 10px;
+             font-weight: 500;
+             font-size: 20px;
+         }
+         #main .firm .icon{
+             position: absolute;
+             right: 0;
+             top: 3px;
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             border: 1px solid #eee;
+             line-height: 30px;
+             background: #fff;
+         }
+         #main .firm .icon i{
+             font-size: 14px;
+             color: #c9c9c9;
+         }
+         #main .firm .firm_box:hover{
+              border-bottom: 2px solid #d7000f;
+         }
+         #main .firm .firm_box:hover .img_box{
+             box-shadow: 0px 0 10px #888;
+         }
+         #main .firm .firm_box:hover .red{
+             color: #d7000f
+         }
+         #main .firm .firm_box:hover .icon{
+             background: #d7000f
+         }
+         #main .firm .firm_box:hover .icon i{
+             color: #fff
+         }

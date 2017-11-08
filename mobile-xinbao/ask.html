@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<title>咨询</title>
+	<link rel="stylesheet" type="text/css" href="css/aui.2.0.css">
+	<link href="css/public.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<style type="text/css">
+		body{
+			background-color:#fff;
+		}
+		.faq{
+			font-size: 20px;
+			color:#202020;
+			text-align: center;
+			margin-top:30px;
+			line-height: 40px;
+		}
+		.ask{
+			font-size: 16px;
+			text-align: center;
+			position:relative;
+		}
+		.ask:after{
+			content:"";
+			width:8%;
+			height:1px;
+			background-color: #dddddd;
+			display: block;
+			position: absolute;
+			top:auto;
+			right:auto;
+			left:46%;
+			bottom:-5px;
+		}
+		#list .aui-row .col0{
+			padding-right:10px;
+		}
+		#list .aui-col-xs-2>div{
+            width: 40px;
+            height: 40px;
+          
+			background-color: #57ab9b;
+		}
+		#list .aui-col-xs-2>div p{
+			color:#fff;
+			text-align: center;
+		}
+		#list .aui-col-xs-10 .aui-row .aui-col-xs-6{
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size:14px;
+            color: #434343;
+		}
+		#list .aui-col-xs-10 .aui-row:nth-of-type(1){
+			margin-bottom: 10px;
+		}
+		#list .aui-col-xs-10 .aui-row .aui-col-xs-6 span{
+			font-size:16px;
+		}
+		#list .aui-col-xs-10 .aui-row .aui-col-xs-6:nth-of-type(2){
+			font-size:12px;
+		}
+		#list .aui-col-xs-10 .aui-row .aui-col-xs-6:nth-of-type(2) i{
+			color:#e7141a;
+		}
+		#list .aui-col-xs-10 .aui-row .aui-col-xs-2 img{
+			height: 100%;
+			width:100%;
+		}
+		#list .aui-col-xs-10 .aui-row .aui-col-xs-10{
+			font-size:12px;
+			padding-left:15px;
+            color: #636363;
+		}
+		#list .list{
+			border-bottom: 1px solid #dddddd;
+			padding-top: 15px;
+		}
+		#count{
+		padding:40px 0;
+		text-align: center;
+		}
+		#count span{
+			border:1px solid #f1f1f1;
+			display: inline-block;
+			width:30px;
+			height: 30px;
+			line-height: 30px;
+		}
+		#count .active{
+			background-color:#e7141a;
+			color:#fff;
+		}
+        .Answer{
+            width: 80px;
+            background: #eeeeee;
+            color: #434343;
+            display: inline-block;
+            text-align: center;
+            margin-top: 5px;
+            font-size: 13px;
+            line-height: 30px;
+        }
+         #Answer {
+             min-width: 80%;
+/*              display: none;*/
+             background: #fff;
+             position: fixed;
+             z-index: 7;
+             left: 10%;
+             top: 30%;
+             padding: 20px;
+         }
+         #Answer textarea{
+             height: 100px;
+             width: 100%;
+             border: 1px solid #d2d2d2;
+             padding: 5px;
+         }
+         #Answer input[type='submit']{
+             color: #fff;
+             background: #434343;
+             width: 100px;
+             line-height: 35px;
+             margin-top: 15px;
+              /*  transition: all .6s;
+            -webkit-transition: all .6s;
+            -moz-transition: all .6s;
+            transform-origin: 5px 8px;*/
+         }
+         #Answer input[type='submit']:hover{
+              background: #e7141a;
+             color: #fff;
+         }
+           #Answer .red{
+            background: #f39994;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            position: relative;
+            margin-right: 10px;
+            margin-bottom: -2px;
+        }
+        #Answer .red i{
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 7px;
+            height: 7px;
+            display: inline-block;
+            background: #e83429;
+            
+        }
+         #Answer .icon-X{
+             position: absolute;
+             top: 15px;
+             right: 10px;
+             font-size: 16px;
+         }
+        #bg{
+            display: block;
+        }
+	</style>
+</head>
+<body>
+ <!-- 头部 -->
+    <nav id="nav_box" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left caidan"><i class="iconfont icon-caidan"></i></p>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+    <div id="nav_all">
+        <ul id="step1" class="aui-padded-r-15 aui-padded-l-15">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="inscompany.html">保险公司 </a></li>
+            <li class="person">保险产品<i class="iconfont icon-down-trangle"></i></li>
+            <li><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="ask.html">ＦＡＱ</a></li>
+            <li><a href="news.html">最新资讯</a></li>
+            <li><a href="About.html">关于平台</a></li>
+        </ul>
+        <div id="step2" class="aui-padded-l-15 aui-padded-r-15">
+            <p class="aui-margin-t-15"><i class="iconfont icon-xiangzuo retu"></i></p>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按险种进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">意外险</a>
+                    <a  class="aui-col-xs-4">少儿险</a>
+                    <a  class="aui-col-xs-4">养老险</a>
+                    <a  class="aui-col-xs-4">重疾险</a>
+                    <a  class="aui-col-xs-4">医疗险</a>
+                    <a  class="aui-col-xs-4">人寿险</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按人群分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">青年</a>
+                    <a  class="aui-col-xs-4">老年</a>
+                    <a  class="aui-col-xs-4">女性</a>
+                    <a  class="aui-col-xs-4">少儿</a>
+                    <a  class="aui-col-xs-4">个人</a>
+                    <a  class="aui-col-xs-4">团体</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按保险公司进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">中国平安</a>
+                    <a  class="aui-col-xs-4">中国人寿</a>
+                    <a  class="aui-col-xs-4">太平洋保险</a>
+                    <a  class="aui-col-xs-4">华安保险</a>
+                    <a  class="aui-col-xs-4">泰康保险</a>
+                    <a  class="aui-col-xs-4">富德生命人寿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="search" class="aui-text-center">
+        <input type="" name="" placeholder="搜索关键词">
+        <span><i class="iconfont icon-fangdajing"></i> <input type="submit" name=""></span>
+    </form>
+    </nav>
+    <div id="mainall"></div>
+	 <h2 class="title aui-text-center">FAQ</h2>
+    <p class="titleEN aui-text-center">ask chanting</p>
+	<div id="list">
+		<a class="list" href="detail.html">
+			<div class="aui-content-padded">
+			<div class="aui-row">
+				<div class="aui-col-xs-2 col0">
+					<div>
+						<p>10</p>
+						<p>问答</p>
+					</div>
+				</div>
+				<div class="aui-col-xs-10">
+					<div class="aui-row">
+						<div class="aui-col-xs-6">
+							<span>咨询 : </span>友邦保险理赔怎么样？理赔速度快不快？
+						</div>
+						<div class="aui-col-xs-6">
+							<i class="iconfont icon-geren"></i> 赵先生
+							<i class="iconfont icon-mp-location"></i>江苏苏州
+						</div>
+					</div>
+					<div class="aui-row">
+						<div class="aui-col-xs-2">
+							<img src="img/conductdetail_head.png">
+						</div>
+						<div class="aui-col-xs-10">
+							你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪
+						</div>
+					</div>
+                    <span class="Answer">回答</span>
+				</div>
+			</div>
+		</div>
+		</a>
+		<a class="list" href="detail.html">
+			<div class="aui-content-padded">
+			<div class="aui-row">
+				<div class="aui-col-xs-2 col0">
+					<div>
+						<p>10</p>
+						<p>问答</p>
+					</div>
+				</div>
+				<div class="aui-col-xs-10">
+					<div class="aui-row">
+						<div class="aui-col-xs-6">
+							<span>咨询 : </span>友邦保险理赔怎么样？理赔速度快不快？
+						</div>
+						<div class="aui-col-xs-6">
+							<i class="iconfont icon-geren"></i> 赵先生
+							<i class="iconfont icon-mp-location"></i>江苏苏州
+						</div>
+					</div>
+					<div class="aui-row">
+						<div class="aui-col-xs-2">
+							<img src="img/conductdetail_head.png">
+						</div>
+						<div class="aui-col-xs-10">
+							你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪
+							电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能
+							让客户的理赔款36秒到账再次刷新自身记录...
+						</div>
+					</div>
+                      <span class="Answer">回答</span>
+				</div>
+			</div>
+		</div>
+		</a>
+		<a class="list" href="detail.html">
+			<div class="aui-content-padded">
+			<div class="aui-row">
+				<div class="aui-col-xs-2 col0">
+					<div>
+						<p>10</p>
+						<p>问答</p>
+					</div>
+				</div>
+				<div class="aui-col-xs-10">
+					<div class="aui-row">
+						<div class="aui-col-xs-6">
+							<span>咨询 : </span>友邦保险理赔怎么样？理赔速度快不快？
+						</div>
+						<div class="aui-col-xs-6">
+							<i class="iconfont icon-geren"></i> 赵先生
+							<i class="iconfont icon-mp-location"></i>江苏苏州
+						</div>
+					</div>
+					<div class="aui-row">
+						<div class="aui-col-xs-2">
+							<img src="img/conductdetail_head.png">
+						</div>
+						<div class="aui-col-xs-10">
+							你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪
+							电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能
+							让客户的理赔款36秒到账再次刷新自身记录...
+						</div>
+					</div>
+                      <span class="Answer">回答</span>
+				</div>
+			</div>
+		</div>
+		</a>
+		<a class="list" href="detail.html">
+			<div class="aui-content-padded">
+			<div class="aui-row">
+				<div class="aui-col-xs-2 col0">
+					<div>
+						<p>10</p>
+						<p>问答</p>
+					</div>
+				</div>
+				<div class="aui-col-xs-10">
+					<div class="aui-row">
+						<div class="aui-col-xs-6">
+							<span>咨询 : </span>友邦保险理赔怎么样？理赔速度快不快？
+						</div>
+						<div class="aui-col-xs-6">
+							<i class="iconfont icon-geren"></i> 赵先生
+							<i class="iconfont icon-mp-location"></i>江苏苏州
+						</div>
+					</div>
+					<div class="aui-row">
+						<div class="aui-col-xs-2">
+							<img src="img/conductdetail_head.png">
+						</div>
+						<div class="aui-col-xs-10">
+							你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪
+							电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能
+							让客户的理赔款36秒到账再次刷新自身记录...
+						</div>
+					</div>
+                      <span class="Answer">回答</span>
+				</div>
+			</div>
+		</div>
+		</a>
+		<a class="list" href="detail.html">
+			<div class="aui-content-padded">
+			<div class="aui-row">
+				<div class="aui-col-xs-2 col0">
+					<div>
+						<p>10</p>
+						<p>问答</p>
+					</div>
+				</div>
+				<div class="aui-col-xs-10">
+					<div class="aui-row">
+						<div class="aui-col-xs-6">
+							<span>咨询 : </span>友邦保险理赔怎么样？理赔速度快不快？
+						</div>
+						<div class="aui-col-xs-6">
+							<i class="iconfont icon-geren"></i> 赵先生
+							<i class="iconfont icon-mp-location"></i>江苏苏州
+						</div>
+					</div>
+					<div class="aui-row">
+						<div class="aui-col-xs-2">
+							<img src="img/conductdetail_head.png">
+						</div>
+						<div class="aui-col-xs-10">
+							你好！作为精品寿险公司，太平人寿的理赔速度力求做到名如“闪
+							电”，也真的快如“闪电”2015年，太平人寿的“先赔后核”功能
+							让客户的理赔款36秒到账再次刷新自身记录...
+						</div>
+					</div>
+                      <span class="Answer">回答</span>
+				</div>
+			</div>
+		</div>
+		</a>
+		
+	</div>
+	<div id="paging">
+        <ul class="aui-text-center">
+           <li class="active"><i class="iconfont icon-xiangzuo"></i></li>
+           <li>1</li>
+           <li class="active">2</li>
+           <li>3</li>
+           <li>4</li>
+           <li><i class="iconfont icon-iconfontright"></i></li>
+        </ul>
+        </div>
+       <form id="Answer">
+        <p class="aui-margin-b-10"><span class="red"><i></i></span>回答</p>
+        <div>
+            <textarea></textarea>
+        </div>
+        <p class="aui-text-center"><input type="submit" value="发布"></p>
+        <i class="iconfont icon-X"></i>
+    </form>
+        <div id="bg"></div>
+        <div id="copyright" class="aui-padded-l-15 aui-padded-r-15">
+            COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司   沪ICP备17034135号
+    </div>
+      <script src="script/jquery.js"></script>
+    <script src="script/public.js"></script>
+    <script>
+    
+         $("#list .Answer").on('click',function(){
+            $("#bg,#Answer").show();
+            return false;
+            
+        })
+        $("#Answer .icon-X").on('click',function(){
+             $("#bg,#Answer").hide();
+        })
+        
+    </script>
+</body>
+</html>

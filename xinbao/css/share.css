@@ -1,5 +1,5 @@
  #main{
-             width: 50%;
+             width: 60%;
              min-width: 1024px;
              margin: 0 auto 150px;
          }
@@ -78,7 +78,8 @@
             line-height: 30px;
          }
          #main .name i{
-             color: #e7141a
+             color: #e7141a;
+             font-size: 22px;
          }
          #main tiem:before{
                content: '';

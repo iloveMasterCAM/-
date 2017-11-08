@@ -13,7 +13,7 @@
      #main{
          width: 60%;
          min-width: 1024px;
-         margin: 140px auto 100px;
+         margin: 190px auto 100px;
      }
    #sort {
         display: inline-block;
@@ -45,6 +45,7 @@
      #wrap .con{
          padding: 15px 20px; 
          margin-bottom: 30px;
+         border: 1px solid #e5e5e5;
      }
 
 
@@ -103,9 +104,12 @@
          width: 130px;
      }
      #wrap .MORE p{
-         font-size: 20px;
+         font-size: 22px;
+         text-align: center;
          color: #838383;
          margin-bottom: 15px;
+         color: #d7000f;
+         font-weight: 500;
      }
      #wrap .MORE .img{
         border: 1px solid #eee         
@@ -113,14 +117,15 @@
      #wrap .list .key{
          width: 100px;
          display: inline-block;
-         line-height: 35px;
+         line-height: 40px;
      }
      #wrap .list .tl{
+         width: 360px;
          border-bottom: 1px solid #eee;
          line-height: 45px;
          color: #434343;
          font-size: 18px;
-         margin-bottom: 15px;
+         margin-bottom: 20px;
          position: relative;
          padding-left: 15px;
      }
@@ -146,11 +151,18 @@
      #wrap .list .tabel{
          width: 870px;
          background: #fafafa;
+         margin-bottom: 15px;
      }
      #wrap .list .tabel .clear{
          height: 65px;
         line-height: 65px;
          border-bottom: 1px solid #e5e5e5;
+     }
+     #wrap .list .tabel .clear:first-child{
+         background: #eeeeee
+     }
+     #wrap .list .tabel .clear:last-child{
+        border-bottom: none;
      }
      #wrap .list .tabel .test{
          line-height: 25px;
@@ -164,9 +176,12 @@
      }
      #wrap .list .red{
          line-height: 50px;
+         color: #d7000f;
+         cursor: pointer;
+     }
+     #wrap .list .red span{
          color: #d7000f
      }
-     
      #wrap .list .tabel_box>div{
          display: table-cell;
          vertical-align: middle;
@@ -220,11 +235,88 @@
      #wrap .list.bor{
          border: none;
      }
-     #wrap .list
-     #wrap .list
-     #wrap .list
-     #wrap .list
-     #wrap .list
+     #wrap .list .tabelimg{
+         width: 100%;
+          transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+         overflow: hidden;
+     }
+     #data img{
+         width: 100%;
+     }
+     #ask{
+         width: 665px;
+     }
+     #ask .key_ask{
+         width: 15%;
+         float: left;
+         text-align: right;
+         padding-right: 15px;
+         line-height: 37px;
+     }
+     #ask sup{
+         color: #d7000f
+     }
+     #ask .input{
+         width: 85%;
+         float: left;
+        
+     }
+     #ask>div{
+         margin-bottom: 30px;
+     }
+     #ask .input textarea{
+        height: 230px;
+            border: 1px solid #e5e5e5;
+           width: 100%;
+         padding: 5px 0 0 5px;
+     }
+     #ask .input input[type='text']{
+          line-height: 45px;
+         width: 100%;
+         padding-left: 5px;
+         border: 1px solid #e5e5e5;
+     }
+     #ask .input select{
+         line-height: 45px;
+         width: 31%;
+         display: block;
+         float: left;
+         padding: 0 15px;
+          border: 1px solid #e5e5e5;
+         background: url("img/select.png") no-repeat scroll 150px center transparent
+     }
+     #ask .input select.mar{
+         margin: 0 3.5%;
+     }
+      #ask .input input.coder{
+         width: 78%;
+     }
+     #ask .input .send{
+         width: 20%;
+         display: inline-block;
+         text-align: center;
+         float: right;
+        line-height: 45px;
+         color: #fff;
+         background: #d7000f
+     }
+     #ask input[type='submit']{
+         background: #d7000f;
+         color: #fff;
+         width: 200px;
+         line-height: 45px;
+         text-align: center;
+     }
+     #sort.fixed{
+         position: fixed;
+         top: 90px;
+         width: 1141px;
+         z-index: 3;
+         border-bottom: 1px solid #eee;
+         background: #fff;
+     }
      #wrap .list
      #wrap .list
      #wrap .list
@@ -235,38 +327,188 @@
 </head>
 <body>
 	<!--头部-->
-      <div id="header_box">
+     <div id="header_box">
     <div id="header">
        <div class="clear wrap">
         <div class="address aui-pull-left">
             <p><i class="iconfont icon-mp-location"></i> <span>厦门</span> <span class="qie">【切换】</span></p>
-            <div>
-                <a href="">北京</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
-                <a href="">南昌</a>
+             <div>
+              <ul class="clear">
+                  <li class="active">热门城市</li>
+                  <li>ABCD</li>
+                  <li>FGHJ</li>
+                  <li>KLMN</li>
+                  <li>QSTW</li>
+                  <li>XYZ</li>
+              </ul>
+               <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+                <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+                <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+                <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+                <div class="city">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">南昌</a>
+                    <a href="">大连市</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
+               <div class="city active">
+                    <a href="">北京</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+                    <a href="">厦门市</a>
+                    <a href="">南昌</a>
+                    <a href="">南昌</a>
+               </div>
             </div>
         </div>
         <div class="aui-pull-right clear ri">
@@ -291,17 +533,30 @@
           </div>
     </div>
     <!--导航-->
-    <nav id="nav" class="aui-col-xs-12">
+   <nav id="nav" class="aui-col-xs-12">
        <div class="clear wrap">
         <a href="index.html" class="logo aui-pull-left">
             <img src="img/logo.png" alt=""> <p> 选保无忧,就上信保网</p>
         </a>
-        
          <ul class="clear aui-pull-right">
             <li><a href="index.html">首页</a></li>
             <li><a href="comlist.html">保险公司</a></li>
-            <li class="nav_product"><a href="list.html">保险产品 <i class="iconfont icon-xiangshang"></i></a>
-                <ul>
+            <li class="nav_product"><a href="list.html">保险产品 <i class="iconfont icon-xiangshang"></i></a></li>
+            <li class="new"><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="conduct.html">FAQ</a></li>
+            <li class="new"><a href="news_list.html">最新资讯</a></li>
+            <form class="search">
+                <input type="text" placeholder="搜索关键字" required>
+                <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
+            </form>
+        </ul>
+        <p class="aui-pull-right caidan"><i class="iconfont icon-caidan"></i></p>
+        </div>
+    </nav>
+    
+    <ul class="animated bounce" id="nav_product">
                     <li class="aui-text-left">
                         <div class="aui-col-xs-4">
                             <h3>按险种进行分类</h3>
@@ -338,24 +593,9 @@
                         </div>
                     </li>
                 </ul>
-            </li>
-            <li class="new"><a href="consultent.html">保险顾问</a></li>
-            <li><a href="share.html">签单分享</a></li>
-            <li><a href="">我要合作</a></li>
-            <li><a href="conduct.html">FAQ</a></li>
-            <li class="new"><a href="news_list.html">最新资讯</a></li>
-            <form class="search">
-                <input type="text" placeholder="搜索关键字" required>
-                <span><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
-            </form>
-        </ul>
-         </div>
-    </nav>
     </div>
 
     <div id="main">
-
-        
         <div id="wrap">
             <div class="con">
                 <div>
@@ -371,7 +611,7 @@
                    
                     <div class="clear test_box">
                         <p class="aui-pull-left aui-ellipsis-3">具有“重疾全面覆盖，特定加倍给付、轻症及早干预、年金自由转化，具有
-“重疾全面覆盖，特定加倍给付、轻症及早干预特定加倍  </p>
+“重疾全面覆盖，特定加倍给付、轻症及早干预特定加倍疾全面覆盖，特定加倍给付、轻症及早干预特定加倍疾全面覆盖，特定加倍给付、轻症及早干预特定加倍... </p>
                     </div>
                      
                 </div>
@@ -384,12 +624,13 @@
             </div>
             
             <p id="sort">
-               <span class="active">全部</span>
-               <span>按时间</span>
-               <span>按热度</span>
+               <span class="active">产品详情</span>
+               <span>投保案例</span>
+               <span>产品问答</span>
+               <span>我要提问</span>
             </p>
-            <div class="list">
-                <p class="tl">产品详情</p>
+            <div class="list list1">
+                <p class="tl">投保详情</p>
                 <div class="clear">
                     <p class="aui-pull-left aui-col-xs-2">
                         <span class="key">投保年龄：</span>
@@ -451,18 +692,20 @@
 保险（2016）条款  </span>
                 </div>
             </div>
-            <div class="list">
-                <p class="tl">产品详情</p>
+            <div class="list list2">
+                <p class="tl">产品案例</p>
 
-                <div class="clear">
-                    <div class="aui-pull-left tabel">
+                <div class="clear" id="data">
+                    <div class="aui-pull-left tabel tabelimg">
+                        <img src="img/conductdetail.png" alt="">
+                        <img src="img/conductdetail.png" alt="">
                         <img src="img/conductdetail.png" alt="">
                     </div>
                 </div>
-                <p class="aui-text-center red">展开全部 <i class="iconfont icon-down-trangle"></i></p>
+                <p class="aui-text-center red" id="red"><span>展开全部 </span><i class="iconfont icon-down-trangle"></i></p>
                 
             </div>
-            <div class="list bor">
+            <div class="list bor list3">
                 <p class="tl">产品问答</p>
               <div class="qa">
                   <div class="clear qa_txt">
@@ -545,10 +788,121 @@
                   <p class="tr-l_div"></p>
               </div>
             </div>
+            
+             <div class="list bor list4">
+                <p class="tl">我要提问</p>
+             
+                <form action="" id="ask">
+                    <div class="clear">
+                        <div class="key_ask">
+                            <sup>*</sup>
+                            留言:
+                        </div>
+                        <div class="input">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <div class="key_ask">
+                            <sup>*</sup>
+                            姓名:
+                        </div>
+                        <div class="input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <div class="key_ask">
+                            <sup>*</sup>
+                            电话:
+                        </div>
+                        <div class="input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <div class="key_ask">
+                            <sup>*</sup>
+                            验证码:
+                        </div>
+                        <div class="input">
+                            <input type="text" class="coder"> <span class="send">获取验证码</span>
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <div class="key_ask">
+                            <sup>*</sup>
+                            地址:
+                        </div>
+                        <!--
+                        <div class="aui-text-right" id="address">
+                        <div data-toggle="distpicker" class="clear">
+                          <select data-province="---- 选择省 ----"></select>
+                          <select data-city="---- 选择市 ----"></select>
+                          <select data-district="---- 选择区 ----"></select>
+                        </div>
+                    </div>
+                        -->
+                        <div data-toggle="distpicker" class="input clear" id="address">
+                          <select  data-province="---- 选择省 ----">
+                            
+                         </select>
+                         <select class="mar" data-city="---- 选择市 ----">
+                             
+                         </select>
+                          <select  data-district="---- 选择区 ----">
+                             
+                         </select>
+                        </div>
+                    </div>
+                     <div class="clear">
+                        <div class="key_ask"> 
+                            &nbsp;
+                        </div>
+                        <div class="input">
+                            <input type="submit" value="提交">
+                        </div>
+                    </div>
+                </form>
+             
+            </div>
+            
         </div>
         
     </div>
-
+     <!--则边栏-->
+    <div id="side" class="">
+        <ul>
+            <li><i class="iconfont icon-qq"></i>
+                <ul>
+                    <li>QQ在线对话</li>
+                </ul>
+            </li>
+            <li><i class="iconfont icon-xiaoxi1"></i>
+                <ul>
+                   <form>
+                       <p class="aui-text-left bor">投诉电话：0592-5914297</p>
+                       <p class="aui-text-left">投诉建议</p>
+                        <textarea></textarea>
+                        <p class="aui-text-right"><input type="submit" value="提交"></p>
+                   </form>
+                </ul>
+            </li>
+            <li><i class="iconfont icon-fankui"></i>
+                <ul class="liuyan">
+                   <form>
+                        <p class="aui-text-left">留言</p>
+                        <textarea></textarea>
+                         <p class="aui-text-right"><input type="submit" value="提交"></p>
+                   </form>
+                </ul>
+            </li>
+            <li class="return">
+                <p><i class="iconfont icon-xiangshang"></i></p>
+                <p>置顶</p>
+              </li>
+        </ul>
+    </div>
      <!--底部-->
     <footer id="footer">
        <div class="wrap clear">
@@ -601,17 +955,60 @@
     <script src="script/qzopensl.js"></script>
     <script src="script/qrcode.js"></script>
     <script src="script/public.js"></script>
-    
+    <script src="script/distpicker.data.js"></script>
+    <script src="script/distpicker.js"></script>
     <script>
     
         $(function(){
             $("#sort span").on('click',function(){
                  $("#sort .active").removeClass('active')
                 $(this).addClass('active')
+                
+                var index = $(this).index()
+            switch(index){
+                    case 0:
+                    $('body,html').animate({ scrollTop: $(".list1").offset().top-155});
+                break;
+                    case 1:
+                   $('body,html').animate({ scrollTop: $(".list2").offset().top-155});
+                break;
+                    case 2:
+                    $('body,html').animate({ scrollTop: $(".list3").offset().top-155});
+                break;
+                     case 3:
+                    $('body,html').animate({ scrollTop: $(".list4").offset().top-155});
+                break;
+               }
+            
             })
+            
+            var h =  $("#wrap .list .tabelimg").height();
+            $("#wrap .list .tabelimg").height(parseInt($("#wrap .list .tabelimg").height())/3+'px')
+            var on = true;;
+            $("#red").on('click',function(){
+                if(on){
+                    $("#wrap .list .tabelimg").height(h+'px')
+                    $("#red span").text('收起')
+                   }else{
+                   $("#wrap .list .tabelimg").height(parseInt($("#wrap .list .tabelimg").height())/3+'px')
+                        $("#red span").text('展开全部')
+                   }
+                on = !on;
+                
+            })
+            
             $(".zan").on('click',function(){
                 $(this).addClass('active')
             })
+            $(window).on('scroll',function(){
+               // console.log($(window).scrollTop())
+                if ($(window).scrollTop()>430){
+                    $("#sort").addClass('fixed')
+                }else{
+                    $("#sort").removeClass('fixed')
+                }
+            })
+            
         })
         
         

@@ -1,12 +1,15 @@
 body{
             background: #fff;
+    min-width: 1024px;
         }
      
         #product{
             position: relative;
+            
         }
         #product .wrap,#star .wrap,#share .wrap,#what .wrap,#Customer .wrap{
             width: 70%;
+            min-width: 1024px;
             border-top: 1px solid transparent;
         }
         #search{
@@ -140,9 +143,10 @@ body{
             
         }
         .product ul{
+            width: 100%;
             margin-top: 50px;
-            position: relative;
-            top:200px;
+             margin-left: -1.5%;
+            margin-right: -1.5%;
             transition: all .6s;
     -webkit-transition: all .6s;
     -moz-transition: all .6s;
@@ -151,12 +155,15 @@ body{
             width: 23%;
             margin: 0 1%;
             float: left;
-            border: 1px solid #ddd;
+            border: 1px solid transparent;
             margin-bottom: 50px;
         }
         .product ul li img{
             width: 100%;
-            height: 280px;
+           
+        }
+        .product ul li:hover{
+             border: 1px solid #ddd
         }
         .product ul li:hover span{
             background: #d7000f;
@@ -166,10 +173,7 @@ body{
         .product ul li:hover h3{
             color: #d7000f
         }
-        .product ul{
-            margin-left: -1.5%;
-            margin-right: -1.5%;
-        }
+       
         .product ul div{
             padding: 20px; 
         }
@@ -219,6 +223,7 @@ body{
             padding: 80px 0;
             margin-top: 85px;
             background: #f6f6f6;
+           
         }
         #star .head_box,#star .txt{
             display: table-cell;
@@ -231,17 +236,25 @@ body{
     position: absolute;
     left: 0;
     top: 40%;
-    width: 15px;
+    width: 10px;
+    height: 130px;
     padding: 15px 0;
+    text-align: center;
     background: #d7000f;
-   writing-mode: tb-rl;
-  -webkit-writing-mode: tb-rl;
+    transform-style: preserve-3d;
+/*   word-wrap: break-word*/
 }
 #star .head_box a p{
     position: relative;
-    left:10px;
+    left: -39px;
+    top: 39px;
     color: #000;
+    width: 100px;
     font-weight: 600;
+     transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+     -moz-transform: rotateZ(90deg);
+     -ms-transform: rotateZ(90deg);
 }
         #star .head{
             width: 360px;
@@ -294,15 +307,27 @@ body{
         }
         #star .star{
             width: 100%;
-            overflow: hidden;
+           
             position: relative;
         }
+ #star .swiper-button-prev ,#star .swiper-button-next{
+    background-image: none;
+}
+ #star .swiper-button-prev i,#star .swiper-button-next i{
+     width: 30px;
+            line-height: 30px;
+            text-align: center;
+            height: 29px;
+      background: #dcdcdc;
+      border-radius: 50%;
+     display: block;
+}
         .star ul{
-            position: relative;
+        /*    position: relative;
             left: 0;
             margin-top: 60px;
             transition: all .6s;
-    -webkit-transition: all .6s;
+    -webkit-transition: all .6s;*/
         }
         .star img{
             width: 180px;
@@ -345,7 +370,7 @@ body{
             left: -24px;
         }
         #star  ol:last-child{
-            right: -24px;
+            right: -4px;
         }
         .star ul li p{
             color: #000000;
@@ -358,7 +383,7 @@ body{
         }
         #share{
             margin-top: 80px;
-            
+          
         }
         #share .txt{
             line-height: 25px;
@@ -509,6 +534,7 @@ body{
             margin-top: 20px;
             width: 100px;
         }
+
         #what .aui-col-xs-8>ul{
             padding: 0 10%;
         }
@@ -587,6 +613,9 @@ body{
             margin-top: 40px;
             position: relative;
         }
+#what img{
+    width: 100%;
+}
         #news{
             margin: 80px 0;
         }
@@ -738,10 +767,7 @@ body{
         }
         #Billboard,#star .wrap,#share .wrap,#adviser .box,#what .wrap,#news>div,#Customer .wrap,#url p,#summary .txt,#footer .mover{
              position: relative;
-            top: 200px;
-             transition: all .6s;
-    -webkit-transition: all .6s;
-    -moz-transition: all .6s;
+           
         }
         
         #Billboard img{
@@ -824,18 +850,26 @@ body{
         }
         #banner a{
             height: 100%;
-            position: absolute;
+           
             width: 100%;
-            top: 0;
-            left: 0;
-            display: none;
-         transition: all .6s;
-    -webkit-transition: all .6s;
-    -moz-transition: all .6s;
+         border-top: 1px solid transparent
+   
         }
         #banner a.active{
             display: block;
         }
+#banner .swiper-slide{
+    height: 700px;
+}
+#banner .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+}
+#banner .swiper-pagination{
+    bottom: 60px;
+    text-align: right;
+    padding-right: 7%;
+}
         #banner a h2{
             position: relative;
             z-index: 3;
@@ -855,38 +889,22 @@ body{
             background-size: cover;
         }
         #banner .banner3{
-            background: url('../img/new.png') no-repeat;
+            background: url('../img/adviser.png') no-repeat;
             background-size: cover;
         }
         #banner .banner2{
-            background: url('../img/new.png') no-repeat;
+            background: url('../img/news.png') no-repeat;
             background-size: cover;
         }
-        #banner ol{
-            display: block;
-            position: absolute;
-            left: 10%;
-            width: 80%;
-            bottom: 15%;
-          
-        }
-        #banner ol li{
-            width: 40px;
-            height: 40px;
-            line-height: 36px;
-            position: relative;
-            margin-left: 15px;
-            display: inline-block;
-            z-index: 5;
-            cursor: pointer;
-            
-        }
-    #banner ol li i{
+   
+  
+    #banner .icon-weibiaoti-{
     position: relative;
             color: #fff;
             display: inline-block;
-            font-size: 3rem;
-        
+            font-size: 2.6rem;
+            margin-left: 5px;
+        font-weight: 500;
           transform:rotate(-95deg);
 -ms-transform:rotate(-95deg); /* Internet Explorer */
 -moz-transform:rotate(-95deg); /* Firefox */
@@ -894,11 +912,11 @@ body{
 -o-transform:rotate(-95deg); /* Opera */
 }
 
-#banner ol li i:after{
+#banner  .icon-weibiaoti-:after{
      position: absolute;
            display: block;
-            top: -8%;
-            left: 35%;
+            top: 22%;
+            left: 39%;
             font-size: 20px;
              transform:rotate(95deg);
 -ms-transform:rotate(95deg); /* Internet Explorer */
@@ -906,17 +924,20 @@ body{
 -webkit-transform:rotate(95deg); /* Safari 和 Chrome */
 -o-transform:rotate(95deg); /* Opera */
 }
-#banner .txt1:after{
+#banner .icon-weibiaoti-:first-child:after{
    content: '1';
            
 }
-#banner  .txt2:after{
+#banner  .icon-weibiaoti-:nth-child(2):after{
     content: '2';
      
 }
-#banner  .txt3:after{
+#banner  .icon-weibiaoti-:last-child:after{
     content: '3';
     
+}
+#banner .icon-weibiaoti-.active{
+    color: #d7000f
 }
 
 
@@ -924,78 +945,22 @@ body{
             color: #fff;
             font-size: 16px;
         }
-#banner ol li.active i{
-    color: #d7000f
-}
-        #side{
-            width:70px;
-            position: fixed;
-            right: 0;
-            top: 45%;
-            z-index: 6;
-             
-            text-align: center;
-           
-        }
-#side img{
-    width: 247px;
-}
-        #side>ul>li{
-            line-height: 70px;
-            position: relative;
-             background: #f6f6f6;
-        }
-        #side>ul>li ul{
-            position: absolute;
-            top: 0;
-            left: 70px;
-            width: 150px;
-            z-index: -1;
-            transition: all .6s;
-    -webkit-transition: all .6s;
-            background: #f6f6f6;
-        }
-        #side>ul>li:hover ul{
-            left: -150px;
-        }
-#side>ul>li.return{
-    line-height: normal;
-    padding: 10px;
-}
-#side>ul>li:hover p{
-    color: #fff;
-}
-        #side>ul>li i{
-            font-size: 1.8rem;
-        }
-        #side>ul>li:hover{
-            background: #d7000f;
-        }
-        #side>ul>li:hover i{
-            color: #fff;
-        }
-        #side>ul>li:before{
-            content: '';
-            display: block;
-            height: 1px;
-            width: 100%;
-            background: #eeeeee;
-            position: absolute;
-            left: 0;
-            top: -1px;
-        }
-        #side>ul>li:first-child:before{
-            display: none;
-        }
+
+
+   
         
         .ad_side{
             position: fixed;
             left: 0;
-            /*display: none;*/
+            
             z-index: 10;
+        }
+        .ad_side img{
+            width: 100%;
         }
         .ad_side a{
             position: relative;
+            width: 200px;
         }
         .ad_side i{
             position: absolute;
@@ -1004,6 +969,7 @@ body{
             color: #fff;
             font-size: 20px;
         }
+
         .ad1{
              top: 150px;
         }

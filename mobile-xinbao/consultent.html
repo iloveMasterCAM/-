@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<title>保险顾问</title>
+	<link rel="stylesheet" type="text/css" href="css/aui.2.0.css">
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link href="css/public.css" rel="stylesheet"/>
+	<style type="text/css">
+	body{
+			background-color: #fff;
+		}
+		#section .peple,#section .insurancetype,#section .inscompany{
+			line-height: 50px;
+			border-bottom: 1px dashed #f1f1f1;
+		}
+		#section  .toup{
+			display: none;
+		}
+		#section .inscompany .toup2{
+			border-top:3px solid #d7000f;
+			position:relative;
+		}
+		#section .box .active{
+			color:#d7000f;
+		}
+		#section .toup2 p{
+			overflow: hidden;
+		}
+		#section .toup2 p span{
+			float:left;
+			margin-right:20px;
+            line-height: normal;
+		}
+		#section .inscompany .toup2 .sanjiao{
+			position:absolute;
+			border-top:5px solid transparent;
+			border-left:5px solid transparent;
+			border-bottom:8px solid #d7000f;
+			border-right:5px solid transparent;
+			top:-15px;
+			left:28%;
+		}
+        #section .aui-row span{
+            padding-right: 10px;
+            display: inline-block;
+        }
+		#section .inscompany .toup2 .aui-col-xs-3{
+			color:#838383;
+		}
+
+		#recommend>p>span{
+			border-left:3px solid #d7000f;
+			font-size:18px;
+			padding-left:20px;
+		}
+        #recommend img{
+        width: 95%;
+            border-radius: 50%;;
+        }
+        #recommend p{
+            position: relative;
+            color: #000000;
+        }
+        #recommend a{
+            display: inline-block;
+            width: 25%;
+        }
+        #recommend .icon{
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+        #recommend .name{
+            display: block
+        }
+        #recommend .swiper-button-next,#recommend .swiper-button-prev{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background: #eee;
+            text-align: center;
+            top: 40%;
+        }
+        #recommend .swiper-button-next{
+            right: 0;
+        }
+        #recommend .swiper-button-prev{
+            left: 0;
+        }
+       #recommend .swiper-container{
+            margin-top: 25px;
+           padding-bottom: 25px;
+           border-bottom: 1px solid #eee;
+        }
+		#recom_list .swiper-slide img{
+			width:80px;
+			height:80px;
+			border-radius:50%;
+		}
+		#recom_list .swiper-slide p{
+			font-size:12px;
+		}
+		#recom_list{
+			text-align: center;
+			position: relative;
+		}
+		#recom_list .recom_box{
+			margin:0 25px; 
+			border-bottom: 1px solid #f1f1f1;
+			padding-bottom: 20px;
+		}
+		#recom_list .prev{
+			position:absolute;
+			top:23%;
+			left:10px;
+			z-index: 15;
+		}
+		#recom_list .next{
+			position:absolute;
+			right:10px;
+			z-index: 15;
+			top:23%;
+		}
+		#recom_list .next i,#recom_list .prev i{
+			font-size:25px;
+			color:#dcdcdc;
+		}
+		#serch{
+			margin:30px;
+			position: relative;
+		}
+		#serch input[type='text']{
+			border:1px solid #d7000f;
+			width:85%;
+            display: block;
+            height: 44px;
+            max-height: 44px;
+            padding-left: 10px;
+		}
+		#serch i{
+			
+			color:#202020;
+			font-size:26px;
+			
+			color:#fff;
+			font-weight: bold;
+			line-height: 44px;
+		}
+        #serch span{
+            display: block;
+            width: 15%;
+            height: 46px;
+            text-align: center;
+            position: relative;
+            background-color:#d7000f;
+        }
+        #serch span input{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top:0;
+            opacity: 0;
+        }
+        #list a>div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #list a img{
+            width: 100px;
+            border-radius: 50%;
+        }
+        #list .txt p{
+            line-height: 27px;
+            color: #838383;
+            
+        }
+        #list .txt .black{
+            color: #434343;
+            font-size: 15px;
+            
+        }
+        #list .txt .black i{
+            color: #b5b5b5
+        }
+        #list .txt .black span{
+            color: #838383;
+            display: inline-block;
+        }
+        #list .txt .black em{
+            position: relative;
+        }
+        #list .txt .black em:before{
+            content: '';
+            display: block;
+            height:  70%;
+            width: 1px;
+            position: absolute;
+            right: -5px;
+            top: 15%;
+            background: #d7000f
+        }
+        #list .red{
+            color: #d7000f;
+        }
+        #list .table{
+            background: #ededed;
+            color:#878787;
+            padding: 3px 6px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+        #list .txt .name{
+            font-size: 18px;
+        }
+        #list .name span{
+              display: inline-block;
+             width: 15px;
+             height: 15px;
+        }
+         .r1{
+          background: url(img/an.png) no-repeat;
+         background-size: cover;
+     }
+      .r2{
+          background: url(img/an2.png) no-repeat;
+         background-size: cover;
+     }
+     .r3{
+          background: url(img/an3.png) no-repeat;
+         background-size: cover;
+     }
+        
+        #list .con{
+            border: 1px solid #eee;
+            display: block;
+            margin-bottom: 20px;
+        }
+        #list
+        #list
+        #list
+        #list
+        #list
+        #list
+	</style>
+</head>
+<body>
+ <!-- 头部 -->
+    <nav id="nav_box" class="aui-padded-l-15 aui-padded-r-15">
+        <p class="aui-pull-left caidan"><i class="iconfont icon-caidan"></i></p>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+       <a href='set.html' class="aui-pull-right aui-margin-l-15"><i class="iconfont icon-haoyouxingming"></i></a>
+        
+    <div id="nav_all">
+        <ul id="step1" class="aui-padded-r-15 aui-padded-l-15">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="inscompany.html">保险公司 </a></li>
+            <li class="person">保险产品<i class="iconfont icon-down-trangle"></i></li>
+            <li><a href="consultent.html">保险顾问</a></li>
+            <li><a href="share.html">签单分享</a></li>
+            <li><a href="">我要合作</a></li>
+            <li><a href="ask.html">ＦＡＱ</a></li>
+            <li><a href="news.html">最新资讯</a></li>
+            <li><a href="About.html">关于平台</a></li>
+        </ul>
+        <div id="step2" class="aui-padded-l-15 aui-padded-r-15">
+            <p class="aui-margin-t-15"><i class="iconfont icon-xiangzuo retu"></i></p>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按险种进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">意外险</a>
+                    <a  class="aui-col-xs-4">少儿险</a>
+                    <a  class="aui-col-xs-4">养老险</a>
+                    <a  class="aui-col-xs-4">重疾险</a>
+                    <a  class="aui-col-xs-4">医疗险</a>
+                    <a  class="aui-col-xs-4">人寿险</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按人群分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">青年</a>
+                    <a  class="aui-col-xs-4">老年</a>
+                    <a  class="aui-col-xs-4">女性</a>
+                    <a  class="aui-col-xs-4">少儿</a>
+                    <a  class="aui-col-xs-4">个人</a>
+                    <a  class="aui-col-xs-4">团体</a>
+                </div>
+            </div>
+            <div>
+                <p class="cl aui-padded-b-10 aui-padded-l-15">按保险公司进行分类</p>
+                <div class="clear aui-padded-l-15">
+                    <a class="aui-col-xs-4">中国平安</a>
+                    <a  class="aui-col-xs-4">中国人寿</a>
+                    <a  class="aui-col-xs-4">太平洋保险</a>
+                    <a  class="aui-col-xs-4">华安保险</a>
+                    <a  class="aui-col-xs-4">泰康保险</a>
+                    <a  class="aui-col-xs-4">富德生命人寿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="search" class="aui-text-center">
+        <input type="" name="" placeholder="搜索关键词">
+        <span><i class="iconfont icon-fangdajing"></i> <input type="submit" name=""></span>
+    </form>
+    </nav>
+    <div id="mainall"></div>
+	<section id="section" class="aui-content-padded">
+		<div class="peple box">
+			<div class="aui-row">
+				<div class="aui-col-xs-3 child">
+					适合人群:
+				</div>
+				<div class="aui-col-xs-2  child">
+					全部
+				</div>
+				<div class="aui-col-xs-2 child">
+					青年
+				</div>
+				<div class="aui-col-xs-2 child">
+					中年
+				</div>
+				<div class="aui-col-xs-2 child">
+					少年
+				</div>
+				<div class="aui-col-xs-1">
+					<i class="iconfont icon-down-trangle icon1"></i>
+				</div>
+			</div>
+			<div class="toup">
+				<div class="aui-row">
+					<span class="child active">儿童</span>
+					<span class="child">青年</span>
+					<span class="child">中年</span>
+					<span class="child">老年</span>
+				</div>
+			</div>
+		</div>
+		<div class="insurancetype box">
+			<div class="aui-row">
+				<div class="aui-col-xs-3">
+					保险险种:
+				</div>
+				<div class="aui-col-xs-2 active child">
+					全部
+				</div>
+				<div class="aui-col-xs-3 child">
+					理财险
+				</div>
+				<div class="aui-col-xs-3 child">
+					人寿险
+				</div>
+				<div class="aui-col-xs-1">
+					<i class="iconfont icon-down-trangle icon2"></i>
+				</div>
+			</div>
+			<div class="toup">
+				<div class="aui-row">
+					<span class="child">理财险</span>
+					<span class="child">人寿险</span>
+					<span class="child">养老险</span>
+					<span class="child">理财险</span>
+					
+				</div>
+			</div>
+		</div>
+		<div class="inscompany box">
+			<div class="aui-row">
+				<div class="aui-col-xs-3 ">
+					保险险种:
+				</div>
+				<div class="aui-col-xs-2  child">
+					全部
+				</div>
+				<div class="aui-col-xs-3 child">
+					理财险
+				</div>
+				<div class="aui-col-xs-3 child">
+					人寿险
+				</div>
+				<div class="aui-col-xs-1">
+					<i class="iconfont icon-down-trangle icon3"></i>
+				</div>
+			</div>
+			<div class="toup2 toup">
+				<p>
+					<span class="child">A</span>
+					<span class="child">B</span>
+					<span class="child">C</span>
+					<span class="child">D</span>
+					<span class="child">E</span>
+					<span class="child">F</span>
+					<span class="child">G</span>
+					<span class="child">H</span>
+					<span class="child">I</span>
+					<span class="child">J</span>
+					<span class="child">K</span>
+					<span class="child">L</span>
+					<span class="child">M</span>
+					<span class="child">N</span>
+					<span class="child">O</span>
+					<span class="child">P</span>
+					<span class="child">Q</span>
+					<span class="child">R</span>
+					<span class="child">S</span>
+					<span class="child">T</span>
+					<span class="child">U</span>
+					<span class="child">V</span>
+					<span class="child">W</span>
+					<span class="child">X</span>
+					<span class="child">Y</span>
+					<span class="child">Z</span>
+				</p>
+				
+				<span class="sanjiao"></span>
+				<div class="aui-row">
+					<span class="child">理财险</span>
+					<span class="child">人寿险</span>
+					<span class="child">养老险</span>
+					<span class="child">理财险</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div id="recommend" class="aui-padded-l-15 aui-padded-r-15">
+		<p><span>顾问推荐</span></p>
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide aui-text-center">
+          <a href="">
+                <p>
+                <img src="img/head.png" alt="">
+                <span class="icon r1"></span>
+                </p>
+                <p class="">城市明星：<span class="name">朱经理</span></p>
+            </a>
+            <a href="">
+                 <p>
+                 <img src="img/head.png" alt="">
+                  <span class="icon r1"></span>
+                 </p>
+                <p class="">城市明星：<span class="name">朱经理</span></p>
+            </a>
+            <a href="">
+                 <p>
+                 <img src="img/head.png" alt="">
+                  <span class="icon r1"></span>
+                 </p>
+                <p class="">城市明星：<span class="name">朱经理</span></p>
+            </a>
+        </div>
+        <div class="swiper-slide aui-text-center">
+          <a href="">
+                <p>
+                <img src="img/head.png" alt="">
+                <span class="icon r1"></span>
+                </p>
+                <p class="">城市明星：<span class="name">朱经理</span></p>
+            </a>
+            <a href="">
+                 <p>
+                 <img src="img/head.png" alt="">
+                  <span class="icon r1"></span>
+                 </p>
+                <p class="">城市明星：<span class="name">朱经理</span></p>
+            </a>
+            <a href="">
+                 <p>
+                 <img src="img/head.png" alt="">
+                  <span class="icon r1"></span>
+                 </p>
+                <p class="">城市明星：<span class="name">朱经理</span></p>
+            </a>
+        </div>
+        <div class="swiper-slide aui-text-center">
+          <a href="">
+                <p>
+                <img src="img/head.png" alt="">
+                <span class="icon r1"></span>
+                </p>
+                <p class="">城市明星：<span class="name">朱经理</span></p>
+            </a>
+            <a href="">
+                 <p>
+                 <img src="img/head.png" alt="">
+                  <span class="icon r1"></span>
+                 </p>
+                <p class="">城市明星：<span class="name">朱经理</span></p>
+            </a>
+            <a href="">
+                 <p>
+                 <img src="img/head.png" alt="">
+                  <span class="icon r1"></span>
+                 </p>
+                <p class="">城市明星：<span class="name">朱经理</span></p>
+            </a>
+        </div>
+    </div>
+    <div class="swiper-button-prev"> <i class="iconfont icon-xiangzuo"></i> </div>
+    <div class="swiper-button-next"><i class="iconfont icon-iconfontright"></i></div>
+</div>
+</div>
+
+	<form id="serch" class="clear">
+		<input type="text" class="aui-pull-left" />
+		<span class="aui-pull-left"><i class="iconfont icon-fangdajing"></i> <input type="submit"> </span>
+	</form>
+	
+	
+	<div id="list" class="aui-margin-l-15 aui-margin-r-15">
+		<a href="person.html" class="con aui-padded-l-10 aui-padded-t-15 aui-padded-b-15">
+		    <div>
+		        <img src="img/head.png" alt="">
+		    </div>
+		    <div class="txt aui-padded-l-10">
+		        <p class="black name">黄辉 <span class="r1"></span> <!--<span class="r3"></span> <span class="r2"></span>--></p>
+		        <p class="">中国平安</p>
+		        <p class="black"> <em>苏州吴中区 </em> <span class="aui-margin-l-10"><i class="iconfont icon-wechat-copy"></i>hws12345</span>  <span  class=""><i class="iconfont icon-xiaoxi"></i>8000000</span></p>
+		        <p>解决问题：<span class="red">78</span> 次</p>
+		        <p>擅长领域: <span class="table">社会保险</span> <span class="table">理财保险</span></p>
+		    </div>
+		</a>
+		<a href="person.html" class="con aui-padded-l-10 aui-padded-t-15 aui-padded-b-15">
+		    <div>
+		        <img src="img/head.png" alt="">
+		    </div>
+		    <div class="txt aui-padded-l-10">
+		        <p class="black name">黄辉 <span class="r1"></span> <!--<span class="r3"></span> <span class="r2"></span>--></p>
+		        <p class="">中国平安</p>
+		        <p class="black"> <em>苏州吴中区 </em> <span class="aui-margin-l-10"><i class="iconfont icon-wechat-copy"></i>hws12345</span>  <span  class=""><i class="iconfont icon-xiaoxi"></i>8000000</span></p>
+		        <p>解决问题：<span class="red">78</span> 次</p>
+		        <p>擅长领域: <span class="table">社会保险</span> <span class="table">理财保险</span></p>
+		    </div>
+		</a>
+	<a href="person.html" class="con aui-padded-l-10 aui-padded-t-15 aui-padded-b-15">
+		    <div>
+		        <img src="img/head.png" alt="">
+		    </div>
+		    <div class="txt aui-padded-l-10">
+		        <p class="black name">黄辉 <span class="r1"></span> <!--<span class="r3"></span> <span class="r2"></span>--></p>
+		        <p class="">中国平安</p>
+		        <p class="black"> <em>苏州吴中区 </em> <span class="aui-margin-l-10"><i class="iconfont icon-wechat-copy"></i>hws12345</span>  <span  class=""><i class="iconfont icon-xiaoxi"></i>8000000</span></p>
+		        <p>解决问题：<span class="red">78</span> 次</p>
+		        <p>擅长领域: <span class="table">社会保险</span> <span class="table">理财保险</span></p>
+		    </div>
+		</a>
+		<a href="person.html" class="con aui-padded-l-10 aui-padded-t-15 aui-padded-b-15">
+		    <div>
+		        <img src="img/head.png" alt="">
+		    </div>
+		    <div class="txt aui-padded-l-10">
+		        <p class="black name">黄辉 <span class="r1"></span> <!--<span class="r3"></span> <span class="r2"></span>--></p>
+		        <p class="">中国平安</p>
+		        <p class="black"> <em>苏州吴中区 </em> <span class="aui-margin-l-10"><i class="iconfont icon-wechat-copy"></i>hws12345</span>  <span  class=""><i class="iconfont icon-xiaoxi"></i>8000000</span></p>
+		        <p>解决问题：<span class="red">78</span> 次</p>
+		        <p>擅长领域: <span class="table">社会保险</span> <span class="table">理财保险</span></p>
+		    </div>
+		</a>
+	</div>
+	<div id="bg"></div>
+     <div id="copyright" class="aui-padded-l-15 aui-padded-r-15">
+            COPYRIGHT (©) 2017 厦门信泽通信息科技有限公司   沪ICP备17034135号
+        </div>
+	<script type="text/javascript" src="script/jquery.js"></script>
+	<script type="text/javascript" src="script/swiper.js"></script>
+    <script src="script/public.js"></script>
+	<script type="text/javascript">
+	/*	var a = 1;
+		//适合人群下拉菜单
+		$('.icon1').click(function(){
+			if(a == 1){
+				$(this).removeClass('icon-down-trangle');
+				$(this).addClass('icon-xiangshang');
+				$('.toup').slideDown();
+				a++;
+			}else{
+				$(this).addClass('icon-down-trangle');
+				$(this).removeClass('icon-xiangshang');
+				$('.toup').slideUp();
+				a--;
+			}
+			
+		})
+		//保险险种下拉菜单
+		$('.icon2').click(function(){
+			if(a == 1){
+				$(this).removeClass('icon-down-trangle');
+				$(this).addClass('icon-xiangshang');
+				$('.toup1').slideDown();
+				a++;
+			}else{
+				$(this).addClass('icon-down-trangle');
+				$(this).removeClass('icon-xiangshang');
+				$('.toup1').slideUp();
+				a--;
+			}
+			
+		})
+		//保险公司下拉菜单
+		$('.icon3').click(function(){
+			if(a == 1){
+				$(this).removeClass('icon-down-trangle');
+				$(this).addClass('icon-xiangshang');
+				$('.toup2').slideDown();
+				a++;
+			}else{
+				$(this).addClass('icon-down-trangle');
+				$(this).removeClass('icon-xiangshang');
+				$('.toup2').slideUp();
+				a--;
+			}
+			
+		})*/
+        $("#section .icon-down-trangle").on('click',function(){
+            var p = $(this).parents('.box')
+            p.find('.toup').slideToggle('300')
+        })
+        $("#section .box .child").on('click',function(){
+             var p = $(this).parents('.box')
+             p.find('.active').removeClass('active')
+            $(this).addClass('active')
+        })
+		var mySwiper = new Swiper('.swiper-container',{
+		  nextButton: '.swiper-button-next',
+              prevButton: '.swiper-button-prev',
+            pagination: '.swiper-pagination',
+		
+		})
+	</script>
+</body>
+</html>

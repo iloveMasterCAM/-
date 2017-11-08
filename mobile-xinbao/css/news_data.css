@@ -1,0 +1,82 @@
+#main{
+             
+             margin: 65px auto;
+         }
+         .Label{
+             padding: 5px 0;
+         }
+         .Label span{
+             position: relative;
+             padding: 0 10px;
+             
+         }
+         #main .Label span:before{
+             content: '';
+            display: block;
+            height: 50%;
+            width: 1px;
+            background: #838383;
+            position: absolute;
+            right: -1px;
+            top: 25%;;
+         }
+         #main .Label span:last-child:before{
+              display: none;
+         }
+         #main h1{
+             margin-bottom: 15px;
+             font-weight: 500;
+             font-size: 22px;
+         }
+         #main .auth{
+             font-size: 18px;
+         }
+         #main .auth time{
+             margin-left: 20px;
+         }
+         #main .txt{
+             border-bottom: 1px solid #eeeeee;
+             border-top: 1px solid #eeeeee;
+             padding: 30px 5px;
+             margin: 20px 0;
+         }
+         #main .txt>p{
+             margin-bottom: 40px;
+             line-height: 28px;
+             font-size: 14px;
+             
+         }
+         #main .txt img{
+             width: 100%;
+         }
+         #main .share .text{
+               margin-right: 20px;
+             position: relative;
+         }
+        #main .share a{
+            display: inline;;
+        }
+         #main .share i{
+             font-size: 1.1rem;
+             color: #b5b5b5;
+         }
+         #main .share i:hover{
+             color: #000;;
+         }
+         #main .share .text:before{
+              content: '';
+            display: block;
+            height: 80%;
+            width: 1px;
+            background: #838383;
+            position: absolute;
+            right: -10px;
+            top: 10%;;
+         }
+ #weixin{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                z-index: 15;
+                margin: -75px 0 0 -75px;
+        }

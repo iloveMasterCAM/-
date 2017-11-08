@@ -159,10 +159,10 @@
          }
          #main .box i{
              position: absolute;
-             right: 30px;
-             bottom: 50px;
+             right: 55px;
+             bottom: 65px;
              color: #e7141a;
-             font-size: 1.3rem;
+             font-size: 1.7rem;
              display: none;
          }
          #main .box .more{

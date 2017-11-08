@@ -1,0 +1,73 @@
+#main{
+
+             margin: 40px auto 50px;
+          
+         }
+         #main .msg>div{
+             display:table-cell;
+            vertical-align: middle;
+         }
+         #main .msg img{
+             width: 160px;
+         }
+         #main .txt{
+             margin-bottom: 20px;
+            line-height: 30px;
+         }
+         #main .msg{
+             padding-bottom: 20px;
+          
+         }
+         #main .msg_txt{
+             padding-left: 10px;
+             
+         }
+         #main .msg_txt h2{
+             font-size: 16px;
+            font-weight: 500;
+         }
+         #main .mra{
+            
+             line-height: 25px;
+            font-size: 14px;
+         }
+         
+         #main .label{
+              margin-top: 10px;
+         }
+         #main .label span{
+             background: #dcdcdc;
+             color: #fff;
+             border-radius: 30px;
+             padding: 0 8px;
+             margin-bottom: 10px;
+            display: inline-block;
+         }
+         #main .label span.active{
+             background: #e7141a;
+         }
+         #main .nice{
+            
+         }
+         #main .nice>p{
+             width: 100px;
+             height: 100px;
+             text-align: center;
+             margin: 0 auto;
+             border: 1px solid #f0f0f0;
+             border-radius: 50%;
+             
+         }
+         #main .nice i,#main .nice span{
+             display: block;
+             color: #e7141a;
+         }
+         #main .nice span{
+             font-size: 18px;
+         }
+         #main .nice i {
+             margin-top: 20px;
+             font-size: 2rem;
+            
+         }
+         

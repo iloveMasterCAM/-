@@ -74,7 +74,12 @@ select {
   /*为下拉小箭头留出一点位置，避免被文字覆盖*/
   padding-right: 14px;
 }
-
+button,input,optgroup,select,textarea {
+	margin: 0;
+	color: inherit;
+	font: inherit;
+    border: none;
+}
 
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
 select::-ms-expand { display: none; }
@@ -86,12 +91,7 @@ button,select {
 	text-transform: none
 }
 
-button,input,optgroup,select,textarea {
-	margin: 0;
-	color: inherit;
-	font: inherit;
-    border: none;
-}
+
 
 hr {
 	box-sizing: content-box;

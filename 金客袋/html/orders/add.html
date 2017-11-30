@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        .ul{
+            margin-top: 45px;
+        }
+        .title{
+            background: #ddd;
+            color: #333;
+            line-height: 35px;
+            padding-left: 15px;
+        }
+        .ul_box{
+            margin-bottom: 10px;
+        }
+        .ul_box li{
+            padding: 0 15px;
+            line-height: 50px;
+        }
+        .mui-switch{
+            margin-top: 10px;
+        }
+        .mui-switch:before{
+            line-height: 23px;;
+        }
+    </style>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left">
+            <span><i class="iconfont icon-xiangzuo"></i></span>
+        </a>
+        <div class="mui-title">新增订单</div>
+        <a class="mui-pull-right">
+            <span><i class="iconfont icon-dui"></i></span>
+        </a>
+    </header>
+    <ul class="ul mui-w ul_box">
+        <p class="title">借款资料</p>
+        <li class="mui-row bor-b">
+            <span>金额</span>
+            <input type="number"  placeholder="输入金额">
+            <div class="mui-pull-right"><span></span> <i class=" iconfont icon-jine"></i></div>
+        </li>
+        <li class="mui-row bor-b">
+            <span>客户</span>
+            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
+        </li>
+        <li class="mui-row bor-b">
+            <span>总周期</span>
+            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
+        </li>
+    </ul>
+     <ul class=" mui-w ul_box">
+        <p class="title">还款资料</p>
+        <li class="mui-row bor-b">
+            <span>还款日期</span>
+            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
+        </li>
+        <li class="mui-row bor-b">
+            <span>还款方式</span>
+            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
+        </li>
+         <li class="mui-row bor-b">
+            <span>倒扣</span>
+            <div class="mui-pull-right mui-switch">
+  <div class="mui-switch-handle"></div>
+            </div>
+        </li>
+    </ul>
+     <ul class=" mui-w ul_box">
+        <p class="title">计息方式</p>
+       
+         <li class="mui-row bor-b">
+            <span>利率</span>
+            <input type="number"  placeholder="输入利率">
+            <div class="mui-pull-right"><span></span> <i class=" iconfont icon-icon03"></i></div>
+        </li>
+       <li class="mui-row bor-b">
+            <span>利息金</span>
+            <input type="number"  placeholder="输入利息金">
+            <div class="mui-pull-right"><span></span> <i class=" iconfont icon-icon03"></i></div>
+        </li>
+         <li class="mui-row bor-b">
+            <span>还款方式</span>
+            <div class="mui-pull-right mui-switch">
+  <div class="mui-switch-handle"></div>
+            </div>
+        </li>
+    </ul>
+    <ul class=" mui-w ul_box">
+        <p class="title">出资资料</p>
+       
+         <li class="mui-row bor-b">
+            <span>是否独资</span>
+            <div class="mui-pull-right mui-switch">
+  <div class="mui-switch-handle"></div>
+            </div>
+        </li>
+        <li class="mui-row bor-b">
+            <span>出资人</span>
+            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
+        </li>
+         <li class="mui-row bor-b">
+            <span>放空</span>
+            <div class="mui-pull-right mui-switch">
+  <div class="mui-switch-handle"></div>
+            </div>
+        </li>
+    </ul>
+         <ul class=" mui-w ul_box">
+        <p class="title">放款资料</p>
+       
+        <li class="mui-row bor-b">
+            <span>放款时间</span>
+            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
+        </li>
+     <li class="mui-row bor-b">
+            <span>放款人</span>
+            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
+        </li>
+    </ul>
+      <ul class=" mui-w ul_box">
+        <p class="title">提醒</p>
+        <li class="mui-row bor-b">
+            <span>提醒方式</span>
+            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
+        </li>
+    </ul>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+</body>
+</html>

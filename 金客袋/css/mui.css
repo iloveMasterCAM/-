@@ -1576,6 +1576,9 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     padding-right: 10px;
     padding-left: 10px;
 }
+.mui-bar-nav a{
+    line-height: 45px;
+}
 
 .mui-title
 {
@@ -2877,7 +2880,7 @@ input[type='tel'],
 input[type='color']
 {
     line-height: 21px;
-    width: 100%;
+  text-indent: 5px;
     height: 40px;
     -webkit-user-select: text;
     border-radius: 3px;
@@ -5677,17 +5680,7 @@ body > .mui-progressbar
             
     }
 
-#head {
-            padding-top: 25px;
-            line-height: 45px;
-            background: #fff;
-            position: relative;
-        }
-        #head i{
-            position: absolute;
-            left: 10px;
-            top: 25px;
-        }
+
         .mui-bar~.mui-content .mui-fullscreen {
             top: 44px;
             height: auto;
@@ -5775,4 +5768,10 @@ body > .mui-progressbar
         }
         .mui-padd-l{
             padding-left: 15px;
+        }
+ .mui-padd-t{
+            padding-top: 15px;
+        }
+ .mui-padd-b{
+            padding-bottom: 15px;
         }

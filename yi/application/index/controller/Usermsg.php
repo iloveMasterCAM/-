@@ -176,9 +176,10 @@ $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'c
 
         $token = Cookie::get('token');
 
-      $user->where('token',$token)->update(['skin'=>"http://localhost/web/public/static/image/show/bg/".$_POST['name']]);
-
-        echo "http://localhost/web/public/static/image/show/bg/".$_POST['name'];
+        $user = Db::name('user');
+        $token = Cookie::get('token');
+      $user->where('token',$token)->update(['skin'=>"http://www.yi-23.com/public/static/image/show/bg/".$_POST['name']]);
+        echo "http://www.yi-23.com/public/static/image/show/bg/".$_POST['name'];
 
     }
 

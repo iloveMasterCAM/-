@@ -13,7 +13,7 @@
 //echo __DIR__; E:\wamp\www\web\public
 
 // 定义应用目录
-define('APP_PATH', __DIR__ . '/../application/');
+//define('APP_PATH', __DIR__ . '/../application/');
 //定义应用配置
 define('CONF_PATH',__DIR__.'/../conf/');
 define( "WB_AKEY" , '493800849' );
@@ -22,4 +22,5 @@ define( "WB_CALLBACK_URL" , 'http://www.yi-23.com/public/index/Userlogin/wbcallb
 
 // E:\wamp\www\web\thinkphp\library\think\View.php
 // 加载框架引导文件
-require __DIR__ . '/../thinkphp/start.php';
+//require __DIR__ . '/../thinkphp/start.php';
+define('APP_PATH','./application/'); require './thinkphp/start.php';

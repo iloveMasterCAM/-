@@ -296,7 +296,7 @@ $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'c
 
             Cookie::set('token',$token,3600*24*50);
 
-         $this->redirect('http://localhost/web/public/index/index/',302);
+         $this->redirect('http://www.yi-23.com/',302);
 
               
 

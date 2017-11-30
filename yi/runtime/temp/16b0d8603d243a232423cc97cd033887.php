@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"/data/home/qxu1146510236/htdocs/public/../application/index/view/index/index.html";i:1511963687;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:41:"./application/index/view/index/index.html";i:1511963687;}*/ ?>
 ﻿
 ﻿<!DOCTYPE html>
 

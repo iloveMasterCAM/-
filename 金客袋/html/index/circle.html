@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../../css/swiper.min.css" rel="stylesheet" />
+    <style>
+    
+    #benner .img{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+       height: 150px;
+    }
+    #benner .title{
+        position: absolute;
+        left: 0;
+        top: 20px;
+        background: red;
+        color: #fff;
+        z-index: 10;
+        padding: 5px 6px  5px ;
+        border-radius: 0 5px 5px 0;
+    }
+    #benner .txt{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+        <div class="swiper-container" id="benner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img" style="background: url(../../image/adviser_bg.png); background-size: cover; background-repeat: no-repeat"></div>
+                        <p class="txt">庆祝软件正式运营庆祝软件正式运营庆祝软件正式运营</p>
+                    </div>
+                    <div class="swiper-slide">
+                     
+                        <div class="img" style="background: url(../../image/comlist.png); background-size: cover; background-repeat: no-repeat"></div>
+                        <p class="txt">庆祝软件正式运营庆祝软件正式运营庆祝软件正式运营</p>
+                    </div>
+                    <div class="swiper-slide">
+                     
+                        <div class="img" style="background: url(../../image/Contaact.png); background-size: cover; background-repeat: no-repeat"></div>
+                        <p class="txt">庆祝软件正式运营庆祝软件正式运营庆祝软件正式运营</p>
+                    </div>
+                </div>
+                <p class="title">今日头条</p>
+            </div>
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script type="text/javascript" src="../../js/swiper.min.js"></script>
+    <script>
+    var mySwiper = new Swiper('.swiper-container', {})
+    </script>
+</body>
+</html>

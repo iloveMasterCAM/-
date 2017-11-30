@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css" />
+    <link href="css/mui.css" rel="stylesheet" />
+    <link href="iconfont/iconfont.css" rel="stylesheet" />
+    <style type="text/css">
+        #footer p {
+            color: #434343;
+            font-size: 0.6rem;
+        }
+
+        #footer p i {
+            font-size: 1.3rem;
+        }
+
+        #footer>div.active p {
+            color: #0071c7
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding-top: 5px
+        }
+
+        #header .search input {
+            background: #0065b2;
+            height: 23px;
+        }
+
+        /*cccccc*/
+
+        #header input::-webkit-input-placeholder {
+            /* WebKit browsers*/
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        #header input:-moz-placeholder {
+            /* Mozilla Firefox 4 to 18*/
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        #header input::-moz-placeholder {
+            /* Mozilla Firefox 19+*/
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        #header input:-ms-input-placeholder {
+            /* Internet Explorer 10+*/
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        #header input {
+            margin-bottom: 0;
+        }
+
+        #header .search {
+            background: #0071c7;
+            padding: 10px;
+            padding-top: 25px;
+        }
+
+        #header .jia ,.cicle {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+
+            color: #0071c7
+        }
+
+        #header .jia i {
+            font-size: 1.5rem;
+        }
+
+        #header .order {
+            line-height: 30px;
+            background: #fff;
+        }
+
+        #header .order p {
+            color: #434343;
+            font-size: 1rem;
+        }
+
+        #header .set {
+            background: #0071c7;
+        }
+
+        #header .set p {
+            color: #fff;
+        }
+
+        #header .set i {
+            color: #fff;
+        }
+
+        #header>div {
+            position: relative;
+            padding-top: 25px;
+        }
+    </style>
+
+    <div id="header" class="">
+        <div class="search ">
+            <input type="search" placeholder="搜索订单">
+        </div>
+        <div class="order bor-b mui-hidden">
+            <p class="mui-text-center ">订单</p>
+            <span class="jia">
+                <i class="iconfont icon-jia"></i>
+            </span>
+        </div>
+        <div class="order bor-b mui-hidden">
+            <p class="mui-text-center">提醒</p>
+        </div>
+        <div class="order bor-b  mui-hidden">
+            <p class="mui-text-center">圈子</p>
+            <span class="cicle">
+                <i class="iconfont icon-yonghu "></i>
+            </span>
+        </div>
+        <div class="set order mui-hidden">
+            <p class="mui-text-center">设置</p>
+            <span class="jia">
+                <i class="iconfont icon-05"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="mui-row mui-text-center bor-t" id="footer">
+        <div class="mui-col-5 active">
+            <p>
+                <i class="iconfont icon-gongzuotai"></i>
+            </p>
+            <p>工作台</p>
+        </div>
+        <div class="mui-col-5">
+            <p>
+                <i class="iconfont icon-dingdan"></i>
+            </p>
+            <p>订单</p>
+        </div>
+        <div class="mui-col-5">
+            <p>
+                <i class="iconfont icon-clock"></i>
+            </p>
+            <p>提醒</p>
+        </div>
+        <div class="mui-col-5">
+            <p>
+                <i class="iconfont icon-n5appqz"></i>
+            </p>
+            <p>圈子</p>
+        </div>
+        <div class="mui-col-5">
+            <p>
+                <i class="iconfont icon-05"></i>
+            </p>
+            <p>设置</p>
+        </div>
+    </div>
+</head>
+
+<body>
+
+</body>
+<script src="script/jquery.js"></script>
+<script src="script/mui.js"></script>
+<script src="script/apiinit.js"></script>
+<script src="script/sendEvent.js"></script>
+<script type="text/javascript">
+
+
+   
+Object.prototype.chain = function (callback) {
+        return callback();
+    }
+    apiready = function () {
+        if (!localStorage["token"]) {
+            openLogin();
+            return;
+        }
+        openFrameGroup();
+    };
+
+
+    function openLogin() {
+        setTimeout(function () {
+            api.openWin({
+                name: 'login_win',
+                url: 'html/user/login.html',
+                animation: {
+                    type: 'none'
+                }
+            });
+        }, 200);
+    }
+
+
+    // apiready = function(){
+
+    function openFrameGroup() {
+        var winHeight = api.winHeight - 105;
+        api.openFrameGroup({
+            name: 'group',
+            scrollEnabled: false,
+            rect: {
+                x: 0,
+                y: 54,
+                w: 'auto',
+                h: winHeight
+            },
+            frames: [{
+                name: 'index',
+                url: 'html/index/index.html',
+            }, {
+                name: 'order',
+                url: 'html/order/index.html',
+            }, {
+                name: 'masge',
+                url: 'html/masge/index.html',
+            }, {
+                name: 'community',
+                url: 'html/community/index.html',
+            }, {
+                name: 'set',
+                url: 'html/set/index.html',
+            }]
+        }, function (ret, err) {
+            var index = ret.index;
+        });
+    }
+
+
+
+    $(function () {
+        $("#footer>div").on('click', function () {
+            var i = $(this).index();
+            api.setFrameGroupIndex({
+                name: 'group',
+                index: i
+            });
+            $("#footer>div").removeClass('active')
+            $(this).addClass('active')
+            $("#header>div").addClass('mui-hidden')
+            $("#header>div").eq(i).removeClass('mui-hidden');
+        })
+        $(".jia").on('click',function(){
+            api.openWin({
+                name:'plus',
+                url:'html/index/plus.html'
+            })
+        })
+        $(".cicle").on('click',function(){
+            api.openWin({
+                name:'cicle',
+                url:'html/community/cicle.html'
+            })
+        })
+        // cicle
+    })
+
+
+    // };
+
+</script>
+
+</html>

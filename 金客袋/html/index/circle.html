@@ -37,6 +37,137 @@
             color: #fff;
             padding: 10px;
         }
+        .list{
+            margin-top: 10px;
+        }
+        .list_head>div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .list_head img{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .list_head{
+            position: relative;
+            padding-top: 10px;
+        }
+        .list_head .time{
+            position: absolute;
+            right: 15px;;
+            top: 5px;
+        }
+        .img_box{
+            height: 150px;
+        }
+        .list .txt{
+            text-indent: 2rem;
+        }
+        .list .name{
+            color: #06aaf4;
+        }
+        .list .tag{
+            line-height: 35px;
+        }
+        .label{
+            color: #333;
+        }
+        #plus_{
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            background:red;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 5px #777;
+            animation: myfirst 4s infinite;
+            -moz-animation: myfirst 4s infinite;	/* Firefox */
+            -webkit-animation: myfirst 4s infinite;	/* Safari 和 Chrome */
+            -o-animation: myfirst 4s infinite;	/* Opera */
+        }
+        #plus_ i{
+            color: #fff;
+            font-size: 22px;
+        }
+        @keyframes myfirst
+            {
+            0% {
+                transform:scale(1,1);
+               -moz-transform: scale(1,1);
+               -webkit-transform: scale(1,1);
+            }
+            50%{
+                transform:scale(1.2,1.2);
+                -moz-transform: scale(1.2,1.2);
+               -webkit-transform: scale(1.2,1.2);
+            }
+            100% {
+                transform:scale(1,1);
+                -moz-transform: scale(1,1);
+               -webkit-transform: scale(1,1);
+            }
+            }
+
+            @-moz-keyframes myfirst /* Firefox */
+            {
+                0% {
+                    transform:scale(1,1);
+                   -moz-transform: scale(1,1);
+                   -webkit-transform: scale(1,1);
+                }
+                50%{
+                    transform:scale(1.2,1.2);
+                    -moz-transform: scale(1.2,1.2);
+                   -webkit-transform: scale(1.2,1.2);
+                }
+                100% {
+                    transform:scale(1,1);
+                    -moz-transform: scale(1,1);
+                   -webkit-transform: scale(1,1);
+                }
+                }
+
+            @-webkit-keyframes myfirst /* Safari and Chrome */
+            {
+                0% {
+                    transform:scale(1,1);
+                   -moz-transform: scale(1,1);
+                   -webkit-transform: scale(1,1);
+                }
+                50%{
+                    transform:scale(1.2,1.2);
+                    -moz-transform: scale(1.2,1.2);
+                   -webkit-transform: scale(1.2,1.2);
+                }
+                100% {
+                    transform:scale(1,1);
+                    -moz-transform: scale(1,1);
+                   -webkit-transform: scale(1,1);
+                }
+                }
+            @-o-keyframes myfirst /* Opera */
+            {
+                0% {
+                    transform:scale(1,1);
+                   -moz-transform: scale(1,1);
+                   -webkit-transform: scale(1,1);
+                }
+                50%{
+                    transform:scale(1.2,1.2);
+                    -moz-transform: scale(1.2,1.2);
+                   -webkit-transform: scale(1.2,1.2);
+                }
+                100% {
+                    transform:scale(1,1);
+                    -moz-transform: scale(1,1);
+                   -webkit-transform: scale(1,1);
+                }
+                }
     </style>
 </head>
 
@@ -60,7 +191,63 @@
         </div>
         <p class="title">今日头条</p>
     </div>
-
+    <div class="list mui-w">
+        <div class="list_head mui-padd-l">
+            <div><img src="../../image/head.png" alt=""></div>
+            <div>
+                <p class="name">你好</p>
+                <p class="addres">厦门市/集美区</p>
+            </div>
+            <div class="time">
+                <p class="label">#放空#</p>
+                <p class="cc">121</p>
+            </div>
+        </div>
+        <div>
+            <p class="txt">nihonihonihonihonihoniho</p>
+            <div class="mui-row ">
+                <div class="mui-col-xs-12 img_box" style="background: url(../../image/Contaact.png); background-repeat: no-repeat;background-size: cover;"></div>
+            </div>
+        </div>
+        <div class="mui-row mui-padd-lr tag">
+            <div class="mui-pull-left">
+                <i class="iconfont icon-chakan"></i>12
+            </div>
+            <div class="mui-pull-right">
+                <i class="iconfont icon-dianzan-copy"></i>12
+            </div>
+        </div>
+    </div>
+    <div class="list mui-w">
+            <div class="list_head mui-padd-l">
+                <div><img src="../../image/head.png" alt=""></div>
+                <div>
+                    <p class="name">你好</p>
+                    <p class="addres">厦门市/集美区</p>
+                </div>
+                <div class="time">
+                    <p class="label">#放空#</p>
+                    <p class="cc">121</p>
+                </div>
+            </div>
+            <div>
+                <p class="txt">nihonihonihonihonihoniho</p>
+                <div class="mui-row ">
+                    <div class="mui-col-xs-12 img_box" style="background: url(../../image/Contaact.png); background-repeat: no-repeat;background-size: cover;"></div>
+                </div>
+            </div>
+            <div class="mui-row mui-padd-lr tag">
+                <div class="mui-pull-left">
+                    <i class="iconfont icon-chakan"></i>12
+                </div>
+                <div class="mui-pull-right">
+                    <i class="iconfont icon-dianzan-copy"></i>12
+                </div>
+            </div>
+        </div>
+        <div id="plus_">
+            <i class="iconfont icon-jia"></i>
+        </div>
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>

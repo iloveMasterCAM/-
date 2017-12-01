@@ -19,36 +19,30 @@
         #header p {
             color: #fff;
         }
-
         #header i {
             font-size: 1.5rem;
         }
-
         #list .title {
             color: #212121;
             background: #ddd;
             line-height: 30px;
             padding-left: 15px;
         }
-
         #list>ul {
             background: #fff;
             margin-bottom: 10px;
         }
-
         #list li {
             position: relative;
             line-height: 45px;
             padding: 0 15px;
         }
-
         #head {
             line-height: 45px;
             padding-top: 15px;
             padding-left: 15px;
             background: #0094ff;
         }
-
         #head i,
         #head span {
             color: #fff;
@@ -297,7 +291,6 @@
         //     alert(JSON.stringify(r))
         // })
         var id = api.pageParam;
-
         $("#header>div").attr({'id':id.id,'api-data':'{"id":"'+id.id+'"}'});
         apimui.config();
         apimui.post('order/detail',{id:id.id},function(r){

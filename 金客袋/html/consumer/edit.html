@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.css" rel="stylesheet" />
+    <link href="../../css/mui.poppicker.css" rel="stylesheet" />
+    <style>
+        .title {
+            background: #ddd;
+            color: #333;
+            line-height: 35px;
+            padding-left: 15px;
+
+        }
+
+        .mar {
+            margin-top: 56px;
+        }
+
+        .list {
+            line-height: 45px;
+            padding-left: 15px;
+        }
+
+        .list span {
+            display: inline-block;
+            width: 15%;
+            margin-top: -4px;
+        }
+
+        .list input {
+            padding: 0;
+            width: 60%;
+
+        }
+
+        #ul {}
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">修改资料</div>
+        <a class="mui-pull-right">
+            <span class="">
+                <i class="iconfont icon-dui"></i>
+            </span>
+        </a>
+    </header>
+    <div class="mar" id="box" role="template" event="html" tempid="temp" api-url='cusumer/Detail' api-data='{}'>
+
+    </div>
+    <script id="temp" type="text/html">
+        <p class="title ">基本资料</p>
+        <ul id="ul" class="mui-w">
+            <li class="list bor-b">
+                 <span class="name ">姓名</span>
+                <input type="text" placeholder="真实姓名" value="{{d.name}}">
+                <span class="mui-pull-right mui-text-center">
+                    <i class="iconfont icon-xuesheng"></i>
+                </span>
+            </li>
+            <li class="list bor-b">
+                 <span class="name ">手机</span>
+                <input type="text" placeholder="手机号" value="{{d.phone}}">
+                <span class="mui-pull-right mui-text-center">
+                    <i class="iconfont icon-shouji"></i>
+                </span>
+            </li>
+            <li class="list bor-b">
+                 <span class="name ">邮箱</span>
+                <input type="text" placeholder="输入邮箱" value="{{d.mail}}">
+                <span class="mui-pull-right mui-text-center">
+                    <i class="iconfont icon-xiaoxi"></i>
+                </span>
+            </li>
+            <li class="list bor-b">
+                 <span class="name ">身份证</span>
+                <input type="text" placeholder="身份证号" value="{{d.idcard}}">
+                <span class="mui-pull-right mui-text-center">
+                    <i class="iconfont icon-identity"></i>
+                </span>
+            </li>
+            <li class="list bor-b" onclick="show()">
+                 <span class="name ">区域</span>
+                <input type="text" id="address" class="" value="{{d.p}}/{{d.c}}/{{d.d}}" disabled="disabled">
+               
+                        <span class="mui-pull-right mui-text-center">
+                                <i class="iconfont icon-xiangyou"></i>
+                        </span>
+                
+               
+            </li>
+            <li class="list bor-b">
+                 <span class="name ">门牌号</span>
+                <input type="text" placeholder="详细住所" value="{{d.ad}}">
+                <span class="mui-pull-right mui-text-center">
+                    <i class="iconfont icon-dizhi"></i>
+                </span>
+            </li>
+    
+        </ul>
+        <p class="title">基本资料</p>
+        <ul class="mui-w">
+            <li class="list bor-b">
+                 <span class="name ">备注</span>
+                <textarea  placeholder="输入备注">{{d.memo}}></textarea>
+            </li>
+        </ul>
+    </script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script src="../../js/mui.picker.js"></script>
+    <script src="../../js/mui.poppicker.js"></script>
+    <script src="../../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        apiready = function () {
+
+            var d = api.pageParam
+            $("#box").attr({ 'api-data': '{"id":"' + d.id + '"}' })
+            //cusumer/Detail
+            apimui.config();
+       
+        }
+      
+        var _getParam = function(obj, param) {
+						return obj[param] || '';
+				};
+            function show(){
+                (function ($_, doc) {
+                $_.ready(function () {
+                    var cityPicker3 = new $_.PopPicker({
+                        layer: 3
+                    });
+                    cityPicker3.setData(cityData3);
+                        cityPicker3.show(function (items) {
+                        $("#address").val( _getParam(items[0], 'text') + " /" + _getParam(items[1], 'text') + " /" + _getParam(items[2], 'text'))
+                        });
+                })
+            })(apimui.mui, document)
+            }
+        
+    </script>
+</body>
+
+</html>

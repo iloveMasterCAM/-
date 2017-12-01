@@ -19,22 +19,18 @@
 }
         #list ul {
             background: #fff;
-
         }
-
         #list li {
             padding: 0 15px;
             line-height: 40px;
             position: relative;
         }
-
         #list .title {
             color: #212121;
             background: #ddd;
             line-height: 30px;
             padding-left: 15px;
         }
-
         #head .jia {
             position: absolute;
             right: 10px;
@@ -86,12 +82,10 @@
             $("#submit").on('click', function () {
                 var password = $("#newpwd").val(), old = $("#oldpwd").val(), passwordtow = $("#newpwdtow").val();
                 if (password.length < 6 || old.length < 6 || passwordtow.length < 6) {
-
                     api.toast({ msg: '请输入6位以上的密码' })
                     return;
                 }
                 if (password != passwordtow) {
-
                     api.toast({ msg: '两次新密码一样' })
                     return;
                 }
@@ -108,9 +102,6 @@
                 })
             })
         }
-
-
-
     </script>
 </body>
 

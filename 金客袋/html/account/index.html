@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link href="../../fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+
+        #header {
+            background: #FB6F18;
+            padding: 10px;
+            position: relative;
+        }
+
+        #header>div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        #header p,
+        #header i {
+            color: #fff;
+        }
+
+        #header .name {
+            padding-left: 15px;
+        }
+
+        #header .icon {
+            position: absolute;
+            right: 10px;
+            top: 35%;
+        }
+
+        #ul a:after {
+            content: '\e583';
+        }
+
+        .ul a {
+            line-height: 30px;
+        }
+
+        .ul a span {
+            margin-right: 20px;
+            font-size: 0.6rem;
+            color: #808080
+        }
+
+        .ul i {
+            width: 25px;
+            color: #fff;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 50%;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        #ul .ul .icon-renzheng {
+            background: #ff0000
+        }
+
+        #ul .ul .icon-xing {
+            background: #0094ff
+        }
+
+        #ul .ul .icon-shijian {
+            background: #118d21
+        }
+
+        #ul .ul .icon-yue {
+            background: #ff6a00
+        }
+
+        #ul .ul .icon-dingdan {
+            background: #118d21
+        }
+
+        #ul .ul .icon-anquan {
+            background: #0094ff
+        }
+
+        #ul .ul .icon-bangding {
+            background: #0094ff
+        }
+
+        #ul .ul .icon-mine_icon_customer {
+            background: #FB6F18
+        }
+
+        #ul .ul .icon-fill147 {
+            background: #0094ff
+        }
+
+        #ul .ul {
+            margin-top: 10px;
+        }
+
+        #ul .ul li {
+            padding: 9px 15px;
+        }
+    </style>
+</head>
+
+<body id="body" role="template" event="html" tempid="user_temp" api-url='account' api-data='{}'>
+
+    <!-- mui-icon mui-icon-arrowright identity  exp relet  bingding-->
+
+
+</body>
+<script id="user_temp" type="text/html">
+    <div id="header" event="click" api-name="usermsg" api-url="usermsg.html">
+        <div><img src="{{d.head}}?w=100" alt=""></div>
+        <div class="name">
+            <p>{{d.name}}</p>
+            <p><i class="iconfont icon-shouji">{{d.phone}}</i></p>
+        </div>
+        <div class="icon">
+            <i class="iconfont icon-xiangyou"></i>
+        </div>
+    </div>
+    <div id="ul">
+    <ul class="mui-table-view ul" > 
+        <li class="mui-table-view-cell mui-collapse" event="click" api-name="identity" api-url="identity.html">
+            <a class="mui-navigate-right" href="#"><i class="iconfont icon-renzheng"></i> 认证 <span class="mui-pull-right">个人用户</span></a>
+        </li>
+        <li class="mui-table-view-cell mui-collapse"  event="click" api-name="exp " api-url="exp.html">
+            <a class="mui-navigate-right" href="#"><i class="iconfont icon-xing"></i> 经验 <span class="mui-pull-right">业务员</span></a>
+        </li>
+        {{if d.phone!="18613229222"}}
+        <li class="mui-table-view-cell mui-collapse" event="click" api-name="relet" api-url="relet.html">
+            <a class="mui-navigate-right" href="#"><i class="iconfont icon-shijian"></i> 续期 <span class="mui-pull-right">{{d.time}}</span></a>
+        </li>
+        {{/if}}
+    </ul>
+    <!-- money -->
+    <ul class="mui-table-view ul"> 
+        {{if d.phone=="18613229222"}}
+    <li class="mui-table-view-cell mui-collapse" event="click" api-name="money" api-url="money.html">
+        <a class="mui-navigate-right" href="#"><i class="iconfont icon-yue"></i> 余额 <span class="mui-pull-right">银两</span></a>
+    </li>
+    {{else}}
+        <li class="mui-table-view-cell mui-collapse" event="click" api-name="money" api-url="money.html">
+            <a class="mui-navigate-right" href="#"><i class="iconfont icon-yue"></i> 余额 <span class="mui-pull-right">{{d.cash}}</span></a>
+        </li>
+        <li class="mui-table-view-cell mui-collapse" event="click" api-name="order" api-url="order.html">
+            <a class="mui-navigate-right" href="#"><i class="iconfont icon-dingdan"></i> 账单 <span class="mui-pull-right">资金记录</span></a>
+        </li>
+
+    {{/if}}
+    
+    </ul>
+    <ul class="mui-table-view ul"> 
+    <li class="mui-table-view-cell mui-collapse" event="click" api-name="pasw" api-url="pasw.html">
+        <a class="mui-navigate-right" href="#"><i class="iconfont icon-anquan"></i> 安全 <span class="mui-pull-right">密码/安全密码</span></a>
+    </li>
+    <li class="mui-table-view-cell mui-collapse" event="click" api-name="bingding" api-url="bingding.html">
+        <a class="mui-navigate-right" href="#"><i class="iconfont icon-bangding"></i> 绑定<span class="mui-pull-right">支付宝账号</span></a>
+    </li>
+    </ul>
+    <!-- service  -->
+    <ul class="mui-table-view ul"> 
+    <li class="mui-table-view-cell mui-collapse" event="click" api-name="service" api-url="service.html">
+        <a class="mui-navigate-right" href="#"><i class="iconfont icon-mine_icon_customer"></i> 客服 <span class="mui-pull-right">意见/bug</span></a>
+    </li>
+    <li class="mui-table-view-cell mui-collapse">
+        <a class="mui-navigate-right" href="#"><i class="iconfont icon-fill147"></i> 金克袋 <span class="mui-pull-right">关于我们</span></a>
+    </li>
+    </ul>
+</div>
+</script>
+<script src="../../script/jquery.js"></script>
+<script src="../../script/mui.js"></script>
+<script src="../../script/apiinit.js"></script>
+<script src="../../script/sendEvent.js"></script>
+<script src="../../script/artTemplate.js"></script>
+<script type="text/javascript">
+    console.log('121')
+    apiready = function () {
+        apimui.config();
+
+        // apimui.post('account',{},function(r){
+        //     alert(JSON.stringify(r))
+        // })
+    }
+
+    // function cat() { }
+    // cat.prototype = {
+    //     food: "fish",
+    //     say: function () {
+    //         alert("I love " + this.food);
+    //     }
+    // }
+    // var blackCat = new cat;
+    // // blackCat.say();
+    // whiteDog = {food:"bone"}
+    // blackCat.say.call(whiteDog);
+    // var args = [].slice.call([1,2,3,4,5], 1);
+    //     alert(args)
+</script>
+
+</html>

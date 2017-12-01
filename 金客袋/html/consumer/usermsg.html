@@ -31,8 +31,8 @@
             <span><i class="iconfont icon-xiangzuo"></i></span>
         </a>
         <div class="mui-title">客户</div>
-        <a class="mui-pull-right">
-            <span><i class="iconfont icon-dui"></i></span>
+        <a class="mui-pull-right" id="edit">
+                <span><i class="iconfont icon-bianji"></i></span>
         </a>
     </header>
     <p class="title">基本资料</p>
@@ -106,7 +106,17 @@
             apimui.config();
             // apimui.post('cusumer/Detail',{id:d.id},function(r){
             //     alert(JSON.stringify(r))
-            // })
+            // })、、edit
+            $("#edit").on('click',function(){
+                var id = d.id;
+                api.openWin({
+                    name:'edit',
+                    url:'edit.html',
+                    pageParam:{
+                        id:id
+                    }
+                })
+            })
         }
     </script>
 </body>

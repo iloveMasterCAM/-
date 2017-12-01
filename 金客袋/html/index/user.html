@@ -52,9 +52,9 @@
             margin-top: 5px;
         }
         .ul .icon{
-            width: 35px;
-            line-height: 35px;
-            height: 35px;
+            width: 32px;
+            line-height: 32px;
+            height: 32px;
             text-align: center;
             display: inline-block;
             border-radius: 50%;
@@ -86,67 +86,94 @@
            color: #333;
         }
         
-        #head
+      
     </style>
 </head>
 <body>
-    <div id="head" class="mui-padd-t">
-        <div class="list_head mui-padd-lr">
-            <div>
-                <img src="../../image/head.png" alt="">
-            </div>
-            <div class="mui-padd-l">
-                <p class="name">你好</p>
-                <p><i class="iconfont icon-shouji">151515454</i></p>
-            </div>
-            <div class="time">
-                <i class="iconfont icon-xiangyou"></i>
+
+    <div id="body"  role="template" event="html" tempid="user_temp" api-url='account' api-data='{}'></div>
+
+    <script id="user_temp" type="text/html">
+        <div id="head" class="mui-padd-t" event="click" api-name="user" api-url="../account/usermsg.html">
+            <div class="list_head mui-padd-lr">
+                <div>
+                    <img src="{{d.head}}?w=100" alt="">
+                </div>
+                <div class="mui-padd-l">
+                    <p class="name">{{d.name}}</p>
+                    <p><i class="iconfont icon-shouji">{{d.phone}}</i></p>
+                </div>
+                <div class="time">
+                    <i class="iconfont icon-xiangyou"></i>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="ul">
+        <div id="ul">
+             <ul class="mui-table-view mui-w ul">
+            <li class="mui-table-view-cell"  event='click' api-name='identity' api-url='../account/identity.html' >
+                <!-- identity -->
+                <a class="mui-navigate-right"><span class="icon renzheng1"><i class="iconfont icon-renzheng1"></i> </span>认证 <span class="mui-pull-right">个人用户</span></a>
+            </li>
+            <li class="mui-table-view-cell"  event='click' api-name='identity' api-url='../account/exp.html' >
+               <a class="mui-navigate-right"><span class="icon jingyano"><i class="iconfont icon-jingyano"></i> </span>经验<span class="mui-pull-right">业务员</span></a>
+            </li>
+            <li class="mui-table-view-cell"  event='click' api-name='identity' api-url='../account/relet.html' >
+                <a class="mui-navigate-right"><span class="icon xuqi"><i class="iconfont icon-xuqi"></i> </span>续期 <span class="mui-pull-right">{{d.time}}</span></a>
+            </li>
+        </ul>
          <ul class="mui-table-view mui-w ul">
-        <li class="mui-table-view-cell">
-            <a class="mui-navigate-right"><span class="icon renzheng1"><i class="iconfont icon-renzheng1"></i> </span>认证 <span class="mui-pull-right">21</span></a>
-        </li>
-        <li class="mui-table-view-cell">
-           <a class="mui-navigate-right"><span class="icon jingyano"><i class="iconfont icon-jingyano"></i> </span>经验<span class="mui-pull-right">21</span></a>
-        </li>
-        <li class="mui-table-view-cell">
-            <a class="mui-navigate-right"><span class="icon xuqi"><i class="iconfont icon-xuqi"></i> </span>续期 <span class="mui-pull-right">21</span></a>
-        </li>
-    </ul>
-     <ul class="mui-table-view mui-w ul">
-        <li class="mui-table-view-cell">
-            <a class="mui-navigate-right"><span class="icon yue"><i class="iconfont icon-yue"></i> </span>余额 <span class="mui-pull-right">21</span></a>
-        </li>
-        <li class="mui-table-view-cell">
-           <a class="mui-navigate-right"><span class="icon order"><i class="iconfont icon-order"></i> </span>账单<span class="mui-pull-right">21</span></a>
-        </li>
-       
-    </ul>
-    <ul class="mui-table-view mui-w ul">
-        <li class="mui-table-view-cell">
-            <a class="mui-navigate-right"><span class="icon anquan"><i class="iconfont icon-anquan"></i> </span>安全 <span class="mui-pull-right">21</span></a>
-        </li>
-        <li class="mui-table-view-cell">
-           <a class="mui-navigate-right"><span class="icon anquan"><i class="iconfont icon-bangding"></i> </span>绑定<span class="mui-pull-right">21</span></a>
-        </li>
-       
-    </ul>
-    <ul class="mui-table-view mui-w ul">
-        <li class="mui-table-view-cell">
-            <a class="mui-navigate-right"><span class="icon customer"><i class="iconfont icon-mine_icon_customer"></i> </span>客服 <span class="mui-pull-right">21</span></a>
-        </li>
-        <li class="mui-table-view-cell">
-           <a class="mui-navigate-right"><span class="icon n5appqz"><i class="iconfont icon-n5appqz"></i> </span> 金客袋<span class="mui-pull-right">21</span></a>
-        </li>
-       
-    </ul>
-    </div>
+            <li class="mui-table-view-cell" event='click' api-name='identity' api-url='../account/money.html'>
+                <a class="mui-navigate-right"><span class="icon yue"><i class="iconfont icon-yue"></i> </span>余额 <span class="mui-pull-right">{{d.cash}}</span></a>
+            </li>
+            <li class="mui-table-view-cell" event='click' api-name='identity' api-url='../account/order.html'>
+               <a class="mui-navigate-right"><span class="icon order"><i class="iconfont icon-order"></i> </span>账单<span class="mui-pull-right">资金记录</span></a>
+            </li>
+           
+        </ul>
+        <ul class="mui-table-view mui-w ul">
+            <li class="mui-table-view-cell" event='click' api-name='identity' api-url='../account/pasw.html'>
+                <!-- pasw -->
+                <a class="mui-navigate-right"><span class="icon anquan"><i class="iconfont icon-anquan"></i> </span>安全 <span class="mui-pull-right">密码/安全密码</span></a>
+            </li>
+            <li class="mui-table-view-cell" event='click' api-name='identity' api-url='../account/bingding.html'>
+                <!-- bingding -->
+               <a class="mui-navigate-right"><span class="icon anquan"><i class="iconfont icon-bangding"></i> </span>绑定<span class="mui-pull-right">支付宝账号</span></a>
+            </li>
+           
+        </ul>
+        <ul class="mui-table-view mui-w ul">
+            <li class="mui-table-view-cell"  event='click' api-name='identity' api-url='../account/service.html'>
+                <a class="mui-navigate-right"><span class="icon customer"><i class="iconfont icon-mine_icon_customer"></i> </span>客服 <span class="mui-pull-right">意见/bug</span></a>
+            </li>
+            <li class="mui-table-view-cell">
+               <a class="mui-navigate-right"><span class="icon n5appqz"><i class="iconfont icon-n5appqz"></i> </span> 金客袋<span class="mui-pull-right">关于我们</span></a>
+            </li>
+           
+        </ul>
+        </div>
+    </script>
    
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script>
+    apiready = function(){
+ 
+        apimui.config();
+            api.setRefreshHeaderInfo({
+        loadingImg: 'widget://image/refresh.png',
+        bgColor: '#fff',
+        textColor: '#ccc',
+        textDown: '下拉刷新...',
+        textUp: '松开刷新...'
+        }, function(ret, err) {
+        //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+        setTimeout(function(){
+            api.refreshHeaderLoadDone();
+        },1000)
+        });
+    }
+    </script>
 </body>
 </html>

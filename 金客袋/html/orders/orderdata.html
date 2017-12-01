@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <title>单子详情</title>
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        #header {
+            background: #0094ff;
+            padding: 10px 0;
+        }
+        #header>div{
+            position: relative;
+        }
+        #header p {
+            color: #fff;
+        }
+
+        #header i {
+            font-size: 1.5rem;
+        }
+
+        #list .title {
+            color: #212121;
+            background: #ddd;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        #list>ul {
+            background: #fff;
+            margin-bottom: 10px;
+        }
+
+        #list li {
+            position: relative;
+            line-height: 45px;
+            padding: 0 15px;
+        }
+
+        #head {
+            line-height: 45px;
+            padding-top: 15px;
+            padding-left: 15px;
+            background: #0094ff;
+        }
+
+        #head i,
+        #head span {
+            color: #fff;
+        }
+        #header .msg{
+            background: red;
+            color: #fff;
+            position: absolute;
+            top: -5px;
+            right: 10px;
+            border-radius: 10px;
+            padding: 0 6px;
+            font-size: 12px;
+        }
+        #list .cc{
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- unexpected tokena at api.closeWin() -->
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>新增单子</span>
+        </div>
+    </header>
+    <div class="mui-row mui-text-center" id="header">
+        <div class="mui-col-xs-4" event='click' api-name='renewal' api-url='renewal.html' api-data=''>
+            <p>
+                <i class="iconfont icon-shijian"></i>
+            </p>
+            <p>收息</p>
+        </div>
+        <div class="mui-col-xs-4" event='click' api-name='prompt' api-url='prompt.html' api-data=''>
+            <p>
+                <i class="iconfont icon-clock"></i>
+            </p>
+            <p>催款</p>
+            <span class="msg">短信</span>
+        </div>
+        <div class="mui-col-xs-4" event='click' api-name='repay' api-url='repay.html' api-data=''>
+            <p>
+                <i class="iconfont icon-dingdan"></i>
+            </p>
+            <p>记录</p>
+        </div>
+    </div>
+    <div id="list">
+        <ul>
+            <p class="title">借款资料</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">金额</span>
+                <div class="mui-pull-right cc">
+                    ￥2.000.00
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">客户</span>
+                <div class="mui-pull-right cc">
+                    ￥2.000.00
+                    <i class="iconfont icon-xiangyou cc"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">总周期</span>
+                <div class="mui-pull-right cc">
+                    1天
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <p class="title">还款资料</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">还款日期</span>
+                <div class="mui-pull-right cc">
+                    17/11/02
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">还款方式</span>
+                <div class="mui-pull-right cc">
+                    先息后本
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">倒扣</span>
+                <div class="mui-pull-right cc">
+                    是
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <p class="title">出资资料</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">是否独资</span>
+                <div class="mui-pull-right cc" >
+                    是
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">出资人</span>
+                <div class="mui-pull-right cc">
+                    1人
+                    <i class="iconfont icon-xiangyou cc"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">空放</span>
+                <div class="mui-pull-right cc">
+                    是
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <p class="title">放款资料</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">放款时间</span>
+                <div class="mui-pull-right cc">
+                    17-05-02
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">放款人</span>
+                <div class="mui-pull-right cc">
+                    你好(17750877003)
+                    <i class="iconfont icon-xiangyou cc"></i>
+                </div>
+            </li>
+
+        </ul>
+        <ul>
+            <p class="title">提醒</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">提醒</span>
+                <div class="mui-pull-right cc">
+                    你好(17750877003)
+                    <i class="iconfont icon-xiangyou cc"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script id="temp" type="text/html">
+
+        <ul>
+            <p class="title">借款资料</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">金额</span>
+                <div class="mui-pull-right cc">
+                    {{money}}
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">客户</span>
+                <div class="mui-pull-right cc">
+                    {{cusumer.name}}({{cusumer.phone}})
+                    <i class="iconfont icon-xiangyou cc"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">总周期</span>
+                <div class="mui-pull-right cc">
+                    {{cycle.time}} {{cycle.type}}
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <p class="title">还款资料</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">还款日期</span>
+                <div class="mui-pull-right cc">
+                    {{repay.time}}
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">还款方式</span>
+                <div class="mui-pull-right cc">
+                    {{repay.type}}
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">倒扣</span>
+                <div class="mui-pull-right cc">
+                    {{isback}}
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <p class="title">出资资料</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">是否独资</span>
+                <div class="mui-pull-right cc">
+                    {{isalone}}
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">出资人</span>
+                <div class="mui-pull-right cc">
+                    {{froms.total}} 人
+                    <i class="iconfont icon-xiangyou cc"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">空放</span>
+                <div class="mui-pull-right cc">
+                    {{isempty}}
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <p class="title">放款资料</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">放款时间</span>
+                <div class="mui-pull-right cc">
+                    {{dispark.time}}
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">放款人</span>
+                <div class="mui-pull-right cc">
+                    {{dispark.user.name}}({{dispark.user.phone}})
+                    <i class="iconfont icon-xiangyou cc"></i>
+                </div>
+            </li>
+
+        </ul>
+        <ul>
+            <p class="title">提醒</p>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">提醒</span>
+                <div class="mui-pull-right cc">
+                    每{{warm.type}},{{warm.time}}
+                    <i class="iconfont icon-xiangyou cc"></i>
+                </div>
+            </li>
+        </ul>
+    </script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script type="text/javascript">
+    apiready = function(){
+        // apimui.post('order/paged','',function(r){
+        //     alert(JSON.stringify(r))
+        // })
+        var id = api.pageParam;
+
+        $("#header>div").attr({'id':id.id,'api-data':'{"id":"'+id.id+'"}'});
+        apimui.config();
+        apimui.post('order/detail',{id:id.id},function(r){
+          //  alert(JSON.stringify(r))
+            var html = template('temp',r.d)
+            $("#list").html(html)
+        })
+        
+    }
+</script>
+</body>
+</html>

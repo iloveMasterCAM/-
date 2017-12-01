@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../iconfont/iconfont.css" />
+    <style>
+    
+        #list{
+            background: #fff;
+            padding: 0 15px;
+            margin-top: 10px;
+        }
+        #list .state{
+            width: 45px;
+            line-height: 45px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 0.8rem;
+            text-align: center;
+            background: red;
+        }
+        #list li{
+            position: relative;
+            padding: 10px 0;
+        }
+        #list li .icon-xiangyou{
+            position:absolute;
+            right: 0;
+            top: 17%;
+        }
+        #scroll{
+          height: auto;
+            
+        }
+        
+        
+        #mar{
+            margin-top: 56px;
+        }
+        #list{}
+        #list{}
+        #list{}
+        #list{}
+        #list{}
+        
+    </style>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span><i class="iconfont icon-xiangzuo"></i></span>
+        </a>
+        <div class="mui-title">账单</div>
+        <a class="mui-pull-right">
+            <span><i class="iconfont icon-dui"></i></span>
+        </a>
+    </header>
+    <div id="mar">
+        <ul  id="list" role="template" event="append" tempid="box_tamp" api-url='account/bill' api-data='{}' >
+            <!-- <li class="mui-row" event='click' api-name='orderdata' api-url='orderdata.html'>
+                <div class="mui-col-xs-3">
+                    <p class="state">
+                        支付中
+                    </p>
+                </div>
+                <div class="mui-col-xs-9">
+                    <p>￥30.000.00</p>
+                    <p class="mui-row"><span class="mui-pull-left">软件续期</span>  <time class="mui-pull-right">4天前</time> </p>
+                </div>
+                <i class="iconfont icon-xiangyou"></i>
+            </li> -->
+        </ul>
+    </div>
+    <script type="text/html" id="box_tamp">
+        {{each d as val}}
+            <li class="mui-row bor-b" event='click' api-name='orderdata' api-url='orderdata.html' api-data='{"id":"{{val.id}}"}' id="{{val.id}}">
+                <div class="mui-col-xs-3">
+                    <p class="state">
+                        {{val.status}}
+                    </p>
+                </div>
+                <div class="mui-col-xs-9">
+                    <p>{{val.money}}</p>
+                    <p class="mui-row"><span class="mui-pull-left">{{val.type}}</span>  <time class="mui-pull-right">{{val.time}}</time> </p>
+                </div>
+                <i class="iconfont icon-xiangyou"></i>
+            </li>
+        {{/each}}
+    </script>
+</body>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/mui.js"></script>
+<script src="../../js/artTemplate.js"></script>
+<script src="../../js/apiinit.js"></script>
+<script src="../../js/sendEvent.js"></script>
+<script src="../../js/mui.pullToRefresh.js"></script>
+<script src="../../js/mui.pullToRefresh.material.js"></script>
+<script>
+    apiready = function(){
+        // apimui.post('account/bill','',function(r){
+        //     alert(JSON.stringify(r))
+        // })
+        apimui.config();
+    }
+    // apimui.pullToRefresh({'obj':'.mui-scroll','down':function(o){
+    //     setTimeout(function(){
+    //         alert('down')
+    //         o.endPullDownToRefresh();
+    //     },1000)
+        
+    // },'up':function(o){
+    //     setTimeout(function(){
+    //         alert('up')
+    //         o.endPullUpToRefresh();
+    //     },1000)
+       
+    // }});
+			
+</script>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>客户</title>
+    <link href='../../css/api.css' rel="stylesheet"/>
+    <link href='../../css/mui.css' rel="stylesheet"/>
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        body{
+            background: #f5f5f5;
+            position: relative;
+        }
+        #search{
+            background: #ebeced;
+            padding: 8px 15px;
+            position: fixed;
+            top: 56px;;
+            width: 100%;
+            left: 0;
+            z-index: 5;
+            /* margin-top: 56px; */
+        }
+        #search input{
+            text-indent: 1.5rem;
+            padding: 0;
+            height: 30px;
+            width: 100%;
+        }
+        #search i{
+            position: absolute;
+            left: 20px;
+            top:14px;
+             color: #777777;
+        }
+        #list{
+            margin-top: 110px;
+        }
+        #list li{
+            padding: 10px 15px;
+            background: #fff;
+            position: relative;
+        }
+        #list .txt{
+            padding-right: 20px;
+            position: relative;
+        }
+        #list .txt .phone{
+            color: #777777;
+        }
+        #list .txt i{
+         position: absolute;
+             color: #777777;
+             right: 0;
+            top: 10px;
+        }
+        #list .icon-dizhi{
+               
+           
+            color: #777777;
+            font-size: 0.8rem;
+        }
+        #head .jia{
+             position: absolute;
+             right: 10px;
+            left: auto;
+            top: 23px;
+        }
+    </style>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span><i class="iconfont icon-xiangzuo"></i></span>
+        </a>
+        <div class="mui-title">客户</div>
+        <a class="mui-pull-right">
+            <span><i class="iconfont icon-dui"></i></span>
+        </a>
+    </header>
+    <div id="search">
+        <i class="iconfont icon-fangdajing"></i> <input type="search" value="" placeholder="手机号/姓名">
+    </div>
+    <div id="list">
+        <ul id='ul' role="template" event="append" tempid="list_temp" api-url='cusumer/paged' api-data='{}'>
+           
+        </ul>
+    </div>
+    <script type="text/html" id="list_temp">
+        {{each d.item as val}}
+        <li class="bor-b" event='click' api-name='usermsg' api-url='usermsg.html' api-data='{"id":"{{val.id}}"}' id="{{val.id}}">
+                <div class="mui-row txt"><span class="mui-pull-left">{{val.name}}</span> <span class="mui-pull-right phone">{{val.phone}}</span> <i class="iconfont icon-xiangyou"></i></div>
+                <div class="">
+                    <i class="iconfont icon-dizhi">{{val.ad}}</i>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script>
+    //cusumer/paged
+        apiready = function(){
+          apimui.config();
+            // apimui.post('cusumer/paged','',function(r){
+            //     alert(JSON.stringify(r))
+            // })
+        }
+
+        $(function(){
+            
+            $("#head .jia").on('click',function(){
+                api.openWin({
+                    name:'plus',
+                    url:'plusUser.html'
+                })
+            })
+            
+        })
+        
+    </script>
+</body>
+</html>

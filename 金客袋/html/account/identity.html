@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>身份证</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../iconfont/iconfont.css" />
+    <style>
+        #identity input {
+            width: 75%;
+        }
+
+        #identity li {
+
+            position: relative;
+            padding: 7px 15px;
+        }
+
+        .title {
+            color: #212121;
+            background: #ddd;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        #identity a::after {
+            display: none;
+        }
+
+        #identity i {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            ;
+        }
+
+        .img {
+            background: #fff;
+        }
+
+        .img .icon {
+            width: 70px;
+            line-height: 70px;
+            text-align: center;
+        }
+
+        .txt {
+            padding: 7px;
+        }
+        #mar{
+            margin-top: 56px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">个人认证</div>
+        <a class="mui-pull-right">
+            <span>
+                <i class="iconfont icon-dui"></i>
+            </span>
+        </a>
+    </header>
+    <div id="mar"></div>
+    <p class="title">个人认证</p>
+    <ul class="mui-table-view" id="identity">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right"> 姓名
+                <input type="text" placeholder="真实姓名">
+                <i class="mui-pull-right iconfont icon-yonghu"></i>
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right"> 身份证
+                <input type="text" placeholder="身份证">
+                <i class="mui-pull-right iconfont icon-identity"></i>
+            </a>
+        </li>
+    </ul>
+    <p class="title">身份证正面（头像）</p>
+    <div class="img mui-text-center">
+        <div class="icon">
+            <i class="iconfont icon-jia"></i>
+        </div>
+    </div>
+    <p class="title">身份证反面（国徽）</p>
+    <div class="img mui-text-center">
+        <div class="icon">
+            <i class="iconfont icon-jia"></i>
+        </div>
+    </div>
+    <p class="txt">身份证身份证身份证身份证身份证身份证身份证身份证身份证身份证身份证身份证身份证身份证</p>
+</body>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/mui.js"></script>
+<script src="../../js/apiinit.js"></script>
+<script>
+
+    apiready = function () {
+
+        $(".icon").on('click', function () {
+            var this_ = $(this).parent();
+            apimui.upimg(0, function (r) {
+                //base64String
+                this_.html('<img style="width:80%;" src=' + r.base64String + '>')
+                apimui.upimgurl([r.base64String], function (r) {
+                    alert(JSON.stringify(r));
+                })
+            }, 1)
+        })
+    }
+
+</script>
+
+</html>

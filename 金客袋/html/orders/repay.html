@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        #record .child {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        #record .child .money {
+            display: inline-block;
+        }
+
+        #record .money {
+            width: 45px;
+            line-height: 45px;
+            color: #fff;
+            border-radius: 50%;
+            background: #ff6a00
+        }
+
+        #wrap {
+            background: #fff;
+            padding: 10px 15px;
+            margin: 10px 0;
+            margin-top: 56px;
+        }
+
+        #wrap .name {
+            font-size: 16px;
+            color: #000;
+        }
+
+        #wrap .color {
+
+            color: #0094ff;
+            ;
+        }
+
+        .list {
+            padding: 10px 15px;
+            background: #fff;
+        }
+
+        .list .roundness {
+            width: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: #fff;
+            border-radius: 50%;
+            background: #9f9f9f;
+        }
+
+        .list .txt {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+        <header class="mui-bar mui-bar-nav">
+                <a class="mui-pull-left" onclick="api.closeWin();">
+                    <span>
+                        <i class="iconfont icon-xiangzuo"></i>
+                    </span>
+                </a>
+                <div class="mui-title">记录</div>
+            </header>
+
+    <div id="wrap" role="template" event="html" tempid="wrap_temp" api-url='inereset/preview' api-data=''>
+        <div class="mui-row">
+            <span class="mui-pull-left name">你好</span>
+            <span class="mui-pull-right color">2121</span>
+        </div>
+        <p>
+            <i class="iconfont icon-dizhi"></i>地址</p>
+        <div class="mui-row mui-text-center" id="record">
+            <div class="child">
+                <p class="money">1</p>
+                <p>逾期</p>
+            </div>
+            <div class="child">
+                <p class="money">1</p>
+                <p>逾期</p>
+            </div>
+        </div>
+    </div>
+    <!-- order/interests  -->
+    <div id="list" role="template" event="html" tempid="list_temp" api-url='order/interests' api-data=''>
+    </div>
+    <!-- <div class="list bor-b">
+        <div class="mui-row">
+            <p class="mui-pull-left roundness">1</p>
+            <div class="mui-pull-left txt">
+                <p>￥1212</p>
+                <p>
+                    <i class="iconfont icon-shijian"></i>2017-11-20 14:26</p>
+            </div>
+            <p class="mui-pull-right">逾期</p>
+        </div>
+    </div>
+    <div class="list bor-b">
+        <div class="mui-row">
+            <p class="mui-pull-left roundness">1</p>
+            <div class="mui-pull-left txt">
+                <p>￥1212</p>
+                <p>
+                    <i class="iconfont icon-shijian"></i>2017-11-20 14:26</p>
+            </div>
+            <p class="mui-pull-right">逾期</p>
+        </div>
+    </div> -->
+</body>
+<script id="wrap_temp" type="text/html">
+
+    <div class="mui-row">
+            <span class="mui-pull-left name">{{d.cusumber.name}}</span>
+            <a class="mui-pull-right color"  href="tell://{{d.cusumber.phone}}"> {{d.cusumber.phone}}</a>
+        </div>
+        <p>
+            <i class="iconfont icon-dizhi"></i>{{d.cusumber.ad}}</p>
+        <div class="mui-row mui-text-center" id="record">
+                {{each d.inters as d i}}
+                <div class="child">
+                        <p class="money">{{d.number}}</p>
+                        <p>{{d.status}}</p>
+                    </div>
+                {{/each}}
+        </div>
+  
+</script>
+<script id="list_temp" type="text/html">
+    {{each d as d i}}
+    <div class="list bor-b">
+            <div class="mui-row">
+                <p class="mui-pull-left roundness">{{d.index}}</p>
+                <div class="mui-pull-left txt">
+                    <p>{{d.money}}</p>
+                    <p>
+                        <i class="iconfont icon-shijian"></i> {{d.time}}</p>
+                </div>
+                <p class="mui-pull-right">{{d.status}}</p>
+            </div>
+        </div>
+    {{/each}}
+</script>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/artTemplate.js"></script>
+<script src="../../js/mui.js"></script>
+<script src="../../js/apiinit.js"></script>
+<script>
+    apiready = function () {
+        // alert(JSON.stringify(api.pageParam))
+        var j = api.pageParam;
+        $("#list,#wrap").attr({'api-data':'{"id":"'+j.id+'"}'})
+        apimui.config();
+        // inereset/preview
+    }
+
+</script>
+
+</html>

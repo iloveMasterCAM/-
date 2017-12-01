@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../fonts/iconfont/iconfont.css" />
+    <style>
+        .title {
+            color: #212121;
+            background: #ddd;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        #month {
+            background: #fff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #month span {
+            padding: 0 15px;
+        }
+
+        #input,
+        #exp {
+            background: #fff;
+            padding: 5px 15px;
+            
+        }
+        #exp {
+            margin-top: 10px;
+            padding:  10px;
+        }
+        #input input {
+            width: 80%;
+            padding-left: 20px;
+        }
+
+        #msg {
+            padding: 15px;
+        }
+
+        #btn button {
+            width: 80%;
+            margin-top: 20px;
+        }
+        .color{
+            color: red;
+            font-size: 1.4rem;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>软件续期</span>
+        </div>
+    </header>
+    <p class="title">选择续费时间</p>
+    <div>
+        <p class="mui-text-center" id="month">
+            <span>1个月</span>
+            <span>3个月</span>
+            <span>6个月</span>
+            <span>12个月</span>
+        </p>
+        <div id="input">
+            <i class="iconfont icon-shijian"></i>
+            <input type="text" value="1">
+        </div>
+    </div>
+    <div class="mui-row" id="exp">
+        <i class="iconfont icon-yue"></i>
+        <span class="color">￥
+            <em>3000</em>
+        </span>
+        <span class="mui-pull-right">
+            <em>300</em>经验</span>
+    </div>
+    <p id="msg">描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
+    <div class="mui-text-center" id="btn">
+        <button type="button" class="mui-btn mui-btn-warning ">黄色</button>
+    </div>
+</body>
+
+</html>

@@ -1487,7 +1487,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     right: 0;
     left: 0;
 
-    height: 44px;
+    height: 56px;
     padding-right: 10px;
     padding-left: 10px;
 
@@ -5622,12 +5622,14 @@ body > .mui-progressbar
 
 [class*=bor-] {
     position: relative;
+  
 }
 /*自定义*/
 .bor-t:before{
            position: absolute; 
             content: ''; 
            z-index: 2;
+           display: block;
             width: 100%; 
             left: 0; 
             top: 0; 
@@ -5644,7 +5646,8 @@ body > .mui-progressbar
             content: ''; 
            z-index: 2;
             width: 100%; 
-            left: 0; 
+            display: block;
+            right: 0px;; 
             bottom: 0; 
             height: 1px; 
             background-color: #ccc; 
@@ -5656,6 +5659,7 @@ body > .mui-progressbar
            position: absolute; 
             content: ''; 
            z-index: 2;
+           display: block;
             height: 100%; 
             left: 0; 
             bottom: 0; 
@@ -5670,6 +5674,7 @@ body > .mui-progressbar
            position: absolute; 
             content: ''; 
            z-index: 2;
+           display: block;
             height: 100%; 
             right: 0; 
             bottom: 0; 
@@ -5774,4 +5779,7 @@ body > .mui-progressbar
         }
  .mui-padd-b{
             padding-bottom: 15px;
+        }
+        .mui-bar-nav{
+            padding-top: 15px;
         }

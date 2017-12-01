@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        #wrap {
+            background: #fff;
+            padding: 10px 15px;
+            margin-top: 60px;
+        }
+
+        #wrap input {
+            text-align: center;
+        }
+
+        #wrap .money {
+            color: red;
+        }
+
+        #wrap h5 {
+            color: #000;
+            font-size: 16px;
+        }
+
+        .title {
+            background: #f5f5f5;
+            line-height: 35px;
+            padding-left: 15px;
+        }
+
+        .box {
+            background: #fff;
+            padding: 10px 15px;
+        }
+
+        .box .money {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ff6a00;
+            color: #fff;
+            line-height: 50px;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            line-height: 50px;
+            color: #fff;
+        }
+
+        .yue {
+            background: #f1c40f;
+        }
+
+        .yinzi {
+            background: #e51c23;
+        }
+
+        .record {
+            background: #fff;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .record .money {
+            background: #9f9f9f;
+        }
+    </style>
+</head>
+
+<body>
+        <header class="mui-bar mui-bar-nav">
+                <a class="mui-pull-left" onclick="api.closeWin();">
+                    <span>
+                        <i class="iconfont icon-xiangzuo"></i>
+                    </span>
+                </a>
+                <div class="mui-title">结息</div>
+            </header>
+    <div id="wrap">
+        <div>
+            <div class="mui-row">
+                <h5 class="mui-pull-left name">
+                    你好
+                </h5>
+                <span class="mui-pull-right money phone">3232</span>
+            </div>
+            <p class="step">第一期</p>
+            <input type="tel" placeholder="" value="2000">
+        </div>
+    </div>
+    <p class="title">你您 1212121</p>
+    <div id="interestfroms" role="template" event="append" tempid="interestfroms_temp" api-url='order/interestfroms' api-data=''>
+       
+    </div>
+
+    <p class="title">你您 1212121</p>
+    <div id="interests" role="template" event="append" tempid="interests_tmp" api-url='order/interests' api-data=''>
+
+    </div>
+
+    <footer id="footer" class="mui-row mui-text-center">
+        <div class="mui-col-xs-6 yue"  action="finish">
+            <i class="iconfont icon-yue"></i>
+            收款
+        </div>
+        <div class="mui-col-xs-6 yinzi" action="accept">
+            <i class="iconfont icon-yinzi"></i>
+            结款
+        </div>
+    </footer>
+    <script type='text/html' id="interestfroms_temp">
+        {{each d as val}}
+        <div class="box mui-row">
+                <p class="money mui-pull-left">{{val.money}}</p>
+                <div class="mui-pull-left">
+                    <p>{{val.name}}</p>
+                    <p>{{val.phone}}</p>
+                </div>
+                <div class="mui-pull-right">
+                    {{val.plot}}
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <script id="interests_tmp" type="text/html">
+        {{each d as val}}
+        <div class="box mui-row record" id="">
+                <p class="money mui-pull-left">{{val.index}}</p>
+                <div class="mui-pull-left">
+                    <p>{{val.money}}</p>
+                    <p>{{val.time}}</p>
+                </div>
+                <div class="mui-pull-right">
+                        {{val.status}}
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+        apiready = function () {
+            // alert(JSON.stringify())
+            var page = api.pageParam
+            apimui.post('order/interest', { id: page.id }, function (r) {
+             
+                $("#wrap .name").text(r.d.cusumer.name)
+                $("#wrap .phone").text(r.d.cusumer.phone)
+                $("#wrap input").val(r.d.money)
+                $("#wrap .step").text(r.d.index)
+            })
+            $("#interestfroms,#interests").attr({ "api-data": '{"id":"' + page.id + '"}' })
+            // $("#interestfroms").attr({"api-data":'{"id":"'+page.id+'"}'})
+            apimui.config();
+            // apimui.post('order/interestfroms',{id:page.id},function(r){
+            //     alert(JSON.stringify(r))
+
+            // })
+            // apimui.post('order/interests',{id:page.id},function(r){
+            //     alert(JSON.stringify(r))
+
+            // })
+        
+        $("footer>div").click(function () {
+            var $this = $(this), action = $this.attr("action");
+            footer[action]();
+        });
+        var footer = {
+            accept: function () {
+                var text = "如果实收金额小于应收金额该记录将被设置为欠款状态.确认收款?",
+                    money = parseFloat($("#money").val());
+                if (money <= 0) {
+                    api.toast({ msg: "收息金额不能为0" });
+                    return;
+                }
+                api.confirm({
+                    title: '提示',
+                    msg: text,
+                    buttons: ['确定', '取消']
+                }, function (ret, err) {
+                    if (ret.buttonIndex != 1) return;
+                    apimui.post("inereset/accept", { id: page.id, money: money }, function (r) {
+                        if (!r || !r.s) {
+                            api.toast({ msg: r.m });
+                            return;
+                        }
+                        //收息成功
+                        api.toast({ msg: '成功' });
+                        setTimeout(function () {
+                            api.closeWin();
+                        }, 1000);
+                    });
+                });
+
+            },
+            finish: function () {
+                var text = "确认该单子收到所有本金及利息?确认完结该订单?完结后将不会再收到订单提醒.",
+                    money = parseFloat($("#money").val());
+                money = parseFloat($("#money").val());
+                if (money <= 0) {
+                    api.toast({msg: "收息金额不能为0" });
+                    return;
+                }
+                api.confirm({
+                    title: '提示',
+                    msg: text,
+                    buttons: ['确定', '取消']
+                }, function (ret, err) {
+                    if (ret.buttonIndex != 1) return;
+                    apimui.post("inereset/finish", { id: page.id, money: money }, function (r) {
+                        if (!r || !r.s) {
+                            api.toast({ msg: r.m });
+                            return;
+                        }
+                        //收息成功
+                        api.toast({ msg: '成功' });
+                        setTimeout(function () {
+                            api.closeWin();
+                        }, 1000);
+                    });
+                });
+            }
+        }
+    }
+    </script>
+
+</body>
+
+</html>

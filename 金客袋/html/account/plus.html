@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>添加单子</title>
+    <link href='../../css/api.css' rel="stylesheet" />
+    <link href='../../css/mui.css' rel="stylesheet" />
+    <link href='../../css/mui.picker.css' rel="stylesheet" />
+    <link href='../../css/mui.poppicker.css' rel="stylesheet" />
+    <link href='../../css/mui.dtpicker.css' rel="stylesheet" />
+    <link href="../../fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+
+        #wrap a:after {
+            content: '\e583';
+        }
+
+        #wrap .list {
+            margin-bottom: 15px;
+        }
+
+        #wrap .title {
+            color: #212121;
+            background: #ddd;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        #wrap input {
+            padding: 0;
+        }
+
+        #wrap ul {
+            background: #fff;
+            margin-bottom: 15px;
+        }
+
+        #wrap ul li {
+            padding: 1px 15px;
+            line-height: 40px;
+            position: relative;
+        }
+
+        #wrap .money input {
+            display: inline-block;
+            width: 180px;
+        }
+
+        #wrap .key {
+            width: 60px;
+            display: inline-block;
+        }
+
+        #wrap .iconfont {
+            color: #dddddd
+        }
+
+        #wrap .btn {
+            margin-top: 5px;
+            line-height: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>新增单子</span>
+        </div>
+    </header>
+    <div id="wrap">
+        <div class="list">
+            <ul>
+                <p class="title">借贷质料</p>
+                <li class="money bor-b">
+                    <span class="key">金额</span>
+                    <input type="tel" placeholder="输入金额">
+                    <span class="mui-pull-right">
+                        <i class="iconfont icon-jine"></i>
+                    </span>
+                </li>
+                <li class="money bor-b">
+                    <span class="key">客户</span>
+                    <span class="mui-pull-right">
+                        <span>请选择</span>
+                        <i class="iconfont icon-xiangyou"></i>
+                    </span>
+                </li>
+                <li class="money bor-b" onclick="show()">
+                    <span class="key">总周期</span>
+                    <span class="mui-pull-right">
+                        <span>1月</span>
+                        <i class="iconfont icon-xiangyou"></i>
+                    </span>
+                </li>
+            </ul>
+            <ul>
+                <p class="title">还款资料</p>
+                <li class="money bor-b" onclick="showdate()">
+                    <span class="">还款日期</span>
+                    <span class="mui-pull-right">
+                        <span>2017-12-1</span>
+                        <i class="iconfont icon-xiangyou"></i>
+                    </span>
+                </li>
+                <li class="money bor-b">
+                    <span class="">还款方式</span>
+                    <span class="mui-pull-right">
+                        <span>等额本息</span>
+                        <i class="iconfont icon-xiangyou"></i>
+                    </span>
+                </li>
+                <li class="money bor-b">
+                    <span class="key">倒扣</span>
+                    <div class="mui-switch mui-switch-mini btn mui-pull-right">
+                        <div class="mui-switch-handle"></div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <p class="title">计息方式</p>
+                <li class="money bor-b">
+                    <span class="key">利率</span>
+                    <input type="tel" placeholder="百分比">
+                    <span class="mui-pull-right">
+                        <i class="iconfont icon-icon03"></i>
+                    </span>
+                </li>
+                <li class="money bor-b">
+                    <span class="">利息金</span>
+                    <input type="tel" placeholder="应收总利息">
+                    <span class="mui-pull-right">
+                        <i class="iconfont icon-jine"></i>
+                    </span>
+                </li>
+                <li class="money bor-b">
+                    <span class="">计息周期</span>
+                    <span class="mui-pull-right">
+                        <span>等额本息</span>
+                        <i class="iconfont icon-xiangyou"></i>
+                    </span>
+                </li>
+            </ul>
+            <ul>
+                <p class="title">计息方式</p>
+                <li class="money bor-b">
+                    <span class="key">利率</span>
+                    <div class="mui-switch mui-switch-mini btn mui-pull-right">
+                        <div class="mui-switch-handle"></div>
+                    </div>
+                </li>
+                <li class="money bor-b">
+                    <span class="">出资人</span>
+                    <input type="tel" placeholder="应收总利息">
+                    <span class="mui-pull-right">
+                        <i class="iconfont icon-jine"></i>
+                    </span>
+                </li>
+                <li class="money bor-b">
+                    <span class="">空放</span>
+                    <div class="mui-switch mui-switch-mini btn mui-pull-right">
+                        <div class="mui-switch-handle"></div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <p class="title">放款资料</p>
+                <li class="money bor-b">
+                    <span class="">放款时间</span>
+                    <span class="mui-pull-right">
+                        <span>2017-12-1</span>
+                        <i class="iconfont icon-xiangyou"></i>
+                    </span>
+                </li>
+                <li class="money bor-b">
+                    <span class="">放款人</span>
+                    <span class="mui-pull-right">
+                        <span>请选择</span>
+                        <i class="iconfont icon-xiangyou"></i>
+                    </span>
+                </li>
+            </ul>
+            <ul>
+                <p class="title">提醒方式</p>
+                <li class="money bor-b" onclick="show()">
+                    <span class="">提醒</span>
+                    <span class="mui-pull-right">
+                        <span>2017-12-1</span>
+                        <i class="iconfont icon-xiangyou"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../../script/mui.js"></script>
+<script src="../../script/mui.poppicker.js"></script>
+<script src="../../script/mui.picker.js"></script>
+<script src="../../script/mui.dtpicker.js"></script>
+<script>
+  var picker = new mui.PopPicker();
+  picker.setData([{
+      value: "first",
+      text: "第一项"
+  }, {
+      value: "second",
+      text: "第一项"
+  }, {
+      value: "third",
+      text: "第三项"
+  }, {
+      value: "fourth",
+      text: "第四项"
+  }, {
+      value: "fifth",
+      text: "第五项"
+  }])
+
+  picker.pickers[0].setSelectedValue('fourth', 2000);
+
+  function show(){
+    picker.show(function(SelectedItem) {
+      alert(JSON.stringify(SelectedItem))
+  })
+  }
+
+  function showdate(){
+    var dtpicker = new mui.DtPicker({ 
+    "type": "time",
+    "customData": {
+        "h": [ 
+            { value: "am", text: "上午" },
+            { value: "pm", text: "下午" },
+        ]
+    } 
+})
+dtpicker.show(function(e) { 
+    console.log(e); 
+})
+  }
+</script>
+
+</html>

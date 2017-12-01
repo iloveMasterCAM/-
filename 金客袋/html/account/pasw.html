@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../iconfont/iconfont.css" />
+    <style>
+        #list input {
+            width: 70%;
+        }
+#list{
+    margin-top: 56px;
+}
+        #list ul {
+            background: #fff;
+
+        }
+
+        #list li {
+            padding: 0 15px;
+            line-height: 40px;
+            position: relative;
+        }
+
+        #list .title {
+            color: #212121;
+            background: #ddd;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        #head .jia {
+            position: absolute;
+            right: 10px;
+            left: auto;
+            top: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">密码修改</div>
+        <a class="mui-pull-right">
+            <span>
+                <i class="iconfont icon-dui"></i>
+            </span>
+        </a>
+    </header>
+    <div id="list">
+        <ul>
+            <li>
+                <i class="iconfont icon-yuechi"></i>
+                <input id="oldpwd" type="password" placeholder="输入旧密码">
+            </li>
+        </ul>
+        <p class="title">输入新密码</p>
+        <ul>
+            <li class="bor-b">
+                <i class="iconfont icon-yuechi"></i>
+                <input type="password" id="newpwd" placeholder="输入新密码">
+            </li>
+            <li>
+                <i class="iconfont icon-yuechi"></i>
+                <input type="password" id="newpwdtow" placeholder="再次输入新密码">
+            </li>
+
+        </ul>
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+        apiready = function () {
+            $("#submit").on('click', function () {
+                var password = $("#newpwd").val(), old = $("#oldpwd").val(), passwordtow = $("#newpwdtow").val();
+                if (password.length < 6 || old.length < 6 || passwordtow.length < 6) {
+
+                    api.toast({ msg: '请输入6位以上的密码' })
+                    return;
+                }
+                if (password != passwordtow) {
+
+                    api.toast({ msg: '两次新密码一样' })
+                    return;
+                }
+                apimui.post("account/setpassword", { oldpwd: old, newpwd: password }, function (d) {
+                    $(".aui-toast").remove();
+                    if (!d || !d.s) {
+                        api.toast({ msg: d.m })
+                        return;
+                    }
+                    api.toast({ msg: '修改成功' })
+                    setTimeout(function () {
+                        api.closeWin();
+                    }, 1000);
+                })
+            })
+        }
+
+
+
+    </script>
+</body>
+
+</html>

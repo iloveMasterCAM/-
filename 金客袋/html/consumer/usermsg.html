@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='../../css/api.css' rel="stylesheet"/>
+    <link href='../../css/mui.css' rel="stylesheet"/>
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        .title {
+            color: #212121;
+            background: #ddd;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+        #ul{
+            margin-top: 27px;
+        }
+        #ul .mui-table-view-cell:after{
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span><i class="iconfont icon-xiangzuo"></i></span>
+        </a>
+        <div class="mui-title">客户</div>
+        <a class="mui-pull-right">
+            <span><i class="iconfont icon-dui"></i></span>
+        </a>
+    </header>
+    <p class="title">基本资料</p>
+    <ul id="ul" class="mui-table-view" role="template" event="html" tempid="list_temp" api-url='cusumer/Detail' api-data='{}'>
+        <li class="mui-table-view-cell">姓名
+                <span class="mui-pull-right"><em>你好</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+        <li class="mui-table-view-cell">手机
+                <span class="mui-pull-right"><em>1775087703</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+        <li class="mui-table-view-cell">邮箱
+            <span class="mui-pull-right"><em>10910660342qqc.om</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+        <li class="mui-table-view-cell">身份证
+            <span class="mui-pull-right"><em>2121515151514454</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+        <li class="mui-table-view-cell">省份
+            <span class="mui-pull-right"><em>福建</em> </span>
+        </li>
+        <li class="mui-table-view-cell">城市
+            <span class="mui-pull-right"><em>厦门</em> </span>
+        </li>
+        <li class="mui-table-view-cell">区/县
+            <span class="mui-pull-right"><em>集美</em> </span>
+        </li>
+        <li class="mui-table-view-cell">门牌号
+            <span class="mui-pull-right"><em>21号</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+    </ul>
+    
+    <script id="list_temp" type="text/html">
+        <li class="mui-table-view-cell">姓名
+                <span class="mui-pull-right"><em>{{d.name}}</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+        <li class="mui-table-view-cell">手机
+                <span class="mui-pull-right"><em>{{d.phone}}</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+        <li class="mui-table-view-cell">邮箱
+            <span class="mui-pull-right"><em>{{d.mail}}</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+        <li class="mui-table-view-cell">身份证
+            <span class="mui-pull-right"><em>{{d.idcard}}</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+        <li class="mui-table-view-cell">省份
+            <span class="mui-pull-right"><em>{{d.p}}</em> </span>
+        </li>
+        <li class="mui-table-view-cell">城市
+            <span class="mui-pull-right"><em>{{d.c}}</em> </span>
+        </li>
+        <li class="mui-table-view-cell">区/县
+            <span class="mui-pull-right"><em>{{d.d}}</em> </span>
+        </li>
+        <li class="mui-table-view-cell">门牌号
+            <span class="mui-pull-right"><em>{{d.ad}}</em> <i class="iconfont icon-yonghu"></i></span>
+        </li>
+        <p class="title">备注</p>
+        <ul class="mui-table-view">
+           <li class="mui-table-view-cell">
+                {{d.memo}}
+           </li>
+        </ul>
+    </script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script>
+        apiready = function(){
+            var d = api.pageParam;
+            $("#ul").attr({'api-data':'{"id":"'+d.id+'"}'})
+            apimui.config();
+            // apimui.post('cusumer/Detail',{id:d.id},function(r){
+            //     alert(JSON.stringify(r))
+            // })
+        }
+    </script>
+</body>
+</html>

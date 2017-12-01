@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../iconfont/iconfont.css" />
+    <link href="../../css/swiper.min.css" rel="stylesheet" />
+    <style>
+        #list .ul {
+            padding-left: 15px;
+            position: relative;
+            margin-top: 10px;
+            background: #fff;
+        }
+
+        #list {
+            margin-top: 60px;
+        }
+
+        #list .ul li {
+            line-height: 45px;
+            position: relative;
+            padding-right: 15px;
+
+        }
+
+        #list .ul img {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 10px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">个人信息</div>
+
+    </header>
+    <div class="" id="list" role="template" event="html" tempid="user_temp" api-url='account/info'>
+        <ul class="ul bor-b">
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">头像</span>
+                <div class="mui-row mui-pull-right">
+                    <img src="../../image/head.jpg" alt="">
+                    <i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">昵称</span>
+                <div class="mui-row mui-pull-right">
+                    <span>你好</span>
+                    <i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row">
+                <span class="mui-pull-left">昵称</span>
+                <div class="mui-row mui-pull-right">
+                    <span>你好</span>
+                    <i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul bor-b">
+            <li class="mui-row">
+                <span class="mui-pull-left">手机号</span>
+                <div class="mui-row mui-pull-right">
+                    <span>17750877003</span>
+                    <i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul bor-b">
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">性别</span>
+                <div class="mui-row mui-pull-right">
+                    <span>男</span>
+                    <i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">QQ</span>
+                <div class="mui-row mui-pull-right">
+                    <span>121212121</span>
+                    <i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row">
+                <span class="mui-pull-left">城市</span>
+                <div class="mui-row mui-pull-right">
+                    <span>厦门市</span>
+                    <i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul bor-b">
+            <li class="mui-row">
+                <span class="mui-pull-left">地址</span>
+                <div class="mui-row mui-pull-right">
+                    <span>厦门市</span>
+                    <i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/html" id="user_temp">
+        <ul class="ul bor-b">
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">头像</span>
+                <div class="mui-row mui-pull-right">
+                    <img src="{{d.head}}?w=100" alt=""><i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">昵称</span>
+                <div class="mui-row mui-pull-right">
+                    <span>{{d.nick}}</span><i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row">
+                <span class="mui-pull-left">名字</span>
+                <div class="mui-row mui-pull-right">
+                    <span>{{d.name}}</span><i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul bor-b">
+            <li class="mui-row">
+                <span class="mui-pull-left">手机号</span>
+                <div class="mui-row mui-pull-right">
+                    <span>{{d.phone}}</span><i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul bor-b">
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">性别</span>
+                <div class="mui-row mui-pull-right">
+                    <span>{{d.sex}}</span><i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-pull-left">QQ</span>
+                <div class="mui-row mui-pull-right">
+                    <span>{{d.qq}}</span><i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row">
+                <span class="mui-pull-left">城市</span>
+                <div class="mui-row mui-pull-right">
+                    <span>{{d.city}}</span><i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul bor-b">
+            <li class="mui-row">
+                <span class="mui-pull-left">地址</span>
+                <div class="mui-row mui-pull-right">
+                    <span>{{d.ad}}</span><i class="iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+    </script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+        apiready = function () {
+            // alert(JSON.stringify(api.pageParam))
+            //var j = api.pageParam; unexpected end of input at
+            // $("#list,#wrap").attr({'api-data':'{"id":"'+j.id+'"}'})
+            apimui.config();
+            // inereset/preview
+        }
+
+    </script>
+</body>
+
+</html>

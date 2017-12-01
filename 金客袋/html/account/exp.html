@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>经验值</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../iconfont/iconfont.css" />
+    <style>
+        #head,
+        #role {
+            background: #FB6F18;
+        }
+        #head{
+            line-height: 45px;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        #head span,
+        #head i {
+            color: #fff;
+        }
+
+        #role {
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+        }
+
+        #role .role {
+        width: 80px;
+            text-align: center;
+            line-height: 80px;
+            background: #fff;
+            color: #FB6F18;
+            margin: 15px auto;
+            box-shadow: 0 0 13px 10px #fff;
+            border-radius: 50%;
+            border: 1px solid #FB6F18; 
+   
+
+        }
+
+        #role i {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        #list {
+            background: #fff;
+          
+            position: relative;
+        }
+
+        #list li {
+            line-height: 45px;
+            padding: 0 15px;
+        }
+
+        #list .solid{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 22px;
+            width: 1px;
+            background: #ccc;
+            z-index: 2;
+        }
+        .icon-aixin{
+            color: #ccc
+        }
+        .date{
+            padding-left: 15px;
+            line-height: 40px;
+            position: relative;
+            z-index: 5;
+            background: #fff;
+        } 
+    </style>
+</head>
+
+<body>
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>经验值</span>
+        </div>
+    </header>
+    <div id="role" class="mui-text-center">
+        <p class="role">业务员</p>
+        <p>
+            <i class="iconfont icon-xiangshang">24</i>
+        </p>
+    </div>
+   <div id="box" role="template" event="html" tempid="list_temp" api-url='expire/paged'>
+
+
+   </div>
+   
+    
+    <script id="list_temp" type="text/html">
+        {{each d as r}}
+        <ul id="list" >
+            <p class="date">{{r.date}}</p>
+            <p class="solid"></p>
+            {{each r.list as l ii}}
+            <li class="mui-row">
+                <i class="iconfont icon-aixin"></i>
+                {{l.content}}
+                <span class="mui-pull-right">  {{l.time}}</span>
+            </li>
+            {{/each}}
+        </ul>
+        {{/each}}
+    </script>
+</body>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/mui.js"></script>
+<script src="../../js/artTemplate.js"></script>
+<script src="../../js/apiinit.js"></script>
+<script>
+//expire/paged
+    apiready = function(){
+        apimui.config();
+    }
+
+</script>
+</html>

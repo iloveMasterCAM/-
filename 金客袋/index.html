@@ -35,6 +35,7 @@
         #header .search input {
             background: #0065b2;
             height: 23px;
+            width: 100%;
         }
 
         /*cccccc*/
@@ -96,7 +97,7 @@
         }
 
         #header .set {
-            background: #0071c7;
+            background: #03a9f4
         }
 
         #header .set p {
@@ -188,24 +189,24 @@ Object.prototype.chain = function (callback) {
         return callback();
     }
     apiready = function () {
-        // if (!localStorage["token"]) {
-        //     openLogin();
-        //     return;
-        // }
+        if (!localStorage["token"]) {
+            openLogin();
+            return;
+        }
         openFrameGroup();
     };
 
 
     function openLogin() {
-        // setTimeout(function () {
-        //     api.openWin({
-        //         name: 'login_win',
-        //         url: 'html/user/login.html',
-        //         animation: {
-        //             type: 'none'
-        //         }
-        //     });
-        // }, 200);
+        setTimeout(function () {
+            api.openWin({
+                name: 'login_win',
+                url: 'html/account/login.html',
+                animation: {
+                    type: 'none'
+                }
+            });
+        }, 200);
     }
 
 
@@ -260,7 +261,7 @@ Object.prototype.chain = function (callback) {
         $(".jia").on('click',function(){
             api.openWin({
                 name:'plus',
-                url:'html/index/plus.html'
+                url:'html/orders/add.html'
             })
         })
         $(".cicle").on('click',function(){

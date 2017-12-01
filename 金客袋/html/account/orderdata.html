@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../fonts/iconfont/iconfont.css" />
+    <title>Document</title>
+    <style>
+        .title{
+            color: #FB6F18;
+            line-height: 45px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>账单</span>
+        </div>
+    </header>
+    <div id="box" role='template' event="append" tempid="box_tamp" api-url='pay/detail'>
+
+    </div>
+    <script id="box_tamp" type="text/html">
+        <p class="mui-text-center title">{{d.order.money}}</p>
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">标题 
+                <span class="mui-pull-right"> {{d.order.name}}</span>
+            </li>
+            <li class="mui-table-view-cell">状态
+                <span class="mui-pull-right"> {{d.order.status}}</span>
+            </li>
+            <li class="mui-table-view-cell">订单编号 
+                <span class="mui-pull-right"> {{d.order.no}}</span>
+            </li>
+            <li class="mui-table-view-cell">订单类型 
+                <span class="mui-pull-right">{{d.order.type}}</span>
+            </li>
+            <li class="mui-table-view-cell">订单方式 
+                <span class="mui-pull-right"> {{d.order.method}}</span>
+            </li>
+            <li class="mui-table-view-cell"> 
+                {{d.order.content}}
+            </li>
+        </ul>
+    </script>
+    
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+    
+    apiready = function(){
+         var d = api.pageParam;
+   
+         $("#box").attr({'api-data':'{"id":"'+d.id+'"}'})
+        //account/billdetail
+        apimui.config();
+        // apimui.post('pay/detail')
+    }
+
+    </script>
+</body>
+</html>

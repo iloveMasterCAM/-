@@ -50,31 +50,44 @@
         }
         .list .money{
             margin-top: 25px;
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 500;
         }
         .mui-w img{
             width: 100%;
             margin-top: 5px;
         }
+        .img{
+            margin-top: 10px;
+        }
+        .color{
+            font-size: 12px;
+            color: #ccc;
+        }
+        .green{
+            color: green;
+        }
+        .red{
+            color: red;
+        }
     </style>
 </head>
 
 <body>
     <div class="mui-row mui-text-center" id="nav">
-        <div class="mui-col-xs-3" event='click' api-name='plus' api-url='plus.html'>
+        <div class="mui-col-xs-3" event='click' api-name='plus' api-url='../orders/add.html'>
             <p>
                 <i class="iconfont icon-icon19"></i>
             </p>
             <p>加单</p>
         </div>
-        <div class="mui-col-xs-3" event='click' api-name='user' api-url='user.html'>
+        <div class="mui-col-xs-3" event='click' api-name='user' api-url='../consumer/user.html'>
             <p>
                 <i class="iconfont icon-yonghu"></i>
             </p>
             <p>客户</p>
         </div>
-        <div class="mui-col-xs-3" event='click' api-name='user' api-url='user.html'>
+        <div class="mui-col-xs-3" event='click' api-name='user' api-url='../consumer/user.html' api-data='{"key":"hhr"}'>
             <p>
                 <i class="iconfont icon-hehuoren2"></i>
             </p>
@@ -120,25 +133,44 @@
             <div class="mui-pull-left">
                 本月出帐
             </div>
-            <div class="mui-pull-right">放款总额</div>
+            <div class="mui-pull-right color">放款总额</div>
         </div>
-        <p class="mui-text-center money">￥1210.112</p>
+        <p class="mui-text-center money red">￥1210.112</p>
     </div>
     <div class="list mui-w">
         <div class="mui-row">
             <div class="mui-pull-left">
                 本月出帐
             </div>
-            <div class="mui-pull-right">放款总额</div>
+            <div class="mui-pull-right color">放款总额</div>
         </div>
-        <p class="mui-text-center money">￥1210.112</p>
+        <p class="mui-text-center money green">￥1210.112</p>
     </div>
-    <div class="mui-w">
+    <div class="mui-w img">
         <img src="../../image/faq.png" alt="">
     </div>
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
+    <script>
+        apiready = function(){
+            apimui.config();
+            api.setRefreshHeaderInfo({
+        loadingImg: 'widget://image/refresh.png',
+        bgColor: '#fff',
+        textColor: '#ccc',
+        textDown: '下拉刷新...',
+        textUp: '松开刷新...'
+    }, function(ret, err) {
+   
+        setTimeout(function(){
+            api.refreshHeaderLoadDone();
+        },1000)
+        //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+        
+    });
+        }
+        </script>
 </body>
 
 </html>

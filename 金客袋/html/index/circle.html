@@ -67,7 +67,23 @@
     <script type="text/javascript" src="../../js/swiper.min.js"></script>
     <script>
         var mySwiper = new Swiper('.swiper-container', {})
+        apiready = function(){
+    
+            api.setRefreshHeaderInfo({
+        loadingImg: 'widget://image/refresh.png',
+        bgColor: '#fff',
+        textColor: '#ccc',
+        textDown: '下拉刷新...',
+        textUp: '松开刷新...'
+    }, function(ret, err) {
+        //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+        setTimeout(function(){
+            api.refreshHeaderLoadDone();
+        },1000)
+    });
+        }
     </script>
+     
 </body>
 
 </html>

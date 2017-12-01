@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../fonts/iconfont/iconfont.css" />
+    <title>充值</title>
+    <style>
+        #radio input[type='radio'] {
+            position: static;
+        }
+
+        #radio label {
+            padding: 0;
+
+        }
+
+        #radio label {
+            background: #fff;
+            padding: 10px 15px;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #input {
+            background: #fff;
+            margin-top: 10px;
+            line-height: 45px;
+            padding: 0 15px;
+        }
+
+        #input input {
+            width: 70%;
+            ;
+        }
+
+        .title {
+            color: #212121;
+            background: #ddd;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        #btn button {
+            width: 80%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>充值</span>
+        </div>
+    </header>
+    <p class="title">选择充值类型</p>
+    <div class="mui-input-row mui-radio" id="radio">
+        <label class="mui-row">
+            <div class="mui-row">
+                <span class="mui-pull-left">金额</span>
+                <input name="radio" type="radio" class="mui-pull-right">
+            </div>
+            <p>现金金额</p>
+        </label>
+        <label class="mui-row">
+            <div class="mui-row">
+                <span class="mui-pull-left">银两</span>
+                <input name="radio" type="radio" class="mui-pull-right">
+            </div>
+            <p>1元等于10两</p>
+        </label>
+        <label class="mui-row">
+            <div class="mui-row">
+                <span class="mui-pull-left">短信</span>
+                <input name="radio" type="radio" class="mui-pull-right">
+            </div>
+            <p>1元等于短信</p>
+        </label>
+    </div>
+    <div class="mui-row" id="input">
+        <span class="mui-pull-left">金额</span>
+        <input class="mui-pull-left" type="text" placeholder="输入充值金额">
+        <i class="mui-pull-right iconfont icon-yue"></i>
+    </div>
+    <p></p>
+    <div class="mui-text-center" id="btn">
+        <button type="button" class="mui-btn mui-btn-warning ">黄色</button>
+    </div>
+
+
+    <!-- <div class="mui-input-row mui-checkbox">
+        <label>checkbox示例</label>
+        <input name="checkbox1" value="Item 1" type="checkbox" checked>
+    </div> -->
+</body>
+
+</html>

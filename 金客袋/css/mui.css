@@ -1492,7 +1492,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     padding-left: 10px;
 
     border-bottom: 0;
-    background-color: #f7f7f7;
+    background-color: #fff;
     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .85);
             box-shadow: 0 0 1px rgba(0, 0, 0, .85);
 

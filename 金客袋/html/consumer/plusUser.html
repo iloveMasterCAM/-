@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>升官</title>
+    <link href='../../css/api.css' rel="stylesheet" />
+    <link href='../../css/mui.css' rel="stylesheet" />
+    <link href="../../fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.css" rel="stylesheet" />
+    <link href="../../css/mui.poppicker.css" rel="stylesheet" />
+    <style>
+        #list .icon-xiangyou,
+        #list .xiangyou {
+            float: right;
+            text-align: right;
+        }
+
+        #list li {
+            line-height: 40px;
+            position: relative;
+            /*            padding: 0 15px;*/
+            padding-right: 15px;
+        }
+
+        #list .title {
+            color: #212121;
+            background: #ddd;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        #list input,
+        #list textarea {
+            padding: 0;
+        }
+
+        #list textarea {
+            height: 80px;
+            padding-top: 5px;
+        }
+
+        #list>ul {
+            margin-bottom: 10px;
+            background: #fff;
+            padding-left: 15px;
+        }
+
+        .icon-dui {
+            position: absolute;
+            top: 25px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>新增单子</span>
+            <span id="submit" class="iconfont icon-dui mui-pull-right"></span>
+        </div>
+    </header>
+    <div id="list" event='form' api-url='' submitid='submit'>
+        <p class="title">基本资料</p>
+        <ul>
+
+            <li class="mui-row bor-b">
+                <span class="mui-col-xs-2">姓名</span>
+                <div class="mui-col-xs-8">
+                    <input name="Name" type="text" placeholder="真实姓名">
+                </div>
+                <i class="mui-col-xs-1 iconfont icon-xiangyou"></i>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-col-xs-2">手机</span>
+                <div class="mui-col-xs-8">
+                    <input name="Phone" type="text" placeholder="手机号">
+                </div>
+                <i class="mui-col-xs-1 iconfont icon-xiangyou"></i>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-col-xs-2">邮箱</span>
+                <div class="mui-col-xs-8">
+                    <input name="Email" type="text" placeholder="联系邮箱">
+                </div>
+                <i class="mui-col-xs-1 iconfont icon-xiangyou"></i>
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-col-xs-2">身份证</span>
+                <div class="mui-col-xs-8">
+                    <input name="IDCardNumber" type="text" placeholder="身份证号">
+                </div>
+                <i class="mui-col-xs-1 iconfont icon-xiangyou"></i>
+            </li>
+            <li class="mui-row bor-b" id="showCityPicker3">
+                <span class="mui-col-xs-2">区域</span>
+
+                <span class="mui-col-xs-7 xiangyou">
+                    <span id="quyu">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </span>
+                <input type="hidden" name="quyu" id="quyu_input" value="">
+            </li>
+            <li class="mui-row bor-b">
+                <span class="mui-col-xs-3">详细地址</span>
+                <div class="mui-col-xs-8">
+                    <input name="Address" type="text" placeholder="详细地址">
+                </div>
+                <i class="mui-col-xs-1 iconfont icon-xiangyou"></i>
+            </li>
+        </ul>
+
+
+        <p class="title">扩展资料</p>
+        <ul>
+
+            <li class="mui-row">
+                <span class="mui-col-xs-2">备注</span>
+                <textarea class="mui-col-xs-9" placeholder="输入备注"></textarea>
+            </li>
+        </ul>
+    </div>
+
+    <script src="../../script/jquery.js"></script>
+    <script src="../../script/mui.js"></script>
+    <script src="../../script/apiinit.js"></script>
+    <script src="../../script/mui.picker.js"></script>
+    <script src="../../script/mui.poppicker.js"></script>
+    <script src="../../script/city.data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../script/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        apiready = function () {
+
+            function seralize(o) {
+                var data = {}, $o = $(o).find('input,textarea,select');
+                $o.each(function (i, o) {
+                    var o = this;
+                    if (o.nodeName == 'INPUT' || o.nodeName == 'TEXTAREA' || o.nodeName == 'SELECT') {
+                        if (o.name) {
+                            data[o.name] = o.value || '';
+                        }
+                    }
+                })
+                return data;
+            }
+
+            apimui.config();
+            mui.ready(function () {
+                var doc = document;
+                var _getParam = function (obj, param) {
+                    return obj[param] || '';
+                };
+                var cityPicker3 = new mui.PopPicker({
+                    layer: 3
+                });
+                cityPicker3.setData(cityData3);
+                var showCityPickerButton = doc.getElementById('showCityPicker3');
+                var cityResult3 = doc.getElementById('quyu_input');//quyu
+                var quyu = doc.getElementById('quyu')
+                showCityPickerButton.addEventListener('tap', function (event) {
+                    cityPicker3.show(function (items) {
+
+                        cityResult3.value = items[0].text + "/ " + items[1].text + "/" + items[2].text
+                        quyu.innerText = items[0].text + "/ " + items[1].text + "/" + items[2].text
+                        //返回 false 可以阻止选择框的关闭
+                        //return false;
+                    });
+
+                }, false);
+            })();
+
+            $("#submit").on('click', function () {
+                var d = seralize("#list");
+
+                apimui.post('Cusumer/Add', d, function (r, d) {
+                    alert(JSON.stringify(r))
+                })
+            })
+        }
+        // 7fd374b4-16a6-4269-86b4-cb02879da8a4
+
+
+    </script>
+</body>
+
+</html>

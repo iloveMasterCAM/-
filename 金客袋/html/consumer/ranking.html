@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='../../css/api.css' rel="stylesheet" />
+    <link href='../../css/mui.css' rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+.li{
+    position: relative;
+}
+    .li>div{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .li .right{
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+    .li{
+        padding: 10px;
+    }
+    .li img{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .title{
+        line-height: 45px;
+        padding: 0 15px;
+        background: #fff;
+        margin-top: 56px;
+    }
+    .li .cc{
+        color: rgb(134, 133, 133)
+    }
+    .li .name{
+        color: #000;
+    }
+    </style>
+</head>
+<body>
+        <header class="mui-bar mui-bar-nav">
+                <a class="mui-pull-left" onclick="api.closeWin();">
+                    <span><i class="iconfont icon-xiangzuo"></i></span>
+                </a>
+                <div class="mui-title">荣升榜</div>
+               
+            </header>
+    <p class="mui-row title bor-b">
+        <span class="mui-pull-left">
+            官职递进
+        </span>
+        <span class="mui-pull-right">
+            授国库奖
+        </span>
+    </p>
+    <ul class="mui-w"  id="ul" role="template" event="html" tempid="temp" api-url='offcer/honour' api-data='{}'>
+        <li class="li bor-b">
+            <div>
+                <img src="../../image/head.jpg" alt="">
+            </div>
+            <div>
+                <p class="name">年后</p>
+                <p class="cc">正三品</p>
+            </div>
+            <div class="right">
+                <p class="cc">大将军</p>
+                <p class="cc"><i class="iconfont icon-xuesheng"></i>1人</p>
+            </div>
+        </li>
+        <li class="li bor-b">
+                <div>
+                    <img src="../../image/head.jpg" alt="">
+                </div>
+                <div>
+                    <p class="name">年后</p>
+                    <p class="cc">正三品</p>
+                </div>
+                <div class="right">
+                    <p class="cc">大将军</p>
+                    <p class="cc"><i class="iconfont icon-xuesheng"></i>1人</p>
+                </div>
+            </li>
+
+            <li class="li bor-b">
+                    <div>
+                        <img src="../../image/head.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="name">年后</p>
+                        <p class="cc">正三品</p>
+                    </div>
+                    <div class="right">
+                        <p class="cc">大将军</p>
+                        <p class="cc"><i class="iconfont icon-xuesheng"></i>1人</p>
+                    </div>
+                </li>
+    </ul>
+    <!-- offcer/honour -->
+    <script id="temp" type="text/html">
+        {{each d as d i}}
+        <li class="li bor-b">
+                <div>
+                    <img src="{{d.head}}?w=150" alt="">
+                </div>
+                <div>
+                    <p class="name">{{d.name}}</p>
+                    <p class="cc">{{d.role.aliag}}</p>
+                </div>
+                <div class="right">
+                    <p class="cc">{{d.role.name}}</p>
+                    <p class="cc"><i class="iconfont icon-xuesheng"></i> {{d.sub}}人</p>
+                </div>
+            </li>
+            {{/each}}
+    </script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+    
+    apiready = function(){
+        apimui.config();
+    }
+   
+    </script>
+</body>
+</html>

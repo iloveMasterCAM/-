@@ -28,9 +28,11 @@
         .list_head p {
             color: #666;
         }
-        .list_head{
+
+        .list_head {
             position: relative;
         }
+
         .xiaoxi {
             width: 35px;
             text-align: center;
@@ -57,7 +59,8 @@
             background: #fcfcfc;
             border-radius: 0 0 5px 5px;
         }
-        .more_{
+
+        .more_ {
             position: absolute;
             right: 15px;
             top: 0px;
@@ -66,114 +69,124 @@
 </head>
 
 <body>
-    <div class="list mui-w">
-        <div class="list_head mui-padd-lr">
-            <div>
-                <p class="xiaoxi">
-                    <i class="iconfont icon-xiaoxi"></i>
+    <div id="list" role="template" event="html" tempid="temp" api-url='message/paged' api-data='{}'>
+        <div class="list mui-w">
+                <div class="list_head mui-padd-lr">
+                    <div>
+                        <p class="xiaoxi">
+                            <i class="iconfont icon-xiaoxi"></i>
+                        </p>
+                    </div>
+                    <div>
+                        <p>系统消息</p>
+                        <p>3小时前</p>
+                    </div>
+                    <p class="more_">
+                        <i class="iconfont icon-gengduo"></i>
+                    </p>
+                </div>
+                <div class="mui-padd-lr">
+                    <p class="txt">你好你好你好你好</p>
+                </div>
+                <div class="mui-text-center more">
+                    点击查看
+                </div>
+            </div>
+            <div class="list mui-w">
+                <div class="list_head mui-padd-lr">
+                    <div>
+                        <p class="xiaoxi">
+                            <i class="iconfont icon-xiaoxi"></i>
+                        </p>
+                    </div>
+                    <div>
+                        <p>系统消息</p>
+                        <p>3小时前</p>
+                    </div>
+                    <p class="more_">
+                        <i class="iconfont icon-gengduo"></i>
+                    </p>
+                </div>
+                <div class="mui-padd-lr">
+                    <p class="txt">你好你好你好你好</p>
+                </div>
+                <div class="mui-text-center more">
+                    点击查看
+                </div>
+            </div>
+            <div class="list mui-w">
+                <div class="list_head mui-padd-lr">
+                    <div>
+                        <p class="xiaoxi">
+                            <i class="iconfont icon-xiaoxi"></i>
+                        </p>
+                    </div>
+                    <div>
+                        <p>系统消息</p>
+                        <p>3小时前</p>
+                    </div>
+                    <p class="more_">
+                        <i class="iconfont icon-gengduo"></i>
+                    </p>
+                </div>
+                <div class="mui-padd-lr">
+                    <p class="txt">你好你好你好你好</p>
+                </div>
+                <div class="mui-text-center more">
+                    点击查看
+                </div>
+            </div>
+        
+    </div>
+    
+    <script id="temp" type="text/html">
+        {{each d as val}}
+    <div class="list mui-w" id='{{val.id}}' event='click' api-name='data' api-url='../message/data.html' api-data='{"id":"{{val.id}}"}'>
+            <div class="list_head mui-padd-lr">
+                <div>
+                    <p class="xiaoxi">
+                        <i class="iconfont icon-xiaoxi"></i>
+                    </p>
+                </div>
+                <div>
+                        <p>{{val.sender}}</p>
+                        <p>{{val.time}}</p>
+                </div>
+                <p class="more_">
+                    <i class="iconfont icon-gengduo"></i>
                 </p>
             </div>
-            <div>
-                <p>系统消息</p>
-                <p>3小时前</p>
+            <div class="mui-padd-lr">
+                <p class="txt">{{val.c}}</p>
             </div>
-            <p class="more_">
-                <i class="iconfont icon-gengduo"></i>
-            </p>
-        </div>
-        <div class="mui-padd-lr">
-            <p class="txt">你好你好你好你好</p>
-        </div>
-        <div class="mui-text-center more">
-            点击查看
-        </div>
-    </div>
-    <div class="list mui-w">
-        <div class="list_head mui-padd-lr">
-            <div>
-                <p class="xiaoxi">
-                    <i class="iconfont icon-xiaoxi"></i>
-                </p>
+            <div class="mui-text-center more">
+                点击查看
             </div>
-            <div>
-                <p>系统消息</p>
-                <p>3小时前</p>
-            </div>
-            <p class="more_">
-                <i class="iconfont icon-gengduo"></i>
-            </p>
         </div>
-        <div class="mui-padd-lr">
-            <p class="txt">你好你好你好你好</p>
-        </div>
-        <div class="mui-text-center more">
-            点击查看
-        </div>
-    </div>
-    <div class="list mui-w">
-        <div class="list_head mui-padd-lr">
-            <div>
-                <p class="xiaoxi">
-                    <i class="iconfont icon-xiaoxi"></i>
-                </p>
-            </div>
-            <div>
-                <p>系统消息</p>
-                <p>3小时前</p>
-            </div>
-            <p class="more_">
-                <i class="iconfont icon-gengduo"></i>
-            </p>
-        </div>
-        <div class="mui-padd-lr">
-            <p class="txt">你好你好你好你好</p>
-        </div>
-        <div class="mui-text-center more">
-            点击查看
-        </div>
-    </div>
-    <div class="list mui-w">
-        <div class="list_head mui-padd-lr">
-            <div>
-                <p class="xiaoxi">
-                    <i class="iconfont icon-xiaoxi"></i>
-                </p>
-            </div>
-            <div>
-                <p>系统消息</p>
-                <p>3小时前</p>
-            </div>
-            <p class="more_">
-                <i class="iconfont icon-gengduo"></i>
-            </p>
-        </div>
-        <div class="mui-padd-lr">
-            <p class="txt">你好你好你好你好</p>
-        </div>
-        <div class="mui-text-center more">
-            点击查看
-        </div>
-    </div>
+    {{/each}}
+</script>
+
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
     <script>
-        apiready = function(){
-    
+        apiready = function () {
+            apimui.config();
             api.setRefreshHeaderInfo({
-        loadingImg: 'widget://image/refresh.png',
-        bgColor: '#fff',
-        textColor: '#ccc',
-        textDown: '下拉刷新...',
-        textUp: '松开刷新...'
-    }, function(ret, err) {
-        //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
-        setTimeout(function(){
-            api.refreshHeaderLoadDone();
-        },1000)
-    });
+                loadingImg: 'widget://image/refresh.png',
+                bgColor: '#fff',
+                textColor: '#ccc',
+                textDown: '下拉刷新...',
+                textUp: '松开刷新...'
+            }, function (ret, err) {
+                //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+                setTimeout(function () {
+                    api.refreshHeaderLoadDone();
+                }, 1000)
+            });
         }
-        </script>
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='../../css/api.css' rel="stylesheet" />
+    <link href='../../css/mui.css' rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+    #join{
+        background: #fff;
+        padding: 15px;
+        margin-top: 10px;
+    }
+    #join h4{
+        font-weight: 500;
+        font-size: 28px;
+    }
+    #list{
+        background: #fff;
+        margin-top: 10px;
+    }
+    #input{
+        background: #fff;
+        text-align: center;
+        margin-top: 10px;
+    }
+    #input input{
+        width: auto;
+        padding: 0;
+    }
+    #list li{
+        padding:10px 15px;
+    }
+    #list p{
+        padding-left: 15px;
+        line-height: 35px;
+    }
+    #list .coder{
+        color: #ffa361;
+    }
+    #head{
+        background: #fff;
+        line-height: 45px;
+        padding-top: 15px;
+    }
+    #head i{
+        position: relative;
+        left: 15px;
+        
+    }
+    #list{}
+    #list{}
+    #list{}
+
+
+    </style>
+</head>
+<body>
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>招贤纳士</span>
+           
+        </div>
+    </header>
+<div id="join">
+    <p>招贤令</p>
+    <h4 class="mui-text-center" id="orders">121</h4>
+    <p>注册时填写业务员编码</p>
+</div>
+<div id="input">
+    <i class="iconfont icon-fangdajing"></i> <input type="text" placeholder="输入招贤令">
+</div>
+<div>
+    <!-- offcer/subuser -->
+    <ul class="" id="list"  role="template" event="html" tempid="list_temp" api-url='offcer/subuser' api-data='{}' >
+        <p>我的门客</p>
+        <li class="bor-t">
+            <div>
+                <em>你好</em>
+                <span class="coder">[11121]</span>
+                <span class="mui-pull-right">13954515454</span>
+            </div>
+            <div>
+                <span><i class="iconfont icon-guan"></i> 业务员</span>
+                <span class="mui-pull-right">无官衔</span>
+            </div>
+        </li>
+        <li class="bor-t">
+                <div>
+                    <em>你好</em>
+                    <span class="coder">[11121]</span>
+                    <span class="mui-pull-right">13954515454</span>
+                </div>
+                <div>
+                        <span><i class="iconfont icon-guan"></i> 业务员</span>
+                    <span class="mui-pull-right">无官衔</span>
+                </div>
+            </li>
+            <li class="bor-t">
+                    <div>
+                        <em>你好</em>
+                        <span class="coder">[11121]</span>
+                        <span class="mui-pull-right">13954515454</span>
+                    </div>
+                    <div>
+                            <span><i class="iconfont icon-guan"></i> 业务员</span>
+                        <span class="mui-pull-right">无官衔</span>
+                    </div>
+                </li>
+    </ul>
+</div>
+<script id="list_temp" type="text/html">
+    <p>我的门客</p>
+    {{each d as d i}}
+    <li class="bor-t"  onclick="search('{{d.number}}')">
+        <div>
+            <em>{{d.name}}</em>
+            <span class="coder">[{{d.number}}]</span>
+            <span class="mui-pull-right">{{d.phone}}</span>
+        </div>
+        <div>
+            <span><i class="iconfont icon-guan"></i> {{d.role.name}}</span>
+            <span class="mui-pull-right">{{d.role.aliag}}</span>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<!-- offcer/number -->
+<script src="../../js/jquery.js"></script>
+<script src="../../js/mui.js"></script>
+<script src="../../js/artTemplate.js"></script>
+<script src="../../js/apiinit.js"></script>
+<script>
+
+apiready = function(){
+    apimui.config();
+    apimui.post('offcer/number',{},function(r){
+        // alert(JSON.stringify(r))
+        $("#orders").text(r.d)
+    })
+}
+function search(){
+    
+}
+</script>
+</body>
+</html>

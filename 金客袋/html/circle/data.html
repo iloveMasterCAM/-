@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../iconfont/iconfont.css" />
+    <style>
+        #txt {
+            background: #fff;
+            padding: 10px 15px;
+            position: relative;
+            top: 56px;
+        }
+
+        #txt .head {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        #txt .data_img>div {
+            height: 100px;
+            background: no-repeat center center;
+            background-size: cover;
+        }
+
+        #txt span {
+            color: #777;
+        }
+
+        #txt .addres {
+            line-height: 35px;
+        }
+        .footer{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            color: #ccc;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+            <a class="mui-pull-left" onclick="api.closeWin();">
+                <span><i class="iconfont icon-xiangzuo"></i></span>
+            </a>
+            <div class="mui-title">圈子详情</div>
+        </header>
+    <!-- sysnews/detail -->
+    <div class="mui-row" id="txt" role="template" event="append" tempid="tet_temp" api-url='circle/detail' api-data='{}'>
+
+    </div>
+    <script type="text/html" id="tet_temp">
+    <div class="mui-col-xs-2" av-id="{{d.member.id}}"><img class="head" src="{{d.member.head}}?w=35" alt=""></div>
+        <div class="mui-pull-right mui-col-xs-10">
+            <p>{{d.member.name}}</p>
+            <p>{{d.content}}</p>
+         <!--  -->
+            <div class="data_img mui-row">
+                {{if d.images.length==1}}
+               
+                <div class="mui-col-xs-12" style="background-image:url({{d.images[0]}}?w=600);" av-img="{{d.images[0]}}"></div>
+                {{/if}}
+                {{if d.images.length==2}}
+                {{each d.images as img i}}
+                <div class="mui-col-xs-6" style="background-image:url('{{img}}?w=400');height:7.5rem;" av-img="{{img}}">
+
+                </div>
+                {{/each}}
+                {{/if}}
+                {{if d.images.length>=3}}
+                {{each d.images as img i}}
+                <div class="mui-col-xs-4" style="background-image:url('{{img}}?w=200')" av-img="{{img}}">
+
+                </div>
+                {{/each}}
+                {{/if}}
+              
+              
+            </div>
+            <div class="mui-row addres">
+                <span class="mui-pull-left">{{d.q}}</span>
+                <span class="mui-pull-right">#{{d.tag}}#</span>
+            </div>
+             <div class="mui-row mui-text-center">
+                <span class="mui-pull-left">{{d.time}}</span>
+                <span><i class="iconfont icon-chakan">{{d.read}} </i></span>
+                <span class="mui-pull-right"><i class="iconfont icon-dianzan-copy">{{d.pra}}</i></span>
+            </div>
+        </div>
+      
+    </script>
+    <p class="mui-text-center footer">评论留言功能稍后开放</p>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script>
+
+        apiready = function () {
+            var d = api.pageParam;
+
+             $("#txt").attr({ 'api-data': '{"id":"' + d.id + '"}' })
+            apimui.config();
+            // apimui.post('circle/detail', { id: d.id }, function (r) {
+            //     alert(JSON.stringify(r.d.images))
+            // })
+        }
+
+    </script>
+</body>
+
+</html>

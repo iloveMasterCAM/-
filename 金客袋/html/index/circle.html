@@ -60,10 +60,14 @@
             top: 5px;
         }
         .img_box{
+            height: 100px;
+        }
+        .img_box.active{
             height: 150px;
         }
         .list .txt{
-            text-indent: 2rem;
+            text-indent: 2.5rem;
+            padding: 5px 15px;
         }
         .list .name{
             color: #06aaf4;
@@ -75,9 +79,9 @@
             color: #333;
         }
         #plus_{
-            width: 45px;
-            height: 45px;
-            line-height: 45px;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
             background:red;
             position: fixed;
             right: 20px;
@@ -191,71 +195,121 @@
         </div>
         <p class="title">今日头条</p>
     </div>
-    <div class="list mui-w">
-        <div class="list_head mui-padd-l">
-            <div><img src="../../image/head.png" alt=""></div>
-            <div>
-                <p class="name">你好</p>
-                <p class="addres">厦门市/集美区</p>
-            </div>
-            <div class="time">
-                <p class="label">#放空#</p>
-                <p class="cc">121</p>
-            </div>
-        </div>
-        <div>
-            <p class="txt">nihonihonihonihonihoniho</p>
-            <div class="mui-row ">
-                <div class="mui-col-xs-12 img_box" style="background: url(../../image/Contaact.png); background-repeat: no-repeat;background-size: cover;"></div>
-            </div>
-        </div>
-        <div class="mui-row mui-padd-lr tag">
-            <div class="mui-pull-left">
-                <i class="iconfont icon-chakan"></i>12
-            </div>
-            <div class="mui-pull-right">
-                <i class="iconfont icon-dianzan-copy"></i>12
-            </div>
-        </div>
-    </div>
-    <div class="list mui-w">
-            <div class="list_head mui-padd-l">
-                <div><img src="../../image/head.png" alt=""></div>
+    <div id="text_box" role="template" event="html" tempid="temp" api-url='circle/paged' api-data='{}'>
+        <div class="list mui-w">
+                <div class="list_head mui-padd-l">
+                    <div><img src="../../image/head.png" alt=""></div>
+                    <div>
+                        <p class="name">你好</p>
+                        <p class="addres">厦门市/集美区</p>
+                    </div>
+                    <div class="time">
+                        <p class="label">#放空#</p>
+                        <p class="cc">121</p>
+                    </div>
+                </div>
                 <div>
-                    <p class="name">你好</p>
-                    <p class="addres">厦门市/集美区</p>
+                    <p class="txt">nihonihonihonihonihoniho</p>
+                    <div class="mui-row ">
+                        <div class="mui-col-xs-12 img_box" style="background: url(../../image/Contaact.png); background-repeat: no-repeat;background-size: cover;"></div>
+                    </div>
                 </div>
-                <div class="time">
-                    <p class="label">#放空#</p>
-                    <p class="cc">121</p>
-                </div>
-            </div>
-            <div>
-                <p class="txt">nihonihonihonihonihoniho</p>
-                <div class="mui-row ">
-                    <div class="mui-col-xs-12 img_box" style="background: url(../../image/Contaact.png); background-repeat: no-repeat;background-size: cover;"></div>
-                </div>
-            </div>
-            <div class="mui-row mui-padd-lr tag">
-                <div class="mui-pull-left">
-                    <i class="iconfont icon-chakan"></i>12
-                </div>
-                <div class="mui-pull-right">
-                    <i class="iconfont icon-dianzan-copy"></i>12
+                <div class="mui-row mui-padd-lr tag">
+                    <div class="mui-pull-left">
+                        <i class="iconfont icon-chakan"></i>12
+                    </div>
+                    <div class="mui-pull-right">
+                        <i class="iconfont icon-dianzan-copy"></i>12
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="list mui-w">
+                    <div class="list_head mui-padd-l">
+                        <div><img src="../../image/head.png" alt=""></div>
+                        <div>
+                            <p class="name">你好</p>
+                            <p class="addres">厦门市/集美区</p>
+                        </div>
+                        <div class="time">
+                            <p class="label">#放空#</p>
+                            <p class="cc">121</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="txt">nihonihonihonihonihoniho</p>
+                        <div class="mui-row ">
+                            <div class="mui-col-xs-12 img_box" style="background: url(../../image/Contaact.png); background-repeat: no-repeat;background-size: cover;"></div>
+                        </div>
+                    </div>
+                    <div class="mui-row mui-padd-lr tag">
+                        <div class="mui-pull-left">
+                            <i class="iconfont icon-chakan"></i>12
+                        </div>
+                        <div class="mui-pull-right">
+                            <i class="iconfont icon-dianzan-copy"></i>12
+                        </div>
+                    </div>
+                </div>
+    </div>
+    
         <div id="plus_">
             <i class="iconfont icon-jia"></i>
         </div>
+        <script id="temp" type="text/html">
+            {{each d.item as val}}
+        <div class="list mui-w" event='click' api-name='txtdata' api-url='../circle/data.html' api-data='{"id":"{{val.id}}"}'>
+                <div class="list_head mui-padd-l" id="{{val.member.id}}">
+                    <div><img  src="{{val.member.head}}" alt=""></div>
+                    <div>
+                        <p class="name">{{val.member.name}}</p>
+                        <p class="addres">{{val.quyu}}</p>
+                    </div>
+                    <div class="time">
+                        <p class="label">#{{val.tag}}#</p>
+                        <p class="cc">{{val.time}}</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="txt">{{val.content}}</p>
+                    <div class="mui-row ">
+                            {{if val.images.length >=3}}
+                            {{each val.images as img i}}
+                            <div class="mui-col-xs-4 img_box" style="background: url({{img}}); background-repeat: no-repeat;background-size: cover;"></div>
+                            {{/each}}
+                        {{/if}}
+                        {{if val.images.length ==2}}
+                        {{each val.images as img i}}
+                        <div class="mui-col-xs-6 img_box" style="background: url({{img}}); background-repeat: no-repeat;background-size: cover;"></div>
+                        {{/each}}
+                    {{/if}}
+                    {{if val.images.length == 1}}
+                    {{each val.images as img i}}
+                    <div  class="mui-col-xs-12 img_box active" style="background: url({{img}}); background-repeat: no-repeat;background-size: cover;"></div>
+                    {{/each}}
+                {{/if}}
+                       
+                    </div>
+                </div>
+                <div class="mui-row mui-padd-lr tag">
+                    <div class="mui-pull-left">
+                        <i class="iconfont icon-chakan"></i>{{val.read}}
+                    </div>
+                    <div class="mui-pull-right">
+                        <i class="iconfont icon-dianzan-copy"></i>{{val.pra}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        </script>
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
     <script type="text/javascript" src="../../js/swiper.min.js"></script>
+    <script src="../../js/artTemplate.js"></script>
     <script>
         var mySwiper = new Swiper('.swiper-container', {})
         apiready = function(){
-    
+            apimui.config();
             api.setRefreshHeaderInfo({
         loadingImg: 'widget://image/refresh.png',
         bgColor: '#fff',
@@ -268,6 +322,14 @@
             api.refreshHeaderLoadDone();
         },1000)
     });
+
+    //register
+    $("#plus_").on('click',function(){
+        api.openWin({
+            name:'plus_',
+            url:'../circle/register.html'
+        })
+    })
         }
     </script>
      

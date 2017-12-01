@@ -13,22 +13,27 @@
     <style>
         #list input {
             width: 70%;
+            padding-left: 30px;
+            
+            
         }
 #list{
-    margin-top: 56px;
+    margin-top: 66px;
+
 }
         #list ul {
             background: #fff;
+
         }
         #list li {
             padding: 0 15px;
-            line-height: 40px;
+            line-height: 50px;
             position: relative;
         }
         #list .title {
-            color: #212121;
-            background: #ddd;
-            line-height: 30px;
+            color: #ccc;
+            background: #f5f5f5;
+            line-height: 50px;
             padding-left: 15px;
         }
         #head .jia {
@@ -48,26 +53,26 @@
             </span>
         </a>
         <div class="mui-title">密码修改</div>
-        <a class="mui-pull-right">
+        <a class="mui-pull-right" id="submit">
             <span>
                 <i class="iconfont icon-dui"></i>
             </span>
         </a>
     </header>
     <div id="list">
-        <ul>
+        <ul class="bor-b">
             <li>
                 <i class="iconfont icon-yuechi"></i>
                 <input id="oldpwd" type="password" placeholder="输入旧密码">
             </li>
         </ul>
         <p class="title">输入新密码</p>
-        <ul>
+        <ul class="bor-t">
             <li class="bor-b">
                 <i class="iconfont icon-yuechi"></i>
                 <input type="password" id="newpwd" placeholder="输入新密码">
             </li>
-            <li>
+            <li class="bor-b">
                 <i class="iconfont icon-yuechi"></i>
                 <input type="password" id="newpwdtow" placeholder="再次输入新密码">
             </li>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='../../css/api.css' rel="stylesheet" />
+    <link href='../../css/mui.css' rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+</head>
+    <style> 
+    
+    .circle{
+        width: 100px;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+        line-height: 100px;
+        text-align: center;
+        box-shadow: 0 0 40px 5px #888888;
+    
+    }
+    .circle.inst{
+        box-shadow: 0 0 10px 3px #888888 inset;
+    }
+    .circle .child{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+       
+    }
+  
+    /* .li1{
+        animation: myfirst 5s infinite;
+        -moz-animation: myfirst 5s infinite;	
+        -webkit-animation: myfirst 5s infinite;	
+        -o-animation: myfirst 5s;
+        box-shadow: 0 0 40px 5px red;;	
+    }
+    .li2{
+        animation: myfirst 5s 4s infinite;
+        -moz-animation: myfirst 5s 4s infinite;;	
+        -webkit-animation: myfirst 5s 4s infinite;	
+        -o-animation: myfirst 5s 4s infinite;
+        box-shadow: 0 0 40px 5px green;;		
+    }
+    .li3{
+        animation: myfirst 5s 8s infinite;
+        -moz-animation: myfirst 5s 8s infinite;	
+        -webkit-animation: myfirst 5s 8s infinite;;	
+        -o-animation: myfirst 5s 8s infinite;;	
+        box-shadow: 0 0 40px 5px red;;	
+    }
+    .li4{
+        animation: myfirst 5s 16s infinite;
+        -moz-animation: myfirst 5s 16s infinite;;	
+        -webkit-animation: myfirst 5s 16s infinite;;	
+        -o-animation: myfirst 5s 16s infinite;;	
+        box-shadow: 0 0 40px 5px green;;		
+    }
+    .li5{
+        animation: myfirst 5s 20s infinite;
+        -moz-animation: myfirst 5s 20s infinite;;	
+        -webkit-animation: myfirst 5s 20s infinite;;	
+        -o-animation: myfirst 5s 20s;;	
+        box-shadow: 0 0 40px 5px blue;;		
+    }
+    .li6{
+        animation: myfirst 5s 24s infinite;
+        -moz-animation: myfirst 5s 24s infinite;;	
+        -webkit-animation: myfirst 5s 24s infinite;;	
+        -o-animation: myfirst 5s 24s infinite;;
+        box-shadow: 0 0 40px 5px red;;		
+    } */
+    /* 
+     animation: myfirst 5s;
+        -moz-animation: myfirst 5s;	
+        -webkit-animation: myfirst 5s;	
+        -o-animation: myfirst 5s;	
+     */
+
+    @keyframes myfirst
+        {
+        from {
+            transform: scale(0,0)
+        }
+        to {
+            transform: scale(1,1)
+        }
+        }
+
+        @-moz-keyframes myfirst /* Firefox */
+        
+        {
+            from {
+                transform: scale(0,0)
+            }
+            to {
+                transform: scale(1,1)
+            }
+        }
+
+        @-webkit-keyframes myfirst /* Safari 和 Chrome */
+        {
+            from {
+                transform: scale(0,0)
+            }
+            to {
+                transform: scale(1,1)
+            }
+        }
+
+        @-o-keyframes myfirst /* Opera */
+        {
+            from {
+                transform: scale(0,0)
+            }
+            to {
+                transform: scale(1,1)
+            }
+        }
+        #wrap{
+            background: #fff;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        #wrap h3{
+            font-weight: 500;
+            font-size: 24px;
+        }
+        #circle{
+            padding: 20px 0;
+            background: #fff;
+            margin-top: 10px;
+        }
+        #msg p{
+            font-size: 12px;
+        }
+        #msg {
+            background: #fff;
+            padding:15px 0 15px 10px;
+            margin-top: 10px;
+        }
+        #tag {
+            background: #fff;
+            margin-top: 10px;
+            padding: 10px 0;
+          
+        }
+        #tag .tag_box{
+            width: 20%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding-top: 10px;
+        }
+        #tag .label{
+            width: 80%;
+            padding-right: 10px;
+        }
+        #tag .label span{
+            background: #757575;
+            padding: 5px 7px;
+            color: #fff;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        #tag .tag{
+            color: #fff;
+            background: #009688;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 0 5px;
+            position: relative;
+            z-index: 3;
+        }
+        #tag .label p{
+            line-height: 30px;
+        }
+        #tag i{
+            color: #ccc;
+           
+        }
+        #tag .icofont{
+            line-height: 50px;
+        }
+        #tag .tag_box::after{
+            content: '';
+            display: block;
+            background: #ccc;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            z-index: 0;
+        }
+        #tag .mui-row{
+            position: relative;
+        }
+        #head {
+            line-height: 45px;
+            background: #fff;
+            padding-top: 15px;
+        }
+        #head i{
+            position: relative;
+            left: 15px;
+        }
+        #wrap p{
+            font-size: 12px;
+        }
+    </style>
+<body>
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>升官进爵</span>
+          
+        </div>
+    </header>
+    <div id="wrap" role="template" event="html" tempid="nextoffer_tmp" api-url='offcer/nextoffer' api-data='{}'>
+        <p>可升官阶</p>
+        <h3 class="mui-text-center">从二品</h3>
+        <div class="mui-row mui-text-center">
+            <div class="mui-col-xs-6">
+                <p>价格</p>
+                <p><i class="iconfont icon-yinzi">12121</i></p>
+            </div>
+            <div class="mui-col-xs-6">
+                <p>续期</p>
+                <p>4个月</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="circle">
+        <div class="circle">
+            <div class="circle inst">
+                升官
+            </div>
+            <div class="child li1"></div>
+            <div class="child li2"></div>
+            <div class="child li3"></div>
+            <div class="child li4"></div>
+            <div class="child li5"></div>
+            <div class="child li6"></div>
+        </div>
+    </div>
+    <div id="msg">   
+        <p>活动协议</p>
+        <p>1.续期软件可获得相应的官阶 </p>
+        <p>2. 每个官阶所需续期月数不一样</p>
+        <p>3. 官阶越高可领取的俸禄也越多</p>
+        <p>4. 俸禄为公司统一发放给推广软件的推广佣金</p>
+        <p>5. 所得值根据当前用户的贡献值计算,以实际为准.</p>
+        <p>6. 官位活动为自愿参与,续期软件后将得到相应的使用期限</p>
+        <p>7. 凡参与活动的用户,续期软件的费用概不退换</p>
+        <p>8. 一切解释权归公司所有</p>
+    </div>
+    <!-- offcer/totaloffer -->
+    <div id="tag" role="template" event="html" tempid="tag_temp" api-url='offcer/totaloffer' api-data='{}'>
+        <div class="mui-row">
+            <div class="tag_box mui-text-center mui-pull-left">
+                <div class="tag">从二品</div>
+            </div>
+            <div class="label mui-pull-right">
+                <div>
+                    <p>男官</p>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你a好</span>
+                    <span>你a好</span>
+                    <span>你好asd</span>
+                    <span>你好</span>
+                </div>
+                <div>
+                    <p>女官</p>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你好</span>
+                </div>
+                <div class="mui-row icofont">
+                    <div class="mui-pull-left">
+                        <i class="iconfont icon-yinzi">2000</i>
+                    </div>
+                    <div class="mui-pull-right">
+                        <i class="iconfont icon-clock">2月</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mui-row">
+            <div class="tag_box mui-text-center mui-pull-left">
+                <div class="tag">从二品</div>
+            </div>
+            <div class="label mui-pull-right">
+                <div>
+                    <p>男官</p>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你a好</span>
+                    <span>你a好</span>
+                    <span>你好asd</span>
+                    <span>你好</span>
+                </div>
+                <div>
+                    <p>女官</p>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你好</span>
+                    <span>你好</span>
+                </div>
+                <div class="mui-row icofont">
+                    <div class="mui-pull-left">
+                        <i class="iconfont icon-yinzi">2000</i>
+                    </div>
+                    <div class="mui-pull-right">
+                        <i class="iconfont icon-clock">2月</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="nextoffer_tmp" type="text/html">
+    
+        <p>可升官阶</p>
+        <h3 class="mui-text-center">{{d.name}}</h3>
+        <div class="mui-row mui-text-center">
+            <div class="mui-col-xs-6">
+                <p>价格</p>
+                <p><i class="iconfont icon-yinzi"></i> {{d.price}}</p>
+            </div>
+            <div class="mui-col-xs-6">
+                <p>续期</p>
+                <p>{{d.month}}个月</p>
+            </div>
+        </div>
+        
+    </script>
+    <script id="tag_temp" type="text/html">
+        {{each d as d i}}
+        <div class="mui-row">
+                <div class="tag_box mui-text-center mui-pull-left">
+                    <div class="tag">{{d.name}}</div>
+                </div>
+                <div class="label mui-pull-right">
+                    <div>
+                        <p>男官</p>
+                        {{each d.aligs.m as a i}}
+                        <span>{{a}}</span>
+                        {{/each}}
+                    </div>
+                    <div>
+                        <p>女官</p>
+                        {{each d.aligs.w as a i}}
+                        <span>{{a}}</span>
+                        {{/each}}
+                    </div>
+                    <div class="mui-row icofont">
+                        <div class="mui-pull-left">
+                            <i class="iconfont icon-yinzi">{{d.mony}}</i>
+                        </div>
+                        <div class="mui-pull-right">
+                            <i class="iconfont icon-clock">{{d.month}}月</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+    
+    apiready = function(){
+        apimui.config();
+    }
+    </script>
+</body>
+
+</html>

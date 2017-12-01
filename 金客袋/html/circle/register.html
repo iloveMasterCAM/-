@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../iconfont/iconfont.css" />
+    <style>
+        #txt {
+            background: #fff;
+            margin-top: 60px;
+        }
+
+        #txt .img>div {
+            text-align: center;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        #txt textarea{
+            height: 100px;
+        }
+        #txt .img i {
+            font-size: 2rem;
+        }
+
+        #txt .label span {
+            padding: 10px;
+            color: #777;
+        }
+
+        #msg {
+            padding: 0 10px;
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        .icon-dui {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        #txt .label span.active{
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">发布说说</div>
+        <a class="mui-pull-right">
+            <span>
+                <i class="iconfont icon-dui"></i>
+            </span>
+        </a>
+    </header>
+    <div id="txt">
+        <div class="bor-b"><textarea class="mui-padd-l" placeholder="输入详情信息"></textarea></div>
+        <div class="bor-b">
+            <input type="number" class="mui-padd-l" value="" placeholder="￥输入金额(选填)">
+        </div>
+        <div class="mui-row img">
+            <div class="mui-col-xs-4" id="updata">
+
+                <i class="iconfont icon-jia"></i>
+            </div>
+        </div>
+        <div class="label">
+            <span class="active">#过桥#</span>
+            <span>#过桥#</span>
+            <span>#过桥#</span>
+            <span>#过桥#</span>
+            <span>#过桥#</span>
+            <span>#过桥#</span>
+        </div>
+    </div>
+    <div id="msg">
+        禁止发布涉嫌黄色，情色，恐怖以及违反法律禁止发布涉嫌黄色，情色，恐怖以及违反法律禁止发布涉嫌黄色，情色，恐怖以及违反法律
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script>
+        apiready = function () {
+            $(function () {
+                var h = $("#txt .img div").width();
+                $("#txt .img div").height(h).css({ "line-height": h + "px" })
+                $(".label span").on('click',function(){
+                    $(".label .active").removeClass('active');
+                    $(this).addClass('active')
+                })
+            })
+
+            var arr = [];
+            $("#updata").on('click', function () {
+                var l = $("#txt .img>div").length - 1;
+                apimui.upimg(l, function (r) {
+                    $("#txt .img").prepend('<div class="mui-col-xs-4" style="background: url(' + r.base64String + ') no-repeat;background-size: cover;background-position: center center;margin-bottom: 2px"></div>')
+                    arr.push(r)
+                })
+            })
+            $("#submit").on('click', function () {
+                apimui.upimgurl(arr, function (r) {
+                    alert(r)
+                })
+            })
+        }
+
+
+       // $("#txt .img").prepend('<div class="mui-col-xs-4" style="background: url(asdf) no-repeat;background-size: cover;background-position: center center;margin-bottom: 2px"></div>')
+        /*
+        5+6 = 11
+11-9 = 2;
+6-2 = 4
+        */
+
+    </script>
+</body>
+
+</html>

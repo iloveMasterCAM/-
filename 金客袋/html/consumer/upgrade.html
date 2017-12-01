@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>升官</title>
+    <link href='../../css/api.css' rel="stylesheet"/>
+    <link href='../../css/mui.css' rel="stylesheet"/>
+    <link href="../../iconfont/iconfont.css" rel="stylesheet"/>
+    <style>
+        #header{
+            background: url(../../image/long.png) no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 130px;
+        }
+        #header h3{
+            margin: 0;
+            padding-top: 40px;
+            margin-bottom: 20px;
+            color: #FB6F18;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        #header .guan{
+             color: #FB6F18;
+        }
+        #header i{
+            color: #FB6F18
+        }
+        #box{
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px 0;
+        }
+        #box i{
+            font-size: 1.5rem;
+        }
+        #list {
+            background: #fff;
+            
+        }
+        #list li{
+            padding: 10px 15px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        #ul span,#ul i{
+            color: #807e7e;
+        }
+        #ul span{
+            font-size: 12px
+        }
+        #ul .icon-yinzi{
+            font-size: 13px;
+        }
+        #header .icon-xiangzuo{
+            position: absolute;
+            top: 35px;
+            left: 15px;
+        }
+    </style>
+</head>
+<body>
+   <!-- offcer/mine -->
+    <div id="header" class="mui-text-center" role="template" event="html" tempid="mine_temp" api-url='offcer/mine' api-data='{}'>
+        <i class="iconfont icon-xiangzuo" onclick="api.closeWin();"></i>
+        <h3>无官阶</h3>
+        <div class="mui-row">
+            <div class="mui-col-xs-4">
+                <p><i class="iconfont icon-yinzi"></i> <span>0两</span></p>
+            </div>
+             <div class="mui-col-xs-4">
+                <p class="guan"><i class="iconfont icon-"></i>无官阶</p>
+            </div>
+             <div class="mui-col-xs-4">
+                <p><i class="iconfont icon-xuesheng"></i><span>0人</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="mui-text-center" id="box">
+        <div class="mui-row">
+            <div class="mui-col-xs-4" event='click' api-name='data' api-url='upgrade_g.html' api-data='{}' >
+                <p><i class="iconfont icon-guan"></i></p>
+                <p>升官进爵</p>
+            </div>
+            <div class="mui-col-xs-4" event='click' api-name='join' api-url='join.html' api-data='{}'>
+                <p><i class="iconfont icon-xuesheng"></i></p>
+                <p>招贤纳士</p>
+            </div>
+            <!-- ranking -->
+            <div class="mui-col-xs-4" event='click' api-name='join' api-url='ranking.html' api-data='{}'>
+                <p><i class="iconfont icon-jinpai"></i></p>
+                <p>荣升榜</p>
+            </div>
+        </div>
+    </div>
+    <div id="list">
+        <ul id="ul" role="template" event="html" tempid="list_temp" api-url='offcer/wage' api-data='{}' >
+           
+        </ul>
+    </div>
+    <script type="text/html" id="list_temp">
+        <li class="mui-row">
+            <span class="mui-pull-left">领俸禄</span>
+            <span class="mui-pull-right">24/s过期</span>
+        </li>
+        {{each d as d}}
+        <li>
+            <div><i class="iconfont icon-yinzi">{{d.money}}两</i> 
+                {{ if d.status=="Paying" }}
+                <input type="button" av-id="{{d.id}}" class="aui-btn aui-btn-sm aui-font-size-12" value="领取">
+                {{ else if d.status=="Success" }}
+                <span class="mui-pull-right">已领取</span>
+                {{ else if d.status=="Expired" }}
+                <span class="mui-pull-right">过期</span>
+                {{/if}}
+            </div>
+            <div><i class="iconfont icon-shijian"></i>  <span>{{d.time}}</span></div>
+        </li>
+        {{/each}}
+    </script>
+    <script id="mine_temp" type="text/html">
+    
+        <i class="iconfont icon-xiangzuo" onclick="api.closeWin();"></i>
+        <h3>{{d.name}}</h3>
+        <div class="mui-row">
+            <div class="mui-col-xs-4">
+                <p><i class="iconfont icon-yinzi"></i> <span>{{d.money}}两</span></p>
+            </div>
+             <div class="mui-col-xs-4">
+                <p class="guan"><i class="iconfont icon-"></i>{{d.aliag}}</p>
+            </div>
+             <div class="mui-col-xs-4">
+                <p><i class="iconfont icon-xuesheng"></i><span>{{d.sub}}人</span></p>
+            </div>
+        </div>
+
+    </script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+    
+    apiready = function(){
+        apimui.config();
+    }
+    </script>
+</body>
+</html>

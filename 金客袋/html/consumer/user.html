@@ -102,6 +102,10 @@
     <script>
     //cusumer/paged
         apiready = function(){
+            var d  = api.pageParam;
+            if(d.key){
+                $("#ul").attr({"api-url":d.key})
+            }
           apimui.config();
             // apimui.post('cusumer/paged','',function(r){
             //     alert(JSON.stringify(r))

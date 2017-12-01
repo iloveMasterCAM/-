@@ -177,10 +177,9 @@
 <body>
 
 </body>
-<script src="script/jquery.js"></script>
-<script src="script/mui.js"></script>
-<script src="script/apiinit.js"></script>
-<script src="script/sendEvent.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/mui.js"></script>
+<script src="/js/apiinit.js"></script>
 <script type="text/javascript">
 
 
@@ -189,24 +188,24 @@ Object.prototype.chain = function (callback) {
         return callback();
     }
     apiready = function () {
-        if (!localStorage["token"]) {
-            openLogin();
-            return;
-        }
+        // if (!localStorage["token"]) {
+        //     openLogin();
+        //     return;
+        // }
         openFrameGroup();
     };
 
 
     function openLogin() {
-        setTimeout(function () {
-            api.openWin({
-                name: 'login_win',
-                url: 'html/user/login.html',
-                animation: {
-                    type: 'none'
-                }
-            });
-        }, 200);
+        // setTimeout(function () {
+        //     api.openWin({
+        //         name: 'login_win',
+        //         url: 'html/user/login.html',
+        //         animation: {
+        //             type: 'none'
+        //         }
+        //     });
+        // }, 200);
     }
 
 
@@ -228,16 +227,16 @@ Object.prototype.chain = function (callback) {
                 url: 'html/index/index.html',
             }, {
                 name: 'order',
-                url: 'html/order/index.html',
+                url: 'html/index/orders.html',
             }, {
                 name: 'masge',
-                url: 'html/masge/index.html',
+                url: 'html/index/message.html',
             }, {
                 name: 'community',
-                url: 'html/community/index.html',
+                url: 'html/index/circle.html',
             }, {
                 name: 'set',
-                url: 'html/set/index.html',
+                url: 'html/index/user.html',
             }]
         }, function (ret, err) {
             var index = ret.index;

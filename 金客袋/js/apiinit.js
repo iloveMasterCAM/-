@@ -47,6 +47,19 @@
 
         });
     }
+
+    //上拉加载
+    apimui.prototype.adddata = function(callback){
+        api.addEventListener({
+            name:'scrolltobottom',
+            extra:{
+                threshold:10            //设置距离底部多少距离时触发，默认值为0，数字类型
+            }
+        }, function(ret, err){        
+            //alert('已滚动到底部');
+            callback();
+        });
+    }
     //http://cusumer.buydee.org/
     apimui.prototype.post = function (url, data, callback) {
         var db = data ? data : {};
@@ -375,8 +388,19 @@
         });
         
     }
-    apimui.prototype.b = function () {
-
+    apimui.prototype.formSerialize = function (o) {
+        var data = {};
+        $(o).find('input,textarea,select').each(function(){
+            data[$(this).attr('name')] = $(this).val();
+            var o = $(this);
+            if(o.is(':radio')){
+                data[o.attr('name')] =  o.find(':radio').val();
+            }
+            if(o.is(':checkbox')){
+                data[o.attr('name')] =  o.find(':checked').val();
+            }
+        })
+        return data;
     }
     apimui.prototype.c = function () {
 

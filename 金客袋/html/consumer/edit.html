@@ -53,13 +53,13 @@
             </span>
         </a>
         <div class="mui-title">修改资料</div>
-        <a class="mui-pull-right">
+        <a class="mui-pull-right" id="submit">
             <span class="">
                 <i class="iconfont icon-dui"></i>
             </span>
         </a>
     </header>
-    <div class="mar" id="box" role="template" event="html" tempid="temp" api-url='cusumer/Detail' api-data='{}'>
+    <div class="mar" id="box" role="template" event="html" tempid="temp" api-url='' api-data='{}'>
 
     </div>
     <script id="temp" type="text/html">
@@ -67,35 +67,35 @@
         <ul id="ul" class="mui-w">
             <li class="list bor-b">
                  <span class="name ">姓名</span>
-                <input type="text" placeholder="真实姓名" value="{{d.name}}">
+                <input type="text" name="Name" placeholder="真实姓名" value="{{d.name}}">
                 <span class="mui-pull-right mui-text-center">
                     <i class="iconfont icon-xuesheng"></i>
                 </span>
             </li>
             <li class="list bor-b">
                  <span class="name ">手机</span>
-                <input type="text" placeholder="手机号" value="{{d.phone}}">
+                <input type="text"  name="Phone" placeholder="手机号" value="{{d.phone}}">
                 <span class="mui-pull-right mui-text-center">
                     <i class="iconfont icon-shouji"></i>
                 </span>
             </li>
             <li class="list bor-b">
                  <span class="name ">邮箱</span>
-                <input type="text" placeholder="输入邮箱" value="{{d.mail}}">
+                <input type="text" name="Email" placeholder="输入邮箱" value="{{d.mail}}">
                 <span class="mui-pull-right mui-text-center">
                     <i class="iconfont icon-xiaoxi"></i>
                 </span>
             </li>
             <li class="list bor-b">
                  <span class="name ">身份证</span>
-                <input type="text" placeholder="身份证号" value="{{d.idcard}}">
+                <input type="text"  name="IDCardNumber" placeholder="身份证号" value="{{d.idcard}}">
                 <span class="mui-pull-right mui-text-center">
                     <i class="iconfont icon-identity"></i>
                 </span>
             </li>
             <li class="list bor-b" onclick="show()">
                  <span class="name ">区域</span>
-                <input type="text" id="address" class="" value="{{d.p}}/{{d.c}}/{{d.d}}" disabled="disabled">
+                <input type="text" id="address" name="quyu" class="" value="{{d.p}}/{{d.c}}/{{d.d}}" disabled="disabled">
                
                         <span class="mui-pull-right mui-text-center">
                                 <i class="iconfont icon-xiangyou"></i>
@@ -105,7 +105,7 @@
             </li>
             <li class="list bor-b">
                  <span class="name ">门牌号</span>
-                <input type="text" placeholder="详细住所" value="{{d.ad}}">
+                <input name="Address" type="text" placeholder="详细住所" value="{{d.ad}}">
                 <span class="mui-pull-right mui-text-center">
                     <i class="iconfont icon-dizhi"></i>
                 </span>
@@ -116,9 +116,13 @@
         <ul class="mui-w">
             <li class="list bor-b">
                  <span class="name ">备注</span>
-                <textarea  placeholder="输入备注">{{d.memo}}></textarea>
+                <textarea  name="Memo"  placeholder="输入备注">{{d.memo}}</textarea>
             </li>
         </ul>
+        <input type="hidden" id="Provence" name="Provence" value="{{d.p}}"/>
+        <input type="hidden" id="City" name="City" value="{{d.c}}" />
+        <input type="hidden" id="District" name="District" value="{{d.d}}" />
+        <input type="hidden" name="ID" value="{{d.id}}" />
     </script>
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
@@ -133,10 +137,23 @@
         apiready = function () {
 
             var d = api.pageParam
-            $("#box").attr({ 'api-data': '{"id":"' + d.id + '"}' })
+            $("#box").attr({ 'api-data': '{"id":"' + d.id + '"}' ,'api-url':d.detail})
             //cusumer/Detail
             apimui.config();
-       
+       //partner/edit   Cusumer/Edit partner/detail
+        
+
+        $("#submit").on('click',function(){
+        var data = apimui.formSerialize('#box')
+           apimui.post(d.url,data,function(r){
+                if(r.s){
+                    api.toast({
+                        msg:'修改成功'
+                    })
+                }
+           })
+        })
+
         }
       
         var _getParam = function(obj, param) {
@@ -151,6 +168,9 @@
                     cityPicker3.setData(cityData3);
                         cityPicker3.show(function (items) {
                         $("#address").val( _getParam(items[0], 'text') + " /" + _getParam(items[1], 'text') + " /" + _getParam(items[2], 'text'))
+                        $("#Provence").val(_getParam(items[0], 'text'))
+                        $("#City").val(_getParam(items[1], 'text'))
+                        $("#District").val(_getParam(items[2], 'text'))
                         });
                 })
             })(apimui.mui, document)

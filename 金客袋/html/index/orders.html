@@ -30,21 +30,25 @@
         #sech i {
             margin-left: 5px;
         }
-        .list{
+
+        .list {
             margin-bottom: 5px;
             padding-top: 15px;
         }
-        .list .money{
+
+        .list .money {
             font-size: 26px;
             color: #ff6a00;
             margin: 20px 0;
         }
-        .list .time{
+
+        .list .time {
             background: #fafafa;
             line-height: 35px;
-            
+
         }
-        .list .time i{
+
+        .list .time i {
             font-size: 0.6rem;
         }
     </style>
@@ -57,7 +61,7 @@
             <input type="text" placeholder="手机号/姓名">
         </div>
     </div>
-    <div id="box" >
+    <div id="box">
 
     </div>
     <!-- <div class="list mui-w">
@@ -102,7 +106,7 @@
                 </div>
             </div>
         </div> -->
-        <script id="box_tamp" type="text/html">
+    <script id="box_tamp" type="text/html">
             {{each d as val}}
             <div class="list mui-w" onclick="iopne('{{val.id}}')">
                     <div class="mui-row mui-padd-lr">
@@ -132,38 +136,46 @@
     <script src="../../js/apiinit.js"></script>
     <script src="../../js/artTemplate.js"></script>
     <script>
-        apiready = function(){
-    //role="template" event="append" tempid="box_tamp" api-url='order/paged' api-data='{}' 
-            apimui.post('order/paged',{},function(r){
-                // alert(JSON.stringify(r));
-                var html = template('box_tamp',r)
-                $("#box").html(html);
-            })
-            
-            
+        apiready = function () {
+            //role="template" event="append" tempid="box_tamp" api-url='order/paged' api-data='{}' 
+            load();
+            function load(callback) {
+                apimui.post('order/paged', {}, function (r) {
+                    // alert(JSON.stringify(r));
+                    var html = template('box_tamp', r)
+                    $("#box").html(html);
+                    callback && callback();
+                })
+
+            }
+
             api.setRefreshHeaderInfo({
-        loadingImg: 'widget://image/refresh.png',
-        bgColor: '#fff',
-        textColor: '#ccc',
-        textDown: '下拉刷新...',
-        textUp: '松开刷新...'
-    }, function(ret, err) {
-        //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
-        setTimeout(function(){
-            api.refreshHeaderLoadDone();
-        },1000)
-    });
+                loadingImg: 'widget://image/refresh.png',
+                bgColor: '#fff',
+                textColor: '#ccc',
+                textDown: '下拉刷新...',
+                textUp: '松开刷新...'
+            }, function (ret, err) {
+                //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+                load(function () {
+                    api.refreshHeaderLoadDone();
+                });
+            });
+            apimui.adddata(function(){
+                //alert(1)
+            })
+           
         }
-        function iopne(id){
+        function iopne(id) {
             api.openWin({
-                name:'data',
-                url:'../orders/orderdata.html',
-                pageParam:{
-                    id:id
+                name: 'data',
+                url: '../orders/orderdata.html',
+                pageParam: {
+                    id: id
                 }
-            })        
+            })
         }
-        </script>
+    </script>
 </body>
 
 </html>

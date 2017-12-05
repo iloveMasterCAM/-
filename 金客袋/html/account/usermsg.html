@@ -8,9 +8,10 @@
     <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
     <title></title>
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
-    <link rel="stylesheet" type="text/css" href="../../iconfont/iconfont.css" />
-    <link href="../../css/swiper.min.css" rel="stylesheet" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.css" rel="stylesheet" />
+    <link href="../../css/mui.poppicker.css" rel="stylesheet" />
     <style>
         #list .ul {
             padding-left: 15px;
@@ -18,20 +19,57 @@
             margin-top: 10px;
             background: #fff;
         }
+
         #list {
             margin-top: 60px;
         }
+
         #list .ul li {
             line-height: 45px;
             position: relative;
             padding-right: 15px;
         }
+
         #list .ul img {
             width: 30px;
             height: 30px;
             position: relative;
             top: 10px;
             border-radius: 3px;
+        }
+
+        #list .cc {
+            color: rgb(102, 102, 102);
+            font-size: 13px;
+        }
+
+        #list i {
+            color: rgb(102, 102, 102);
+            font-size: 12px;
+        }
+
+        #fixed {
+            background: #fff;
+            border-radius: 5px 5px 0 0;
+            position: fixed;
+            bottom: -100px;
+            width: 100%;
+            z-index: 6;
+        }
+
+        #fixed p {
+            line-height: 40px;
+        }
+
+        #bg {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(7, 7, 7, 0.55);
+            z-index: 5;
+            display: none;
         }
     </style>
 </head>
@@ -115,66 +153,79 @@
 
     <script type="text/html" id="user_temp">
         <ul class="ul bor-b">
-            <li class="mui-row bor-b">
+            <!-- sethead -->
+            <li class="mui-row bor-b" event='click' api-name='sethead' api-url='sethead.html' api-data='{"src":"{{d.head}}"}'>
                 <span class="mui-pull-left">头像</span>
                 <div class="mui-row mui-pull-right">
                     <img src="{{d.head}}?w=100" alt=""><i class="iconfont icon-xiangyou"></i>
                 </div>
             </li>
-            <li class="mui-row bor-b">
+            <li class="mui-row bor-b"  event='click' api-name='setmessage' api-url='setmessage.html' api-data='{"key":"昵称","plach":"输入昵称","name":"NickName"}' >
                 <span class="mui-pull-left">昵称</span>
                 <div class="mui-row mui-pull-right">
-                    <span>{{d.nick}}</span><i class="iconfont icon-xiangyou"></i>
+                    <span class="cc">{{d.nick}}</span><i class="iconfont icon-xiangyou"></i>
                 </div>
             </li>
-            <li class="mui-row">
-                <span class="mui-pull-left">名字</span>
+            <li class="mui-row"  event='click' api-name='identity' api-url='identity.html'>
+                <span class="mui-pull-left">姓名</span>
                 <div class="mui-row mui-pull-right">
-                    <span>{{d.name}}</span><i class="iconfont icon-xiangyou"></i>
+                    <span class="cc">{{d.name}}</span><i class="iconfont icon-xiangyou"></i>
                 </div>
             </li>
         </ul>
-        <ul class="ul bor-b">
+        <ul class="ul bor-b"  event='click' api-name='phone' api-url='phone.html' api-data='{"phone":"{{d.phone}}"}'>
             <li class="mui-row">
                 <span class="mui-pull-left">手机号</span>
                 <div class="mui-row mui-pull-right">
-                    <span>{{d.phone}}</span><i class="iconfont icon-xiangyou"></i>
+                    <span class="cc">{{d.phone}}</span><i class="iconfont icon-xiangyou"></i>
                 </div>
             </li>
         </ul>
         <ul class="ul bor-b">
-            <li class="mui-row bor-b">
+            <li class="mui-row bor-b" onclick="sex()">
                 <span class="mui-pull-left">性别</span>
                 <div class="mui-row mui-pull-right">
-                    <span>{{d.sex}}</span><i class="iconfont icon-xiangyou"></i>
+                    <span id="sex" class="cc">{{d.sex}}</span><i class="iconfont icon-xiangyou"></i>
                 </div>
             </li>
-            <li class="mui-row bor-b">
+            <li class="mui-row bor-b"  event='click' api-name='setmessage' api-url='setmessage.html' api-data='{"key":"QQ","plach":"输入QQ","name":"QQ"}'>
                 <span class="mui-pull-left">QQ</span>
                 <div class="mui-row mui-pull-right">
-                    <span>{{d.qq}}</span><i class="iconfont icon-xiangyou"></i>
+                    <span class="cc">{{d.qq}}</span><i class="iconfont icon-xiangyou"></i>
                 </div>
             </li>
-            <li class="mui-row">
+            <li class="mui-row" onclick="show()">
                 <span class="mui-pull-left">城市</span>
                 <div class="mui-row mui-pull-right">
-                    <span>{{d.city}}</span><i class="iconfont icon-xiangyou"></i>
+                    <span id="address" class="cc">{{d.city}}</span><i class="iconfont icon-xiangyou"></i>
                 </div>
             </li>
         </ul>
-        <ul class="ul bor-b">
+        <ul class="ul bor-b"  event='click' api-name='setmessage' api-url='setmessage.html' api-data='{"key":"地址","plach":"输入详细地址","name":"Address"}'>
             <li class="mui-row">
                 <span class="mui-pull-left">地址</span>
                 <div class="mui-row mui-pull-right">
-                    <span>{{d.ad}}</span><i class="iconfont icon-xiangyou"></i>
+                    <span class="cc">{{d.ad}}</span>
                 </div>
             </li>
         </ul>
     </script>
+    <div id="fixed" class="mui-text-center">
+        <p>男</p>
+        <p>女</p>
+    </div>
+    <div id="bg" onclick="hide()"></div>
+    <input type="hidden" id="provice" value="" id="">
+    <input type="hidden" id="city" value="" id="">
+    <input type="hidden" id="area" value="" id="">
     <script src="../../js/jquery.js"></script>
-    <script src="../../js/artTemplate.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script src="../../js/mui.picker.js"></script>
+    <script src="../../js/mui.poppicker.js"></script>
+    <script src="../../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
     <script>
         apiready = function () {
             // alert(JSON.stringify(api.pageParam))
@@ -183,6 +234,58 @@
             apimui.config();
             // inereset/preview
         }
+        var _getParam = function (obj, param) {
+            return obj[param] || '';
+        };
+        function show() {
+            (function ($_, doc) {
+                $_.ready(function () {
+                    var cityPicker3 = new $_.PopPicker({
+                        layer: 3
+                    });
+                    cityPicker3.setData(cityData3);
+                    cityPicker3.show(function (items) {
+                        $("#address").text(_getParam(items[0], 'text') + " /" + _getParam(items[1], 'text') + " /" + _getParam(items[2], 'text'))
+                        var data = {
+                            provence: _getParam(items[0], 'text'),
+                            city: _getParam(items[1], 'text'),
+                            area: _getParam(items[2], 'text')
+                        };
+                        apimui.post("account/setcity", data, function (r) {
+                            if (r.s)
+                                api.toast({ msg: '修改成功' })
+                        })
+
+                    });
+                })
+            })(apimui.mui, document)
+        }
+        function sex() {
+            $("#fixed").animate({ 'bottom': '0px' })
+            $("#bg").show();
+        }
+        function hide() {
+            $("#fixed").animate({ 'bottom': '-100px' })
+            $("#bg").hide();
+        }
+        $("#fixed p").on('click', function () {
+            var i = $(this).index();
+            var t = $(this).text();
+            var data = {};
+            if (i == 0) {
+                data['Sex'] = true;
+            } else {
+                data['Sex'] = false;
+            }
+            apimui.post('account/modify', data, function (r) {
+                if (r.s) {
+                    api.toast({ msg: '修改成功' })
+                    $("#fixed").animate({ 'bottom': '-100px' })
+                    $("#bg").hide();
+                    $("#sex").text(t)
+                }
+            })
+        })
     </script>
 </body>
 

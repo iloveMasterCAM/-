@@ -36,7 +36,7 @@
         </a>
     </header>
     <p class="title">基本资料</p>
-    <ul id="ul" class="mui-table-view" role="template" event="html" tempid="list_temp" api-url='cusumer/Detail' api-data='{}'>
+    <ul id="ul" class="mui-table-view" role="template" event="html" tempid="list_temp"  api-data='{}'>
         <li class="mui-table-view-cell">姓名
                 <span class="mui-pull-right"><em>你好</em> <i class="iconfont icon-yonghu"></i></span>
         </li>
@@ -102,18 +102,20 @@
     <script>
         apiready = function(){
             var d = api.pageParam;
-            $("#ul").attr({'api-data':'{"id":"'+d.id+'"}'})
+            $("#ul").attr({'api-data':'{"id":"'+d.id+'"}','api-url':d.detail})
             apimui.config();
             // apimui.post('cusumer/Detail',{id:d.id},function(r){
             //     alert(JSON.stringify(r))
             // })、、edit
             $("#edit").on('click',function(){
-                var id = d.id;
+                var id = d.id,url = d.url,detail = d.detail;
                 api.openWin({
                     name:'edit',
                     url:'edit.html',
                     pageParam:{
-                        id:id
+                        id:id,
+                        url:url,
+                        detail:detail
                     }
                 })
             })

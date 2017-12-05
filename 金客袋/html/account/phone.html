@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        .box {
+            margin-top: 10px;
+            padding: 0 15px;
+        }
+
+        .box .mui-btn {
+            margin-top: 4px;
+        }
+
+        #btn {
+            margin-top: 20px;
+        }
+
+        #btn button {
+            width: 80%;
+
+        }
+
+        #mar {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">绑定手机</div>
+    </header>
+    <div id="mar"></div>
+    <div class="mui-w box mui-row">
+        <span>
+            <i class="iconfont icon-shouji"></i>
+        </span>
+        <input type="number" id="phone" placeholder="输入手机号" />
+    </div>
+    <div class="mui-w box mui-row">
+        <input type="number" class="mui-col-xs-8" placeholder="输入验证码">
+        <button type="button" id="send" class="mui-btn mui-col-xs-4 mui-btn-primary">获取验证</button>
+    </div>
+    <div id="btn" class="mui-text-center">
+        <button type="button" class="mui-btn mui-col-xs-4 mui-btn-primary">验证</button>
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+        var off = true, o, i = 0, time;
+
+        apiready = function(){
+            var d = api.pageParam;
+            $("#phone").val(d.phone)
+        }
+
+        $("#send").on('click', function () {
+            if (off) {
+                o = this;
+                var phone = $("#phone").val();
+                apimui.post("account/verifycode", { phone: phone }, function (r) {
+                    time = setInterval(function () {
+                        fn();
+                    }, 1000)
+                    off = false;
+                    fn();
+                })
+            }
+
+        })
+
+        function fn() {
+            i++;
+            $(o).text(i+'/s重新获取')
+            if (i == 30) {
+                clearTimeout(time);
+                i = 0;
+                $(o).text('重新获取')
+                off = true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

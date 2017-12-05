@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+    
+    #box{
+        margin-top: 65px;
+        text-align: center;
+        background: #fff;
+        padding-top: 10px;
+    }
+    #box img{
+        width: 90%;
+
+    }
+    #submit {
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+        <header class="mui-bar mui-bar-nav">
+                <a class="mui-pull-left" onclick="api.closeWin();">
+                    <span>
+                        <i class="iconfont icon-xiangzuo"></i>
+                    </span>
+                </a>
+                <div class="mui-title">头像设置</div>
+                <span id="submit" class="iconfont icon-dui mui-pull-right"></span>
+            </header>
+            <div id="box">
+                <img id="head" src="" alt="">
+            </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+    
+    apiready = function(){
+       var d =  api.pageParam
+        $("#head").attr({'src':d.src})
+    }
+
+    </script>
+</body>
+</html>

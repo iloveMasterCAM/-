@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        #box {
+            margin-top: 70px;
+            background: #fff;
+            line-height: 45px;
+
+        }
+
+        #submit {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title" id="title"></div>
+        <span id="submit" class="iconfont icon-dui mui-pull-right"></span>
+    </header>
+    <div class="mui-row" id="box">
+        <div id="name" class="mui-col-xs-2 mui-text-center"></div>
+        <div class="mui-col-xs-10">
+            <input id="val" name="" type="text" placeholder="">
+        </div>
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+
+        apiready = function () {
+            var d = api.pageParam
+            $("#name").text(d.key + ':');
+            $("#val").attr({ 'placeholder': '请输入' + d.key ,'name':d.name});
+            $("#title").text(d.key + '修改')
+            $("#submit").on('click', function (r) {
+                var data = apimui.formSerialize('#box')
+           
+                apimui.post('account/modify', data, function (r) {
+                    if (r.s) {
+                        api.toast({ msg: '修改成功' })
+
+                    }
+                })
+            })
+
+
+
+        }
+    </script>
+</body>
+
+</html>

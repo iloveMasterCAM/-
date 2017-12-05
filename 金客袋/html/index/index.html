@@ -87,7 +87,7 @@
             </p>
             <p>客户</p>
         </div>
-        <div class="mui-col-xs-3" event='click' api-name='user' api-url='../consumer/user.html' api-data='{"key":"partner/paged"}'>
+        <div class="mui-col-xs-3" event='click' api-name='user' api-url='../consumer/user.html' api-data='{"key":"partner/paged","url":"partner/edit"}'>
             <p>
                 <i class="iconfont icon-hehuoren2"></i>
             </p>
@@ -109,7 +109,8 @@
                 本月1日至今
             </div>
         </div>
-        <div class="mui-row mui-text-center">
+        <!-- home/bill -->
+        <div class="mui-row mui-text-center" role="template" event="html" tempid="temp_bill" api-url='home/bill'>
             <div class="mui-col-xs-3">
                 <p class="number">1</p>
                 <p>逾期</p>
@@ -128,7 +129,7 @@
             </div>
         </div>
     </div>
-    <div class="list mui-w">
+    <div class="list mui-w" >
         <div class="mui-row">
             <div class="mui-pull-left">
                 本月出帐
@@ -140,7 +141,7 @@
     <div class="list mui-w">
         <div class="mui-row">
             <div class="mui-pull-left">
-                本月出帐
+                本月入帐
             </div>
             <div class="mui-pull-right color">放款总额</div>
         </div>
@@ -149,12 +150,37 @@
     <div class="mui-w img">
         <img src="../../image/faq.png" alt="">
     </div>
+    <script id="temp_bill" type="text/html">
+        <div class="mui-col-xs-3">
+                <p class="number">{{d.e}}</p>
+                <p>逾期</p>
+            </div>
+            <div class="mui-col-xs-3">
+                <p class="number">{{d.a}}</p>
+                <p>欠资</p>
+            </div>
+            <div class="mui-col-xs-3">
+                <p class="number">{{d.n}}</p>
+                <p>正常</p>
+            </div>
+            <div class="mui-col-xs-3">
+                <p class="number">{{d.c}}</p>
+                <p>新用户</p>
+            </div>
+    </script>
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
     <script>
         apiready = function(){
             apimui.config();
+            apimui.post('home/billout','',function(r){
+                $(".red").text(r.d)
+            })
+            apimui.post('home/billin','',function(r){
+                $(".green").text(r.d)
+            })
             api.setRefreshHeaderInfo({
         loadingImg: 'widget://image/refresh.png',
         bgColor: '#fff',

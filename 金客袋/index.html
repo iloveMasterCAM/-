@@ -74,7 +74,7 @@
             padding-top: 25px;
         }
 
-        #header .jia ,.cicle {
+        #header .jia ,.cicle ,#header .set i{
             position: absolute;
             right: 10px;
             top: 20px;
@@ -82,7 +82,7 @@
             color: #0071c7
         }
 
-        #header .jia i {
+        #header .jia i,#header .set i {
             font-size: 1.5rem;
         }
 
@@ -135,7 +135,7 @@
         </div>
         <div class="set order mui-hidden">
             <p class="mui-text-center">设置</p>
-            <span class="jia">
+            <span class="">
                 <i class="iconfont icon-05"></i>
             </span>
         </div>
@@ -264,12 +264,19 @@ Object.prototype.chain = function (callback) {
                 url:'html/orders/add.html'
             })
         })
+        $(".set").on('click',function(){
+            api.openWin({
+                name:'set',
+                url:'html/account/set.html'
+            })
+        })
         $(".cicle").on('click',function(){
             api.openWin({
                 name:'cicle',
                 url:'html/community/cicle.html'
             })
         })
+        
         // cicle
     })
 

@@ -87,7 +87,17 @@
     </div>
     <script type="text/html" id="list_temp">
         {{each d.item as val}}
-        <li class="bor-b" event='click' api-name='usermsg' api-url='usermsg.html' api-data='{"id":"{{val.id}}"}' id="{{val.id}}">
+        <li class="bor-b" event='click' api-name='usermsg' api-url='usermsg.html' api-data='{"id":"{{val.id}}","url":"Cusumer/Edit","detail":"cusumer/Detail"}' id="{{val.id}}">
+                <div class="mui-row txt"><span class="mui-pull-left">{{val.name}}</span> <span class="mui-pull-right phone">{{val.phone}}</span> <i class="iconfont icon-xiangyou"></i></div>
+                <div class="">
+                    <i class="iconfont icon-dizhi">{{val.ad}}</i>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="list_temp_p">
+        {{each d.item as val}}
+        <li class="bor-b" event='click' api-name='usermsg' api-url='usermsg.html' api-data='{"id":"{{val.id}}","url":"partner/edit","detail":"partner/detail"}' id="{{val.id}}">
                 <div class="mui-row txt"><span class="mui-pull-left">{{val.name}}</span> <span class="mui-pull-right phone">{{val.phone}}</span> <i class="iconfont icon-xiangyou"></i></div>
                 <div class="">
                     <i class="iconfont icon-dizhi">{{val.ad}}</i>
@@ -103,8 +113,9 @@
     //cusumer/paged
         apiready = function(){
             var d  = api.pageParam;
+                
             if(d.key){
-                $("#ul").attr({"api-url":d.key})
+                $("#ul").attr({"api-url":d.key,"tempid":'list_temp_p'})
             }
           apimui.config();
             // apimui.post('cusumer/paged','',function(r){

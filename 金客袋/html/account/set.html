@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        .head {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-top: 81px;
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .exit {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            left: 0;
+        }
+
+        .exit span {
+            padding: 5px 7px;
+            border-radius: 5px;
+            background: #03a9f4;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">系统设置</div>
+
+    </header>
+    <div class="mui-text-center">
+        <img class="head" src="../../image/head.jpg" alt="">
+    </div>
+    <h1 class="mui-text-center name">金客袋</h1>
+    <p class="mui-text-center">全球首款个人金融行业管理软件</p>
+    <div class="mui-text-center exit">
+        <span id="exit">退出登录</span>
+    </div>
+    
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+    
+    $("#exit").on('click',function(){
+        localStorage["token"] = '';
+        localStorage["phone"] = '';
+        api.rebootApp();
+    })
+
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,135 +9,571 @@
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link href="../../css/mui.css" rel="stylesheet" />
     <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <link href='../../css/mui.picker.css' rel="stylesheet" />
+    <link href='../../css/mui.poppicker.css' rel="stylesheet" />
+    <link href='../../css/mui.dtpicker.css' rel="stylesheet" />
     <style>
-        .ul{
+        .ul {
             margin-top: 56px;
         }
-        .title{
+
+        .title {
             background: #ddd;
             color: #333;
             line-height: 35px;
             padding-left: 15px;
         }
-        .ul_box{
+
+        .ul_box {
             margin-bottom: 10px;
         }
-        .ul_box li{
+
+        .ul_box li {
             padding: 0 15px;
             line-height: 45px;
         }
-        .mui-switch{
+
+        .mui-switch {
             margin-top: 6px;
         }
-        .mui-switch:before{
-            line-height: 23px;;
+
+        .mui-switch:before {
+            line-height: 23px;
+
+        }
+
+        #cycle_box,
+        #return_type,
+        #ratecycle_select,
+        #warn_box {
+            background: #fff;
+            padding: 0 15px;
+            position: fixed;
+            bottom: -150px;
+            ;
+            width: 100%;
+            left: 0;
+            z-index: 6;
+            line-height: 45px;
+        }
+
+        #return_type {
+            bottom: -240px;
+        }
+
+        #ratecycle_select {
+            bottom: -180px;
+        }
+
+        #warn_box {
+            bottom: -210px;
+            ;
+        }
+
+        #cycle_select {
+            width: 90%;
+            line-height: 45px;
+        }
+
+        #bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            display: none;
+        }
+
+        #time {
+            width: 100%;
+        }
+
+        #period {
+            line-height: 45px;
+        }
+
+        .button button {
+            width: 80%;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
+
 <body>
     <header class="mui-bar mui-bar-nav">
         <a class="mui-pull-left" onclick="api.closeWin();">
-            <span><i class="iconfont icon-xiangzuo"></i></span>
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
         </a>
         <div class="mui-title">新增订单</div>
-        <a class="mui-pull-right">
-            <span><i class="iconfont icon-dui"></i></span>
+        <a class="mui-pull-right" id="submit">
+            <span>
+                <i class="iconfont icon-dui"></i>
+            </span>
         </a>
     </header>
-    <ul class="ul mui-w ul_box">
-        <p class="title">借款资料</p>
-        <li class="mui-row bor-b">
-            <span>金额</span>
-            <input type="number"  placeholder="输入金额">
-            <div class="mui-pull-right"><span></span> <i class=" iconfont icon-jine"></i></div>
-        </li>
-        <li class="mui-row bor-b">
-            <span>客户</span>
-            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
-        </li>
-        <li class="mui-row bor-b">
-            <span>总周期</span>
-            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
-        </li>
-    </ul>
-     <ul class=" mui-w ul_box">
-        <p class="title">还款资料</p>
-        <li class="mui-row bor-b">
-            <span>还款日期</span>
-            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
-        </li>
-        <li class="mui-row bor-b">
-            <span>还款方式</span>
-            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
-        </li>
-         <li class="mui-row bor-b">
-            <span>倒扣</span>
-            <div class="mui-pull-right mui-switch">
-  <div class="mui-switch-handle"></div>
+    <div id="form">
+        <ul class="ul mui-w ul_box" id="">
+            <p class="title">借款资料</p>
+            <li class="mui-row bor-b">
+                <span>金额</span>
+                <input id="Money" name="Money" type="number" placeholder="输入金额">
+                <div class="mui-pull-right">
+                    <span></span>
+                    <i class=" iconfont icon-jine"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b" event='click' api-name='selcet' api-url='selcet.html'>
+                <span>客户</span>
+                <div class="mui-pull-right">
+                    <span id="consumer_selected">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b" onclick="show('cycle_box')">
+                <span>总周期</span>
+                <div class="mui-pull-right">
+                    <span id="cycle">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+        <ul class=" mui-w ul_box">
+            <p class="title">还款资料</p>
+            <li class="mui-row bor-b btnker" data-options='{"type":"date","beginYear":2000,"endYear":2116}' id="returnmoneydate">
+                <span>还款日期</span>
+                <div class="mui-pull-right">
+                    <span id="return_money_date">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b" onclick="show('return_type')">
+                <span>还款方式</span>
+                <div class="mui-pull-right">
+                    <span id="return_money_type">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span>倒扣</span>
+                <div name="IsBackDeduct" id="IsBackDeduct" class="mui-pull-right mui-switch">
+                    <div class="mui-switch-handle"></div>
+                </div>
+            </li>
+        </ul>
+        <ul class=" mui-w ul_box">
+            <p class="title">计息方式</p>
+
+            <li class="mui-row bor-b">
+                <span>利率</span>
+                <input id="Interest" name="Interest" type="number" placeholder="输入利率">
+                <div class="mui-pull-right">
+                    <span></span>
+                    <i class=" iconfont icon-icon03"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span>利息金</span>
+                <input id="InterestMoney" name="InterestMoney" type="number" placeholder="输入利息金">
+                <div class="mui-pull-right">
+                    <span></span>
+                    <i class=" iconfont icon-icon03"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b" onclick="show('ratecycle_select')">
+                <span>计息周期</span>
+                <div class="mui-pull-right">
+                    <span id="rate_cycle">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+        <ul class=" mui-w ul_box">
+            <p class="title">出资资料</p>
+
+            <li class="mui-row bor-b">
+                <span>是否独资</span>
+                <div id="IsAlone" name="IsAlone" class="mui-pull-right mui-switch">
+                    <div class="mui-switch-handle"></div>
+                </div>
+            </li>
+            <li class="mui-row bor-b" event='click' api-name='parther_select' api-url='parther_select.html'>
+                <span>出资人</span>
+                <div class="mui-pull-right">
+                    <span id="sponsor">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b">
+                <span>放空</span>
+                <div name="IsEmptyMake" id="IsEmptyMake" class="mui-pull-right mui-switch">
+                    <div class="mui-switch-handle"></div>
+                </div>
+            </li>
+        </ul>
+        <ul class=" mui-w ul_box">
+            <p class="title">放款资料</p>
+
+            <li class="mui-row bor-b btnker" data-options='{"type":"date","beginYear":2000,"endYear":2116}'>
+                <span>放款时间</span>
+                <div class="mui-pull-right">
+                    <span id="grant_money_date">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+            <li class="mui-row bor-b" event='click' api-name='parther_select' api-url='parther_select.html' api-data='{"key":"fang","eventname":"event_partner_selected"}'>
+                <span>放款人</span>
+                <div class="mui-pull-right">
+                    <span id="partner_name">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+        <ul class=" mui-w ul_box">
+            <p class="title">提醒</p>
+            <li class="mui-row bor-b" onclick="show('warn_box')">
+                <span>提醒方式</span>
+                <div class="mui-pull-right">
+                    <span id="warn">请选择</span>
+                    <i class=" iconfont icon-xiangyou"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="bg"></div>
+    <div id="cycle_box">
+        <div class="bor-b">
+            <span>周期:</span>
+            <input type="number" value="" placeholder="输入数字">
+            <i class="iconfont icon-clock mui-pull-right"></i>
+        </div>
+        <div class="bor-b">
+            <select id="cycle_select">
+                <option value="0">分钟</option>
+                <option value="1">小时</option>
+                <option value="2">天</option>
+                <option value="3">月</option>
+                <option value="4">年</option>
+            </select>
+            <i class="iconfont mui-pull-right  icon-xiangyou"></i>
+        </div>
+        <div class="button mui-text-center">
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">确认</button>
+        </div>
+    </div>
+    <div id="return_type">
+        <form class="mui-input-group">
+            <div class="mui-input-row mui-radio mui-left mui-disabled">
+                <label>先息后本</label>
+                <input name="radio1" api-val='先息后本' value="0" type="radio">
             </div>
-        </li>
-    </ul>
-     <ul class=" mui-w ul_box">
-        <p class="title">计息方式</p>
-       
-         <li class="mui-row bor-b">
-            <span>利率</span>
-            <input type="number"  placeholder="输入利率">
-            <div class="mui-pull-right"><span></span> <i class=" iconfont icon-icon03"></i></div>
-        </li>
-       <li class="mui-row bor-b">
-            <span>利息金</span>
-            <input type="number"  placeholder="输入利息金">
-            <div class="mui-pull-right"><span></span> <i class=" iconfont icon-icon03"></i></div>
-        </li>
-         <li class="mui-row bor-b">
-            <span>还款方式</span>
-            <div class="mui-pull-right mui-switch">
-  <div class="mui-switch-handle"></div>
+            <div class="mui-input-row mui-radio mui-left mui-disabled">
+                <label>等额本息</label>
+                <input name="radio1" api-val='等额本息' value="1" type="radio" checked>
             </div>
-        </li>
-    </ul>
-    <ul class=" mui-w ul_box">
-        <p class="title">出资资料</p>
-       
-         <li class="mui-row bor-b">
-            <span>是否独资</span>
-            <div class="mui-pull-right mui-switch">
-  <div class="mui-switch-handle"></div>
+            <div class="mui-input-row mui-radio mui-left mui-disabled">
+                <label>扣息均本(砍头息)</label>
+                <input name="radio1" api-val='扣息均本(砍头息)' type="radio" value="2">
             </div>
-        </li>
-        <li class="mui-row bor-b">
-            <span>出资人</span>
-            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
-        </li>
-         <li class="mui-row bor-b">
-            <span>放空</span>
-            <div class="mui-pull-right mui-switch">
-  <div class="mui-switch-handle"></div>
+            <div class="mui-input-row mui-radio mui-left mui-disabled">
+                <label>等额减息</label>
+                <input name="radio1" api-val='等额减息' type="radio" value="3">
             </div>
-        </li>
-    </ul>
-         <ul class=" mui-w ul_box">
-        <p class="title">放款资料</p>
-       
-        <li class="mui-row bor-b">
-            <span>放款时间</span>
-            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
-        </li>
-     <li class="mui-row bor-b">
-            <span>放款人</span>
-            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
-        </li>
-    </ul>
-      <ul class=" mui-w ul_box">
-        <p class="title">提醒</p>
-        <li class="mui-row bor-b">
-            <span>提醒方式</span>
-            <div class="mui-pull-right"><span>请选择</span> <i class=" iconfont icon-xiangyou"></i></div>
-        </li>
-    </ul>
+        </form>
+        <div class="button mui-text-center">
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">确认</button>
+        </div>
+    </div>
+    <div id="ratecycle_select">
+        <form class="mui-input-group">
+            <div class="mui-input-row mui-radio mui-disabled">
+                <label>按天计息</label>
+                <input name="radio2" api-val='按天计息' value="0" type="radio">
+            </div>
+            <div class="mui-input-row mui-radio mui-disabled">
+                <label>按月计息</label>
+                <input name="radio2" api-val='按月计息' value="1" type="radio">
+            </div>
+            <div class="mui-input-row mui-radio mui-disabled">
+                <label>按年计息</label>
+                <input name="radio2" api-val='按年计息' value="2" type="radio">
+            </div>
+        </form>
+        <div class="button mui-text-center">
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">确认</button>
+        </div>
+    </div>
+    <div id="warn_box">
+        <div class="bor-b mui-row">
+            <span>间隔</span>
+            <input class="cricle" type="number" placeholder="输入间隔周期">
+            <i class="iconfont mui-pull-right icon-xiangyou"></i>
+        </div>
+        <div class="bor-b mui-row">
+            <span class="mui-col-xs-3">提醒周期</span>
+            <select id="period" class="mui-col-xs-9">
+                <option value="2">天</option>
+                <option value="3">月</option>
+            </select>
+        </div>
+        <div class="bor-b mui-row">
+            <select id="time">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="button mui-text-center">
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">确认</button>
+        </div>
+    </div>
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
+    <script src="../../js/mui.poppicker.js"></script>
+    <script src="../../js/mui.picker.js"></script>
+    <script src="../../js/mui.dtpicker.js"></script>
+    <script>
+        var consumer,
+            now = new Date()
+        //总周期
+        cycle = { number: 1, unit: 3, display: "月" },
+
+            //提醒
+            warn = {
+                cricle: 1,
+                type: {
+                    unit: 2,
+                    display: "月"
+                },
+                day: now.getDate(),
+                time: {
+                    number: now.getHours(),
+                    display: "22:00"
+                }
+            },
+            //放款时间
+            granmoneydate = { year: now.getFullYear(), month: now.getMonth() + 1, day: now.getDate() },
+            //客户
+            consumer = {},
+            //计息周期
+            ratecycle = { display: "按月计息", value: 3 },
+            //还款日期
+            returnmoneydate = { year: now.getFullYear(), month: now.getMonth() + 1, day: now.getDate() },
+            //还款方式
+            returntype = { display: "等额本息", value: 1 },
+            //出资人
+            partners = [],
+            //放款人
+            sponsor = {};
+        (function () {
+            var cycle_html = '';
+            for (var i = 0; i < 24; i++) {
+                cycle_html += ' <option value="' + i + ':00">' + i + ':00</option>'
+            }
+            $("#time").html(cycle_html);
+
+        })()
+        apiready = function () {
+
+            apimui.config();
+            var btns = apimui.mui('.btnker');
+            btns.each(function (i, btn) {
+                btn.addEventListener('tap', function () {
+                    var _self = this;
+                    var id = $(this).attr('id');
+                    if (_self.picker) {
+                        _self.picker.show(function (rs) {
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    } else {
+                        var optionsJson = this.getAttribute('data-options') || '{}';
+                        var options = JSON.parse(optionsJson);
+                        var id = this.getAttribute('id');
+                        _self.picker = new apimui.mui.DtPicker(options);
+                        _self.picker.show(function (rs) {
+                            var db = {};
+                            db['year'] = rs.text.split('-')[0];
+                            db['month'] = rs.text.split('-')[1];
+                            db['day'] = rs.text.split('-')[2];
+
+                            if (id == 'returnmoneydate') {
+                                returnmoneydate = db;
+                                $("#return_money_date").text(rs.text.split('-')[0] + "-" + rs.text.split('-')[1] + "-" + rs.text.split('-')[2]);
+                            } else {
+                                granmoneydate = db;
+                                $("#grant_money_date").text(db.year + "-" + db.month + "-" + db.day);
+                            }
+
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    }
+
+                }, false);
+            });
+            // 添加客户
+            api.addEventListener({
+                name: 'event_consumer_selected'
+            }, function (ret, err) {
+                alert(JSON.stringify(ret))
+                var db = ret.value;
+                if (typeof (ret.value) == "string")
+                    db = $.parseJSON(ret.value);
+                cusumer = db;
+                $("#consumer_selected").text(db.name + "(" + db.phone + ")");
+                consumer = db;
+            });
+            //总周期
+
+            // api.addEventListener({
+            //     name: 'event_add_cycle'
+            // }, function (ret, err) {
+            //     var db = ret.value;
+            //     if (typeof (ret.value) == "string")
+            //         db = $.parseJSON(ret.value);
+            //     $("#cycle").text(db.number + " " + db.display);
+            //     cycle = db;
+            // })
+            //还款时间
+            api.addEventListener({
+                name: 'event_return_money_date'
+            }, function (ret, err) {
+                var db = ret.value;
+                if (typeof (ret.value) == "string")
+                    db = $.parseJSON(ret.value);
+                $("#return_money_date").text(db.year + "-" + db.month + "-" + db.day);
+                returnmoneydate = db;
+            })
+            // 还款方式
+            // api.addEventListener({
+            //     name: 'event_return_type_selector'
+            // }, function (ret, err) {
+            //     var db = ret.value;
+            //     if (typeof (ret.value) == "string")
+            //         db = $.parseJSON(ret.value);
+            //     $("#return_money_type").text(db.display);
+            //     returntype = db;
+            // })
+            //计息周期
+            // api.addEventListener({
+            //     name: 'event_rate_cycle_selector'
+            // }, function (ret, err) {
+            //     var db = ret.value;
+            //     if (typeof (ret.value) == "string")
+            //         db = $.parseJSON(ret.value);
+            //     $("#rate_cycle").text(db.display);
+            //     ratecycle = db;
+            // })
+            //出资人
+            api.addEventListener({
+                name: 'event_sponsor_selected'
+            }, function (ret, err) {
+                var db = ret.value;
+                if (typeof (ret.value) == "string")
+                    db = $.parseJSON(ret.value);
+                if (db.length > 1)
+                    $("#sponsor").text("多人出资");
+                else
+                    $("#sponsor").text(db[0].name);
+                partners = db;
+            })
+            //放款时间
+            api.addEventListener({
+                name: 'event_grant_money_date'
+            }, function (ret, err) {
+                var db = ret.value;
+                if (typeof (ret.value) == "string")
+                    db = $.parseJSON(ret.value);
+                $("#grant_money_date").text(db.year + "-" + db.month + "-" + db.day);
+                granmoneydate = db;
+            })
+            //放款人
+            api.addEventListener({
+                name: 'event_partner_selected'
+            }, function (ret, err) {
+
+                var db = ret.value[0];
+                if (typeof (ret.value) == "string")
+                    db = $.parseJSON(ret.value);
+                $("#partner_name").text(db[0].name + "(" + db[0].phone + ")");
+                sponsor = db[0];
+            })
+            //提醒
+            // api.addEventListener({
+            //     name: 'event_add_warn'
+            // }, function (ret, err) {
+            //     var db = ret.value;
+            //     if (typeof (ret.value) == "string")
+            //         db = $.parseJSON(ret.value);
+            //     $("#warn").text("每" + db.cricle + db.type.display + " " + (db.type.unit > 1 ? (db.day + "日") : "") + db.time.display);
+            //     warn = db;
+            // })
+
+            /*
+                  var form = avatar.formSerialize("form");
+            $.extend(form, { Cycle: cycle }, { Warn: warn }, { Granmoneydate: granmoneydate },
+                { Consumer: consumer }, { Ratecycle: ratecycle }, { ReturnMoneydate: returnmoneydate },
+                { ReturnType: returntype }, { Partners: partners }, { Sponsor: sponsor });
+            */
+            $("#submit").on('click', function () {
+                var form = apimui.formSerialize("#form");
+                form['IsBackDeduct'] = $("#IsBackDeduct").hasClass('mui-active') ? true : false;
+                form['IsAlone'] = $("#IsAlone").hasClass('mui-active') ? true : false;
+                form['IsEmptyMake'] = $("#IsEmptyMake").hasClass('mui-active') ? true : false;
+
+                var data = $.extend(form, { Cycle: cycle }, { Warn: warn }, { Granmoneydate: granmoneydate },
+                { Consumer: consumer }, { Ratecycle: ratecycle }, { ReturnMoneydate: returnmoneydate },
+                { ReturnType: returntype }, { Partners: partners }, { Sponsor: sponsor });
+                alert(JSON.stringify(data));
+            apimui.post('order/add', data, function (r) {
+                alert(JSON.stringify(r))
+            })
+            })
+        }
+        $("#cycle_box,#return_type,#ratecycle_select,#warn_box").each(function () {
+            $(this).attr({ 'api-bottom': $(this).css('bottom') })
+        });
+        var w_id;
+        function show(id) {
+            w_id = id;
+            $("#" + id).animate({ 'bottom': '0px' })
+            $("#bg").show();
+        }
+        $("#bg").on('click', function () {
+            var b = $("#" + w_id).attr('api-bottom');
+            $("#" + w_id).animate({ 'bottom': b });
+            $(this).hide();
+        })
+        $(".button button").on('click', function () {
+            var p = $(this).parent().parent();
+            var id = p.attr('id');
+            if (id == 'cycle_box') {
+                cycle = { number: Math.abs(p.find("input[type='number']").val()), unit: Math.abs(p.find('select').val()), display: p.find("select option:selected").text() }
+            } else if (id == 'return_type') {
+                returntype = { display: p.find('input:radio:checked').attr('api-val'), value: Math.abs(p.find('input:radio:checked').val()) }
+            } else if (id == 'ratecycle_select') {
+                ratecycle = { display: p.find('input:radio:checked').attr('api-val'), value: Math.abs(p.find('input:radio:checked').val()) }
+            } else if (id == 'warn_box') {
+
+                warn = {
+                    cricle: 1,
+                    type: {
+                        unit: 2,
+                        display: "月"
+                    },
+                    day: now.getDate(),
+                    time: {
+                        number: now.getHours(),
+                        display: "22:00"
+                    }
+                }
+            }
+        })
+    </script>
 </body>
+
 </html>

@@ -36,7 +36,8 @@ class usermsg extends Controller{
 
          if($t >= $d['expire_time']){
 
-             echo '<script>alert("请先登录")</script>';
+          Cookie::delete('token');
+             echo '<script>alert("请重新登录")</script>';
 
              exit;
 

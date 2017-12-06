@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:41:"./application/index/view/index/index.html";i:1511963687;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:41:"./application/index/view/index/index.html";i:1512396105;}*/ ?>
 ﻿
 ﻿<!DOCTYPE html>
 
@@ -1239,17 +1239,15 @@
 
        post('index/Usermsg/usermsg','',function(r,d){
 
-          
-
            usermsg = JSON.parse(d);
 
         $("#nav .username,.add>div").removeClass('aui-hide')
 
         $("#username").text(usermsg.nickname)
 
-        $("#userhead").attr('src',usermsg.header)
+         $("#userhead").attr('src',usermsg.header || 'http://www.yi-23.com/public/static/image/show/default.png')
 
-        if(usermsg.skin){
+        if(usermsg.skin != '0'){
                 $("#bg_skin").css({backgroundImage:'url('+usermsg.skin+')'}).addClass('active');
             }else{
                  $("#bg_skin").css({backgroundImage:'url(/public/static/image/show/yi23bg.png)','backgroundRepeat': 'repeat'});
@@ -1275,9 +1273,7 @@
 
             showset(r.set);
 
-         
-
-      if(r.skin){
+       if(r.skin != '0'){
                 $("#bg_skin").css({backgroundImage:'url('+r.skin+')'}).addClass('active');
             }else{
                  $("#bg_skin").css({backgroundImage:'url(/public/static/image/show/yi23bg.png)','backgroundRepeat': 'repeat'});
@@ -1764,7 +1760,7 @@ classname();
 
     /*自定义*/
 
-    $("#Collection .add>div").on('mouseover',function(){
+  /*  $("#Collection .add>div").on('mouseover',function(){
 
             $("#add_cla").attr('class','iconfont icon-jia')
 
@@ -1775,6 +1771,7 @@ classname();
             $("#add_cla").attr('class','iconfont icon-54-copy')
 
          })
+*/
 
 
 
@@ -2472,7 +2469,7 @@ classname();
 
         if(!color){
 
-             $("#news_ul a,#Collection .head,#Collection .title").css({color:'#fff'})
+             $("#news_ul a,#Collection .head,#Collection .title,#custom,#add_cla").css({color:'#fff'})
 
              $("#Collection .news .msg p").css({color:'#ddd'})
 
@@ -2510,7 +2507,7 @@ classname();
             $("#key_box").html(key)
             if(!color){
              $('#set input[name="color"]').eq(1).attr("checked",'checked');
-             $("#Collection a,#Collection .head,#Collection .title,#search_box a").css({color:'#fff'})
+             $("#Collection a,#Collection .head,#Collection .title,#search_box a,#custom,#add_cla").css({color:'#fff'})
             }
                  
         })
@@ -2622,7 +2619,7 @@ classname();
 
              $('#set input[name="color"]').eq(1).attr("checked",'checked');
 
-              $("#Collection a,#Collection .head,#Collection .title,#search_box a").css({color:'#fff'})
+              $("#Collection a,#Collection .head,#Collection .title,#search_box a,#custom,#add_cla").css({color:'#fff'})
 
             }
 

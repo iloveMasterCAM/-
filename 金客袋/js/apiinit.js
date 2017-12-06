@@ -98,6 +98,7 @@
         this.url = pageParam.url || this.url;
         this.template();
         this.event_click();
+        
     
     }
     apimui.prototype.headImg = function (max) {

@@ -13,7 +13,7 @@ require ROOT_PATH."/extend/class.phpmailer.php";
 require ROOT_PATH."/extend/class.smtp.php";
 
 use think\Cookie;
-
+use think\Session;
 class index extends Controller{
 
     public $url = 'E:\wamp\www\web\public\static\image\show\bg';
@@ -397,131 +397,56 @@ $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'c
         ]);
 
     }
-
-    public function email(){
-
+  public function email(){
        $email = $_POST['name'];
-
-        $pasw = $_POST['pasw'];
-
-//         $email = '1091060034@qq.com';
-
-//        $pasw = '21212';
-
         $user =  Db::name('user');
-
         $arr = $user->where('account',$email)->select();
-
         if(count($arr)>0){
-
             echo 400;
-
         }else{
-
-            $this->sendemail($email,"尊敬的用户：
-
-    <br/>
-
-    您好！恭喜您注册成。
-
-    <br/>
-
-    <br/>
-
-    这是一封注册认证邮件，请点击以下链接确认：<br/>
-
-    http://www.yi-23.com/web/public/index/register/register/?pasw=$pasw&email=$email
-
-    <br/>
-
-    如果链接不能点击，请复制地址到浏览器，然后直接打开。
-
-    <br/>
-
-    <br/>
-
-    上述链接48小时内有效。如果激活链接失效，请您登录网站http://yi-23.com。
-
-    <br/>
-
-    <br/>
-
-    <h2> 感谢您的注册</h2>");
-
+             $rand = rand();
+            $this->sendemail($email,"亲爱的： ".$email."
+            <br/>
+            <br/>
+            欢迎您使用邮箱验证功能，本次获取验证码为：<span style='color:#35b558'>".$rand."</span>，验证码有效期为10分钟，逾期请重新获取； <br/>
+            如非本人操作，请忽略此邮件； <br/>
+            <br/>
+            <br/>
+            （这是一封自动发送的邮件，请不要直接回复）<br/>
+            <br/>
+            yi-23团队");
+             Session::delete('register');
+             Session::set('register',$rand);
         }
 
-
-
        // echo '账号：'.$email.',密码：'.$pas;
-
     }
-
-    public function dbdata(){
-  echo '21332';
- //  dump(config(''));    
-
-     /*   $user =  Db::name('user');
-
-        $arr = $user->where('account','asdf22')->select();
-
-        echo count($arr);*/
-
-     /**/
-
-     
-
-      /*  if (isset($_SERVER['PHP_AUTH_DIGEST'])) { 
-
-            $header['AUTHORIZATION'] = $_SERVER['PHP_AUTH_DIGEST']); 
-
-        } elseif (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW'])) { 
-
-            $header['AUTHORIZATION'] = base64_encode($_SERVER['PHP_AUTH_USER'] . ':' . $_SERVER['PHP_AUTH_PW'])); 
-
-        } 
-
-        if (isset($_SERVER['CONTENT_LENGTH'])) { 
-
-            $header['CONTENT-LENGTH'] = $_SERVER['CONTENT_LENGTH']; 
-
-        } 
-
-        if (isset($_SERVER['CONTENT_TYPE'])) { 
-
-            $header['CONTENT-TYPE'] = $_SERVER['CONTENT_TYPE']; 
-
-        }*/
-
-
-
- // 'host' => string 'localhost' (length=9)
-
- //  'connection' => string 'keep-alive' (length=10)
-
- //  'cache-control' => string 'max-age=0' (length=9)
-
- //  'upgrade-insecure-requests' => string '1' (length=1)
-
- //  'user-agent' => string 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36' (length=110)
-
- //  'accept' => string 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*;q=0.8' (length=85)
-
- //  'accept-encoding' => string 'gzip, deflate, br' (length=17)
-
- //  'accept-language' => string 'zh-CN,zh;q=0.8' (length=14)
-
- //  'cookie' => string 'pgv_pvid=2606648944; 
-
- //        
-
-       // dump( $request->header());
-
-        //dump($user->where('id',1)->select());//条件查询
-
-      //  dump($user->query('select * from user WHERE id = 1')); //返回的是二维数组
-
-//       echo Db::query('select * from user where id=1',[1]);
-
+        public function validatei(){
+   $order = $_POST['order'];
+        $email = $_POST['email'];
+        $s_email = Session::get('register');
+        $pasword = $_POST['pasw'];
+        if(intval($order) != intval($s_email)){
+            echo '验证码错误！';
+            return;
+        }
+    	$pasw = md5($pasword);
+    	$token = md5($pasword.$email);
+    	 $user =  Db::name('user');
+         $website =  Db::name('website');
+        $arr = $user->where('account',$email)->select();
+        if(count($arr) == 0){
+            $t=time()+(86400*30);
+$user->insert(['id'=>null,'account'=>$email,'nickname'=>$email,'header'=>'','pasw'=>$pasw,'token'=>$token,'expire_time'=>$t,'skin'=>0,'Recommend'=>0,'history'=>0,'remind'=>0,'color'=>0]);
+    $d = $user->where('token',$token)->find();  //查询一条记录
+$website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'calss'=>'综合']);
+        	Cookie::set('token',$token,3600*24*50);
+        $this->redirect('http://www.yi-23.com/',302);
+        }else{
+            echo "<script>alert('该账号已注册！')</script>>";
+        }
+        
+ 
     }
 
     public function Forgotpasw(){
@@ -564,9 +489,9 @@ $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'c
 
             yi-23团队");
 
-             Cookie::delete('email');
+             Session::delete('email');
 
-             Cookie::set('email',$rand,600);
+              Session::set('email',$rand);
 
         }
 

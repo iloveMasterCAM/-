@@ -44,7 +44,7 @@
         }
         #btn button {
             width: 90%;
-            line-height: 35px;
+            line-height: 30px;
             margin-top: 20px;
             background: #03a9f4;
         }
@@ -63,7 +63,7 @@
             background: #fff;
         }
         #month span.active{
-            color: red;
+            color: #ffdc1a;
         }
     </style>
 </head>
@@ -91,10 +91,10 @@
     <div class="mui-row" id="exp">
         <i class="iconfont icon-yue"></i>
         <span class="color">￥
-            <em id="exp_">3000</em>
+            <em id="exp_">3000</em> 
         </span>
         <span class="mui-pull-right">
-            <em  style="color:#03a9f4">300</em>经验</span>
+            <em id="exp_a"  style="color:#03a9f4">300</em>经验</span>
     </div>
     <p id="msg">一旦续期软件便产生消费，消费金额不再退回</p>
     <div class="mui-text-center" id="btn">
@@ -113,6 +113,13 @@
     var money =  n*300;
         $("#val").val(n)
         $("#exp_").text(money);
+        $("#exp_a").text(money);
+    })
+    $("#btn button").on('click',function(){
+        api.openWin({
+            name:'pay',
+            url:'../pay/pay.html'
+        })
     })
     
 

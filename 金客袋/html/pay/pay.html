@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        .ul_box {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .ul_box li {
+            padding: 0 15px;
+            line-height: 45px;
+        }
+        .type{
+            padding: 5px 15px 10px;
+        }
+        #type{
+            background: #fff;
+        }
+        #type input{
+            top: 14px;
+        }
+        #button button{
+            width: 80%;
+            margin-top: 20px;
+        }
+        .title{
+            text-align: center;
+            line-height: 40px;
+            font-size: 15px;
+        }
+        #head{
+        background: #fff;
+        line-height: 45px;
+        padding-top: 15px;
+    }
+    #head i{
+        position: relative;
+        left: 15px;
+        
+    }
+    </style>
+</head>
+
+<body>
+    <header id="head">
+        <div class="mui-row mui-text-center">
+            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
+            <span>系统消息</span>
+        </div>
+    </header>
+    <ul class=" mui-w ul_box">
+        <p class="title">软件续期</p>
+        <li class="mui-row bor-b" event='click' api-name='parther_select' api-url='parther_select.html'>
+            <span>金额</span>
+            <div class="mui-pull-right">
+                <span id="sponsor">￥200</span>
+            </div>
+        </li>
+        <li class="mui-row bor-b" event='click' api-name='parther_select' api-url='parther_select.html'>
+            <span>状态</span>
+            <div class="mui-pull-right">
+                <span id="sponsor">支付中</span>
+            </div>
+        </li>
+        <li class="mui-row bor-b" event='click' api-name='parther_select' api-url='parther_select.html'>
+            <span>订单号</span>
+            <div class="mui-pull-right">
+                <span id="sponsor">12212121212124</span>
+            </div>
+        </li>
+        <li class="mui-row bor-b" event='click' api-name='parther_select' api-url='parther_select.html'>
+            <span>订单类型</span>
+            <div class="mui-pull-right">
+                <span id="sponsor">软件续期</span>
+            </div>
+        </li>
+        <li class="mui-row bor-b" event='click' api-name='parther_select' api-url='parther_select.html'>
+            <span>阿什顿发斯蒂芬是</span>
+
+        </li>
+    </ul>
+    <p class="type">选择支付方式</p>
+    <div id="type">
+        <div class="bor-b">
+            <div class="mui-input-row mui-radio">
+                <label class="mui-row">
+                    <div class="mui-col-xs-3">
+                            <img src="../../image/zhifub.png" alt="">
+                    </div>
+                    <div class="mui-col-xs-9">
+                        <p>支付宝</p>
+                        <p>使用支付宝支付</p>
+                    </div>
+
+                </label>
+                <input name="radio1" type="radio">
+            </div>
+        </div>
+        <div class="bor-b">
+                <div class="mui-input-row mui-radio">
+                    <label class="mui-row">
+                        <div class="mui-col-xs-3">
+                                <img src="../../image/weixn.png" alt="">
+                        </div>
+                        <div class="mui-col-xs-9">
+                            <p>支付宝</p>
+                            <p>使用支付宝支付</p>
+                        </div>
+    
+                    </label>
+                    <input name="radio1" type="radio">
+                </div>
+            </div>
+    </div>
+    <div id="button" class="mui-text-center">
+            <button type="button" class="mui-btn mui-btn-primary">蓝色</button>
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+</body>
+
+</html>

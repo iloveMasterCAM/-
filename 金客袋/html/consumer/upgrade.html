@@ -43,8 +43,7 @@
         }
         #list li{
             padding: 10px 15px;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+          
         }
         #ul span,#ul i{
             color: #807e7e;
@@ -59,6 +58,13 @@
             position: absolute;
             top: 35px;
             left: 15px;
+        }
+        #ul .color{
+            color: #FB6F18
+        }
+        #ul .txt{
+            color: #333;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -102,13 +108,13 @@
         </ul>
     </div>
     <script type="text/html" id="list_temp">
-        <li class="mui-row">
+        <li class="mui-row bor-b">
             <span class="mui-pull-left">领俸禄</span>
             <span class="mui-pull-right">24/s过期</span>
         </li>
         {{each d as d}}
-        <li>
-            <div><i class="iconfont icon-yinzi">{{d.money}}两</i> 
+        <li class='bor-b'>
+            <div><i class="iconfont icon-yinzi color"></i> <span class="txt"> {{d.money}}两</span>
                 {{ if d.status=="Paying" }}
                 <input type="button" av-id="{{d.id}}" class="aui-btn aui-btn-sm aui-font-size-12" value="领取">
                 {{ else if d.status=="Success" }}

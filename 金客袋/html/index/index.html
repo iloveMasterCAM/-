@@ -24,50 +24,61 @@
         #nav i {
             font-size: 28px;
         }
-        #all{
+
+        #all {
             padding-bottom: 10px;
             margin-top: 6px;
         }
-        #all .number{
+
+        #all .number {
             width: 45px;
             line-height: 45px;
             background: #ccc;
             margin: 0 auto;
             color: #fff;
             border-radius: 50%;
-            
+
         }
-        #all p{
+
+        #all p {
             color: #333;
         }
-        #all .txt{
+
+        #all .txt {
             line-height: 50px;
         }
-        .list{
+
+        .list {
             margin-top: 6px;
             padding: 15px;
             padding-bottom: 40px;
         }
-        .list .money{
+
+        .list .money {
             margin-top: 25px;
             font-size: 20px;
             font-weight: 500;
         }
-        .mui-w img{
+
+        .mui-w img {
             width: 100%;
             margin-top: 5px;
         }
-        .img{
+
+        .img {
             margin-top: 10px;
         }
-        .color{
+
+        .color {
             font-size: 12px;
             color: #ccc;
         }
-        .green{
+
+        .green {
             color: green;
         }
-        .red{
+
+        .red {
             color: red;
         }
     </style>
@@ -110,7 +121,7 @@
             </div>
         </div>
         <!-- home/bill -->
-        <div class="mui-row mui-text-center" role="template" event="html" tempid="temp_bill" api-url='home/bill'>
+        <div class="mui-row mui-text-center" role="template" api-type="html" api-id="temp_bill" api-url='home/bill'>
             <div class="mui-col-xs-3">
                 <p class="number">1</p>
                 <p>逾期</p>
@@ -129,7 +140,7 @@
             </div>
         </div>
     </div>
-    <div class="list mui-w" >
+    <div class="list mui-w">
         <div class="mui-row">
             <div class="mui-pull-left">
                 本月出帐
@@ -170,33 +181,54 @@
     </script>
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
-    <script src="../../js/apiinit.js"></script>
+    <!-- <script src="../../js/apiinit.js"></script> -->
+    <script src="../../js/rc.js"></script>
     <script src="../../js/artTemplate.js"></script>
     <script>
-        apiready = function(){
-            apimui.config();
-            apimui.post('home/billout','',function(r){
-                $(".red").text(r.d)
-            })
-            apimui.post('home/billin','',function(r){
-                $(".green").text(r.d)
-            })
-            api.setRefreshHeaderInfo({
-        loadingImg: 'widget://image/refresh.png',
-        bgColor: '#fff',
-        textColor: '#ccc',
-        textDown: '下拉刷新...',
-        textUp: '松开刷新...'
-    }, function(ret, err) {
-   
-        setTimeout(function(){
-            api.refreshHeaderLoadDone();
-        },1000)
-        //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+         
+        apiready = function () {
         
-    });
+            rc.c({isDown:true})
+            rc.init();
+            // apimui.config();
+            // load();
+            // api.setRefreshHeaderInfo({
+            //     loadingImg: 'widget://image/refresh.png',
+            //     bgColor: '#fff',
+            //     textColor: '#ccc',
+            //     textDown: '下拉刷新...',
+            //     textUp: '松开刷新...'
+            // }, function (ret, err) {
+
+            //     load(function () {
+            //         setTimeout(function() {
+            //             api.refreshHeaderLoadDone();
+            //         }, 1000);
+                   
+            //     });
+
+
+            //     //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+
+            // });
+            // function load(callback) {
+            //     apimui.post('home/billout', '', function (r) {
+            //         if(r.s){
+            //             $(".red").text(r.d)
+            //         callback && callback();
+            //         }
+                 
+            //     })
+            //     apimui.post('home/billin', '', function (r) {
+            //         if(r.s){
+            //             $(".green").text(r.d)
+            //         callback && callback();
+            //         }
+                
+            //     })
+            // }
         }
-        </script>
+    </script>
 </body>
 
 </html>

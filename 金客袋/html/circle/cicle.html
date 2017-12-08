@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+    <link rel="stylesheet" type="text/css" href="../../iconfont/iconfont.css" />
+    <style>
+        .img>div {
+            height: 100px;
+
+
+        }
+
+        .txt {
+            padding: 10px;
+    
+            padding-top: 10px;
+        }
+
+        .list {
+
+            border-top: 10px solid #f5f5f5;
+
+        }
+
+        #box {
+            background: #fff;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+        <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">催款</div>
+    </header>
+    <!-- circle/mine -->
+    <div id="box" role="template" event="append" tempid="box_temp" api-url='circle/mine' api-data='{}'></div>
+
+    <script id="box_temp" type="text/html">
+    {{each d as d}}
+    <div class="list">
+        <p class="txt">{{d.content}}</p>
+        <div class="mui-row img">
+                {{if d.images.length == 1}}
+                <div class="mui-col-xs-12" style="background-image:url('{{d.images[0]}}?w=900');height:150px;"></div>
+                {{/if}}
+                {{if d.images.length ==2}}
+                {{each d.images as img i}}
+                    <div class="mui-col-xs-6" style="background-image:url('{{img}}?w=600'); background-repeat: no-repeat;background-size: cover;"></div>
+                   
+                {{/each}}
+                {{/if}}
+                {{if d.images.length>=3}}
+                {{each d.images as img i}}
+                    <div class="mui-col-xs-4"  style="background-image:url('{{img}}?w=400');background-repeat: no-repeat;background-size: cover;"></div>
+                {{/each}}
+                {{/if}}
+
+      </div>
+        
+        <div class="mui-row txt">
+            <div class="mui-pull-left"><i class="iconfont icon-chakan"></i> {{d.read}}</div>
+            <div class="mui-pull-right"><i class="iconfont icon-dianzan-copy"></i>{{d.pra}}</div>
+        </div>
+        <div class="mui-row mui-padd-lr">
+          <div class="mui-pull-left">{{d.time}}</div>
+          <div class="mui-pull-right"><i onclick="del('{{d.id}}')" class="iconfont icon-shanchu"></i></div>
+      </div>
+    </div>
+    {{/each}}
+</script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script src="../../js/artTemplate.js"></script>
+    <script>
+
+        apiready = function () {
+            var d = api.pageParam;
+
+            $("#box").attr({ 'api-data': '{"id":"' + d.id + '"}' })
+            apimui.config();
+        }
+
+    </script>
+</body>
+
+</html>

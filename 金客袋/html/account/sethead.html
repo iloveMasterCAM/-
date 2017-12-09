@@ -46,6 +46,17 @@
     apiready = function(){
        var d =  api.pageParam
         $("#head").attr({'src':d.src})
+
+        $("#box").on('click', function () {
+            var this_ = $(this);
+            apimui.upimg(0, function (r) {
+                //base64String
+                this_.html('<img style="width:80%;" src=' + r.base64String + '>')
+                apimui.upimgurl([r.base64String], function (r) {
+                    alert(JSON.stringify(r));
+                })
+            }, 1)
+        })
     }
 
     </script>

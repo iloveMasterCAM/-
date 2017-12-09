@@ -502,23 +502,7 @@
                 $("#partner_name").text(db[0].name + "(" + db[0].phone + ")");
                 sponsor = db[0];
             })
-            //提醒
-            // api.addEventListener({
-            //     name: 'event_add_warn'
-            // }, function (ret, err) {
-            //     var db = ret.value;
-            //     if (typeof (ret.value) == "string")
-            //         db = $.parseJSON(ret.value);
-            //     $("#warn").text("每" + db.cricle + db.type.display + " " + (db.type.unit > 1 ? (db.day + "日") : "") + db.time.display);
-            //     warn = db;
-            // })
-
-            /*
-                  var form = avatar.formSerialize("form");
-            $.extend(form, { Cycle: cycle }, { Warn: warn }, { Granmoneydate: granmoneydate },
-                { Consumer: consumer }, { Ratecycle: ratecycle }, { ReturnMoneydate: returnmoneydate },
-                { ReturnType: returntype }, { Partners: partners }, { Sponsor: sponsor });
-            */
+         
             $("#submit").on('click', function () {
                 var form = apimui.formSerialize("#form");
                 form['IsBackDeduct'] = $("#IsBackDeduct").hasClass('mui-active') ? true : false;
@@ -528,7 +512,7 @@
                 var data = $.extend(form, { Cycle: cycle }, { Warn: warn }, { Granmoneydate: granmoneydate },
                 { Consumer: consumer }, { Ratecycle: ratecycle }, { ReturnMoneydate: returnmoneydate },
                 { ReturnType: returntype }, { Partners: partners }, { Sponsor: sponsor });
-                alert(JSON.stringify(data));
+
             apimui.post('order/add', data, function (r) {
                 alert(JSON.stringify(r))
             })
@@ -553,12 +537,14 @@
             var id = p.attr('id');
             if (id == 'cycle_box') {
                 cycle = { number: Math.abs(p.find("input[type='number']").val()), unit: Math.abs(p.find('select').val()), display: p.find("select option:selected").text() }
+                $("#cycle").text(p.find("select option:selected").text())
             } else if (id == 'return_type') {
                 returntype = { display: p.find('input:radio:checked').attr('api-val'), value: Math.abs(p.find('input:radio:checked').val()) }
+                $("#return_money_type").text(p.find('input:radio:checked').attr('api-val'))
             } else if (id == 'ratecycle_select') {
                 ratecycle = { display: p.find('input:radio:checked').attr('api-val'), value: Math.abs(p.find('input:radio:checked').val()) }
+                $("#rate_cycle").text(p.find('input:radio:checked').attr('api-val'))
             } else if (id == 'warn_box') {
-
                 warn = {
                     cricle: 1,
                     type: {
@@ -572,6 +558,9 @@
                     }
                 }
             }
+            var b = $("#" + w_id).attr('api-bottom');
+            $("#" + w_id).animate({ 'bottom': b });
+            $('#bg').hide();
         })
     </script>
 </body>

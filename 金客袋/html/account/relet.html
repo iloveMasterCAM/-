@@ -16,53 +16,65 @@
             line-height: 50px;
             padding-left: 15px;
         }
+
         #month {
             background: #fff;
             padding: 10px 0;
             border-bottom: 1px solid #ddd;
         }
+
         #month span {
             padding: 0 15px;
         }
+
         #input,
         #exp {
             background: #fff;
             padding: 5px 15px;
-            
+
         }
+
         #exp {
             margin-top: 10px;
-            padding:  10px;
+            padding: 10px;
         }
+
         #input input {
             width: 90%;
             line-height: 45px;
             padding-left: 20px;
         }
+
         #msg {
             padding: 15px;
         }
+
         #btn button {
             width: 90%;
             line-height: 30px;
             margin-top: 20px;
             background: #03a9f4;
         }
-        #btn .mui-btn-warning, .mui-btn-yellow{
+
+        #btn .mui-btn-warning,
+        .mui-btn-yellow {
             border-color: #03a9f4;
         }
-        .color{
+
+        .color {
             color: red;
             font-size: 1.4rem;
             padding-left: 20px;
         }
-        #head{
+
+        #head {
             line-height: 45px;
             padding-top: 15px;
             padding-left: 15px;
             background: #fff;
         }
-        #month span.active{
+
+        #month span.active {
             color: #ffdc1a;
         }
     </style>
@@ -91,37 +103,55 @@
     <div class="mui-row" id="exp">
         <i class="iconfont icon-yue"></i>
         <span class="color">￥
-            <em id="exp_">3000</em> 
+            <em id="exp_">3000</em>
         </span>
         <span class="mui-pull-right">
-            <em id="exp_a"  style="color:#03a9f4">300</em>经验</span>
+            <em id="exp_a" style="color:#03a9f4">300</em>经验</span>
     </div>
     <p id="msg">一旦续期软件便产生消费，消费金额不再退回</p>
     <div class="mui-text-center" id="btn">
         <button type="button" class="mui-btn mui-btn-warning ">确认续期</button>
     </div>
-    
+
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
     <script>
-    $("#month span").on('click',function(){
-        // alert(1)
-        $('#month .active').removeClass('active');
-        $(this).addClass('active');
-    var n = parseInt($(this).text());
-    var money =  n*300;
-        $("#val").val(n)
-        $("#exp_").text(money);
-        $("#exp_a").text(money);
-    })
-    $("#btn button").on('click',function(){
-        api.openWin({
-            name:'pay',
-            url:'../pay/pay.html'
+        $("#month span").on('click', function () {
+            // alert(1)
+            $('#month .active').removeClass('active');
+            $(this).addClass('active');
+            var n = parseInt($(this).text());
+            var money = n * 300;
+            $("#val").val(n)
+            $("#exp_").text(money);
+            $("#exp_a").text(money);
         })
-    })
-    
+        var price = 500;
+        $("#btn button").on('click', function () {
+            var month = parseInt($("#val").val()), money = month * price;
+            var data = {
+                Title: "续期软件",
+                Money: money, Number: month,
+                Content: "续期软件[" + month + "]个月,支付[" + money + "]元",
+                Type: 7
+            };
+            apimui.post("pay/create", data, function ( d) {
+                if (!d || !d.s) {
+                    api.toast({ msg: d.m || e.msg });
+                    return;
+                }   
+                api.openWin({
+                name: 'pay',
+                url: '../pay/pay.html',
+                pageParam: d.d
+            })
+            })
+
+
+           
+        })
+
 
     </script>
 </body>

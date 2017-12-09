@@ -163,7 +163,7 @@
             width: 80%;
             padding-right: 10px;
         }
-        #tag .label span{
+        #tag .label span,#upgrade span{
             background: #757575;
             padding: 5px 7px;
             color: #fff;
@@ -447,13 +447,54 @@
         #wrap .color{
             color: #FFC107
         }
+        #upgrade{
+            width: 80%;
+            background: #fff;
+            position: fixed;
+            top: 20%;
+            left: 10%;
+            z-index: 10;
+            border-radius: 5px;
+            box-shadow: 0 0 20px 4px #888;
+            display: none;
+        }
+        #upgrade .active{
+            background: #f57e29;
+        }
+        #upgrade .mui-input-group::before, #upgrade .mui-input-group::after,.mui-input-group .mui-input-row:after{
+            display: none;
+        }
+        #upgrade .mui-input-group{
+            margin:5px 0;
+        }
+        #upgrade .mui-checkbox.mui-left input[type='checkbox']{
+            left: 10px;
+            top: -2px;
+        }
+        #upgrade .mui-input-row label{
+            padding-top: 0 ;
+            padding-bottom: 0 ;
+            padding-left: 49px;
+            color: #ff710c;
+        }
+        #upgrade>div{
+            padding: 0.6rem;
+        }
+        #bg{
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 9;
+            display: none;
+        }
     </style>
 <body>
     <header id="head">
         <div class="mui-row mui-text-center">
             <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
             <span>升官进爵</span>
-          
         </div>
     </header>
     <div id="wrap" role="template" event="html" tempid="nextoffer_tmp" api-url='offcer/nextoffer' api-data='{}'>
@@ -472,24 +513,11 @@
 
     </div>
     <div id="circle">
-        <!-- <div class="circle">
-            <div class="circle inst">
-                升官
-            </div>
-            <div class="child li1"></div>
-            <div class="child li2"></div>
-            <div class="child li3"></div>
-            <div class="child li4"></div>
-            <div class="child li5"></div>
-            <div class="child li6"></div>
-        </div> -->
-
         <section class="aui-content aui-margin-b-5" style="background-color:white;">
                 <div class="up"  id="toup">
                     <span>升官 <i></i></span>
                 </div>
             </section>
-
     </div>
     <div id="msg">   
         <p>活动协议</p>
@@ -571,6 +599,9 @@
             </div>
         </div>
     </div>
+
+  
+    <div id="bg"></div>
     <script id="nextoffer_tmp" type="text/html">
     
         <p>可升官阶</p>
@@ -585,7 +616,29 @@
                 <p>{{d.month}}个月</p>
             </div>
         </div>
-        
+        <div id="upgrade">
+            <div>   
+                <p>男官</p>
+                {{each d.aliags.m as a i}}
+                <span onclick="show(this)">{{a}}</span>
+                {{/each}}
+            </div>
+            <div>  
+                <p>女官</p>
+                {{each d.aliags.w as a i}}
+                <span onclick="show(this)">{{a}}</span>
+                {{/each}}
+            </div>
+            <form class="mui-input-group">
+                <div class="mui-input-row mui-checkbox mui-left">
+                    <label>我已详细知晓该活动的全部内容，并自愿参与并遵守活动协议内容</label>
+                    <input id="checkbox" name="checkbox" value="1" type="checkbox" checked>
+                </div>
+            </form>
+            <div class="mui-text-center">
+                <button type="button" onclick="upgrade(this)" id="{{d.id}}" class="mui-btn mui-btn-primary">升官进爵</button>
+            </div>
+        </div>
     </script>
     <script id="tag_temp" type="text/html">
         {{each d as d i}}
@@ -626,7 +679,51 @@
     
     apiready = function(){
         apimui.config();
+        
     }
+    //offcer/upoffer
+    function upgrade(self){
+        
+        if(!$(self).attr('id')){
+            api.toast({
+                msg:'没有可升级的官衔'
+            })
+            return;
+        }
+        if(!$("#upgrade #checkbox").is(":checked")) {
+            api.toast({ msg: "请勾选同意协议!" });
+                return;
+        }
+        if($("#upgrade span.active").length == 0){
+            api.toast({ msg: "请选择官位!" });
+            return;
+        }
+
+        apimui.post('offcer/upoffer',{id:$(self).attr('id'),name:$("#upgrade span.active").text()},function(r){
+       //     alert(JSON.stringify(r))
+            if(r.s){
+                api.toast({
+                    msg:r.m
+                })
+            }else{
+                api.toast({
+                    msg:r.m
+                })
+            }
+        })
+    }
+    function show(self){
+        $("#upgrade span").removeClass('active')
+        $(self).addClass('active')
+    }
+    $("#bg").on('click',function(){
+        $("#upgrade").hide();
+        $("#bg").hide();
+    })
+    $("#toup").on('click',function(){
+        $("#upgrade").show();
+        $("#bg").show();
+    })
     </script>
 </body>
 

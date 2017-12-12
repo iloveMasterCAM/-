@@ -1,19 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
-    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../css/public.css" rel="stylesheet" />
     <link href="../../iconfont/iconfont.css" rel="stylesheet" />
-</head>
-<body>
-    
+    <link href="../../css/swiper.min.css" rel="stylesheet" />
+    <style>
+        #benner .img {
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 150px;
+        }
 
+        .title {
+            line-height: 40px;
+            background: #fff;
+        }
+
+        .title .txt::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 14px;
+            width: 3px;
+            height: 12px;
+            ;
+            background: red;
+        }
+
+        #recommend::-webkit-scrollbar {
+            display: none
+        }
+
+        #recommend {
+            overflow-x: auto;
+            background: #fff;
+
+        }
+
+        #recommend .img {}
+
+        #recommend .recommend::before {
+            position: absolute;
+            content: '';
+            z-index: 2;
+            width: 100%;
+            right: 0px;
+            ;
+            bottom: 0;
+            height: 1px;
+            background-color: #ccc;
+            -webkit-transform: scale(1, 0.5);
+            transform: scale(1, 0.5);
+        }
+
+        #recommend .recommend {
+            padding: 5px 0;
+        }
+
+        #commodity .nav {
+            background: #fff;
+        }
+
+        #commodity .nav li {
+            position: relative;
+            line-height: 40px;
+        }
+
+        #commodity .nav li p {
+            line-height: normal;
+            display: inline-block;
+            margin-top: -6px;
+            position: relative;
+            top: 6px;
+        }
+
+        #commodity .nav i {
+            display: block;
+            line-height: normal;
+            font-size: 12px;
+        }
+
+        #commodity li.active span {
+            color: red;
+        }
+
+        #commodity_box {
+            padding: 0 1%;
+        }
+
+        #commodity_box>div {
+            background: #fff;
+            ;
+            width: 48%;
+            float: left;
+            margin: 1%;
+            ;
+        }
+
+        #commodity_box img {
+            width: 100%;
+        }
+
+        #commodity {}
+
+        #commodity {}
+
+        #commodity {}
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container" id="benner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="img" style="background: url(../../image/adviser_bg.png); background-size: cover; background-repeat: no-repeat"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img" style="background: url(../../image/comlist.png); background-size: cover; background-repeat: no-repeat"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img" style="background: url(../../image/Contaact.png); background-size: cover; background-repeat: no-repeat"></div>
+            </div>
+        </div>
+    </div>
+    <div class="title bor-b mui-row mui-padded-l-15 mui-padded-r-15">
+        <span class="mui-pull-lfet txt mui-padded-l-15 mui-relative">锻造坊</span>
+        <span class="mui-pull-right more">更多</span>
+    </div>
+    <div class="" id="recommend">
+        <div class="recommend clear mui-relative">
+            <div class="box mui-pull-left">
+                <div class="img" style="  background: url(../../image/adviser_bg.png); background-size: cover;background-repeat: no-repeat; background-position: center center;"></div>
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>10</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>12</em>
+                    </div>
+                </div>
+            </div>
+            <div class="box mui-pull-left">
+                <div class="img" style="  background: url(../../image/adviser_bg.png); background-size: cover;background-repeat: no-repeat; background-position: center center;"></div>
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>10</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>12</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box mui-pull-left">
+                <div class="img" style="  background: url(../../image/adviser_bg.png); background-size: cover;background-repeat: no-repeat; background-position: center center;"></div>
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>10</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>12</em>
+                    </div>
+                </div>
+            </div>
+            <div class="box mui-pull-left">
+                <div class="img" style="  background: url(../../image/adviser_bg.png); background-size: cover;background-repeat: no-repeat; background-position: center center;"></div>
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>10</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>12</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title bor-b mui-row mui-padded-l-15 mui-padded-r-15">
+        <span class="mui-pull-lfet txt mui-padded-l-15 mui-relative">限时推荐</span>
+        <span class="mui-pull-right more">更多</span>
+    </div>
+    <div id="commodity">
+        <ul class="mui-row nav mui-text-center">
+            <li class="mui-col-xs-3 mui-row active">
+                <span class="">综合</span>
+                <p class="">
+                    <i class="iconfont icon-xiangshangsanjiao"></i>
+                    <i class="iconfont icon-xiangxiasanjiao"></i>
+                </p>
+            </li>
+            <li class="mui-col-xs-3 mui-row ">
+                <span class="">综合</span>
+                <p class="">
+                    <i class="iconfont icon-xiangshangsanjiao"></i>
+                    <i class="iconfont icon-xiangxiasanjiao"></i>
+                </p>
+            </li>
+
+            <li class="mui-col-xs-3 mui-row ">
+                <span class="">综合</span>
+                <p class="">
+                    <i class="iconfont icon-xiangshangsanjiao"></i>
+                    <i class="iconfont icon-xiangxiasanjiao"></i>
+                </p>
+            </li>
+            <li class="mui-col-xs-3 mui-row ">
+                <span class="">综合</span>
+                <p class="">
+                    <i class="iconfont icon-xiangshangsanjiao"></i>
+                    <i class="iconfont icon-xiangxiasanjiao"></i>
+                </p>
+            </li>
+        </ul>
+        <div class="mui-row" id="commodity_box">
+            <div class="">
+                <div>
+                    <img src="../../image/head.png" alt="">
+                </div>
+
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>1212</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>122</em>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div>
+                    <img src="../../image/head.png" alt="">
+                </div>
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>1212</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>122</em>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div>
+                    <img src="../../image/head.png" alt="">
+                </div>
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>1212</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>122</em>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div>
+                    <img src="../../image/head.png" alt="">
+                </div>
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>1212</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>122</em>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div>
+                    <img src="../../image/head.png" alt="">
+                </div>
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>1212</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>122</em>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div>
+                    <img src="../../image/head.png" alt="">
+                </div>
+                <p class="mui-ellipsis-2  mui-padded-l-10 mui-padded-r-10">啦啦啦啦啦啦啦啦啦啦绿绿绿绿绿绿</p>
+                <div class="mui-row mui-padded-l-10 mui-padded-r-10">
+                    <div class="mui-pull-left">
+                        原价:
+                        <em>1212</em>
+                    </div>
+                    <div class="mui-pull-right">
+                        售价:
+                        <em>122</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+	
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
+    <script type="text/javascript" src="../../js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {})
+        var w = $(window).width();
+        $("#recommend .box").width(w / 3)
+        $("#recommend .img").height(w / 3 - 10)
+        var len = $("#recommend .box").length;
+        $("#recommend .recommend").width(w / 3 * len);
+     /* 倒计时 毫秒单位 1000*/
+     time();
+        function time(){
+            var inow = new Date();
+            var inew = new Date(2017,11,13,09,33,0);
+           
+            var t = (inew - inow)/1000;
+         //天 
+           
+        //    Math.floor(t/86400) // 天
+        //    Math.floor(t%86400/3600) // 时
+        //    Math.floor(t%86400%3600/60) // 分
+        //    t%60 // 秒
+
+
+            // console.log(wt);
+            console.log(t%86400);
+            console.log(t/86400);
+        }
+        function fmtDate(obj){
+            
+        }
+
+    </script>
 </body>
+
 </html>

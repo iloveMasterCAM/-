@@ -1,4 +1,7 @@
 (function (window) {
+    $("[role='template']").each(function () {
+        $(this).html("<div class='loading'><p>玩命加载中...</p><div class='typing_loader'></div></div>")
+    })
     var r = {};
     var c = {
         'dburl': 'http://cusumer.buydee.org/',
@@ -24,8 +27,9 @@
             r.post(url,d,function(d){
                 var id = $(self).attr('api-id'),type = $(self).attr('api-type')
                 if(d.s){
-                    var html = template(id,d);
-                    $(self)[type](html);
+                   $(self).html('');
+                   var html = template(id,d);
+                  $(self)[type](html);
                 }
              if(i+1 == len){
               r.click();
@@ -159,6 +163,7 @@
            
         })
     } 
+   
     r.plugs = plugs;
     window.rc = r; 
 

@@ -5782,3 +5782,79 @@ body > .mui-progressbar
         .mui-bar-nav{
             padding-top: 15px;
         }
+
+        /* loading */
+        .loading{
+            width: 100%;
+           padding: 50px 0;
+            text-align: center;
+        }
+        .loading p{
+            font-size: 0.6rem;
+        }
+.typing_loader{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+     -webkit-animation: typing 1s linear infinite alternate;
+       -moz-animation: Typing 1s linear infinite alternate;
+            animation: typing 1s linear infinite alternate; 
+    margin: 0 auto; /* Not necessary- its only for layouting*/  
+    position: relative;
+    left: -12px;
+  
+
+}
+@-webkit-keyframes typing{
+    0%{
+        /* (158, 158, 158,1) */
+        background-color: rgba(158, 158, 158,1);
+        box-shadow: 12px 0px 0px 0px rgba(158,158,158,0.2), 
+                    24px 0px 0px 0px rgba(158,158,158,0.2);
+      }
+    25%{ 
+        background-color: rgba(158,158,158, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(158,158,158,2), 
+                    24px 0px 0px 0px rgba(158,158,158,0.2);
+    }
+    75%{ background-color: rgba(158,158,158, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(158,158,158,0.2), 
+                    24px 0px 0px 0px rgba(158,158,158,1);
+      }
+}
+
+@-moz-keyframes typing{
+    0%{
+        /* (158, 158, 158,1) */
+        background-color: rgba(158, 158, 158,1);
+        box-shadow: 12px 0px 0px 0px rgba(158,158,158,0.2), 
+                    24px 0px 0px 0px rgba(158,158,158,0.2);
+      }
+    25%{ 
+        background-color: rgba(158,158,158, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(158,158,158,2), 
+                    24px 0px 0px 0px rgba(158,158,158,0.2);
+    }
+    75%{ background-color: rgba(158,158,158, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(158,158,158,0.2), 
+                    24px 0px 0px 0px rgba(158,158,158,1);
+      }
+}
+
+@keyframes typing{
+    0%{
+        /* (158, 158, 158,1) */
+        background-color: rgba(158, 158, 158,1);
+        box-shadow: 12px 0px 0px 0px rgba(158,158,158,0.2), 
+                    24px 0px 0px 0px rgba(158,158,158,0.2);
+      }
+    25%{ 
+        background-color: rgba(158,158,158, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(158,158,158,2), 
+                    24px 0px 0px 0px rgba(158,158,158,0.2);
+    }
+    75%{ background-color: rgba(158,158,158, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(158,158,158,0.2), 
+                    24px 0px 0px 0px rgba(158,158,158,1);
+      }
+}

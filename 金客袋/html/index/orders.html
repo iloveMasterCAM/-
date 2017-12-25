@@ -61,7 +61,7 @@
             <input type="text" placeholder="手机号/姓名">
         </div>
     </div>
-    <div id="box" role="template" api-type="html" api-id="box_tamp" api-url='order/paged' api-up='append' api-down='html'>
+    <div id="box" role="template" api-type="html" api-id="box_tamp" api-url='order/paged' api-up='append' api-down='html' api-callback="callback">
 
     </div>
     <!-- <div class="list mui-w">
@@ -131,6 +131,7 @@
                 </div>
             {{/each}}
         </script>
+        <img src="" alt="">
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/rc.js"></script>
@@ -141,7 +142,13 @@
             rc.c({isUp:true,isDown:true});
             rc.init();
         }
-
+        $("img").on('error',function(){
+                //alert(localStorage['img'])
+                $(this).attr({'src':localStorage['img']});
+            });
+        function callback(){
+           
+        }
         function iopne(id) {
             api.openWin({
                 name: 'data',

@@ -74,7 +74,9 @@
             padding-top: 25px;
         }
 
-        #header .jia ,.cicle ,#header .set i{
+        #header .jia,
+        .cicle,
+        #header .set i {
             position: absolute;
             right: 10px;
             top: 20px;
@@ -82,7 +84,8 @@
             color: #0071c7
         }
 
-        #header .jia i,#header .set i {
+        #header .jia i,
+        #header .set i {
             font-size: 1.5rem;
         }
 
@@ -182,8 +185,8 @@
 <script src="js/mui.js"></script>
 <script src="js/apiinit.js"></script>
 <script type="text/javascript">
-   
-Object.prototype.chain = function (callback) {
+
+    Object.prototype.chain = function (callback) {
         return callback();
     }
     apiready = function () {
@@ -192,6 +195,18 @@ Object.prototype.chain = function (callback) {
             return;
         }
         openFrameGroup();
+
+        if (!localStorage['img']) {
+            api.imageCache({
+                url: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1109011109,4198513394&fm=27&gp=0.jpg',
+            }, function (ret, err) {
+                var url = ret.url;
+                localStorage['img'] = url
+
+            });
+
+        }
+
     };
 
 
@@ -256,25 +271,25 @@ Object.prototype.chain = function (callback) {
             $("#header>div").addClass('mui-hidden')
             $("#header>div").eq(i).removeClass('mui-hidden');
         })
-        $(".jia").on('click',function(){
+        $(".jia").on('click', function () {
             api.openWin({
-                name:'plus',
-                url:'html/orders/add.html'
+                name: 'plus',
+                url: 'html/orders/add.html'
             })
         })
-        $(".set").on('click',function(){
+        $(".set").on('click', function () {
             api.openWin({
-                name:'set',
-                url:'html/account/set.html'
+                name: 'set',
+                url: 'html/account/set.html'
             })
         })
-        $(".cicle").on('click',function(){
+        $(".cicle").on('click', function () {
             api.openWin({
-                name:'cicle',
-                url:'html/circle/cicle.html'
+                name: 'cicle',
+                url: 'html/circle/cicle.html'
             })
         })
-        
+
         // cicle
     })
 

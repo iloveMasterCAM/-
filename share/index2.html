@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="baidu-site-verification" content="PMj7CcZUak" />
+    <meta name="keywords" content="自定义导航,上网导航,网址大全">
+    <meta name="description" content="www.yi-23.com-自定义导航-为用户提供门户、新闻、视频、游戏、小说等各种分类的优秀内容，让您的网络生活更简单精彩。上网，从yi-23开始" />
+    <title>上网,从yi-23开始</title>
+    <link rel="icon" href="img/icon/yi-23.ico"/>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/indexfrm.css" rel="stylesheet" />
+    <link href="css/iconfont/iconfont.css" rel="stylesheet">
+    <style>
+        #standard{
+            margin: 0 auto;
+            width: 1190px;
+            box-sizing: border-box;
+            background: #fff;
+          padding-top: 35px;
+            display: none;
+        }
+        #standard form{
+            background: #fbfbfb
+        }
+        #standard form a:hover{
+            text-decoration: none;
+        }
+        #standard form img{
+            width: 100px;
+            display: inline-block;
+           vertical-align: middle;
+        }
+        
+         #standard form input[type="text"]{
+            border: 1px solid #2d78f4;
+            height: 35px;
+            padding: 0 5px;
+            display: inline-block;
+/*            float: left;*/
+            width: 350px;
+        }
+         #standard form input[type="submit"]{
+            background: #2d78f4;
+            height: 37px;
+            color: #fff;
+            width: 100px;
+            display: inline-block;
+        }
+        #standard a{
+            color: #000;
+        }
+        #standard a:hover{
+            color: red;
+             text-decoration: underline;
+            
+        }
+        #standard nav{
+            background: #fff;
+            border-bottom: 1px solid #3eaf0e;
+            border-left: 1px solid #3eaf0e;
+            border-right: 1px solid #3eaf0e;
+        }
+        #standard nav .nav1{
+         border-bottom: 1px solid #3eaf0e;
+        }
+        #standard nav .nav1 li,#standard nav .nav2 li{
+            width: 9%;
+            line-height: 38px;
+            font-size: 14px;
+        }
+        #standard nav .nav1 li:before{
+            content: '';
+            height: 60%;
+            width: 1px;
+            position: absolute;
+            right: 0;
+            top: 20%;
+            background: #ccc;
+        }
+        #standard nav .nav1 li:last-child:before{
+            background: #fff;
+        }
+        #aui-pull-left{
+            width: 280px;
+        }
+        
+        #aui-pull-left .l_all_title{
+        
+            border: 1px solid #cecece;
+            padding: 15px;
+            font-size: 14px;
+        }
+        #aui-pull-left .l_all_title p{
+            text-align: left;
+            width: 50%;
+            line-height: 25px;
+        }
+        #aui-pull-left .l_all_title a{
+            margin: 0 5px;
+        }
+        #l_box{
+            height: 622px;
+        }
+        #l_box ul{
+           position: absolute;
+            left: 0;
+            display: none;
+        }
+        #l_box ul.active{
+            display: block;
+        }
+        #l_box li{
+            position: relative;
+        }
+        #l_box li P{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            color: #fff;
+        }
+        #l_box li a{
+            font-size: 14px;
+            line-height: 26px;
+            padding: 0 10px;
+        }
+        
+        #right{
+            width: 900px;
+        }
+        #right .box li span{
+            width: 10%;
+            display: block;
+            float: left;
+        }
+        #right .box li p{
+            width: 90%;
+            float: left;
+        }
+        #right .box li p a{
+            width: 12%;
+            display: inline-block;
+            font-size: 14px;
+        }
+        
+        #right .r_nav .nav{
+            border-bottom: 1px solid #cecece;
+            background: #f5f5f5;
+        }
+        #right .r_nav .nav a{
+            width: 10%;
+            display: inline-block;
+          
+        }
+        #right .nav1{
+            background: #f5f5f5;
+            text-align: center;
+            line-height: 30px;
+        }
+        #right .nav1 a{
+            
+        }
+        footer{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            font-size: 12px;
+        }
+        /*
+        #3eaf0e
+        */
+        
+    </style>
+</head>
+<body>
+<ul class="head clear" id="head">
+    <li class="aui-pull-left" id="weather"><a href="" target="_blank"><span></span><i></i><b>23℃</b><em>空气优</em></a>
+    <ul class="weather">
+    <li></li>
+    </ul>
+    </li>
+    <li class="aui-pull-left" id="skin"><a href="javascript:void(0);">皮肤</a></li>
+    <li class="aui-pull-left"><a href="javascript:void(0)" id="add_a">添加</a></li>
+    <li class="aui-pull-left"><a id="edit" href="javascript:void(0)">编辑</a></li>
+
+    <li class="aui-pull-right"><a id="set_" class="set" href="javascript:void(0)">设置</a></li>
+    <li class="aui-pull-right" id="login"><a href="html/login.html">登录</a></li>
+    <li class="aui-pull-right" id="user_li"><a href="" id="user">用户名</a>
+    <ul class="eixt">
+    <li id="exit">退出登录</li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="head1 clear" id="">
+    <li class="aui-pull-left" id="weather"><a href="" target="_blank"><span></span><i></i><b>23℃</b><em>空气优</em></a>
+    <ul class="weather">
+    <li></li>
+    </ul>
+    </li>
+    <li class="aui-pull-left" id="skin"><a href="javascript:void(0);">皮肤</a></li>
+    <li class="aui-pull-left"><a href="javascript:void(0)" id="add_a">添加</a></li>
+    <li class="aui-pull-left"><a id="edit" href="javascript:void(0)">编辑</a></li>
+
+    <li class="aui-pull-right"><a id="set_" class="set" href="javascript:void(0)">设置</a></li>
+    <li class="aui-pull-right" id="login"><a href="html/login.html">登录</a></li>
+    <li class="aui-pull-right" id="user_li"><a href="" id="user">用户名</a>
+    <ul class="eixt">
+    <li id="exit">退出登录</li>
+    </ul>
+    </li>
+    </ul>
+    
+<div id="simple">
+    
+    <ul id="add_skin">
+    <div>
+    <li class="class">
+    <ul class="clear">
+    </ul>
+    <span></span>
+    </li>
+    </div>
+    </ul>
+    <div id="news" class="news">
+    <h1>热点新闻</h1>
+    <ul>
+
+    </ul>
+    </div>
+    <div id="set">
+    <ul>
+    <li>导航字体颜色<div class="aui-pull-right"><span id="0">白色</span> <span class="active"  id="1">黑色</span></div></li>
+    <input type="hidden" name="navcolor" value="">
+    <li>新闻字体颜色<div class="aui-pull-right"><span id="0">白色</span> <span class="active" id="1">黑色</span></div></li>
+    <input type="hidden" name="newscolor" value="">
+    <li>是否显示新闻<div class="aui-pull-right"><span id="0">开启</span> <span class="active" id="1">关闭</span></div></li>
+    <input type="hidden" name="news" value="">
+    <li>是否显示百度<div class="aui-pull-right"><span id="0">开启</span> <span  class="active" id="1">关闭</span></div></li>
+    <input type="hidden" name="baidu" value="">
+    <div class="set_div">
+    <span class="set_del">保存</span>
+    <span class="set_hide">收起</span>
+    </div>
+    </ul>
+    </div>
+    <div id="add">
+    <p>添加网站 <span class="hide"></span></p>
+    <div class="box">
+    <input type="text" name="name" placeholder="网站名称">
+    <input type="text" name="url" placeholder="例如:http://www.baidu.com">
+    <div class="msg"><p>请输入正确的网站/ 例如:http://www.baidu.com</p></div>
+    <input id="addsubmit" type="submit" value="确定"/>
+    </div>
+    </div>
+    
+    <form class="baidu" onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+    <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
+    <a href="https://www.baidu.com/" target="_blank">
+    <img src="img/logo_white_fe6da1ec.png" alt="Baidu" align="bottom" border="0">
+    </a>
+    <input type="text" id="text"  onfocus="checkHttps" name="word"  size="30">
+    <ul id="list"></ul>
+    <input type="submit"value="百度搜索">
+    </form>
+    
+</div>
+
+<div id="standard" class="clear">
+ 
+       <form class="clear aui-text-center aui-padded-t-15 aui-padded-b-15" onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+    <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
+    <a href="https://www.baidu.com/" target="_blank">
+    <img src="img/searchlogo.dd56f38.png" alt="Baidu" align="bottom" border="0">
+    </a>
+    <input type="text" id="text"  onfocus="checkHttps" name="word"  size="30">
+    <!--<ul id="list"></ul>-->
+    <input type="submit"value="百度搜索">
+    </form>
+       
+  
+    <nav class="aui-margin-b-15">
+        <ul class="clear nav1">
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">首页</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">电视剧</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">最新电影</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">新闻头条</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">八卦娱乐</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">军事热点</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">热门游戏</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">小 游 戏</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">今日特价</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">特价旅游</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">热点车讯</a></li>
+        </ul>
+        <ul class="clear nav2">
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">推荐</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">人民网新华网</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">央视网</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">国际在线</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">中国日报网</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">中国网</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">中国经济网</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">光明网</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">央广网</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">中国青年网</a></li>
+            <li class="aui-pull-left aui-text-center"><a href="" target="_blank">中国网信网</a></li>
+        </ul>
+    </nav>
+    <!--
+    电视剧|综艺游戏|小游戏电影|直播动画|漫画新闻|军事旅游|音乐彩票|竞猜搞笑|小说特价|手机股票|理财
+    -->
+    <div class="aui-pull-left" id="aui-pull-left">
+        <ul class="l_all_title">
+            <li class="clear">
+                <p class="aui-pull-left"><i class="iconfont icon-tmdog"></i> <a>电视剧</a>|<a>综艺</a></p>
+                <p class="aui-pull-right"><i class="iconfont icon-tmdog"></i> <a>游戏</a>|<a>小游戏</a></p>
+            </li>
+            <li class="clear">
+                <p class="aui-pull-left "><i class="iconfont icon-tmdog"></i> <a>电影</a>|<a>直播</a></p>
+                <p class="aui-pull-right"><i class="iconfont icon-tmdog"></i> <a>动画</a>|<a>漫画</a></p>
+            </li>
+            <li class="clear">
+                <p class="aui-pull-left"><i class="iconfont icon-tmdog"></i> <a>新闻</a>|<a>军事</a></p>
+                <p class="aui-pull-right"><i class="iconfont icon-tmdog"></i> <a>旅游</a>|<a>音乐</a></p>
+            </li>
+            <li class="clear">
+                <p class="aui-pull-left"><i class="iconfont icon-tmdog"></i> <a>彩票</a>|<a>竞猜</a></p>
+                <p class="aui-pull-right"><i class="iconfont icon-tmdog"></i> <a>搞笑</a>|<a>小说</a></p>
+            </li>
+            <li class="clear">
+                <p class="aui-pull-left"><i class="iconfont icon-tmdog"></i> <a>特价</a>|<a>手机</a></p>
+                <p class="aui-pull-right"><i class="iconfont icon-tmdog"></i> <a>股票</a>|<a>理财</a></p>
+            </li>
+        </ul>
+        <!--
+        推荐 社会 娱乐 军事 体育
+        -->
+        <div id="l_box" class="bor aui-margin-t-10 aui-col-xs-12">
+        <ol class="aui-col-xs-12 clear">
+            <li class="aui-col-5 aui-text-center aui-padded-t-10 aui-padded-b-10">推荐</li>
+            <li class="aui-col-5 aui-text-center aui-padded-t-10 aui-padded-b-10">社会</li>
+            <li class="aui-col-5 aui-text-center aui-padded-t-10 aui-padded-b-10">娱乐</li>
+            <li class="aui-col-5 aui-text-center aui-padded-t-10 aui-padded-b-10">军事</li>
+            <li class="aui-col-5 aui-text-center aui-padded-t-10 aui-padded-b-10">体育</li>
+        </ol>
+        <!--
+      
+           -->
+            <ul class="active">
+                <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+                
+                
+                 <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+                
+               
+            </ul>
+            <ul class="">
+                <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+                
+                
+                 <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+                
+               
+            </ul>
+            <ul class="active">
+                <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+                
+                
+                 <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+                
+               
+            </ul>
+            <ul class="">
+                <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+                
+                
+                 <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+                
+               
+            </ul>
+            <ul class="">
+                <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+                
+                
+                 <li>
+                    <img class="aui-col-xs-12" src="img/1.jpg" alt="">
+                    <p class="aui-text-center aui-col-xs-12">进击的巨人</p>
+                </li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">3男子深夜猥亵白衣女 猛踹抢包</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">泰国第20届变性皇后大赛开赛</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">儿子遇害10年不见尸体 父母带镐头进山找</a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">粽子别这么吃!男子吃这东西吐血身亡 </a></li>
+                <li><a class="aui-ellipsis-1" href="" target="_blank">外交部深夜回应:G7对南海指手划脚</a></li>
+            </ul>
+        </div>
+        
+        
+     
+        
+    </div>
+    
+    
+    <div class="aui-pull-right" id="right">
+       
+        <section class="bor">
+        <ul class="clear aui-padded-l-15">
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+        </ul>
+        <hr>
+         <ul class="clear aui-padded-l-15">
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+            <li class="aui-col-xs-2 aui-padded-t-5 aui-padded-b-5"><i class="iconfont icon-tmdog"></i><a href="" target="_blank">百度贴吧</a></li>
+        </ul>
+        </section>
+        <section class="bor aui-margin-t-15">
+           <ul class="box">
+               <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   </p>
+               </li>
+               
+               
+           </ul>
+        </section>
+        <section class="bor r_nav aui-margin-t-15">
+           <!-- 电影 新闻       -->
+            <p class="aui-col-xs-12 nav"><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">电视剧</a><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">电影</a><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">新闻</a><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">娱乐</a><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">军事</a><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">小游戏</a><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">特价购物</a><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">综艺</a><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">软件</a><a class="aui-padded-t-10 aui-padded-b-10 aui-text-center" href="">理财</a></p>
+            
+              <ul class="box">
+               <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+               
+           </ul>
+           <p class="aui-col-xs-12 nav1">
+               <!--
+               新闻-娱乐-军事-体育-直播-NBA-足球-美女秀-搞笑-游戏-漫画-小说
+               -->
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">新闻</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">娱乐</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">军事</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">体育</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">直播</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">NBA</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">足球</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">美女秀</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">搞笑</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">游戏</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">漫画</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">小说</a>
+           </p>
+           <ul class="box">
+               <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+               
+           </ul>
+           <p class="aui-col-xs-12 nav1">
+               <!--
+               ----------QQ-
+               -->
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">特价</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">团购</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">门票</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">银行</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">汽车</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">交通违章</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">快递</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">房产</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">社区</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">交友</a>
+                <a class="aui-padded-l-10 aui-padded-r-10" href="">菜谱</a>
+           </p>
+           <ul class="box">
+               <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+                <li class="clear aui-padded-t-10 aui-padded-b-10">
+                   <span class="aui-text-center">游戏</span>
+                   <p class=""><a class="aui-pull-left" href="">2017版传奇</a>
+                   <a class="" href="">林志玲</a>
+                   <a class="" href="">一刀999999</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">全屏爆神装</a>
+                   <a class="" href="">3D传奇</a>
+                   <a class="" href="">战神杀蛛皇</a>
+                   <a class="aui-text-center" href="">换一换</a>
+                   </p>
+               </li>
+               
+           </ul>
+        </section>
+    </div>
+    
+</div>
+
+<!--
+
+把百度设为主页 关于百度 About Baidu
+©2015 Baidu 使用百度前必读 京ICP证030173号 
+-->
+<footer class="aui-text-center">
+    <p><a href="">把yi-23设为主页 </a><a href="">关于yi-23</a></p>
+    <p>©2017 Yi-23 闽ICP备15012318号</p>
+</footer>
+
+<script type="text/html" id="tmp">
+<li class="clear">
+<img class="img aui-pull-left" src="{{thumbnail_pic_s}}" alt="">
+<div class="aui-pull-left test">
+<h1 class="title"><a href='{{url}}' target="_blank">{{title}}</a></h1>
+<p class="msg">{{author_name}}<time>{{date}}</time> <em>{{category}}</em></p>
+</div>
+</li>
+</script>
+
+<!-- <a class="url">
+<img src="img/inter.png" alt="">
+<p>腾讯课堂</p>
+<span class="del">x</span>
+</a>-->
+
+<div id="bg"></div>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/index.js"></script>
+<script src="js/BaiduHttps_20150714_zhanzhang.js"></script>
+<script src="js/artTemplate.js"></script>
+</body>
+</html>

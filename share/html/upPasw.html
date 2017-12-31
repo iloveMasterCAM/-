@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>忘记密码</title>
+    <link href="../css/index.css" rel="stylesheet"/>
+</head>
+    <style>
+        html,body{
+            height: 100%;
+            min-height: 100%;
+        }
+        nav{
+           border: 1px solid #ccc;
+            line-height: 45px;
+        }
+        nav ul{
+            width: 800px;
+            margin: 0 auto;
+        }
+        nav li{
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #box{
+            width: 500px;
+            margin: 90px auto;
+        }
+        #box li {
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        #box li span{
+          
+            display: block;
+        }
+        #box li.active span{
+            background: #f00056;
+            border: 1px solid #f00056;
+            color: #fff;
+        }
+        #box li .bg{
+            width:30px;
+            height: 30px;
+            text-align: center;
+            line-height:30px; 
+            border: 1px solid #ccc;
+            border-radius: 50%;
+              display: inline-block;
+            
+        }
+        #box li .text{
+            padding: 2px 6px;
+            border-radius: 5px;
+        }
+        #box p{
+            width: 150px;
+            height: 2px;
+            background: #ccc;
+            margin-top: 15px;
+        }
+        #send,#set div span,#set{
+            display: none;
+        }
+        #send,#set{
+            width: 420px;
+            margin: 0 auto;
+            
+        }
+        #send h1{
+            margin: 10px auto;
+        }
+        #send input,#set input[type="button"]{
+            width: 190px;
+            height: 40px;
+            background: #f00056;
+            color: #fff;
+            font-size: 18px;
+            margin: 40px auto;
+        }
+        #set input {
+            border: 1px solid #eee;
+            height: 35px;
+            width: 300px;
+            padding: 0 10px;
+        
+        }
+        #set div{
+            line-height: 30px;
+            height: 30px;
+            color: #f00056
+        }
+        
+    
+        #auth>div{
+            width: 380px;
+            margin: 0 auto;
+        }
+        #auth input {
+            border: 1px solid #eee;
+            height: 35px;
+            width: 300px;
+            padding: 0 5px;
+            margin: 5px 0;
+        }
+/*        #f00056*/
+        #auth>div>div{
+            display: inline-block;
+            position: relative;
+        }
+        #auth div p{
+        
+            height: 18px;
+            
+        }
+        #auth div p span{
+            display: none;
+            color: red;
+        }
+        #auth input[type="submit"]{
+            background: #f00056;
+            color: #fff;
+            padding: 5px 10px;
+            width: 314px;
+        }
+        #img{
+            position: absolute;
+            right: 1px;
+            top: 6px;
+            width: 100px;
+            height: 34px;
+            
+        }
+        .bg_{
+            position: absolute;
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            opacity: 0.5;
+            display: none;
+        }
+    </style>
+<body>
+    <nav>
+        <ul class="clear">
+            <li class="float_l">找回密码</li>
+            <li class="float_r"><a href="register.html">注册</a></li>
+            <li class="float_r"><a href="login.html">登录</a></li>
+        </ul>
+    </nav>
+    <ul id="box" class="clear">
+        <li class="active float_l">
+            <span class="bg">1</span>
+            <span class="text">确定账号</span>
+        </li>
+        <p class="float_l"></p>
+        <li class="float_l">
+            <span class="bg">2</span>
+            <span class="text">发送邮件</span>
+        </li>
+        <p class="float_l"></p>
+        <li class="float_l">
+            <span class="bg">3</span>
+            <span class="text">重置密码</span>
+        </li>
+    </ul>
+    <div id="auth">
+       <div>
+            <input id="email" name="email" type="text" placeholder="邮箱/用户名">
+            <p><span>邮箱/用户名错误！</span></p>
+            <div><input id="authcode" name="auch" type="text" placeholder="验证码">
+            <img onclick=" document.getElementById('img').src = '../php/auth.php?r=<?php echo rand();?>'" id="img" src="../php/auth.php?r=<?php echo rand();?>" alt=""></div>
+             <p><span>验证码错误！</span></p>
+            <input type="submit" onclick="isubmit()" value="提交">
+       </div>
+    </div>
+    
+    <div id="send">
+        <h1>前往邮箱</h1>
+        <p>发送邮件到 <span id="send_email"></span> 查阅来自xxx的邮件, 从邮件重设你的密码</p>
+        
+        <input type="button" id="sendbtn" value="发送">
+    </div>
+    
+    <div id="set">
+        
+        <div>
+            
+            <p><input name="pasw1" type="password" placeholder="输入新密码"></p>
+            
+            <div> <span>8位之16位英文或字母</span></div>
+            <p><input name="pasw2" type="password" placeholder="再次输入新密码"></p>
+            
+            <div> <span>两次密码不一致</span></div>
+            <p><input id="authcodr" name="auth" type="text" placeholder="邮箱验证码"></p>
+            
+            <div> <span>邮箱验证码错误</span></div>
+            <input id="name" name="name" type="hidden" value="">
+            <p><input type="button" onclick="setpasw()" value="提交"></p>
+            
+        </div>
+        
+    </div>
+    <div class="bg_"></div>
+    <script src="../js/jquery.js"></script>
+    <script>
+     function isEmail(str){
+        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+            if(re.test(str)){
+                return true
+            }else{
+                return false
+            }
+        }
+        
+        function ispasw(str){
+         var re = /[a-z,A-Z,0-9][^\s]{6,16}$/ig;
+            if(re.test(str)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        $("#sendbtn").on('click',function(){
+            $(".bg_").show();
+        var con = $("input").serialize();
+            $.ajax({
+                url:'../php/sendAmail.php',
+                data: con,
+                method:'get',
+                success:function(r){
+                    alert(r)
+                    $("#send").hide();
+                    if(r == '用户名不存在'|| r == '邮件发送失败'){
+                        alert(r)
+                        $("#auth").show();
+                    }
+                    if(r == '邮件发送成功'){
+                    $("#box .active").removeClass('active')
+                    $("#box li").eq(2).addClass('active');
+                        $("#set").show();
+                    }
+                    $(".bg_").hide();
+                },
+                error:function (e){
+                    alert(e)
+                }
+            })
+            
+        })
+        
+        /*
+         $.ajax({
+                url:'../php/authcode.php',
+                data: con,
+                method:'get',
+                success:function(r){
+                    if(r == '正确'){
+                        return true;
+                    }else{
+                        return false;
+                    }
+               }
+                  
+              })
+        */
+        var onoff = false;
+        $('#authcode').on('keyup',function(){
+            if($(this).val().length >= 4){
+                 var con = $("input").serialize();
+                $.ajax({
+                url:'../php/authcode.php',
+                data: con,
+                method:'get',
+                success:function(r){
+                    if(r == '正确'){
+                         onoff = true;
+                    }else{
+                         onoff = false;
+                    };
+               } 
+              })
+            }
+        })
+        var setON = false;
+        $("#authcodr").on('keyup',function(){
+            if($(this).val().length >= 4){
+                   var con = $("#set input").serialize();
+                    $.ajax({
+                        url:'../php/setpasw.php',
+                        method:'get',
+                        data:con,
+                        success:function(r){
+                            alert(r)
+                            if(r == '正确'){
+                                setON = true;
+                            }
+                            if(r == '错误'){
+                                setON = false;
+                            }
+                        }
+                    })
+            }
+          
+            
+        })
+        function isubmit(){
+           if( isEmail($("#email").val()) ){
+           
+             if(onoff){
+               $("#auth").hide();
+               $("#send").show();
+                $("#box .active").removeClass('active')
+                $("#box li").eq(1).addClass('active');
+                 $("#send_email").text($("#email").val())
+                 $("#name").val($("#email").val())
+                return true;
+             }else{
+                 $("#auth span").eq(1).show(0,function(){
+                 setTimeout(function(){
+                    $("#auth span").hide();
+                 },3000)
+               });
+                return false;
+             }
+               
+           }else{
+               $("#auth span").eq(0).show(0,function(){
+                 setTimeout(function(){
+                    $("#auth span").hide();
+                 },3000)
+               });
+            return false;
+           }
+        }
+        
+        function setpasw(){
+        
+            if(ispasw($("#set input").eq(0).val())){
+                if($("#set input").eq(0).val() == $("#set input").eq(1).val()){
+                    
+                    if($("#set input").eq(2).val() == ''){
+                        $("#set span").eq(2).show(500,function(){
+                    hidden();
+                        });
+                        return false
+                    }
+                  if(setON){
+                      window.location.href = '../html/login.html'
+                    return true;
+                  }else{
+                      $("#set span").eq(2).show(500,function(){
+                        hidden();
+                        });
+                    return false;
+                  }
+                    
+                }else{
+                    $("#set span").eq(1).show(500,function(){
+                        hidden();
+                });
+                    return false;
+                }
+            }else{
+                $("#set span").eq(0).show(500,function(){
+                     hidden();
+                });
+                return false;
+            }
+            
+        }
+        
+        function hidden(){
+                setTimeout(function(){
+                $("#set span").hide();
+            },3000)
+        }
+        
+    </script>
+    
+</body>
+</html>

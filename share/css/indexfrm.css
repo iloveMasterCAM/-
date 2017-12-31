@@ -1,0 +1,649 @@
+html,
+body {
+    height: 100%;
+}
+body::scrollbar {
+    width: 0;
+    height: 0
+}
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0
+}
+body::-moz-scrollbar {
+    width: 0;
+    height: 0
+}
+body::-o-scrollbar {
+    width: 0;
+    height: 0
+}
+body {
+    border-top: 1px solid transparent;
+    box-sizing: border-box;
+}
+.bg_skin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+    background: url(../img/540.jpg) no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.3;
+    z-index: 3;
+    display: none;
+}
+.isShow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    display: none;
+}
+.bor-l {
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid #666;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 2;
+}
+.bor-r {
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #666;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 2;
+}
+#nav {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 25, 50, .3)), to(rgba(15, 25, 50, .3)));
+    background-image: -moz-linear-gradient(rgba(15, 25, 50, .3) 0, rgba(15, 25, 50, .3) 100%);
+    background-image: -ms-linear-gradient(rgba(15, 25, 50, .3) 0, rgba(15, 25, 50, .3) 100%);
+    background-image: -o-linear-gradient(rgba(15, 25, 50, .3) 0, rgba(15, 25, 50, .3) 100%);
+    background-image: linear-gradient(rgba(15, 25, 50, .3) 0, rgba(15, 25, 50, .3) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+}
+#nav li {
+    line-height: 35px;
+    font-size: 13px;
+    position: relative;
+}
+#nav a {
+    color: #fff;
+    text-decoration: underline;
+}
+#nav span {
+    color: #fff;
+}
+#nav .username i ,#nav .about i{
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    width: 0;
+    height: 0;
+}
+#nav .about i{
+    position: absolute;
+    right: 14px;
+    top: -17px;
+}
+#nav .about li{
+    line-height:normal;
+}
+#nav .username p {
+    position: absolute;
+    width: 100%;
+    top: -34px;
+}
+#nav .username img {
+    width: 25px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+#nav li ul{
+    display: none;
+}
+#nav li:hover ul {
+    display: block;
+}
+#nav .about ul{
+    position: absolute;
+    width: 600px;
+    right: 0;
+    padding: 0.6rem;
+    background: #fff;
+}
+#nav .username ul {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #dad8d8;
+    width: 100%;
+    min-width: 90px;
+    
+}
+#search_box {
+    display: none;
+}
+#nav .weather:before,
+#nav .username:before {
+    content: '';
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    width: 1px;
+    height: 40%;
+}
+#nav>div {
+    position: fixed;
+    width: 100%;
+    padding-bottom: 15px;
+    background: #fff;
+    display: none;
+}
+#nav .content,
+#nav .btn p,
+#set ul {
+    width: 911px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#nav div.active {
+    display: block;
+}
+#nav .btn {
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 1px;
+}
+#nav .btn span {
+    line-height: 45px;
+    display: inline-block;
+    font-size: 13px;
+    padding: 0 15px;
+    transition: all 0.6s;
+    color: #666;
+    cursor: pointer;
+    background: #fff;
+}
+#nav .btn .child:hover {
+    background: #35b558;
+    color: #fff;
+}
+#nav .btn .child.active {
+    background: #35b558;
+    color: #fff;
+}
+#nav .content img {
+    display: block;
+}
+#nav .content img.mar-l {
+    margin-left: 1px;
+}
+#nav .content img.mar-r {
+    margin-right: 1px;
+}
+#nav .content img.mar-b {
+    margin-bottom: 1px;
+}
+#nav .content img.mar-t {
+    margin-top: 1px;
+}
+#nav .content .img_large {
+    width: 298px;
+}
+#nav .content .img_Small {
+    width: 148px;
+}
+#nav .content .box1 {
+    width: 300px;
+}
+#nav .content,
+#nav .content div {
+    display: none;
+}
+#nav .content.active,
+#nav .content div.active {
+    display: block;
+}
+#nav .content li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+#nav .content li.active {
+    background: #35b558;
+}
+#Collection {
+    width: 911px;
+    z-index: 1;
+    margin-top: 15%;
+    padding: 0 20px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 25, 50, 0.1)), to(rgba(15, 25, 50, 0.1)));
+    background-image: -moz-linear-gradient(rgba(15, 25, 50, 0.1) 0, rgba(15, 25, 50, 0.1) 100%);
+    background-image: -ms-linear-gradient(rgba(15, 25, 50, 0.1) 0, rgba(15, 25, 50, 0.1) 100%);
+    background-image: -o-linear-gradient(rgba(15, 25, 50, 0.1) 0, rgba(15, 25, 50, 0.1) 100%);
+    background-image: linear-gradient(rgba(15, 25, 50, 0.1) 0, rgba(15, 25, 50, 0.1) 100%);
+}
+#Collection ul {
+    position: relative;
+    overflow: hidden;
+}
+#Collection .three {
+    right: 10px;
+    top: 10px;
+    transform-origin: center 0;
+    cursor: pointer;
+}
+#Collection .list li,
+#search_box li {
+    width: 20%;
+    position: relative;
+    box-sizing: border-box;
+}
+#Collection .list li:hover,
+#search_box li:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 25, 50, .1)), to(rgba(15, 25, 50, .1)));
+    background-image: -moz-linear-gradient(rgba(15, 25, 50, .1) 0, rgba(15, 25, 50, .1) 100%);
+    background-image: -ms-linear-gradient(rgba(15, 25, 50, .1) 0, rgba(15, 25, 50, .1) 100%);
+    background-image: -o-linear-gradient(rgba(15, 25, 50, .1) 0, rgba(15, 25, 50, .1) 100%);
+    background-image: linear-gradient(rgba(15, 25, 50, .1) 0, rgba(15, 25, 50, .1) 100%);
+}
+#Collection li.active {
+    border: 1px dotted #eee;
+    margin: 5px;
+}
+#Collection #list_box a,
+#search_box a {
+    width: 70%;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: left;
+}
+#Collection #list_box img,
+#Collection #search_box img {
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    width: 16px;
+}
+#Collection sup {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    cursor: pointer;
+    display: none;
+}
+#Collection .title {
+    line-height: 35px;
+}
+#Collection .list .CollectionNav,
+#Collection h1,
+#Collection .add,
+#Collection .CollectionNav p {
+    line-height: 45px;
+}
+/*#35b558*/
+
+#Collection>div p span {
+    margin: 0 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#Collection .list:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transform: scale(1, 0.5)
+}
+#Collection .list {
+    position: relative;
+    overflow: hidden;
+}
+#Collection .head {
+    font-weight: 400;
+    color: #333;
+    font-size: 14px;
+}
+#Collection .h1 {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+#Collection .add p {
+    width: 0;
+    overflow: hidden;
+    position: relative;
+}
+#Collection h1.active {
+    background: rgba(250, 250, 250, 0.1)
+}
+#Collection .head.active {
+    background: rgba(250, 250, 250, 0.1)
+}
+#Collection .add p span {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    margin: 0;
+    padding: 0 15px;
+    background: #35b558;
+    color: #fff;
+    line-height: 33px;
+}
+#Collection .add input {
+    width: 200px;
+}
+#Collection input {
+    height: 30px;
+    width: 200px;
+    background: none;
+    border: 1px solid #eee;
+    text-indent: 5px;
+    color: #eee;
+}
+#Collection::-webkit-input-placeholder {
+    color: #eee
+}
+#Collection:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #eee;
+}
+#Collection::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #eee;
+}
+#Collection:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #eee;
+}
+#Collection .news {
+    position: relative;
+    overflow: auto;
+    display: none;
+}
+#Collection .news a {
+    display: block;
+}
+#Collection .news a:hover{
+    text-decoration:underline
+}
+#Collection .news li {
+    position: relative;
+}
+#Collection .news li:before {
+    width: 100%;
+    height: 1px;
+    background-color: #dddddd;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transform: scale(1, 0.5);
+    pointer-events: none;
+}
+#Collection .news img {
+    width: 180px;
+    display: inline;
+}
+#Collection .news li div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px 0;
+}
+#Collection .news .msg p {
+    font-size: 13px;
+    color: #666;
+}
+#Collection .news>div {
+    line-height: 30px;
+    transform-style: preserve-3d;
+}
+#Collection .news>div a {
+    color: #333;
+    font-size: 13px;
+}
+#Collection .news>div .huan i,
+#history .msg i {
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    font-size: 15px;
+}
+#Collection .news>div .huan:hover i,
+#history .msg .huan:hover i {
+    transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+}
+#Collection .news>div .huan i {
+    display: table-cell;
+    ;
+    line-height: 30px;
+    text-align: left;
+}
+#Collection .box {
+    display: none;
+}
+#Collection .box.active {
+    display: block;
+}
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    left: 0;
+    font-size: 12px;
+    color: #fff;
+}
+footer a {
+    color: #fff;
+}
+#add,
+#setName {
+    background: #fff;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    width: 840px;
+    margin-left: -420px;
+    padding: 20px 3%;
+    z-index: 5;
+    display: none;
+}
+#add p span {
+    cursor: default;
+    font-size: 26px;
+}
+#add>span {
+    font-size: 13px;
+    color: orange#35b558;
+    display: none;
+}
+#add input,
+#setName input {
+    border: 1px solid #eee;
+    line-height: 40px;
+    text-indent: 5px;
+}
+#add input {
+    display: inline-block;
+}
+#add .name {
+    width: 25%;
+}
+#add .url {
+    width: 50%;
+}
+#add .selcet {
+    position: relative;
+    width: 20%;
+    margin-left: 10px;
+    text-indent: 10px;
+    border: 1px solid #eee;
+    cursor: Default;
+}
+#add .selcet span {
+    line-height: 40px;
+    display: inline-block;
+    width: 100%;
+}
+#add .selcet p {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+#add .selcet>div div {
+    padding-left: 10px;
+    line-height: 35px;
+}
+#add .selcet>div {
+    position: absolute;
+    top: 41px;
+    right: -1px;
+    width: 100%;
+    border: 1px solid #eee;
+    background: #fff;
+    display: none;
+}
+#add>input {
+    width: 50%;
+    background: #35b558;
+    margin: 30px auto;
+    color: #fff;
+    display: block;
+}
+#add_cla {
+    cursor: pointer;
+}
+#set {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    display: none;
+}
+#set li {
+    width: 50%;
+    line-height: 35px;
+}
+#set ul>p {
+    padding: 10px 15px;
+    color: #fff;
+    width: 100px;
+    background: #35b558;
+    margin: 20px 0 20px 36%;
+}
+#set ul {
+    position: relative;
+}
+#set i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+}
+#return {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    padding: 10px;
+    bottom: 15%;
+    right: 100px;
+    background: rgba(0, 0, 0, 0.1);
+    display: none;
+}
+#return .text {
+    display: none;
+}
+#return .icon {
+    line-height: 40px;
+    font-size: 30px;
+}
+#return:hover .icon {
+    display: none;
+}
+#return:hover .text {
+    display: block;
+}
+#setName {
+    width: auto;
+    display: none;
+    left: 50%;
+    padding: 60px 3%;
+    margin-left: -237px;
+}
+#setName span {
+    margin-left: 100px;
+    padding: 10px 30px;
+    background: #35b558;
+    color: #fff;
+}
+#setName input {
+    width: 200px;
+}
+#setName p {
+    position: absolute;
+    font-size: 12px;
+    color: #35b558;
+    display: none;
+}
+
+#headimg {
+    background: #fff;
+    width: 540px;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    z-index: 4;
+   display: none;
+    margin-left: -270px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+

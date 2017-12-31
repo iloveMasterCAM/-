@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>用户登录</title>
+<link rel="icon" href="../img/icon/yi-23.ico"/>
+<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="../css/component.css" />
+
+<!--[if IE]>
+	<script src="js/html5.js"></script>
+<![endif]-->
+   <style>
+       
+        body,html{
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+        }
+       *{
+           margin: 0; padding: 0;
+       }
+        input[type="submit"]{
+            width: 300px;
+            padding: 0;
+            font-size: 18px;
+            background: #f00056;
+            color: #fff;
+        }
+        input{
+            display: block;
+            width: 300px;
+            height: 45px;
+            border: none;
+            padding-left: 10px;
+        }
+        #form{
+            position: absolute;
+            top: 25%;
+            right: 25%;
+            z-index: 5;
+            background: url(../img/bg.png) repeat;
+            padding: 50px 15px;
+        }
+        #form>p{
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+       #form>p a{
+           float: right;
+           color: #fff;
+           font-size: 16px;
+       }
+        #form .box a{
+            width: 55px;
+            cursor: pointer;
+            cursor: pointer;
+            height: 55px;
+            display: inline-block;
+            background: url(../img/fouricon.png) no-repeat;
+            margin: 15px 10px 0 10px;
+        }
+        #form .box .qq{
+            background-position: 0 -65px;
+        }
+        #form .box .qq:hover{
+            background-position: 0 0;
+        }
+        #form .box .weibo:hover{
+            background-position: -80px 0;
+        }
+        #form .box .weibo{
+            background-position: -80px -65px;
+        }
+        .imsg{
+            color: #f00056;
+            font-size: 14px;
+            height: 35px;
+            position: relative;
+        }
+        .imsg p{
+            display: none;
+             line-height: 35px;
+        }
+       .imsg a{
+           position: absolute;
+           right: 0;
+           top: 10px;
+           color: #fff;
+       }
+        #qq a{
+            opacity: 0;
+           position: absolute;
+            height: 55px;
+        }
+       #f_hidden {
+           display: none;
+       }
+    </style>
+</head>
+<body>
+<div class="container demo-2">
+	<div class="content">
+		<div id="large-header" class="large-header">
+			<canvas id="demo-canvas"></canvas>
+		</div>
+		<div id="form" >
+       <p>登录</p>
+        <input type="text" name="name" placeholder="邮箱/用户名">
+         <div class="imsg">
+             <p>邮箱/用户名错误</p>
+        </div>
+        <input type="password" name="pasw" placeholder="密码">
+        <div class="imsg">
+             <p>密码错误</p>
+             <a href="upPasw.html">忘记密码?</a>
+        </div>
+        <input type="submit" value="登录" onclick="isubmit()">
+        <p>快速登录 <a href="register.html">邮箱注册</a></p>
+        <div class="box">
+            <a class="qq" href="../php/Connect/example/oauth/index.php"></a>
+            <a class="weibo" id="weibo"></a>
+        </div>
+    </div>
+	</div>
+</div><!-- /container -->
+<form id="f_hidden">
+    <input type="hidden" name="nickname" value="">
+    <input type="hidden" name="openId" value="">
+</form>
+<script src="../script/rAF.js"></script>
+<script src="../script/demo-2.js"></script>
+<script src="../script/jquery.js"></script>
+<!--<script src="../script/jquery.cookie.js"></script>-->
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101396079" data-redirecturi="http://www.yi-23.com/html/qqlogin.html" charset="utf-8"></script>
+<script>
+    $(function(){
+        function isubmit(){
+        var con = $('input').serialize();
+        $.ajax({
+         type: "GET",
+         url: "../php/login.php",
+         data: con,
+        success: function(r){
+
+            if(r == '用户错误'){
+            $(".imsg p").eq(0).show()
+            }
+            if(r == '密码错误'){
+               $(".imsg p").eq(1).show()
+            }
+             if(r.indexOf("------") != -1 ){
+                 var str = r.replace('------','');
+                $.cookie("token",str,{expires:360,path:'/'});
+                 window.location.href = '../index.html'
+            }
+        }
+            
+       });  
+        };
+        $.ajax({
+            type:'POST',
+            url:'../php/weibo/index.php',
+            data:'',
+            success: function(r){
+                $("#weibo").attr('href',r)
+                //alert(r)
+                
+            }
+        })
+        
+    })
+        
+    
+    
+     /* QC.Login({
+           btnId:"qq"
+        });
+        QC.api("get_user_info", {})
+            .success(function(s){//成功回调
+           
+            var str = s.data.nickname.replace(/\s/g,'');
+            if(QC.Login.check()){//如果已登录
+               
+            QC.Login.getMe(function(openId, accessToken){
+               
+                //alert(["当前登录用户的", "openId为："+openId, "accessToken为："+accessToken].join("\n"));
+                $("#f_hidden input").eq(0).val(str)
+                $("#f_hidden input").eq(1).val(openId)
+                var can = $("#f_hidden input").serialize();
+
+                $.ajax({
+                    url:'../php/qqlogin.php',
+                    data:can,
+                    match:'get',
+                    success:function(r){
+                      
+                        $.cookie("token",r,{expires:360,path:'/'});
+                        window.location.href = "../index.html";
+                    },
+                    error:function(e){
+                        alert(e)
+                    }
+
+                })
+            });
+            }
+                
+            })
+            .error(function(f){//失败回调
+                alert("获取用户信息失败！");
+            })*/   
+        
+    </script>
+</body>
+</html>

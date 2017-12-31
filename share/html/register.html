@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>快速注册</title>
+<link rel="icon" href="../img/icon/yi-23.ico"/>
+<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="../css/component.css" />
+
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+    <style>
+      
+        input[type="submit"]{
+            width: 300px;
+            padding: 0;
+            font-size: 18px;
+            background: #f00056;
+            color: #fff;
+           
+        }
+        input{
+            display: block;
+            width: 300px;
+            border: none;
+            height: 45px;
+            padding-left: 10px;
+        }
+        #form{
+            position: absolute;
+            top: 23%;
+            right: 25%;
+            background: url(../img/bg.png) repeat;
+            padding: 50px 15px;
+            z-index: 5;
+        }
+        #form .border{
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            font-size: 16px;
+        }
+        #form div>a{
+            width: 55px;
+            cursor: pointer;
+            cursor: pointer;
+            height: 55px;
+            display: inline-block;
+            background: url(../img/fouricon.png) no-repeat;
+            margin: 15px 10px 0 10px;
+        }
+        #form .qq{
+            background-position: 0 -65px;
+        }
+        #form .qq:hover{
+            background-position: 0 0;
+        }
+        #form .weibo:hover{
+            background-position: -80px 0;
+        }
+        #form .weibo{
+            background-position: -80px -65px;
+        }
+        .imsg{
+            color: #ff3300;
+            font-size: 14px;
+            height: 30px;
+
+        }
+        .imsg p{
+            display: none;
+        }
+     #qq a{
+            opacity: 0;
+           position: absolute;
+            height: 55px;
+        }
+    </style>
+</head>
+<body>
+        <div class="container demo-1">
+        <div class="content">
+        <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+        </div>
+        <form action="../php/register.php" method="post" id="form" onsubmit="return isubmit();">
+        <p class="border">注册</p>
+        <input type="text" name="name" placeholder="邮箱" id="name">
+        <div class="imsg">
+        <p>输入正确的邮箱</p>
+        </div>
+        <input type="password" name="pasw" placeholder="8位之16位英文或字母" id="pasw">
+        <div class="imsg">
+        <p>输入正确的密码</p>
+        </div>
+        <input type="submit" value="下一步">
+        <p class="border">快速注册</p>
+        <div>
+        <a class="qq" href="../php/QQ/example/oauth/index.php"></a>
+        <a class="weibo"></a>
+        </div>
+
+        </form>
+        </div>
+        </div>
+		<div id="f_hidden">
+		    
+		    <input type="hidden" name="nickname" value="">
+		    <input type="hidden" name="openId" value="">
+		    <!--<input type="hidden" name="" value="">
+		    <input type="hidden" name="" value="">-->
+		</div>
+		<script src="../script/TweenLite.min.js"></script>
+		<script src="../script/EasePack.min.js"></script>
+		<script src="../script/rAF.js"></script>
+		<script src="../script/demo-1.js"></script>
+		 <script src="../script/jquery.js"></script>
+<script>
+    
+        function isEmail(str){
+        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+            if(re.test(str)){
+                return true
+            }else{
+                return false
+            }
+        }
+    
+        function ispasw(str){
+         var re = /[a-z,A-Z,0-9][^\s]{6,16}$/ig;
+            if(re.test(str)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    
+        function isubmit(){
+            if(isEmail($("#name").val())){
+                
+                 $(".imsg").eq(0).find("p").hide();
+                
+                if(ispasw($("#pasw").val())){
+                    $(".imsg").eq(1).find("p").hide();
+                    return true;
+                }else{
+                    
+                   $(".imsg").eq(1).find("p").show(500);
+                }
+                
+            }else{
+                    $(".imsg").eq(0).find("p").show(500);
+            }
+            return false;
+            
+        }
+    
+       /* QC.Login({
+           btnId:"qq"
+        });
+        QC.api("get_user_info", {})
+            .success(function(s){//成功回调
+            var str = s.data.nickname.replace(/\s/g,'');
+            if(QC.Login.check()){//如果已登录
+               
+            QC.Login.getMe(function(openId, accessToken){
+               
+                //alert(["当前登录用户的", "openId为："+openId, "accessToken为："+accessToken].join("\n"));
+                $("#f_hidden input").eq(0).val(str)
+                $("#f_hidden input").eq(1).val(openId)
+                var can = $("#f_hidden input").serialize();
+
+                $.ajax({
+                    url:'../php/qqlogin.php',
+                    data:can,
+                    match:'get',
+                    success:function(r){
+                        $.cookie("token",r,{expires:360,path:'/'});
+                        window.location.href = "../index.html";
+                    },
+                    error:function(e){
+                        alert(e)
+                    }
+
+                })
+            });
+            }
+                
+            })
+            .error(function(f){//失败回调
+                alert("获取用户信息失败！");
+            })
+           */
+    </script>
+	</body>
+</html>

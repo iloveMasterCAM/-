@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        .box {
+            background: #fff;
+        }
+
+        .bottom button {
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        .box {
+            padding: 0 15px;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        .box button {
+            position: absolute;
+            right: 15px;
+            top: 3px;
+        }
+
+        .txt {
+            padding: 0 15px;
+            padding-top: 20px;
+        }
+
+        #mar {
+            margin-top: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">软件续期</div>
+    </header>
+    <div id="mar"></div>
+    <div class="box">
+        <i class="iconfont icon-shouji"></i>
+        <input id="phone" type="number" placeholder="输入手机号">
+    </div>
+    <div class="box">
+        <input id="order" type="number" placeholder="输入验证码">
+        <button type="button" id="send" class="mui-btn mui-btn-primary ">获取验证码</button>
+    </div>
+    <div class="box">
+        <i class="iconfont icon-renzheng1"></i>
+        <input type="text" placeholder="输入授权吗">
+    </div>
+    <div class="bottom mui-text-center">
+        <button type="button" id="submit" class="mui-btn mui-btn-primary">确认授权</button>
+    </div>
+    <div class="txt">
+        <p>软件授权码可以延长软件使用时间</p>
+        <p>授权方式：</p>
+        <p>1.与当前正常使用的用户购买</p>
+        <p>2.电话给客服购买(0592-6256285)</p>
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>
+    <script>
+        var off = true, o, i = 0, time,phone;
+        apiready = function () {
+
+        }
+        $("#send").on('click', function () {
+            phone = $("#phone").val();
+            if(phone.length < 11){
+                api.toast({ 
+                    msg:'手机号错误'
+                })
+                return;
+            }
+            if (off) {
+                o = this;
+            
+                //account/verifycode
+                apimui.post('account/verifycode',{phone:phone},function(){
+                    phone = $("#phone").val();
+                    time = setInterval(function () {
+                        fn();
+                    }, 1000)
+                    off = false;
+                    fn();
+    
+                })
+            }
+        })
+        //account/verifyphone
+        $("#submit").on('click',function(){
+            var order = $("#order").val();
+            if(!order){
+                api.toast({
+                    msg:'请输入验证码'
+                })
+            };
+            apimui.post('account/verifyphone',{phone:phone,code:order},function(r,e){
+                alert(JSON.stringify(r))
+                apimui.post('account/extendtime',{phone:phone,code:order},function(r,e){
+                    alert(JSON.stringify(r))
+                })
+            })
+        })
+        function fn() {
+            i++;
+            $(o).text(i + '/s重新获取')
+            if (i == 30) {
+                clearTimeout(time);
+                i = 0;
+                $(o).text('重新获取')
+                off = true;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

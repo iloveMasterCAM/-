@@ -22,7 +22,7 @@
             line-height: 40px;
             color: #fff;
             border-radius: 50%;
-            background: #ff6a00
+            background: #0094ff
         }
         #wrap {
             background: #fff;
@@ -63,7 +63,7 @@
                         <i class="iconfont icon-xiangzuo"></i>
                     </span>
                 </a>
-                <div class="mui-title">记录</div>
+                <div class="mui-title">还款记录</div>
             </header>
 
     <div id="wrap" role="template" event="html" tempid="wrap_temp" api-url='inereset/preview' api-data=''>
@@ -74,17 +74,16 @@
         <p>
             <i class="iconfont icon-dizhi"></i>地址</p>
         <div class="mui-row mui-text-center" id="record">
-            <div class="child">
+            <div class="child mui-col-xs-4">
                 <p class="money">1</p>
                 <p>逾期</p>
             </div>
-            <div class="child">
+            <div class="child mui-col-xs-4">
                 <p class="money">1</p>
                 <p>逾期</p>
             </div>
         </div>
     </div>
-    <!-- order/interests  -->
     <div id="list" role="template" event="html" tempid="list_temp" api-url='order/interests' api-data=''>
     </div>
     <!-- <div class="list bor-b">
@@ -118,9 +117,9 @@
         </div>
         <p>
             <i class="iconfont icon-dizhi"></i>{{d.cusumber.ad}}</p>
-        <div class="mui-row " id="record">
+        <div class="mui-row mui-text-center" id="record">
                 {{each d.inters as d i}}
-                <div class="child mui-text-center">
+                <div class="child mui-col-xs-4">
                         <p class="money">{{d.number}}</p>
                         <p>{{d.status}}</p>
                     </div>

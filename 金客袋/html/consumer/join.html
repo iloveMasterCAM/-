@@ -16,7 +16,7 @@
     }
     #join h4{
         font-weight: 500;
-        font-size: 28px;
+        font-size: 24px;
     }
     #list{
         background: #fff;
@@ -67,12 +67,12 @@
         </div>
     </header>
 <div id="join">
-    <p>招贤令</p>
+    <p>招贤令 <span class="mui-pull-right"> <i class="iconfont icon-erweima"></i></span></p>
     <h4 class="mui-text-center" id="orders">121</h4>
     <p>注册时填写业务员编码</p>
 </div>
 <div id="input">
-    <i class="iconfont icon-fangdajing"></i> <input type="text" placeholder="输入招贤令">
+    <i class="iconfont icon-fangdajing"></i> <input type="text" id="" placeholder="输入招贤令">
 </div>
 <div>
     <!-- offcer/subuser -->
@@ -143,8 +143,8 @@ apiready = function(){
         $("#orders").text(r.d)
     })
 }
-function search(){
-    
+function search(key){
+    $("#input input").val(key)
 }
 </script>
 </body>

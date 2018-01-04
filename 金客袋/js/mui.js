@@ -107,7 +107,6 @@ var mui = (function(document, undefined) {
 				}
 			}
 		}
-
 		return target;
 	};
 	/**
@@ -8225,7 +8224,7 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
     var STATE_LOADING = 'loading';
 
     var defaultOptions = {
-        loadingText: 'Loading...', //文案
+        loadingText: '加载中...', //文案
         loadingIcon: 'mui-spinner' + ' ' + 'mui-spinner-white', //图标，可为空
         loadingIconPosition: 'left' //图标所处位置，仅支持left|right
     };

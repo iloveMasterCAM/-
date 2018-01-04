@@ -41,17 +41,22 @@
             right: 10%;
             width: 80%;
         }
+        #mar{
+            margin-top: 65px;
+        }
     </style>
 </head>
 
 <body>
-    <header id="head">
-        <div class="mui-row mui-text-center">
-            <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
-            <span>注册</span>
-            <span id="submit" class="iconfont icon-dui mui-pull-right"></span>
-        </div>
-    </header>
+        <header class="mui-bar mui-bar-nav">
+                <a class="mui-pull-left" onclick="api.closeWin();">
+                    <span>
+                        <i class="iconfont icon-xiangzuo"></i>
+                    </span>
+                </a>
+                <div class="mui-title">注册</div>
+            </header>
+            <div id="mar"></div>
     <div id="input">
         <div>
             <i class="iconfont icon-shouji"></i>
@@ -88,7 +93,7 @@
         </div>
 
         <div class="mui-text-center">
-            <button type="button" class="mui-btn mui-btn-warning btn">注册</button>
+            <button type="button" class="mui-btn mui-btn-primary btn">立即注册</button>
         </div>
     </div>
 
@@ -105,7 +110,7 @@
             //   mui(this).button('loading');
             var phone = $.trim($("#phone").val());
             if (!rexp.test(phone)) {
-                alert('手机号错误')
+                api.toast({msg:'手机号错误'});
                 return;
             }
             var self = this;

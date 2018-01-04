@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,68 @@
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link href="../../css/mui.css" rel="stylesheet" />
     <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        #wrap {
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 1000px;
+            height: 400px;
+        }
+        #box{
+            height: 100%;
+        }
+        #wrap li{
+            height: 100%;
+            width: 100px;
+            float: left;
+            transition: all 0.6s;
+        }
+        #wrap li.active{
+            width: 700px;
+        }
+        .li1{
+            background: url(../../image/1.jpg) no-repeat center / cover;
+        }
+        .li2{
+            background: url(../../image/2.jpg) no-repeat center / cover;
+        }
+        .li3{
+            background: url(../../image/3.jpg) no-repeat center / cover;
+        }
+        .li4{
+            background: url(../../image/4.jpg) no-repeat center / cover;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="wrap">
+        <ul id="box" class="clear">
+            <li class="li1 active"></li>
+            <li class="li2"></li>
+            <li class="li3"></li>
+            <li class="li4"></li>
+        </ul>
+    </div>
+
 
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
     <script src="../../js/apiinit.js"></script>
+    <script>
+    $("#box li").on('click',function(){
+    $("#box li").removeClass('active')
+        $(this).addClass('active')
+        
+    })
+
+
+    </script>
 </body>
+
 </html>

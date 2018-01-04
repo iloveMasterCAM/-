@@ -12,7 +12,7 @@
     
         #list{
             background: #fff;
-            padding: 0 15px;
+          
             margin-top: 10px;
         }
         #list .state{
@@ -26,40 +26,24 @@
         }
         #list li{
             position: relative;
-            padding: 10px 0;
+            padding: 10px 15px;
+            /* border-bottom: 1px solid rgba(51, 51, 51,0.2) !important */
         }
         #list li .icon-xiangyou{
             position:absolute;
-            right: 0;
+            right: 15px;
             top: 17%;
         }
         #scroll{
           height: auto;
             
         }
-        
-        
-        #mar{
-            margin-top: 56px;
-        }
-        #list{}
-        #list{}
-        #list{}
-        #list{}
-        #list{}
-        
     </style>
 </head>
 <body>
-    <header class="mui-bar mui-bar-nav">
-        <a class="mui-pull-left" onclick="api.closeWin();">
-            <span><i class="iconfont icon-xiangzuo"></i></span>
-        </a>
-        <div class="mui-title">账单</div>
-       
-    </header>
-    <div id="mar">
-        <ul  id="list" role="template" event="append" tempid="box_tamp" api-url='account/bill' api-data='{}' >
+  
+   
+        <ul  id="list" class="bor-t" role="template" api-type="append" api-id="box_tamp" api-url='account/bill' api-down='html' api-up='append' >
             <!-- <li class="mui-row" event='click' api-name='orderdata' api-url='orderdata.html'>
                 <div class="mui-col-xs-3">
                     <p class="state">
@@ -94,7 +78,8 @@
 <script src="../../js/jquery.js"></script>
 <script src="../../js/mui.js"></script>
 <script src="../../js/artTemplate.js"></script>
-<script src="../../js/apiinit.js"></script>
+<!-- <script src="../../js/apiinit.js"></script> -->
+<script src="../../js/rc.js"></script>
 <script src="../../js/sendEvent.js"></script>
 <script src="../../js/mui.pullToRefresh.js"></script>
 <script src="../../js/mui.pullToRefresh.material.js"></script>
@@ -103,7 +88,9 @@
         // apimui.post('account/bill','',function(r){
         //     alert(JSON.stringify(r))
         // })
-        apimui.config();
+        //apimui.config();
+            rc.c({'isDown':true,'isUp':true})
+            rc.init();
     }
     // apimui.pullToRefresh({'obj':'.mui-scroll','down':function(o){
     //     setTimeout(function(){

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link href="../../css/mui.css" rel="stylesheet" />
+    <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        .box {
+            background: #fff;
+        }
+
+        .bottom button {
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        .box {
+            padding: 0 15px;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        .box button {
+            position: absolute;
+            right: 15px;
+            top: 3px;
+        }
+
+        .txt {
+            padding: 0 15px;
+            padding-top: 20px;
+        }
+
+        #mar {
+            margin-top: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-pull-left" onclick="api.closeWin();">
+            <span>
+                <i class="iconfont icon-xiangzuo"></i>
+            </span>
+        </a>
+        <div class="mui-title">软件续期</div>
+    </header>
+    <div id="mar"></div>
+    <div class="box bor-b">
+        <i class="iconfont icon-shouji"></i>
+        <input id="phone" type="number" placeholder="输入手机号">
+    </div>
+    <div class="box bor-b">
+        <input id="order" type="number" placeholder="输入验证码">
+        <button type="button" id="send" class="mui-btn mui-btn-primary ">获取验证码</button>
+    </div>
+
+    <div class="box bor-b">
+        <div class="bor-b">
+            <i class="iconfont icon-yuechi"></i>
+            <input id="p1" type="password" placeholder="输入新密码">
+        </div>
+        <div>
+            <i class="iconfont icon-yuechi"></i>
+            <input id="p2" type="password" placeholder="再次输入新密码">
+        </div>
+    </div>
+    <div class="bottom mui-text-center">
+        <button type="button" id="submit" class="mui-btn mui-btn-primary">确认修改</button>
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/mui.js"></script>
+    <script src="../../js/apiinit.js"></script>、
+    <script>
+        var off = true, o, i = 0, time, phone;
+        apiready = function () {
+            //post("account/verifycode", { phone: phone })
+            $("#send").on('click', function () {
+                var phone = $("#phone").val();
+                if (!phone) {
+                    api.toast({
+                        msg: '手机号错误'
+                    })
+                    return;
+                }
+                apimui.post("account/verifycode", { phone: phone }, function (r) {
+                    // alert(JSON.stringify(r))
+                    phone = $("#phone").val();
+                    time = setInterval(function () {
+                        fn();
+                    }, 1000)
+                    off = false;
+                    fn();
+                })
+            })
+            $("#submit").on('click',function(){
+                //account/verifyphone
+                var code = $("#order").val();
+                if(!code){
+                    api.toast({
+                        msg:'验证码错误'
+                    })
+                    return;
+                }
+
+                apimui.post('account/verifyphone',{ phone: phone,code:code },function(r){
+                    // alert(JSON.stringify(r))
+                    if(r.s){
+                        //"account/findpassword
+                        apimui.post('account/findpassword',{phone: phone,password:p1},function(){
+
+                        })
+                    }
+                })
+            })
+            function fn() {
+                i++;
+                $(o).text(i + '/s重新获取')
+                if (i == 30) {
+                    clearTimeout(time);
+                    i = 0;
+                    $(o).text('重新获取')
+                    off = true;
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

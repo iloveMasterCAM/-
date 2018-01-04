@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +10,39 @@
     <link href="../../css/mui.css" rel="stylesheet" />
     <link href="../../iconfont/iconfont.css" rel="stylesheet" />
     <style>
-        body{
+        body {
             background: url(../../image/login.jpg) no-repeat;
             background-position: center center;
-           
+            min-height: 
         }
-        #banner{
-           padding-top: 100px;
-           padding-bottom: 20px;
+
+        #banner {
+            padding-top: 100px;
+            padding-bottom: 20px;
             text-align: center;
         }
-        #banner img{
+
+        #banner img {
             width: 70px;
             height: 70px;
             display: inline-block;
             border-radius: 50%;
             border: 2px solid #fff;
         }
-        #input{
+
+        #input {
             text-align: center;
         }
-        #input input{
+
+        #input input {
             background: transparent;
             border-bottom: 1px solid #fff;
             width: 80%;
             padding: 5px;
             color: #fff;
         }
-        #bottom{
+
+        #bottom {
             position: absolute;
             bottom: 10px;
             left: 0;
@@ -44,46 +50,62 @@
             padding: 0 15px;
             color: #fff;
         }
-        
-        input::-webkit-input-placeholder { /* WebKit browsers*/ 
-      font-size:14px;
-      color: #fff;
-      }
-   input:-moz-placeholder {  /* Mozilla Firefox 4 to 18*/ 
-      font-size:14px;
-      color: #fff;
-      }
-     input::-moz-placeholder {  /* Mozilla Firefox 19+*/ 
-     font-size:14px;
-     color: #fff;
-      }
-    input:-ms-input-placeholder { /* Internet Explorer 10+*/ 
-     font-size:14px;
-     color: #fff;
-    }
-    #input .submit p{
-        width: 80%;
-        border: 1px solid #fff;
-        line-height: 45px;
-        color: #fff;
-        margin: 30px auto;
-    }
+
+        input::-webkit-input-placeholder {
+            /* WebKit browsers*/
+            font-size: 14px;
+            color: #fff;
+        }
+
+        input:-moz-placeholder {
+            /* Mozilla Firefox 4 to 18*/
+            font-size: 14px;
+            color: #fff;
+        }
+
+        input::-moz-placeholder {
+            /* Mozilla Firefox 19+*/
+            font-size: 14px;
+            color: #fff;
+        }
+
+        input:-ms-input-placeholder {
+            /* Internet Explorer 10+*/
+            font-size: 14px;
+            color: #fff;
+        }
+
+        #input .submit p {
+            width: 80%;
+            border: 1px solid #fff;
+            line-height: 45px;
+            color: #fff;
+            margin: 30px auto;
+        }
     </style>
 </head>
+
 <body>
     <div id="banner">
         <img src="../../image/head.jpg" alt="">
     </div>
     <div id="input">
-        <p><input type="tel" placeholder="账号、邮箱"></p>
-        <p><input type="password" placeholder="密码"></p>
-        <div class="submit"><p>登录</p></div>
+        <p>
+            <input id="account" type="number" placeholder="账号、邮箱">
+        </p>
+        <p>
+            <input id="pasw" type="password" placeholder="密码">
+        </p>
+        <div class="submit">
+            <p>登录</p>
+        </div>
     </div>
-    <div class="mui-row" id="bottom">
-        <span class="mui-pull-left">
+    <div class="mui-row mui-text-center" id="bottom">
+        <span class="mui-pull-left" event='click' api-name='register' api-url='register.html'>
             新用户注册
         </span>
-        <span class="mui-pull-right">
+        <span event='click' api-name='renew' api-url='renew.html'>软件续期</span>
+        <span class="mui-pull-right" event='click' api-name='pasw_w' api-url='pasw_w.html'>
             无法登录？
         </span>
     </div>
@@ -94,18 +116,32 @@
         /*
         avatar.post("auth/index", { username: data.name, password: data.pwd })
         */
-        apiready = function(){
-            apimui.post('auth/index',{ username: '13859986750', password: '123456' },function(r,d){
-                if(r.s){
-                    var auth = { Authorization: "Bearer " + r.d.token };
-                    localStorage["token"] = JSON.stringify(auth);
-                    localStorage["phone"] = '13859986750';
-                    api.rebootApp();
+        apiready = function () {
+
+            apimui.config();
+           //13859986750
+            $("#input .submit").on('click', function () {
+                if(!$("#account").val()){
+                    api.toast({msg:'别闹，账号没输入...'})
+                    return;
                 }
-               
+                if(!$("#pasw").val()){
+                    api.toast({msg:'大兄弟，密码忘记填了...'})
+                    return;
+                }
+                apimui.post('auth/index', { username: $("#account").val(), password: $("#pasw").val() }, function (r, d) {
+                    if (r.s) {
+                        var auth = { Authorization: "Bearer " + r.d.token };
+                        localStorage["token"] = JSON.stringify(auth);
+                        localStorage["phone"] = '13859986750';
+                        api.rebootApp();
+                    }
+                })
             })
+
         }
     </script>
 
 </body>
+
 </html>

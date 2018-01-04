@@ -163,7 +163,7 @@
             width: 80%;
             padding-right: 10px;
         }
-        #tag .label span{
+        #tag .label span,#upgrade span{
             background: #757575;
             padding: 5px 7px;
             color: #fff;
@@ -215,13 +215,286 @@
         #wrap p{
             font-size: 12px;
         }
+
+        #toup {
+            background-color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+            #toup span {
+                font-size: 18px;
+                width: 80px;
+                height: 80px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 50%;
+                box-shadow: inset 0 0 5px #BD2C00;
+                -webkit-box-shadow: inset 0 0 5px #bd2c00;
+                background-color: transparent;
+                position: relative;
+                line-height: 80px;
+                animation: change1 4s linear infinite;
+                -webkit-animation: change1 4s linear infinite;
+            }
+
+                #toup span:before {
+                    content: "";
+                    position: absolute;
+                    border-radius: 50%;
+                    width: 80px;
+                    height: 80px;
+                    left: 0;
+                    top: 0;
+                    box-shadow: 0 0 15px #BD2C00;
+                    animation: change2 4s linear infinite;
+                    -webkit-animation: change2 4s linear infinite;
+                }
+
+                #toup span i {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    box-shadow: inset 0 0 15px #007AFF;
+                    border-radius: 50%;
+                    animation: yuan 1s ease-in infinite, change 4s linear infinite;
+                    -webkit-animation: yuan 1s linear infinite, change 4s linear infinite;
+                }
+
+        @keyframes yuan {
+            from {
+                transform: scale(0);
+                -webkit-transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+            }
+        }
+
+        @-webkit-keyframes yuan {
+            from {
+                transform: scale(0);
+                -webkit-transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+            }
+        }
+
+        @keyframes yuan1 {
+            from {
+                transform: scale(0);
+                -webkit-transform: scale(0);
+            }
+
+            to {
+                transform: scale(5);
+                -webkit-transform: scale(5);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes yuan1 {
+            from {
+                transform: scale(0);
+                -webkit-transform: scale(0);
+            }
+
+            to {
+                transform: scale(5);
+                -webkit-transform: scale(5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes change {
+            0% {
+                box-shadow: inset 0 0 15px #fe0000;
+            }
+
+            25% {
+                box-shadow: inset 0 0 15px #ffa600;
+            }
+
+            50% {
+                box-shadow: inset 0 0 15px #00ff01;
+            }
+
+            75% {
+                box-shadow: inset 0 0 15px #120afb;
+            }
+
+            100% {
+                box-shadow: inset 0 0 15px #8c08f1;
+            }
+        }
+
+        @-webkit-keyframes change {
+            0% {
+                box-shadow: inset 0 0 15px #fe0000;
+            }
+
+            25% {
+                box-shadow: inset 0 0 15px #ffa600;
+            }
+
+            50% {
+                box-shadow: inset 0 0 15px #00ff01;
+            }
+
+            75% {
+                box-shadow: inset 0 0 15px #120afb;
+            }
+
+            100% {
+                box-shadow: inset 0 0 15px #8c08f1;
+            }
+        }
+
+        @keyframes change1 {
+            0% {
+                box-shadow: inset 0 0 5px #fe0000;
+            }
+
+            25% {
+                box-shadow: inset 0 0 5px #ffa600;
+            }
+
+            50% {
+                box-shadow: inset 0 0 5px #00ff01;
+            }
+
+            75% {
+                box-shadow: inset 0 0 5px #120afb;
+            }
+
+            100% {
+                box-shadow: inset 0 0 5px #8c08f1;
+            }
+        }
+
+        @-webkit-keyframes change1 {
+            0% {
+                box-shadow: inset 0 0 5px #fe0000;
+            }
+
+            25% {
+                box-shadow: inset 0 0 5px #ffa600;
+            }
+
+            50% {
+                box-shadow: inset 0 0 5px #00ff01;
+            }
+
+            75% {
+                box-shadow: inset 0 0 5px #120afb;
+            }
+
+            100% {
+                box-shadow: inset 0 0 5px #8c08f1;
+            }
+        }
+
+        @keyframes change2 {
+            0% {
+                box-shadow: 0 0 15px #fe0000;
+            }
+
+            25% {
+                box-shadow: 0 0 15px #ffa600;
+            }
+
+            50% {
+                box-shadow: 0 0 15px #00ff01;
+            }
+
+            75% {
+                box-shadow: 0 0 15px #120afb;
+            }
+
+            100% {
+                box-shadow: 0 0 15px #8c08f1;
+            }
+        }
+
+        @-webkit-keyframes change2 {
+            0% {
+                box-shadow: 0 0 15px #fe0000;
+            }
+
+            25% {
+                box-shadow: 0 0 15px #ffa600;
+            }
+
+            50% {
+                box-shadow: 0 0 15px #00ff01;
+            }
+
+            75% {
+                box-shadow: 0 0 15px #120afb;
+            }
+
+            100% {
+                box-shadow: 0 0 15px #8c08f1;
+            }
+        }
+        #wrap .color{
+            color: #FFC107
+        }
+        #upgrade{
+            width: 80%;
+            background: #fff;
+            position: fixed;
+            top: 20%;
+            left: 10%;
+            z-index: 10;
+            border-radius: 5px;
+            box-shadow: 0 0 20px 4px #888;
+            display: none;
+        }
+        #upgrade .active{
+            background: #f57e29;
+        }
+        #upgrade .mui-input-group::before, #upgrade .mui-input-group::after,.mui-input-group .mui-input-row:after{
+            display: none;
+        }
+        #upgrade .mui-input-group{
+            margin:5px 0;
+        }
+        #upgrade .mui-checkbox.mui-left input[type='checkbox']{
+            left: 10px;
+            top: -2px;
+        }
+        #upgrade .mui-input-row label{
+            padding-top: 0 ;
+            padding-bottom: 0 ;
+            padding-left: 49px;
+            color: #ff710c;
+        }
+        #upgrade>div{
+            padding: 0.6rem;
+        }
+        #bg{
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 9;
+            display: none;
+        }
     </style>
 <body>
     <header id="head">
         <div class="mui-row mui-text-center">
             <i class="iconfont icon-xiangzuo mui-pull-left" onclick="api.closeWin()"></i>
             <span>升官进爵</span>
-          
         </div>
     </header>
     <div id="wrap" role="template" event="html" tempid="nextoffer_tmp" api-url='offcer/nextoffer' api-data='{}'>
@@ -230,7 +503,7 @@
         <div class="mui-row mui-text-center">
             <div class="mui-col-xs-6">
                 <p>价格</p>
-                <p><i class="iconfont icon-yinzi">12121</i></p>
+                <p><i class="iconfont icon-yinzi color"></i> 12121</p>
             </div>
             <div class="mui-col-xs-6">
                 <p>续期</p>
@@ -240,17 +513,11 @@
 
     </div>
     <div id="circle">
-        <div class="circle">
-            <div class="circle inst">
-                升官
-            </div>
-            <div class="child li1"></div>
-            <div class="child li2"></div>
-            <div class="child li3"></div>
-            <div class="child li4"></div>
-            <div class="child li5"></div>
-            <div class="child li6"></div>
-        </div>
+        <section class="aui-content aui-margin-b-5" style="background-color:white;">
+                <div class="up"  id="toup">
+                    <span>升官 <i></i></span>
+                </div>
+            </section>
     </div>
     <div id="msg">   
         <p>活动协议</p>
@@ -332,6 +599,9 @@
             </div>
         </div>
     </div>
+
+  
+    <div id="bg"></div>
     <script id="nextoffer_tmp" type="text/html">
     
         <p>可升官阶</p>
@@ -339,14 +609,36 @@
         <div class="mui-row mui-text-center">
             <div class="mui-col-xs-6">
                 <p>价格</p>
-                <p><i class="iconfont icon-yinzi"></i> {{d.price}}</p>
+                <p><i class="iconfont icon-yinzi color"></i> {{d.price}}</p>
             </div>
             <div class="mui-col-xs-6">
                 <p>续期</p>
                 <p>{{d.month}}个月</p>
             </div>
         </div>
-        
+        <div id="upgrade">
+            <div>   
+                <p>男官</p>
+                {{each d.aliags.m as a i}}
+                <span onclick="show(this)">{{a}}</span>
+                {{/each}}
+            </div>
+            <div>  
+                <p>女官</p>
+                {{each d.aliags.w as a i}}
+                <span onclick="show(this)">{{a}}</span>
+                {{/each}}
+            </div>
+            <form class="mui-input-group">
+                <div class="mui-input-row mui-checkbox mui-left">
+                    <label>我已详细知晓该活动的全部内容，并自愿参与并遵守活动协议内容</label>
+                    <input id="checkbox" name="checkbox" value="1" type="checkbox" checked>
+                </div>
+            </form>
+            <div class="mui-text-center">
+                <button type="button" onclick="upgrade(this)" id="{{d.id}}" class="mui-btn mui-btn-primary">升官进爵</button>
+            </div>
+        </div>
     </script>
     <script id="tag_temp" type="text/html">
         {{each d as d i}}
@@ -387,7 +679,51 @@
     
     apiready = function(){
         apimui.config();
+        
     }
+    //offcer/upoffer
+    function upgrade(self){
+        
+        if(!$(self).attr('id')){
+            api.toast({
+                msg:'没有可升级的官衔'
+            })
+            return;
+        }
+        if(!$("#upgrade #checkbox").is(":checked")) {
+            api.toast({ msg: "请勾选同意协议!" });
+                return;
+        }
+        if($("#upgrade span.active").length == 0){
+            api.toast({ msg: "请选择官位!" });
+            return;
+        }
+
+        apimui.post('offcer/upoffer',{id:$(self).attr('id'),name:$("#upgrade span.active").text()},function(r){
+       //     alert(JSON.stringify(r))
+            if(r.s){
+                api.toast({
+                    msg:r.m
+                })
+            }else{
+                api.toast({
+                    msg:r.m
+                })
+            }
+        })
+    }
+    function show(self){
+        $("#upgrade span").removeClass('active')
+        $(self).addClass('active')
+    }
+    $("#bg").on('click',function(){
+        $("#upgrade").hide();
+        $("#bg").hide();
+    })
+    $("#toup").on('click',function(){
+        $("#upgrade").show();
+        $("#bg").show();
+    })
     </script>
 </body>
 

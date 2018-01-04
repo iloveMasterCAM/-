@@ -868,7 +868,10 @@ body{
 #banner .swiper-pagination{
     bottom: 60px;
     text-align: right;
-    padding-right: 7%;
+    padding-right: 5%;
+    position: relative;
+    z-index: 4;
+    bottom: 115px;
 }
         #banner a h2{
             position: relative;
@@ -924,7 +927,7 @@ body{
 -webkit-transform:rotate(95deg); /* Safari 和 Chrome */
 -o-transform:rotate(95deg); /* Opera */
 }
-#banner .icon-weibiaoti-:first-child:after{
+#banner .icon-weibiaoti-:nth-child(1):after{
    content: '1';
            
 }
@@ -932,9 +935,14 @@ body{
     content: '2';
      
 }
-#banner  .icon-weibiaoti-:last-child:after{
+#banner  .icon-weibiaoti-:nth-child(3):after{
     content: '3';
     
+}
+
+#banner  .icon-weibiaoti-:nth-child(4):after{
+    content: '4';
+     
 }
 #banner .icon-weibiaoti-.active{
     color: #d7000f

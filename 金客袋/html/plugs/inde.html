@@ -8,9 +8,51 @@
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link href="../../css/mui.css" rel="stylesheet" />
     <link href="../../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+    #tool{
+        margin: 50px auto;
+        position: relative;
+    }
+    #tool i{
+        font-size: 46px;
+        position: absolute;
+        -webkit-animation: mymove 1s linear infinite alternate;
+       -moz-animation: mymove 1s linear infinite alternate;
+            animation: mymove 1s linear infinite alternate; 
+            transform-origin:20% 80%;
+            -webkit-transform-origin:20% 80%;
+            -moz-transform-origin:20% 80%;
+    }
+    @keyframes mymove{
+        0%{
+            transform:rotate(0deg);
+            -ms-transform:rotate(0deg); /* Internet Explorer */
+            -moz-transform:rotate(0deg); /* Firefox */
+            -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+            -o-transform:rotate(0deg); /* Opera */
+        }
+        50%{
+            transform:rotate(45deg);
+            -ms-transform:rotate(45deg); /* Internet Explorer */
+            -moz-transform:rotate(45deg); /* Firefox */
+            -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+            -o-transform:rotate(45deg); /* Opera */
+        }
+        100%{
+            transform:rotate(0deg);
+            -ms-transform:rotate(0deg); /* Internet Explorer */
+            -moz-transform:rotate(0deg); /* Firefox */
+            -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+            -o-transform:rotate(0deg); /* Opera */
+        }
+    }
+    </style>
 </head>
 <body>
-    
+     
+    <div class="mui-text-center" id="tool">
+        <i class="iconfont icon-fl-chuizi"></i>
+    </div>
 
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>

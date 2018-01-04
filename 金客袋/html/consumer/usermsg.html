@@ -30,7 +30,7 @@
         <a class="mui-pull-left" onclick="api.closeWin();">
             <span><i class="iconfont icon-xiangzuo"></i></span>
         </a>
-        <div class="mui-title">客户</div>
+        <div class="mui-title" id="name">客户</div>
         <a class="mui-pull-right" id="edit">
                 <span><i class="iconfont icon-bianji"></i></span>
         </a>
@@ -104,9 +104,9 @@
             var d = api.pageParam;
             $("#ul").attr({'api-data':'{"id":"'+d.id+'"}','api-url':d.detail})
             apimui.config();
-            // apimui.post('cusumer/Detail',{id:d.id},function(r){
-            //     alert(JSON.stringify(r))
-            // })、、edit
+            apimui.post(d.detail,{id:d.id},function(r){
+                $("#name").text(r.d.name)
+            })
             $("#edit").on('click',function(){
                 var id = d.id,url = d.url,detail = d.detail;
                 api.openWin({

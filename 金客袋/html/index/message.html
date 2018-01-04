@@ -69,7 +69,7 @@
 </head>
 
 <body>
-    <div id="list" role="template" event="html" tempid="temp" api-url='message/paged' api-data='{}'>
+    <div id="list" role="template" api-type="html" api-id="temp" api-url='message/paged' api-up='append' api-down='html'>
         <div class="list mui-w">
                 <div class="list_head mui-padd-lr">
                     <div>
@@ -168,23 +168,27 @@
 
     <script src="../../js/jquery.js"></script>
     <script src="../../js/mui.js"></script>
-    <script src="../../js/apiinit.js"></script>
+    <!-- <script src="../../js/apiinit.js"></script> -->
+    <script src="../../js/rc.js"></script>
     <script src="../../js/artTemplate.js"></script>
     <script>
         apiready = function () {
-            apimui.config();
-            api.setRefreshHeaderInfo({
-                loadingImg: 'widget://image/refresh.png',
-                bgColor: '#fff',
-                textColor: '#ccc',
-                textDown: '下拉刷新...',
-                textUp: '松开刷新...'
-            }, function (ret, err) {
-                //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
-                setTimeout(function () {
-                    api.refreshHeaderLoadDone();
-                }, 1000)
-            });
+            // apimui.config();
+            // api.setRefreshHeaderInfo({
+            //     loadingImg: 'widget://image/refresh.png',
+            //     bgColor: '#fff',
+            //     textColor: '#ccc',
+            //     textDown: '下拉刷新...',
+            //     textUp: '松开刷新...'
+            // }, function (ret, err) {
+            //     //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+            //     setTimeout(function () {
+            //         apimui.config();
+            //         api.refreshHeaderLoadDone();
+            //     }, 1000)
+            // });
+            rc.c({'isDown':true,'isUp':true});
+            rc.init();
         }
     </script>
 </body>

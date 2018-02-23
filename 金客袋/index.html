@@ -186,6 +186,33 @@
 <script src="js/apiinit.js"></script>
 <script type="text/javascript">
 
+
+    // onmessage = function (e) {
+    //     e = e || event;
+    //     alert(11)
+    //     document.write("我是", e.data);
+    // };
+
+    function receiveMessage(event)
+{
+
+
+     document.write("我是", event.data);
+     alert(event.origin+'接受页')
+  // event.origin 来源地址/域
+
+  // event.source 就当前弹出页的来源页面
+  // event.data 是 "hello there!"
+
+  // 假设你已经验证了所受到信息的origin (任何时候你都应该这样做), 一个很方便的方式就是把enent.source
+  // 作为回信的对象，并且把event.origin作为targetOrigin
+  event.source.postMessage("hi there yourself!  the secret response " +
+                           "is: rheeeeet!",
+                           event.origin);
+}
+
+window.addEventListener("message", receiveMessage, false);
+
     Object.prototype.chain = function (callback) {
         return callback();
     }

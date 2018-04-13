@@ -1,0 +1,9 @@
+User-Agent: ia_archiver
+Disallow:
+ 
+User-Agent: *
+Disallow: /application/admin/
+Disallow: /admin/
+
+User-agent: MJ12bot
+Disallow: /

@@ -152,10 +152,11 @@ class index extends Controller{
 
             curl_setopt( $ch, CURLOPT_TIMEOUT , 60);
 
-            curl_setopt( $ch, CURLOPT_RETURNTRANSFER , true );
+            if (ini_get('open_basedir') == '' && ini_get('safe_mode' == 'Off')) {
+                  curl_setopt( $ch, CURLOPT_RETURNTRANSFER , true );
+                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-
+            }
             if( $ispost )
 
             {
@@ -404,7 +405,7 @@ $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'c
         if(count($arr)>0){
             echo 400;
         }else{
-             $rand = rand();
+              $rand = rand(1000,9999);
             $this->sendemail($email,"亲爱的： ".$email."
             <br/>
             <br/>
@@ -459,7 +460,7 @@ $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'c
 
          $val = $user->where('account',$name)->find();
 
-        $rand = rand();
+      
 
          if(!count($val)){
 
@@ -468,7 +469,7 @@ $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'c
              echo 400;
 
         }else{
-
+  	 $rand = rand(1000,9999);
               $this->sendemail($name,"亲爱的： ".$name."
 
             <br/>
@@ -515,11 +516,11 @@ $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'c
 
       // Cookie::set('email','2121',600);
 
-       $a =  Cookie::has('email');
+    $a =  Session::has('email');
 
         if($a){
 
-          $val =  Cookie::get('email');
+          $val =  Session::get('email');
 
             if($val == $code){
 

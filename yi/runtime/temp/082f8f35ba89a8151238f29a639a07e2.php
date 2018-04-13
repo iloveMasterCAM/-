@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:90:"/data/home/qxu1146510236/htdocs/public/../application/index/view/index/Forgotpassword.html";i:1511954242;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:90:"/data/home/qxu1146510236/htdocs/public/../application/index/view/index/Forgotpassword.html";i:1512740548;}*/ ?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -196,6 +196,24 @@
             visibility:inherit;
 
         }
+    #bg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(25,25,25,0.06);
+            z-index: 20;
+            display: none;
+        }
+        #loginload{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 21;
+            margin-left: -25px;
+            margin-top: -25px;
+        }
 
     </style>
 
@@ -271,8 +289,8 @@
 
                 <div class="aui-text-center aui-margin-t-15">
 
-                     <input type="text" id="code"  placeholder="输入邮箱中的验证码">
-
+                      <p><input type="text" id="code"  placeholder="输入邮箱中的验证码"></p>
+                       <p class="aui-text-left msg code">验证码错误</p>
                 </div>
 
                 <div class="aui-text-center but aui-margin-t-15">
@@ -292,7 +310,9 @@
         <p>©2017&nbsp;&nbsp;&nbsp;Yi-23 闽ICP备15012318号</p>
 
     </footer>
-
+  <div id="bg">
+        <div id="loginload"> <img src="__IMG__/show/loginload.gif" alt=""></div>
+   </div>
    <script src="__JS__/jquery.js"></script>
 
     <script>
@@ -342,7 +362,7 @@
            var val = $.trim($("#account").val()); 
 
             if(isEmail(val)){
-
+	 $("#bg").show();
                 post('index/index/Forgotpasw',{'name':val},function(r,d){
 
                     if(d == '400'){
@@ -362,11 +382,8 @@
                         $(".form").removeClass('aui-hide')
 
                         $(".account").addClass('aui-hide')
-
-                        
-
                     }
-
+	 $("#bg").hide();
                 })
 
             }else{
@@ -420,12 +437,21 @@
                return false; 
 
             }
+ if(!$("#code").val()){
+                   $(".code").addClass('show')
 
-            
+                setTimeout(function(){
 
+                 $(".msg").removeClass('show')
+
+            },4000)
+                return false; 
+            }
+  $("#bg").show();
             post('index/index/coder',{code:$.trim($("#code").val()),pasw:$.trim($("#newlpasw").val()),account:$.trim($("#account").val())},function(r){
-                alert(d)
-	window.history.back(-1); 
+ alert(JSON.stringify(r))
+                 $("#bg").hide();
+	//window.history.back(-1); 
 
             })
 

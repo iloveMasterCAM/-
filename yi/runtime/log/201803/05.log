@@ -1,0 +1,1607 @@
+---------------------------------------------------------------
+[ 2018-03-05T01:06:36+08:00 ] 121.42.87.135 106.11.227.246 GET /
+[ info ] yi-23.com/ [运行时间：0.031470s][吞吐率：31.78req/s] [内存消耗：2,288.95kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'accept-encoding' => 'gzip',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yi-23.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T04:54:35+08:00 ] 121.42.87.135 106.11.231.201 GET /
+[ info ] yi-23.com/ [运行时间：0.032057s][吞吐率：31.19req/s] [内存消耗：2,287.26kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'host' => 'yi-23.com',
+  'user-agent' => 'Go-http-client/1.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T04:54:35+08:00 ] 121.42.87.135 106.11.228.170 GET /
+[ info ] www.yi-23.com/ [运行时间：0.032329s][吞吐率：30.93req/s] [内存消耗：2,287.31kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Go-http-client/1.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T07:20:30+08:00 ] 121.42.87.135 159.65.182.108 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031732s][吞吐率：31.51req/s] [内存消耗：2,289.01kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+  'accept-charset' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.7',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'en-gb,en;q=0.5',
+  'connection' => 'close',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T09:18:17+08:00 ] 121.42.87.135 27.154.171.209 GET /
+[ info ] www.yi-23.com/ [运行时间：0.035131s][吞吐率：28.46req/s] [内存消耗：2,272.64kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T09:18:18+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.100158s][吞吐率：9.98req/s] [内存消耗：1,676.83kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T09:18:18+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.155487s][吞吐率：6.43req/s] [内存消耗：2,863.63kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T09:18:18+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024498s][吞吐率：40.82req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T09:18:18+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.049546s][吞吐率：20.18req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T11:22:00+08:00 ] 121.42.87.135 66.249.66.156 GET /
+[ info ] www.yi-23.com/ [运行时间：0.033222s][吞吐率：30.10req/s] [内存消耗：2,288.49kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T12:34:01+08:00 ] 121.42.87.135 42.236.99.65 GET /
+[ info ] www.yi-23.com/ [运行时间：0.046226s][吞吐率：21.63req/s] [内存消耗：2,289.13kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'accept-language' => 'zh-CN',
+  'connection' => 'Keep-Alive',
+  'cookie' => '',
+  'host' => 'www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36; 360Spider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:19:28+08:00 ] 121.42.87.135 106.11.226.203 GET /
+[ info ] www.yi-23.com/ [运行时间：0.032805s][吞吐率：30.48req/s] [内存消耗：2,288.92kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'accept-encoding' => 'gzip',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.yi-23.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:27:35+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/setnickname
+[ info ] www.yi-23.com/public/index/Usermsg/setnickname [运行时间：0.078491s][吞吐率：12.74req/s] [内存消耗：2,670.54kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'setnickname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '15',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'nickname' => 'LLLLLL',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->setnickname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:11+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/sethead
+[ info ] www.yi-23.com/public/index/Usermsg/sethead [运行时间：0.044656s][吞吐率：22.39req/s] [内存消耗：2,792.31kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'sethead',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '32429',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'data' => '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',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->sethead[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:13+08:00 ] 121.42.87.135 27.154.171.209 GET /
+[ info ] www.yi-23.com/ [运行时间：0.032107s][吞吐率：31.15req/s] [内存消耗：2,272.99kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:14+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.024055s][吞吐率：41.57req/s] [内存消耗：1,676.83kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:14+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.044034s][吞吐率：22.71req/s] [内存消耗：2,863.63kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:14+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024464s][吞吐率：40.88req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:14+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.047522s][吞吐率：21.04req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:19+08:00 ] 121.42.87.135 27.154.171.209 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031247s][吞吐率：32.00req/s] [内存消耗：2,272.99kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:19+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.024942s][吞吐率：40.09req/s] [内存消耗：1,676.83kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:19+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.044169s][吞吐率：22.64req/s] [内存消耗：2,863.63kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:19+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.023553s][吞吐率：42.46req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:19+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.046282s][吞吐率：21.61req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:29+08:00 ] 121.42.87.135 27.154.171.209 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031687s][吞吐率：31.56req/s] [内存消耗：2,273.25kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:30+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.025790s][吞吐率：38.77req/s] [内存消耗：1,677.84kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'pragma' => 'no-cache',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:30+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.044662s][吞吐率：22.39req/s] [内存消耗：2,865.48kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'pragma' => 'no-cache',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:30+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.026005s][吞吐率：38.45req/s] [内存消耗：1,678.64kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'pragma' => 'no-cache',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:30+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.050053s][吞吐率：19.98req/s] [内存消耗：3,059.93kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'pragma' => 'no-cache',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:36+08:00 ] 121.42.87.135 27.154.171.209 GET /
+[ info ] www.yi-23.com/ [运行时间：0.033445s][吞吐率：29.90req/s] [内存消耗：2,272.99kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:36+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.024774s][吞吐率：40.37req/s] [内存消耗：1,676.83kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:36+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.044265s][吞吐率：22.59req/s] [内存消耗：2,863.63kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:36+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.025700s][吞吐率：38.91req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:36+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.114419s][吞吐率：8.74req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:56+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/sethead
+[ info ] www.yi-23.com/public/index/Usermsg/sethead [运行时间：0.044841s][吞吐率：22.30req/s] [内存消耗：2,750.16kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'sethead',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '21263',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'data' => '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',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->sethead[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:57+08:00 ] 121.42.87.135 27.154.171.209 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031204s][吞吐率：32.05req/s] [内存消耗：2,272.99kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:57+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.023441s][吞吐率：42.66req/s] [内存消耗：1,676.83kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:57+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.042590s][吞吐率：23.48req/s] [内存消耗：2,863.63kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:57+08:00 ] 121.42.87.135 27.154.171.209 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024867s][吞吐率：40.21req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T16:28:57+08:00 ] 121.42.87.135 27.154.171.209 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.048658s][吞吐率：20.55req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=7k60pvh9iqvb9qsjul2je7ds64',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T18:56:41+08:00 ] 121.42.87.135 211.162.237.17 GET /
+[ info ] www.yi-23.com/ [运行时间：0.033564s][吞吐率：29.79req/s] [内存消耗：2,272.59kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T18:56:43+08:00 ] 121.42.87.135 211.162.237.17 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.024754s][吞吐率：40.40req/s] [内存消耗：1,676.45kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=sr4ne4bnb4f9l0tba6cgcs03j5',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T18:56:43+08:00 ] 121.42.87.135 211.162.237.17 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.075234s][吞吐率：13.29req/s] [内存消耗：2,863.62kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=sr4ne4bnb4f9l0tba6cgcs03j5',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T18:56:43+08:00 ] 121.42.87.135 211.162.237.17 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024123s][吞吐率：41.45req/s] [内存消耗：1,677.43kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=sr4ne4bnb4f9l0tba6cgcs03j5',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T18:56:43+08:00 ] 121.42.87.135 211.162.237.17 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.047466s][吞吐率：21.07req/s] [内存消耗：3,058.11kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=sr4ne4bnb4f9l0tba6cgcs03j5',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T19:54:26+08:00 ] 121.42.87.135 211.162.237.17 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.025739s][吞吐率：38.85req/s] [内存消耗：1,677.41kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '8',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=sr4ne4bnb4f9l0tba6cgcs03j5',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'geme',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T19:54:32+08:00 ] 121.42.87.135 211.162.237.17 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.026287s][吞吐率：38.04req/s] [内存消耗：1,677.41kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '11',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=sr4ne4bnb4f9l0tba6cgcs03j5',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'Scenery',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T19:54:46+08:00 ] 121.42.87.135 211.162.237.17 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.026338s][吞吐率：37.97req/s] [内存消耗：1,677.43kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=sr4ne4bnb4f9l0tba6cgcs03j5',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'Comic',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T19:54:47+08:00 ] 121.42.87.135 211.162.237.17 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.023716s][吞吐率：42.17req/s] [内存消耗：1,677.41kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '10',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=sr4ne4bnb4f9l0tba6cgcs03j5',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'animal',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T19:55:08+08:00 ] 121.42.87.135 211.162.237.17 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.025152s][吞吐率：39.76req/s] [内存消耗：1,677.41kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '8',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=sr4ne4bnb4f9l0tba6cgcs03j5',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3350.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'film',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-05T23:07:56+08:00 ] 121.42.87.135 106.11.226.21 GET /
+[ info ] yi-23.com/ [运行时间：0.033553s][吞吐率：29.80req/s] [内存消耗：2,288.95kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'accept-encoding' => 'gzip',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yi-23.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

@@ -74,9 +74,7 @@
             padding-top: 25px;
         }
 
-        #header .jia,
-        .cicle,
-        #header .set i {
+        #header .jia ,.cicle ,#header .set i{
             position: absolute;
             right: 10px;
             top: 20px;
@@ -84,8 +82,7 @@
             color: #0071c7
         }
 
-        #header .jia i,
-        #header .set i {
+        #header .jia i,#header .set i {
             font-size: 1.5rem;
         }
 
@@ -114,16 +111,6 @@
         #header>div {
             position: relative;
             padding-top: 25px;
-        }
-        #show{
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 1px solid #ccc;
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            margin-left: -50px;
         }
     </style>
 
@@ -155,7 +142,6 @@
     </div>
 
     <div class="mui-row mui-text-center bor-t" id="footer">
-        <div id="show">1</div> 
         <div class="mui-col-5 active">
             <p>
                 <i class="iconfont icon-gongzuotai"></i>
@@ -196,65 +182,20 @@
 <script src="js/mui.js"></script>
 <script src="js/apiinit.js"></script>
 <script type="text/javascript">
-
-
-    // onmessage = function (e) {
-    //     e = e || event;
-    //     alert(11)
-    //     document.write("我是", e.data);
-    // };
-
-    function receiveMessage(event)
-{
-
-
-     document.write("我是", event.data);
-     alert(event.origin+'接受页')
-  // event.origin 来源地址/域
-
-  // event.source 就当前弹出页的来源页面
-  // event.data 是 "hello there!"
-
-  // 假设你已经验证了所受到信息的origin (任何时候你都应该这样做), 一个很方便的方式就是把enent.source
-  // 作为回信的对象，并且把event.origin作为targetOrigin
-  event.source.postMessage("hi there yourself!  the secret response " +
-                           "is: rheeeeet!",
-                           event.origin);
-}
-
-window.addEventListener("message", receiveMessage, false);
-
-    Object.prototype.chain = function (callback) {
+   
+Object.prototype.chain = function (callback) {
         return callback();
     }
     apiready = function () {
-        // if (!localStorage["token"]) {
-        //     openLogin();
-        //     return;
-        // }
-        openFrameGroup();
-
-        if (!localStorage['img']) {
-            api.imageCache({
-                url: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1109011109,4198513394&fm=27&gp=0.jpg',
-            }, function (ret, err) {
-                var url = ret.url;
-                localStorage['img'] = url
-
-            });
-
+        if (!localStorage["token"]) {
+            openLogin();
+            return;
         }
-        api.sendFrameToBack({
-    from: 'group',
-
-});
-//winroot
-
+        openFrameGroup();
     };
 
 
     function openLogin() {
-   
         setTimeout(function () {
             api.openWin({
                 name: 'login_win',
@@ -315,25 +256,25 @@ window.addEventListener("message", receiveMessage, false);
             $("#header>div").addClass('mui-hidden')
             $("#header>div").eq(i).removeClass('mui-hidden');
         })
-        $(".jia").on('click', function () {
+        $(".jia").on('click',function(){
             api.openWin({
-                name: 'plus',
-                url: 'html/orders/add.html'
+                name:'plus',
+                url:'html/orders/add.html'
             })
         })
-        $(".set").on('click', function () {
+        $(".set").on('click',function(){
             api.openWin({
-                name: 'set',
-                url: 'html/account/set.html'
+                name:'set',
+                url:'html/account/set.html'
             })
         })
-        $(".cicle").on('click', function () {
+        $(".cicle").on('click',function(){
             api.openWin({
-                name: 'cicle',
-                url: 'html/circle/cicle.html'
+                name:'cicle',
+                url:'html/circle/cicle.html'
             })
         })
-
+        
         // cicle
     })
 

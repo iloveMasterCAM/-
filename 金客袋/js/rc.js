@@ -30,9 +30,6 @@
                    $(self).html('');
                    var html = template(id,d);
                   $(self)[type](html);
-                  if($(self).attr('api-callback'))  window[$(self).attr('api-callback')](); 
-                  
-                //   alert()
                 }
              if(i+1 == len){
               r.click();

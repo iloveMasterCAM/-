@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" article="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" article="ie=edge">
+    <link href="../css/aui.css" rel="stylesheet" />
+    <link href="../css/public.css" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <link href="../iconfont/iconfont.css" rel="stylesheet" />
+    <title>文章详情</title>
+    <style>
+        #article {}
+
+        #article .title_box h2 {
+
+            font-size: 30px;
+            font-weight: 500;
+            color: #0e0e0e;
+            margin: 33px 0 15px;
+        }
+
+        #article .left {
+            width: 870px;
+
+        }
+
+        #article .right {
+            width: 290px;
+        }
+
+        #article .title_box {
+            position: relative;
+            border-bottom: 1px dashed #e3e3e3;
+            margin-bottom: 35px;
+        }
+
+        #article .title_box div span {
+            color: #979797;
+            margin: 0 20px;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        #article .title_box .share {
+            border: 1px solid #e3e3e3;
+            border-bottom: none;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        #article .title_box .share p {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        #article .left .txt_p {
+            text-indent: 2rem;
+            color: #6b6b6b;
+            margin-bottom: 30px;
+        }
+
+        #article .left .img {
+            margin-bottom: 30px;
+        }
+
+        #article .left .img img {
+            width: 450px;
+        }
+
+        #article .next,
+        #article .left .text,
+        #article .Strategy {
+            border-bottom: 1px dashed #e3e3e3;
+        }
+
+        #article .next {
+            padding: 20px 0 60px;
+            color: #707070;
+        }
+
+        #article .next span {
+            color: #ec1e1e;
+            margin-right: 10px;
+            ;
+        }
+
+        #article .Strategy {
+            padding: 20px 0;
+            margin-bottom: 25px;
+        }
+
+        #article .Strategy .relative {
+            font-size: 24px;
+            color: #333333;
+        }
+
+        #article .Strategy .MORE {
+            position: relative;
+            color: #999999;
+            font-size: 12px;
+            bottom: -13px;
+        }
+
+        #article .relative_box img {
+            width: 160px;
+        }
+
+        #article .relative_box .name {
+            margin: 15px 0 45px;
+            padding-left: 20px;
+            color: #222222;
+            font-size: 18px;
+            width: 210px;
+            overflow: hidden;
+        }
+
+        #article .relative_box .more {
+            padding-left: 20px;
+            color: #999999;
+        }
+
+        #article .relative_box>div {
+            margin-bottom: 20px;
+            width: 435px;
+            float: left;
+        }
+
+        #article .relative_box {
+            margin-bottom: 100px;
+        }
+
+        #article .h-wu {
+            color: #ffa60c
+        }
+
+        #article .h-share {
+            color: #32a1f0
+        }
+
+        #Apply {
+
+            width: 100%;
+            position: static;
+            border: 1px solid #eaeaea;
+            padding: 15px;
+        }
+
+        #article .hot {
+            margin-top: 20px;
+            width: 100%;
+            border: 1px solid #dedede;
+        }
+
+        #article .hot .txt {
+            color: #333333;
+            font-weight: 500;
+            line-height: 45px;
+            border-bottom: 1px dashed #dadada;
+        }
+
+        #article .hot .list:last-child .txt {
+            border-bottom: none
+        }
+
+        #article .hot .txt span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            line-height: 15px;
+            color: #333333;
+            margin-right: 10px;
+        }
+
+        #article .hot .txt span.active {
+            background: #d6162d;
+            color: #fff;
+        }
+
+        #article .hot img {
+            display: none;
+            margin-top: 10px;
+        }
+
+        #article .hot .list:hover img {
+            display: block;
+        }
+
+        #article .hot .list {
+            padding-left: 20px;
+        }
+
+        #article .hot h3 {
+            border-bottom: 1px solid #dedede;
+            font-size: 18px;
+            font-weight: 500;
+            color: #3c3c3c;
+            padding-left: 40px;
+            margin-bottom: 10px;
+            line-height: 45px;
+            position: relative;
+        }
+
+        #article .hot h3::after {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 25%;
+            height: 50%;
+            ;
+            width: 2px;
+            background: #ec1e1e;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_box w aui-row">
+            <div class="aui-pull-left aui-row">
+                <div class="aui-pull-left">
+                    <i class="hua h-dizhi"></i>
+                    <span>厦门</span>
+                    <span>[切换]</span>
+                    <i class="hua h-bottom"></i>
+                </div>
+
+            </div>
+            <div class="aui-pull-right">
+                <a class="aui-pull-left longin">登录</a>
+                <a class="aui-pull-left">注册</a>
+                <a class="aui-pull-left">商家入驻</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-home1"></i> 华闽美家</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-telephone"></i> 客服热线:0592-5221258</a>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索 -->
+    <div id="log" class="aui-row w">
+        <div class="aui-col-xs-4">
+            <img class="aui-col-xs-11" src="../img/log.png" alt="">
+        </div>
+        <form class="aui-col-xs-6 search aui-row">
+            <select class="">
+                <option class="aui-text-center" value="装修公司">装修公司</option>
+                <option class="aui-text-center" value="装修公司">装修公司</option>
+                <option class="aui-text-center" value="装修公司">装修公司</option>
+            </select>
+            <input type="text" class="aui-padded-l-10" value="" placeholder="搜索装修公司/问题/攻略/效果图">
+            <div class=" button">
+                <input type="submit" value="">
+            </div>
+
+        </form>
+        <div class="aui-col-xs-2 aui-padded-t-10">
+            <img class="aui-col-xs-9 aui-pull-right" src="../img/log_r.png" alt="">
+        </div>
+    </div>
+    <!-- 导航 -->
+    <div id="nav" class="aui-margin-t-15">
+        <div class="w aui-row">
+            <div class="aui-col-xs-9 nav_child">
+                <div class="aui-pull-left ">首页</div>
+                <div class="aui-pull-left acitve">效果图
+                    <i class="hua h-s_bottom"></i>
+                </div>
+                <div class="aui-pull-left">装修攻略
+                    <i class="hua h-s_bottom"></i>
+                </div>
+                <div class="aui-pull-left">设计与报价
+                    <i class="hua h-s_bottom"></i>
+                </div>
+                <div class="aui-pull-left">装修公司</div>
+                <div class="aui-pull-left">找设计师</div>
+                <div class="aui-pull-left">装修保险金</div>
+            </div>
+            <div class=" aui-col-xs-3 aui-pull-right aui-text-right right">
+                <div class=" ">
+                    <i class="hua h-mianfeibaojia"></i> 免费</div>
+                <div class=" active">
+                    <i class="hua h-home"></i> 保障</div>
+                <div class="">
+                    <i class="hua h-shengqian"></i>省钱</div>
+            </div>
+
+        </div>
+    </div>
+    <div id="map">
+        <div class="w">
+            <span>
+                <i class="hua h-home1"></i> 当前位置: </span>
+            <a href="">华闽美家</a>
+            <a href="">华闽美家</a>
+            <a href="">华闽美家</a>
+        </div>
+    </div>
+    <div class="w aui-row" id="article">
+        <div class="left aui-pull-left">
+            <div class="title_box aui-text-center">
+                <h2>派雅门窗和一米阳光门窗哪个好</h2>
+                <div class="aui-row">
+                    <span>来自：华闽美家</span>
+                    <span>浏览次数：169</span>
+                    <span>发布时间：2017-06-09</span>
+                </div>
+                <div class="share">
+                    <p>
+                        <i class="hua h-wu"></i>
+                    </p>
+                    <p>
+                        <i class="hua h-share"></i>
+                    </p>
+
+                </div>
+            </div>
+            <div class="text">
+                <p class="txt_p">
+                    我们在装修房屋的时候，对于门窗的选择的问题，往往很是纠结，不管是门窗的品牌品质，还是门窗的风格款式都让我们很难抉择。不同品牌的门窗有不同的质量，而且也有很多不一样的风格和别具一格的款式。我们生活中，派雅门窗和一米阳光门窗是两个不错的品牌，那么很多人问这两个品牌到底哪个比较好，下面就让小编来为您详细介绍!
+                </p>
+                <div class="aui-text-center img">
+                    <img src="../img/case.png" alt="">
+                </div>
+                <p class="txt_p">
+                    派雅门窗是国内铝合金门窗行业的“老牌子”，一直专注原创、专注铝合金门窗的研发和制造。派雅门窗全部采用全自动混料系统，进口挤出机和进口模具，主要原材料均采用进口产品，配方精湛，生产出的型材细密、均匀、光洁度高，功能尺寸、腔体结构完全符合设计要求。
+                </p>
+                <p class="txt_p">
+                    派雅门窗外观质量好，色系为青白色，明快亮丽，给人以清新高雅的感觉，外形尺寸精确度高，型材单位长度质量稳定。派雅门窗耐热性能高，型材经高温处理后，尺寸基本没有变化，加热后无气泡、麻点和裂痕产生。抗冲击性能也很好，低温落锤冲击十个试样均不破裂，简支梁冲击强度远高于国家标准，达到欧洲标准要求。
+                </p>
+                <p class="txt_p">
+                    派雅门窗连接型材品种繁多、配套性好，适用于派雅门窗型材各系列的拼装、连接，可根据风压强度的要求或使用者的喜好选择。
+                </p>
+                <p class="txt_p">
+                    一米阳光在用材上也是非常考究的，他们选用的原材料不仅无毒，而且有的还具有很好的隔热效果，特别是一米阳光门窗最新推出的130推拉门和70折叠门，更是这些门窗中的极品，其内置隔热材料，使其导热系数极低，大大的提高了隔热效果，为消费者创造出了一个最舒适温馨的居住环境。
+                </p>
+            </div>
+            <div class="aui-row next">
+                <div class="aui-pull-left">
+                    <span>上一篇:</span>露台和阳台一样吗？如何装修露台
+                </div>
+                <div class="aui-pull-right">
+                    <span>下一篇:</span>露台和阳台一样吗？如何装修露台
+                </div>
+            </div>
+            <div class="aui-row Strategy">
+                <div class="aui-pull-left relative">
+                    相关攻略
+                </div>
+                <div class="aui-pull-right MORE">
+                    MORE
+                    <i class="hua h-xiangzuo"></i>
+                </div>
+            </div>
+            <div class="relative_box aui-row" id="">
+                <div class=" aui-row">
+                    <div class="aui-pull-left">
+                        <img src="../img/Design_head.png" alt="">
+                    </div>
+                    <div class="aui-pull-left ">
+                        <p class="name aui-ellipsis-1">金雨弘防水品牌怎么样</p>
+                        <p class="more"> MORE
+                            <i class="hua h-xiangzuo"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class=" aui-row">
+                    <div class="aui-pull-left">
+                        <img src="../img/Design_head.png" alt="">
+                    </div>
+                    <div class="aui-pull-left ">
+                        <p class="name aui-ellipsis-1">金雨弘防水品牌怎么样</p>
+                        <p class="more"> MORE
+                            <i class="hua h-xiangzuo"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class=" aui-row">
+                    <div class="aui-pull-left">
+                        <img src="../img/Design_head.png" alt="">
+                    </div>
+                    <div class="aui-pull-left ">
+                        <p class="name aui-ellipsis-1">金雨弘防水品牌怎么样</p>
+                        <p class="more"> MORE
+                            <i class="hua h-xiangzuo"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class=" aui-row">
+                    <div class="aui-pull-left">
+                        <img src="../img/Design_head.png" alt="">
+                    </div>
+                    <div class="aui-pull-left ">
+                        <p class="name aui-ellipsis-1">金雨弘防水品牌怎么样</p>
+                        <p class="more"> MORE
+                            <i class="hua h-xiangzuo"></i>
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="right aui-pull-right">
+            <div id="Apply" class="aui-text-center">
+                <h1>你装修，我保障</h1>
+                <p class="aui-margin-b-15">申请装修立省
+                    <span class="color">30%</span>
+                </p>
+                <form action="">
+                    <div class="aui-margin-b-15">
+                        <input type="text" value="" placeholder="您的称呼">
+                    </div>
+                    <div class="aui-margin-b-15">
+                        <input type="text" value="" placeholder="您的手机号码">
+                    </div>
+                    <div class="aui-row  aui-margin-b-15 address">
+                        <div class="aui-col-xs-6 active">
+                            <select name="" id="">
+                                <option value="厦门">厦门</option>
+                                <option value="厦门">厦门</option>
+                                <option value="厦门">厦门</option>
+
+                            </select>
+                        </div>
+                        <div class="aui-col-xs-6">
+                            <select name="" id="">
+                                <option value="厦门">厦门</option>
+                                <option value="厦门">厦门</option>
+                                <option value="厦门">厦门</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="aui-row aui-margin-b-15">
+                        <div class="aui-pull-left t">
+                            已有
+                            <span class="color">18154</span> 位业主免费申请
+                        </div>
+
+                        <label class="aui-pull-right t">
+                            <input type="checkbox">
+                            <span>资料保密</span>
+                        </label>
+                    </div>
+                    <div class="">
+                        <input type="submit" value="立即申请免费">
+                    </div>
+
+                    <div class="t">
+                        我们的客服将在提交订单15分钟内与您联系
+                    </div>
+                </form>
+            </div>
+            <div class="hot aui-pull-left">
+                <h3>热门文章</h3>
+                <div class="list">
+                    <p class="txt">
+                        <span class="active">1</span> 家庭装修流程</p>
+                    <img src="../img/special6.png" alt="">
+                </div>
+                <div class="list">
+                    <p class="txt">
+                        <span class="active">1</span> 家庭装修流程</p>
+                    <img src="../img/special6.png" alt="">
+                </div>
+                <div class="list">
+                    <p class="txt">
+                        <span class="active">1</span> 家庭装修流程</p>
+                    <img src="../img/special6.png" alt="">
+                </div>
+                <div class="list">
+                    <p class="txt">
+                        <span>1</span> 家庭装修流程</p>
+                    <img src="../img/special6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div id="guarantee" class="aui-text-center">
+        <h2>
+            <span>华闽美家</span> -互联网装修—站式平台</h2>
+        <div class="number ">
+            <div>
+                <p class="title_">装修公司</p>
+                <p class="num">
+                    <span>24,781</span> 家 </p>
+            </div>
+            <div>
+                <p class="title_">发布金额</p>
+                <p class="num">
+                    <span>37,495，000,00</span> 元</p>
+            </div>
+            <div>
+                <p class="title_">开通城市</p>
+                <p class="num">
+                    <span>274</span> 个</p>
+            </div>
+        </div>
+        <div class="certificate aui-text-center">
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/bao.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">权威保障 </p>
+                    <p>你来装修 我来担保</p>
+                </div>
+            </div>
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/xing.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">自由选择 </p>
+                    <p class="">多家公司 自由选择</p>
+                </div>
+            </div>
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/you.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">多家公司 自由选择</p>
+                    <p>专业服务 全程伴随</p>
+                </div>
+            </div>
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/xing.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">诚信商家</p>
+                    <p class="">诚信商家</p>
+                </div>
+            </div>
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/du.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">业主监督</p>
+                    <p>一起消费 集体维权</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="w">
+            <div class="aui-row link">
+                <div class="aui-pull-left acitve">友情链接</div>
+                <div class="aui-pull-left">热门城市</div>
+                <div class="aui-pull-left">附近城市</div>
+                <div class="aui-pull-left">热门标签</div>
+            </div>
+            <div class="link_a">
+                <!--                                      福州装修公司   长春家居网   福州装修网   福州装修网   福州搜房网    -->
+                <a href="">深圳房地产</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州商铺网</a>
+                <a href="">福建加盟</a>
+                <a href="">福州装修</a>
+                <a href="">上海造价信息网</a>
+                <a href="">美缝剂</a>
+                <a href="">福州装修网</a>
+                <a href="">福州婚纱摄影</a>
+                <a href="">福州房产网</a>
+                <a href="">福州住宿</a>
+                <a href="">福州装修网</a>
+                <a href="">南通招标网</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州装修网</a>
+                <a href="">福州结婚网</a>
+                <a href="">福州便民网</a>
+                <a href="">南宁装修公司</a>
+                <a href="">文化石</a>
+
+            </div>
+            <div class="aui-row footer_bxo">
+                <div class="aui-col-xs-2">
+
+                    <p class="title_ aui-margin-b-10"> 全国统一热线</p>
+                    <p class="tell">0592-5221258</p>
+                    <p class="txt">如有需要，请关注本网站！</p>
+                    <p>
+                        <i class="hua h-qq"></i>
+                        <i class="hua h-weibo"></i>
+                    </p>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_ ">新手指南</p>
+                    <a href="">如何购买</a>
+                    <a href="">注册新用户</a>
+                    <a href="">如何购买</a>
+                    <a href="">服务流程</a>
+                    <a href="">积分说明</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">装修指南 </p>
+                    <a href="">在线预约</a>
+                    <a href="">装修流程</a>
+                    <a href="">量房设计</a>
+                    <a href="">购买材料</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">合作方案</p>
+                    <a href="">协议声明</a>
+                    <a href="">技术支持</a>
+                    <a href="">合作洽谈</a>
+                    <a href="">提交需求</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">本站服务 </p>
+                    <a href="">合同范本</a>
+                    <a href="">装修保</a>
+                    <a href="">售后服务</a>
+                    <a href="">物流配送</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <div>
+                        <img class="er" src="../img/er.png" alt="">
+                    </div>
+                    <p class="title_ aui-margin-b-5">关注公众微信号</p>
+                    <div>
+                        <a href="">公司网站：http://57hmw.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate aui-text-center">
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v1.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公司信息 </p>
+                        <p>评级证书</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v2.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>经营性网站 </p>
+                        <p>备案信息</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v3.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公共信息安</p>
+                        <p>全网络监察</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v4.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>不良信息</p>
+                        <p>举报中心</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v5.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>互联网</p>
+                        <p>诚信网站</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v6.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>安全联盟 </p>
+                        <p>实名验证</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-text-center footer">
+            Copyright © 2017 http://57hmw.com All Rights Reserved ICP备案：闽ICP备17008952号
+        </div>
+    </div>
+</body>
+
+</html>

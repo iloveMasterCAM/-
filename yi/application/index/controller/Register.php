@@ -19,7 +19,7 @@ class register extends Controller{
 INSERT INTO `user`(`id`, `account`, `nickname`, `pasw`, `skin`, `Recommend`, `history`, `remind`, `color`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9])
         	*/
             $t=time()+(86400*30);
-$user->insert(['id'=>null,'account'=>$email,'nickname'=>$email,'header'=>'','pasw'=>$pasw,'token'=>$token,'expire_time'=>$t,'skin'=>0,'Recommend'=>0,'history'=>0,'remind'=>0,'color'=>0]);
+$user->insert(['id'=>null,'account'=>$email,'nickname'=>$email,'header'=>'','pasw'=>$pasw,'token'=>$token,'expire_time'=>$t,'skin'=>0,'Recommend'=>0,'history'=>0,'remind'=>0,'color'=>0,'opacity'=>20]);
     $d = $user->where('token',$token)->find();  //查询一条记录
 $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'calss'=>'综合']);
         	Cookie::set('token',$token,3600*24*50);

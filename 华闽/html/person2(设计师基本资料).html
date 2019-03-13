@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/aui.css" rel="stylesheet" />
+    <link href="../css/public.css" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <link href="../iconfont/iconfont.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/personalCenter.css">
+    <title>个人中心</title>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_box w aui-row">
+            <div class="aui-pull-left aui-row">
+                <div class="aui-pull-left">
+                    <i class="hua h-dizhi"></i>
+                    <span>厦门</span>
+                    <span>[切换]</span>
+                    <i class="hua h-bottom"></i>
+                </div>
+
+            </div>
+            <div class="aui-pull-right">
+                <a class="aui-pull-left longin">登录</a>
+                <a class="aui-pull-left">注册</a>
+                <a class="aui-pull-left">商家入驻</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-home1"></i> 华闽美家</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-telephone"></i> 客服热线:0592-5221258</a>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索 -->
+    <div id="log" class="aui-row w">
+        <div class="aui-col-xs-4">
+            <img class="aui-col-xs-11" src="../img/log.png" alt="">
+        </div>
+        <div class="aui-col-xs-6 tit">
+            设计师个人中心
+        </div>
+    </div>
+    <!-- 导航 -->
+    <div id="nav" class="aui-margin-t-15">
+    </div>
+    <!-- content-start -->
+    <div class="personal-center w">
+        <div class="menu" id="menu">
+            <p class="header-title">个人中心</p>
+            <ul>
+                <li class="item">
+                    <span class="icon-tile">-</span>设计师基本资料</li>
+                <ul>
+                    <li class="sub-item active">个人资料</li>
+                    <li class="sub-item">修改密码</li>
+                    <li class="sub-item">绑定手机/邮箱</li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="item">
+                    <span class="icon-tile">-</span>设计师信息</li>
+                <ul>
+                    <li class="sub-item">设计师资料</li>
+                    <li class="sub-item">我入驻的公司</li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="item">
+                    <span class="icon-tile">-</span>内容管理</li>
+                <ul>
+                    <li class="sub-item">装修日记</li>
+                    <li class="sub-item">装修问答</li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="item">
+                    <span class="icon-tile">-</span>我的订单</li>
+                <ul>
+                    <li class="sub-item">我的招标</li>
+                    <li class="sub-item">我的预约</li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="item">
+                    <span class="icon-tile">-</span>我的案例</li>
+                <ul>
+                    <li class="sub-item">我发布的</li>
+                    <li class="sub-item">我收藏的</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="content">
+            <p class="header-title" id="title">设计师基本资料</p>
+            <ul class="user-info">
+                <li class="item-upload">
+                    <label for="">当前头像：</label>
+                    <img id="headimg" src="../img/news_.png" alt="" class="upload">
+                    <span class="upload-btn rel">更换头像 <input type="file" class="file"> </span>
+                    <p class="img-tip">支持JPG、GIF、PNG图片、建议尺寸为250*250，在2M内</p>
+                </li>
+                <li class="item">
+                    <label for="">所在城市：</label>
+                    <select name="" id="" class="address">
+                        <option value='' disabled selected style='display:none;'>省/市</option>
+                        <option value="">上海</option>
+                    </select>
+                    <select name="" id="" class="address">
+                        <option value='' disabled selected style='display:none;'>地区/市</option>
+                        <option value="">上海</option>
+                    </select>
+                    <select name="" id="" class="address">
+                        <option value='' disabled selected style='display:none;'>县/市</option>
+                        <option value="">上海</option>
+                    </select>
+                </li>
+                <li class="item">
+                    <label for="">用户名：</label>
+                    <input type="text">
+                </li>
+                <li class="item">
+                    <label for="">职业身份：</label>
+                    <input type="radio" name="professional">&nbsp;家装设计师
+                    <input type="radio" name="professional" checked>&nbsp;工装设计师
+                </li>
+                <li class="item">
+                    <label for="">手机：</label>
+                    <input type="text">
+                </li>
+                <li class="item">
+                    <label for="">QQ：</label>
+                    <input type="text">
+                </li>
+                <li class="item">
+                    <label for="">邮箱：</label>
+                    <input type="text">
+                </li>
+                <li class="item">
+                    <label for="">毕业院校：</label>
+                    <input type="text">
+                </li>
+                <li class="item">
+                    <label for="">从业时间：</label>
+                    <select name="" id="" class="select">
+                        <option value="">一年</option>
+                    </select>
+                </li>
+                <li class="item">
+                    <label for="">设计费用：</label>
+                    <select name="" id="" class="select">
+                        <option value="">面议</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="">擅长风格：</label>
+                    <div class="type">
+                        <div class="type-item cur">现代</div>
+                        <div class="type-item">美式</div>
+                        <div class="type-item">简约</div>
+                        <div class="type-item">简欧</div>
+                        <div class="type-item">现代</div>
+                        <div class="type-item">美式</div>
+                        <div class="type-item">简约</div>
+                        <div class="type-item">简欧</div>
+                    </div>
+                </li>
+                <li>
+                    <label for="">擅长领域：</label>
+                    <div class="type">
+                        <div class="type-item cur">住宅公寓</div>
+                        <div class="type-item">写字楼</div>
+                        <div class="type-item">别墅</div>
+                        <div class="type-item">专卖展示店</div>
+                        <div class="type-item">酒店宾馆</div>
+                        <div class="type-item">餐饮酒吧</div>
+                        <div class="type-item">歌舞迪</div>
+                        <div class="type-item">其他</div>
+                    </div>
+                </li>
+                <li>
+                    <label for="">设计理念：</label>
+                    <textarea name="" id=""></textarea>
+                    <p class="txt-tip">您的设计理念，关乎客户寻找您的方便程度，请认真填写</p>
+                </li>
+                <li>
+                    <label for="">自我介绍：</label>
+                    <textarea name="" id=""></textarea>
+                </li>
+            </ul>
+            <button class="sumbit">保存</button>
+        </div>
+    </div>
+    <!-- content-end -->
+
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="w">
+            <div class="aui-row link">
+                <div class="aui-pull-left acitve">友情链接</div>
+                <div class="aui-pull-left">热门城市</div>
+                <div class="aui-pull-left">附近城市</div>
+                <div class="aui-pull-left">热门标签</div>
+            </div>
+            <div class="link_a">
+                <!--                                      福州装修公司   长春家居网   福州装修网   福州装修网   福州搜房网    -->
+                <a href="">深圳房地产</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州商铺网</a>
+                <a href="">福建加盟</a>
+                <a href="">福州装修</a>
+                <a href="">上海造价信息网</a>
+                <a href="">美缝剂</a>
+                <a href="">福州装修网</a>
+                <a href="">福州婚纱摄影</a>
+                <a href="">福州房产网</a>
+                <a href="">福州住宿</a>
+                <a href="">福州装修网</a>
+                <a href="">南通招标网</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州装修网</a>
+                <a href="">福州结婚网</a>
+                <a href="">福州便民网</a>
+                <a href="">南宁装修公司</a>
+                <a href="">文化石</a>
+
+            </div>
+            <div class="aui-row footer_bxo">
+                <div class="aui-col-xs-2">
+
+                    <p class="title_ aui-margin-b-10"> 全国统一热线</p>
+                    <p class="tell">0592-5221258</p>
+                    <p class="txt">如有需要，请关注本网站！</p>
+                    <p>
+                        <i class="hua h-qq"></i>
+                        <i class="hua h-weibo"></i>
+                    </p>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_ ">新手指南</p>
+                    <a href="">如何购买</a>
+                    <a href="">注册新用户</a>
+                    <a href="">如何购买</a>
+                    <a href="">服务流程</a>
+                    <a href="">积分说明</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">装修指南 </p>
+                    <a href="">在线预约</a>
+                    <a href="">装修流程</a>
+                    <a href="">量房设计</a>
+                    <a href="">购买材料</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">合作方案</p>
+                    <a href="">协议声明</a>
+                    <a href="">技术支持</a>
+                    <a href="">合作洽谈</a>
+                    <a href="">提交需求</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">本站服务 </p>
+                    <a href="">合同范本</a>
+                    <a href="">装修保</a>
+                    <a href="">售后服务</a>
+                    <a href="">物流配送</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <div>
+                        <img class="er" src="../img/er.png" alt="">
+                    </div>
+                    <p class="title_ aui-margin-b-5">关注公众微信号</p>
+                    <div>
+                        <a href="">公司网站：http://57hmw.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate aui-text-center">
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v1.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公司信息 </p>
+                        <p>评级证书</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v2.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>经营性网站 </p>
+                        <p>备案信息</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v3.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公共信息安</p>
+                        <p>全网络监察</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v4.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>不良信息</p>
+                        <p>举报中心</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v5.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>互联网</p>
+                        <p>诚信网站</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v6.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>安全联盟 </p>
+                        <p>实名验证</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-text-center footer">
+            Copyright © 2017 http://57hmw.com All Rights Reserved ICP备案：闽ICP备17008952号
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function () {
+                $('#menu').find('.sub-item').on('click', function () {
+                    $(this).addClass('active').siblings().removeClass('active')
+                    $(this).parent().parent().siblings().children().children().removeClass('active')
+                    let title = $(this).text();
+                    $('#title').text(title)
+                })
+
+                $('.type').find('.type-item').on('click', function () {
+                    $(this).addClass('cur').siblings().removeClass('cur')
+                })
+                /**
+                进度条
+                */
+                var w = 50 + '%';
+                $('#progressBar').css('width', w);
+                $('#progressBar').text(w);
+            })
+
+
+
+            $(".file").change(function () {
+                var objUrl = getObjectURL(this.files[0]);
+                if (objUrl) {
+                    $("#headimg").attr('src',objUrl)
+                }
+            })
+            function getObjectURL(file) {
+                var url = null;
+                if (window.createObjectURL != undefined) { // basic
+                    url = window.createObjectURL(file);
+                } else if (window.URL != undefined) { // mozilla(firefox)
+                    url = window.URL.createObjectURL(file);
+                } else if (window.webkitURL != undefined) { // webkit or chrome
+                    url = window.webkitURL.createObjectURL(file);
+                }
+                return url;
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2180 @@
+---------------------------------------------------------------
+[ 2018-01-25T00:16:32+08:00 ] 121.42.87.135 123.125.71.110 GET /
+[ info ] www.yi-23.com/ [运行时间：0.034437s][吞吐率：29.04req/s] [内存消耗：2,288.55kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip',
+  'accept-language' => 'zh-cn,zh-tw',
+  'connection' => 'close',
+  'host' => 'www.yi-23.com',
+  'if-none-match' => '"@NULL@"',
+  'user-agent' => 'Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T00:30:21+08:00 ] 121.42.87.135 211.162.237.180 GET /public/static/css/img/arrow.png
+[ info ] www.yi-23.com/public/static/css/img/arrow.png [运行时间：0.019807s][吞吐率：50.49req/s] [内存消耗：1,342.30kb] [文件加载：26]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=50vdfv5v6rgiol6jbftad7a2t4',
+  'host' => 'www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/public/static/css/show/aui.css',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:57.0) Gecko/20100101 Firefox/57.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T00:30:32+08:00 ] 121.42.87.135 211.162.237.180 POST /public/index/Usermsg/addurl
+[ info ] www.yi-23.com/public/index/Usermsg/addurl [运行时间：0.045412s][吞吐率：22.02req/s] [内存消耗：2,679.33kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'addurl',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '100',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=50vdfv5v6rgiol6jbftad7a2t4',
+  'host' => 'www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'name' => '自学网',
+  'tt' => 'ZXW',
+  'url' => 'http://v.dxsbb.com/',
+  'class' => '综合',
+  'id' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->addurl[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T00:30:33+08:00 ] 121.42.87.135 211.162.237.180 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.046922s][吞吐率：21.31req/s] [内存消耗：3,057.72kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=50vdfv5v6rgiol6jbftad7a2t4',
+  'host' => 'www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T02:35:47+08:00 ] 121.42.87.135 203.208.60.140 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031647s][吞吐率：31.60req/s] [内存消耗：2,288.97kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T03:02:08+08:00 ] 121.42.87.135 196.52.43.127 GET /
+[ info ] yi-23.com/ [运行时间：0.032429s][吞吐率：30.84req/s] [内存消耗：2,286.98kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'yi-23.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T03:43:39+08:00 ] 121.42.87.135 39.104.29.35 GET /
+[ info ] www.yi-23.com/ [运行时间：0.033397s][吞吐率：29.94req/s] [内存消耗：2,288.45kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.yi-23.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T04:09:40+08:00 ] 121.42.87.135 109.63.228.196 GET /
+[ info ] yi-23.com/ [运行时间：0.035201s][吞吐率：28.41req/s] [内存消耗：2,292.42kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US',
+  'connection' => 'close',
+  'host' => 'yi-23.com',
+  'pragma' => 'no-cache',
+  'referer' => 'http://yandex.ru/clck/jsredir?from=yandex.ru%3Bsearch%3Bweb%3B%3B&text=&etext=1676.3bq4eSgaNRoMQ4tudIHzWnlKwBf-nxgmkSYl4Vwr5jU.a9add2887c57bbc9f02416cbf05eb23265d696ee&uuid=&state=_BLhILn4SxNIvvL0W45KSic66uCIg23qh8iRG98qeIXmeppkgUc0YD4hgzqAYr5iuWBiLZQy-rY&data=UlNrNmk5WktYejR0eWJFYk1LdmtxaXNFbnFWNjFWY2dSV2tqMEduaUdoX1JGcHBtQV9oNldoSk5nbVhwQVdmSHpZV2dIdmZkSUpiS0dvZFd5REp3dU1Sc25DdG0tSWRn&b64e=2&sign=6123b712834e51f351106d8a276f4ed1&keyno=0&cst=AiuY0DBWFJ7IXge4WdYJQULnoVAFacUf9z2BBoEN9RGkDmVWggP0zAGBH-1aqtfOjDeGyL31igxu08BUirt9IJ95DJAzdpeg_h02ES_Ybt20ixWYElpIZVnRC336qOzUBPWS_DU1s8rDUAvhmOfohdkjibJ0nx1S&ref=orjY4mGPRjk5boDnW0uvlrrd71vZw9kp5uQozpMtKCUano4BEc9IEQ3I6Y10shDDuCfgMp3GFgP-5vgs2NTXYScbq9YqT2y37qYwkAHC1gk&l10n=ru&cts=1516823667539&mc=3.78577125407',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T05:26:34+08:00 ] 121.42.87.135 111.206.36.13 GET /
+[ info ] yi-23.com/ [运行时间：0.033013s][吞吐率：30.29req/s] [内存消耗：2,287.83kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T05:49:28+08:00 ] 121.42.87.135 106.11.227.37 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031182s][吞吐率：32.07req/s] [内存消耗：2,288.87kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'accept-encoding' => 'gzip',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.yi-23.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T08:40:55+08:00 ] 121.42.87.135 106.120.160.109 GET /
+[ info ] yi-23.com/ [运行时间：0.031431s][吞吐率：31.82req/s] [内存消耗：2,288.68kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+  'host' => 'yi-23.com',
+  'referer' => 'http://yi-23.com/',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T08:42:08+08:00 ] 121.42.87.135 182.118.20.158 GET /
+[ info ] yi-23.com/ [运行时间：0.031983s][吞吐率：31.27req/s] [内存消耗：2,289.92kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-charset' => 'iso-8859-1,*,utf-8',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'host' => 'yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 5.0.2; zh-CN; Redmi Note 3 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 OPR/11.2.3.102637 Mobile Safari/537.36',
+  'x-forwarded-for' => 'unknown',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T09:17:40+08:00 ] 121.42.87.135 27.154.171.247 GET /
+[ info ] www.yi-23.com/ [运行时间：0.032354s][吞吐率：30.91req/s] [内存消耗：2,272.63kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T09:17:44+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.025136s][吞吐率：39.78req/s] [内存消耗：1,676.83kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T09:17:44+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.076368s][吞吐率：13.09req/s] [内存消耗：2,863.63kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T09:17:44+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024452s][吞吐率：40.90req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T09:17:44+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.046822s][吞吐率：21.36req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T09:31:33+08:00 ] 121.42.87.135 203.208.60.139 GET /
+[ info ] www.yi-23.com/ [运行时间：0.033034s][吞吐率：30.27req/s] [内存消耗：2,288.41kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:29:49+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024489s][吞吐率：40.83req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '8',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'geme',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:29:51+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.023494s][吞吐率：42.56req/s] [内存消耗：1,677.95kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '11',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'Scenery',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:29:58+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/setbg
+[ info ] www.yi-23.com/public/index/Usermsg/setbg [运行时间：0.062738s][吞吐率：15.94req/s] [内存消耗：2,670.96kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'setbg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '25',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'Scenery/311733.jpg',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->setbg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:30:06+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/SaveSet
+[ info ] www.yi-23.com/public/index/Usermsg/SaveSet [运行时间：0.043326s][吞吐率：23.08req/s] [内存消耗：2,674.85kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'SaveSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '38',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'Recommend' => '0',
+  'history' => '0',
+  'remind' => '0',
+  'color' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->SaveSet[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:30:07+08:00 ] 121.42.87.135 27.154.171.247 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031909s][吞吐率：31.34req/s] [内存消耗：2,272.89kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:30:08+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.025258s][吞吐率：39.59req/s] [内存消耗：1,676.83kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:30:08+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.044031s][吞吐率：22.71req/s] [内存消耗：2,863.63kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:30:08+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024810s][吞吐率：40.31req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:30:08+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.050306s][吞吐率：19.88req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T11:30:17+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/opacity
+[ info ] www.yi-23.com/public/index/Usermsg/opacity [运行时间：0.048189s][吞吐率：20.75req/s] [内存消耗：2,670.49kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'opacity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '10',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'opacity' => '41',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->opacity[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T12:16:31+08:00 ] 121.42.87.135 176.116.2.96 GET /
+[ info ] yi-23.com/ [运行时间：0.031234s][吞吐率：32.02req/s] [内存消耗：2,288.18kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip',
+  'connection' => 'keep-alive',
+  'host' => 'yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T12:38:12+08:00 ] 121.42.87.135 42.236.99.218 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031425s][吞吐率：31.82req/s] [内存消耗：2,289.23kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'accept-language' => 'zh-CN',
+  'connection' => 'Keep-Alive',
+  'cookie' => '',
+  'host' => 'www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36; 360Spider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T13:04:38+08:00 ] 121.42.87.135 106.11.226.163 GET /
+[ info ] yi-23.com/ [运行时间：0.033723s][吞吐率：29.65req/s] [内存消耗：2,288.95kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'accept-encoding' => 'gzip',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yi-23.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T13:10:09+08:00 ] 121.42.87.135 203.208.60.143 GET /
+[ info ] www.yi-23.com/ [运行时间：0.032217s][吞吐率：31.04req/s] [内存消耗：2,288.97kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T15:18:58+08:00 ] 121.42.87.135 42.236.49.172 GET /
+[ info ] www.yi-23.com/ [运行时间：0.032307s][吞吐率：30.95req/s] [内存消耗：2,289.23kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'accept-language' => 'zh-CN',
+  'connection' => 'Keep-Alive',
+  'cookie' => '',
+  'host' => 'www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36; 360Spider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:12:10+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/opacity
+[ info ] www.yi-23.com/public/index/Usermsg/opacity [运行时间：0.065911s][吞吐率：15.17req/s] [内存消耗：2,670.49kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'opacity',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '10',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'opacity' => '59',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->opacity[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:12:19+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.047576s][吞吐率：21.02req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:12:26+08:00 ] 121.42.87.135 27.154.171.247 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031650s][吞吐率：31.60req/s] [内存消耗：2,272.89kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:12:26+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.024849s][吞吐率：40.24req/s] [内存消耗：1,676.83kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:12:26+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.043494s][吞吐率：22.99req/s] [内存消耗：2,863.63kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:12:26+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024048s][吞吐率：41.58req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:12:26+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.046449s][吞吐率：21.53req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:15:56+08:00 ] 121.42.87.135 27.154.171.247 GET /
+[ info ] www.yi-23.com/ [运行时间：0.080893s][吞吐率：12.36req/s] [内存消耗：2,481.52kb] [文件加载：41]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:15:56+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.024453s][吞吐率：40.89req/s] [内存消耗：1,676.83kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:15:56+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.043852s][吞吐率：22.80req/s] [内存消耗：2,863.63kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:15:56+08:00 ] 121.42.87.135 27.154.171.247 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.027081s][吞吐率：36.93req/s] [内存消耗：1,677.85kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:15:56+08:00 ] 121.42.87.135 27.154.171.247 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.051566s][吞吐率：19.39req/s] [内存消耗：3,058.79kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=75770munggehuo57d82p661bc0',
+  'dnt' => '1',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T18:55:33+08:00 ] 121.42.87.135 207.46.13.128 GET /
+[ info ] yi-23.com/ [运行时间：0.032021s][吞吐率：31.23req/s] [内存消耗：2,289.40kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'yi-23.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T19:26:21+08:00 ] 121.42.87.135 106.11.154.145 GET /
+[ info ] www.yi-23.com/ [运行时间：0.032118s][吞吐率：31.14req/s] [内存消耗：2,288.49kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip',
+  'accept-language' => 'zh-cn,en-us,zh-tw,en-gb,en;',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'YisouSpider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T19:45:58+08:00 ] 121.42.87.135 74.115.214.144 HEAD /
+[ info ] yi-23.com/ [运行时间：0.032016s][吞吐率：31.23req/s] [内存消耗：2,288.08kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'yi-23.com',
+  'referer' => 'http://uptime-us.net/yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Uptimebot/1.0; +http://www.uptime.com/uptimebot)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T19:49:25+08:00 ] 121.42.87.135 211.162.237.135 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031357s][吞吐率：31.89req/s] [内存消耗：2,272.55kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T19:49:26+08:00 ] 121.42.87.135 211.162.237.135 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.024294s][吞吐率：41.16req/s] [内存消耗：1,676.45kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=38rdiki6r8ojp4a70g1kqk0os0',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T19:49:26+08:00 ] 121.42.87.135 211.162.237.135 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.063260s][吞吐率：15.81req/s] [内存消耗：2,863.62kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=38rdiki6r8ojp4a70g1kqk0os0',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T19:49:26+08:00 ] 121.42.87.135 211.162.237.135 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024413s][吞吐率：40.96req/s] [内存消耗：1,677.44kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=38rdiki6r8ojp4a70g1kqk0os0',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T19:49:26+08:00 ] 121.42.87.135 211.162.237.135 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.049850s][吞吐率：20.06req/s] [内存消耗：3,058.17kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'cookie' => 'token=7892BDDA8F06E8B8B1D8143E68210EE3; PHPSESSID=38rdiki6r8ojp4a70g1kqk0os0',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:31+08:00 ] 121.42.87.135 211.162.237.135 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031833s][吞吐率：31.41req/s] [内存消耗：2,289.02kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:32+08:00 ] 121.42.87.135 211.162.237.135 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.024262s][吞吐率：41.22req/s] [内存消耗：1,676.06kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:32+08:00 ] 121.42.87.135 211.162.237.135 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.023750s][吞吐率：42.11req/s] [内存消耗：1,677.36kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:32+08:00 ] 121.42.87.135 211.162.237.135 POST /public/index/html/news
+[ info ] www.yi-23.com/public/index/html/news [运行时间：0.191955s][吞吐率：5.21req/s] [内存消耗：2,282.74kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'html',
+    2 => 'news',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Html->news[ /data/home/qxu1146510236/htdocs/application/index/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:36+08:00 ] 121.42.87.135 211.162.237.135 GET /public/index/index/login.html
+[ info ] www.yi-23.com/public/index/index/login.html [运行时间：0.032593s][吞吐率：30.68req/s] [内存消耗：2,280.55kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05',
+  'host' => 'www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->login[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/qxu1146510236/htdocs/public/../application/index/view/index/login.html [ array (
+  0 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:36+08:00 ] 121.42.87.135 211.162.237.135 POST /public/index/Userlogin/wblogin
+[ info ] www.yi-23.com/public/index/Userlogin/wblogin [运行时间：0.026672s][吞吐率：37.49req/s] [内存消耗：1,868.88kb] [文件加载：38]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Userlogin',
+    2 => 'wblogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  0 => 'a',
+  1 => 'a',
+  10 => 'a',
+  11 => 'a',
+  12 => 'a',
+  2 => 'a',
+  3 => 'a',
+  4 => 'a',
+  5 => 'a',
+  6 => 'a',
+  7 => 'a',
+  8 => 'a',
+  9 => 'a',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/public/index/index/login.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\userlogin->wblogin[ /data/home/qxu1146510236/htdocs/application/index/controller/Userlogin.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:38+08:00 ] 121.42.87.135 211.162.237.135 GET /public/index/index/qq_login
+[ info ] www.yi-23.com/public/index/index/qq_login [运行时间：0.030840s][吞吐率：32.43req/s] [内存消耗：2,242.76kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'qq_login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05',
+  'host' => 'www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/public/index/index/login.html',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->qq_login[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:49+08:00 ] 121.42.87.135 211.162.237.135 GET /public/index/index/qq_callback.html?code=BA3E5AE9B2432C06AD12AE9FEA9B7810&state=98af505b4ee778e0ee76df23f3cd5f7a
+[ info ] www.yi-23.com/public/index/index/qq_callback.html?code=BA3E5AE9B2432C06AD12AE9FEA9B7810&state=98af505b4ee778e0ee76df23f3cd5f7a [运行时间：1.239362s][吞吐率：0.81req/s] [内存消耗：3,213.88kb] [文件加载：47]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'qq_callback',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+  'code' => 'BA3E5AE9B2432C06AD12AE9FEA9B7810',
+  'state' => '98af505b4ee778e0ee76df23f3cd5f7a',
+)
+[ info ] [ RUN ] app\index\controller\index->qq_callback[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:49+08:00 ] 121.42.87.135 211.162.237.135 GET /
+[ info ] www.yi-23.com/ [运行时间：0.033144s][吞吐率：30.17req/s] [内存消耗：2,273.41kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05; token=7892BDDA8F06E8B8B1D8143E68210EE3',
+  'host' => 'www.yi-23.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+  0 => 'key',
+  1 => 'aaa',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:49+08:00 ] 121.42.87.135 211.162.237.135 POST /public/index/Usermsg/usermsg
+[ info ] www.yi-23.com/public/index/Usermsg/usermsg [运行时间：0.049548s][吞吐率：20.18req/s] [内存消耗：2,863.62kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'usermsg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05; token=7892BDDA8F06E8B8B1D8143E68210EE3',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->usermsg[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:49+08:00 ] 121.42.87.135 211.162.237.135 POST /public/admin/html/show
+[ info ] www.yi-23.com/public/admin/html/show [运行时间：0.084156s][吞吐率：11.88req/s] [内存消耗：1,676.45kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05; token=7892BDDA8F06E8B8B1D8143E68210EE3',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Html->show[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:49+08:00 ] 121.42.87.135 211.162.237.135 POST /public/index/Usermsg/classname
+[ info ] www.yi-23.com/public/index/Usermsg/classname [运行时间：0.054596s][吞吐率：18.32req/s] [内存消耗：3,058.08kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Usermsg',
+    2 => 'classname',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05; token=7892BDDA8F06E8B8B1D8143E68210EE3',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\usermsg->classname[ /data/home/qxu1146510236/htdocs/application/index/controller/Usermsg.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:03:49+08:00 ] 121.42.87.135 211.162.237.135 POST /public/admin/html/showimg
+[ info ] www.yi-23.com/public/admin/html/showimg [运行时间：0.024314s][吞吐率：41.13req/s] [内存消耗：1,677.43kb] [文件加载：30]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'html',
+    2 => 'showimg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '9',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=9dqurh88dvbbfi6ulusv4o2n05; token=7892BDDA8F06E8B8B1D8143E68210EE3',
+  'host' => 'www.yi-23.com',
+  'origin' => 'http://www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'belle',
+)
+[ info ] [ RUN ] app\admin\controller\Html->showimg[ /data/home/qxu1146510236/htdocs/application/admin/controller/Html.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:46:54+08:00 ] 121.42.87.135 61.135.165.10 GET /
+[ info ] www.yi-23.com/ [运行时间：0.033604s][吞吐率：29.76req/s] [内存消耗：2,287.94kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:47:01+08:00 ] 121.42.87.135 111.206.36.137 GET /
+[ info ] www.yi-23.com/ [运行时间：0.035178s][吞吐率：28.43req/s] [内存消耗：2,287.94kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T20:47:05+08:00 ] 121.42.87.135 111.206.36.142 GET /
+[ info ] www.yi-23.com/ [运行时间：0.032461s][吞吐率：30.81req/s] [内存消耗：2,287.94kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T21:13:40+08:00 ] 121.42.87.135 203.208.60.139 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031584s][吞吐率：31.66req/s] [内存消耗：2,288.49kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T21:13:41+08:00 ] 121.42.87.135 203.208.60.139 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031981s][吞吐率：31.27req/s] [内存消耗：2,288.49kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'www.yi-23.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-25T23:54:36+08:00 ] 121.42.87.135 42.236.10.103 GET /
+[ info ] www.yi-23.com/ [运行时间：0.031535s][吞吐率：31.71req/s] [内存消耗：2,289.13kb] [文件加载：40]
+[ info ] [ LANG ] /data/home/qxu1146510236/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'accept-language' => 'zh-CN',
+  'connection' => 'Keep-Alive',
+  'cookie' => '',
+  'host' => 'www.yi-23.com',
+  'referer' => 'http://www.yi-23.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.4.2661.102 Safari/537.36; 360Spider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\index->index[ /data/home/qxu1146510236/htdocs/application/index/controller/Index.php ]
+[ info ] [ VIEW ] ./application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

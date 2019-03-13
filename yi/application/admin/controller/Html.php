@@ -25,22 +25,16 @@ class Html extends Controller{
     }
     //文件上传
       public function updata(){ 
-        //获取表单上传文件
-        $flie = print_r($_FILES);
-         $len = count($_FILES);
-          
-          for($i =0; $i<$len-1; $i++){
-              $fileName = 'file'.$i;
-              if(is_uploaded_file($_FILES[$fileName]['tmp_name'])){
-                  move_uploaded_file($_FILES[$fileName]['tmp_name'],'E:\wamp\www\web\public\static\image\show\bg\\'.$_POST['catalog'].'\\'.$_FILES[$fileName]['name']);
-              }else{
-                  echo '没找到文件';
-              }
-          }
-       return $this->fetch('updata',[
-            'f' => $flie,
-           'len' => $len
-        ]);
+       $file = request()->file('files');
+    if($file){
+        $info = $file->rule('uniqid')->move(ROOT_PATH . 'public' . DS . 'static'.DS.'image'.DS.'show'.DS.'bg'.DS.$_POST['catalog']);
+        if($info){
+            $this->success('文件上传成功'); 
+        }else{
+            // 上传失败获取错误信息
+            echo $file->getError();
+        }
+    }
     }
     // 显示路径
     public function show(){

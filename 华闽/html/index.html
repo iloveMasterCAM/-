@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="../css/aui.css" rel="stylesheet" />
+    <link href="../css/public.css" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <link href="../iconfont/iconfont.css" rel="stylesheet" />
+    <style>
+        #ad {
+            background: #f5f5f5;
+            padding: 20px 0 30px
+        }
+
+        #ad .box {
+            padding-left: -20px
+        }
+
+        #ad .box img {
+            width: 50px
+        }
+
+        #ad .box>div {
+            float: left;
+            width: 23%;
+            margin: 0 1.31%;
+            padding: 30px 20px 20px;
+            background: #ffff;
+
+        }
+
+        #ad .box>div:hover {
+            box-shadow: 0px 4px 19px 0px #bfbfbf
+        }
+
+        #ad .t {
+            font-size: 22px;
+            color: #070707;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        #ad .txt {
+            color: #666666;
+            font-size: 14px;
+        }
+
+        #ad .box>div.first {
+            margin-left: 0;
+        }
+
+        #ad .box>div.last {
+            margin-right: 0;
+        }
+
+        .ad {
+            padding: 10px;
+            border: 1px solid #cbcbcb;
+
+            margin-top: 20px;
+
+        }
+
+        .ad img {
+            width: 100%;
+        }
+
+
+
+        #look {
+            padding: 80px 0 30px;
+            background: #fff;
+        }
+
+        #look img {
+            width: 82%;
+
+        }
+
+        #look .w p {
+            position: absolute;
+            left: -5px;
+            top: -5px;
+
+        }
+
+        #look div div {
+            border: 1px solid #d7d7d7;
+            width: 19%;
+            margin: 0 0.5%;
+            margin-bottom: 20px;
+            float: left;
+            position: relative;
+        }
+
+        #look .acitve,
+        #look .acitve_ {
+            /* border: 2px solid #d7d7d7; */
+            border-color: #fc3d3d;
+        }
+
+        #look .acitve p {
+            width: 75px;
+            height: 75px;
+            background: url(../img/active1.png) no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        #look .acitve_ p {
+            width: 55px;
+            height: 45px;
+            left: 3px;
+            top: -7px;
+            background: url(../img/baozhang.png) no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        #case,
+        #sign,
+        #news,
+        #Success,
+        #Strategy,
+        #Design {
+            background: #f5f5f5;
+            padding: 70px 0 30px;
+        }
+
+        #case .key span {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 30px;
+            padding: 5px 20px;
+            font-size: 15px;
+            color: #747474;
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        #case .key span.active {
+            background: #ec1e1e;
+
+            color: #fff;
+        }
+
+        #case .key {
+            margin: 25px 0;
+
+        }
+
+        #case .box div {
+            width: 24%;
+            margin: 0.5% 0.5%;
+
+        }
+
+        #case .box div p {
+            position: absolute;
+            line-height: 45px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+
+            background: rgba(0, 0, 0, 0.61);
+        }
+
+        #case img {
+            min-height: 260px;
+        }
+
+        #sign,
+        #Design {
+            background: #fff;
+        }
+
+        #sign .tab_row div {
+            width: 16.666666666666666666%;
+            text-align: center;
+            line-height: 50px;
+            color: #6e6e6e;
+            border-bottom: 1px solid #c0c0c0;
+            white-space: nowrap;
+            display: -webkit-box;
+            white-space: normal!important;
+            word-wrap: break-word;
+            -webkit-line-clamp: 1;
+            -moz-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical
+        }
+
+        #sign .tab_wrap {
+            border: 1px solid #c0c0c0;
+            border-top: 2px solid #fe0002;
+            border-bottom: none
+        }
+
+        #sign .text div {
+            color: #9a9a9a;
+        }
+
+        #sign .company .t {
+            margin: 0 auto;
+            padding: 22px;
+            width: 6%;
+            font-size: 24px;
+            background: #e30113;
+            color: #fff;
+            writing-mode: vertical-lr;
+            writing-mode: tb-lr;
+        }
+
+        #sign .company_box {
+            width: 94%;
+            border: 1px solid #c0c0c0;
+            border-left: none;
+            border-right: none;
+        }
+
+        #sign .company_box>div {
+            border-right: 1px solid #c0c0c0;
+
+        }
+
+        #sign .company_box>div>div {
+            padding: 10px 0;
+        }
+
+        #sign .company_box p {
+            text-align: center;
+            margin-bottom: 11px;
+        }
+
+        #sign .company_box img {
+            width: 57%;
+            height: 62px;
+            ;
+        }
+
+        #sign .borb {
+            border-bottom: 1px solid #c0c0c0;
+        }
+
+        #sign .money {
+
+            color: #868686;
+            font-size: 14px;
+        }
+
+        #sign .money span {
+            color: #e30113;
+            font-weight: 900;
+            font-size: 40px;
+        }
+
+        #sign .money::after {
+            position: absolute;
+            content: '';
+            z-index: 2;
+            width: 1px;
+            left: -20px;
+            top: 0%;
+            height: 100%;
+            background-color: #c0c0c0;
+        }
+
+        #news .left {
+            width: 31%;
+        }
+
+        #news .right {
+            width: 69%;
+        }
+
+        #news .right>div {
+            width: 47%;
+            float: left;
+            background: #fff;
+            margin-left: 3%;
+            padding: 15px 10px 5px 10px;
+            margin-bottom: 15px;
+            border-top: 2px solid #fe0002;
+        }
+
+        #news .right p {
+            overflow: hidden;
+            width: 216px;
+            margin: 20px 0 45px;
+            font-size: 15px;
+            color: #969696;
+        }
+
+        #news .box>div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #news .right h3 {
+            color: #353535;
+            font-size: 18px;
+
+        }
+
+        #Success {
+            background: #fff;
+        }
+
+        #Strategy .child,
+        #Design .child {
+            width: 23%;
+            margin: 0 1%;
+            background: #ffffff;
+            float: left;
+            border: 1px solid #e5e5e5;
+        }
+
+        #Strategy .txt {
+            padding: 17px 15px;
+        }
+
+        #Strategy .head {
+            position: relative;
+            background: #f8f8f8;
+            border-bottom: 1px solid #e5e5e5;
+            height: 128px;
+            line-height: 128px;
+            text-align: center;
+            ;
+        }
+
+        #Strategy .child:hover {
+            -webkit-transform: scale(1.05, 1.05);
+            -moz-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+        }
+
+        #Strategy .child:hover .head {
+            background: url(../img/case_head.png) no-repeat;
+            background-size: cover;
+            background-position: center 0;
+        }
+
+        #Strategy .head p {
+            color: #fff;
+            font-size: 24px;
+            text-shadow: 0.1em 0.1em 0.05em #333
+        }
+
+        #Strategy .show {
+            display: none;
+        }
+
+        #Strategy .show.acitve {
+            display: block;
+        }
+
+        #Strategy .txt div:hover .show {
+            display: block;
+        }
+
+        #Strategy .txt div:hover .hide {
+            display: none;
+        }
+
+        #Strategy .box {
+            height: 380px;
+            ;
+        }
+
+        #Design .w {
+            padding: 35px 0;
+        }
+
+        #Design .child:hover {
+            box-shadow: 0px 4px 19px 0px #bfbfbf
+        }
+
+        #Design .txt {
+            padding: 28px 20px 20px 20px;
+            ;
+        }
+
+        #Design .head {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            bottom: -25px;
+            left: 50%;
+            margin-left: -40px;
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+            padding: 5px;
+        }
+
+        #Design .bg {
+            position: relative;
+        }
+
+        #Design .text {
+            font-size: 15px;
+            color: #a3a3a5;
+            margin-top: 20px;
+        }
+
+        #Design .name {
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #414141;
+        }
+
+        #Design .xiangzuo {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #e9e9e9;
+            border-radius: 50%;
+            line-height: 40px;
+            color: #dcdcdc;
+            position: relative;
+            bottom: -17px;
+            background: #fff;
+        }
+
+        #Design .child:hover .xiangzuo {
+            box-shadow: 0px 10px 19px 0px #bfbfbf
+        }
+
+        #Side {
+            width: 52px;
+
+            position: fixed;
+            right: 50px;
+            top: 300px;
+            z-index: 5;
+        }
+
+        #Side>div {
+            border: 1px solid #f1f1f1;
+            border-top: none;
+            background: #fff;
+            height: 52px;
+            padding-top: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #Side>div i {
+            color: #a9a9a9;
+        }
+
+        #Side .hide {
+            min-height: 52px;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            width: 120px;
+            z-index: 5;
+            opacity: 0;
+            box-shadow: 0px 4px 19px 0px #8f8f8f
+        }
+
+        #Side .hide.er {
+            top: -50px;
+            left: -150px;
+        }
+
+        #Side .hide.er::before,
+        #Side .hide.baojia::before {
+            content: '';
+            display: block;
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-left: 10px solid #fff;
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: -20px;
+            top: 65px;
+           
+        }
+
+        #Side .hide.baojia::before {
+            top: 15px;
+        }
+
+        #Side>div:hover .er,
+        #Side>div:hover .baojia {
+            opacity: 1;
+            left: -135px;
+        }
+
+        #Side .hide.baojia {
+            text-align: center;
+            line-height: 52px;
+            top: 0;
+            left: -150px;
+        }
+
+
+        /* link */
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_box w aui-row">
+            <div class="aui-pull-left aui-row">
+                <div class="aui-pull-left">
+                    <i class="hua h-dizhi"></i>
+                    <span>厦门</span>
+                    <span>[切换]</span>
+                    <i class="hua h-bottom"></i>
+                </div>
+
+            </div>
+            <div class="aui-pull-right">
+                <a class="aui-pull-left longin">登录</a>
+                <a class="aui-pull-left">注册</a>
+                <a class="aui-pull-left">商家入驻</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-home1"></i> 华闽美家</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-telephone"></i> 客服热线:0592-5221258</a>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索 -->
+    <div id="log" class="aui-row w">
+        <div class="aui-col-xs-4">
+            <img class="aui-col-xs-11" src="../img/log.png" alt="">
+        </div>
+        <form class="aui-col-xs-6 search aui-row">
+            <select class="">
+                <option class="aui-text-center" value="装修公司">装修公司</option>
+                <option class="aui-text-center" value="装修公司">装修公司</option>
+                <option class="aui-text-center" value="装修公司">装修公司</option>
+            </select>
+            <input type="text" class="aui-padded-l-10" value="" placeholder="搜索装修公司/问题/攻略/效果图">
+            <div class=" button">
+                <input type="submit" value="">
+            </div>
+
+        </form>
+        <div class="aui-col-xs-2 aui-padded-t-10">
+            <img class="aui-col-xs-9 aui-pull-right" src="../img/log_r.png" alt="">
+        </div>
+    </div>
+    <!-- 导航 -->
+    <div id="nav" class="aui-margin-t-15">
+        <div class="w aui-row">
+            <div class="aui-col-xs-9 nav_child">
+                <div class="aui-pull-left ">首页</div>
+                <div class="aui-pull-left acitve">效果图
+                    <i class="hua h-s_bottom"></i>
+                </div>
+                <div class="aui-pull-left">装修攻略
+                    <i class="hua h-s_bottom"></i>
+                </div>
+                <div class="aui-pull-left">设计与报价
+                    <i class="hua h-s_bottom"></i>
+                </div>
+                <div class="aui-pull-left">装修公司</div>
+                <div class="aui-pull-left">找设计师</div>
+                <div class="aui-pull-left">装修保险金</div>
+            </div>
+            <div class=" aui-col-xs-3 aui-pull-right aui-text-right right">
+                <div class=" ">
+                    <i class="hua h-mianfeibaojia"></i> 免费</div>
+                <div class=" active">
+                    <i class="hua h-home"></i> 保障</div>
+                <div class="">
+                    <i class="hua h-shengqian"></i>省钱</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 轮播 -->
+    <div id="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../img/banner.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/banner.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/banner.png" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div id="Apply" class="aui-text-center">
+            <h1>华闽美家，用心装家！</h1>
+            <p class="aui-margin-b-15">申请装修立省
+                <span class="color">30%</span>
+            </p>
+            <form action="">
+                <div class="aui-margin-b-15">
+                    <input type="text" value="" placeholder="您的称呼">
+                </div>
+                <div class="aui-margin-b-15">
+                    <input type="text" value="" placeholder="您的手机号码">
+                </div>
+
+                <div class="aui-row  aui-margin-b-15 address">
+                    <div class="aui-col-xs-6 active">
+                        <select name="" id="">
+                            <option value="厦门">厦门</option>
+                            <option value="厦门">厦门</option>
+                            <option value="厦门">厦门</option>
+
+                        </select>
+                    </div>
+                    <div class="aui-col-xs-6">
+                        <select name="" id="">
+                            <option value="厦门">厦门</option>
+                            <option value="厦门">厦门</option>
+                            <option value="厦门">厦门</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="aui-row aui-margin-b-15">
+                    <div class="aui-pull-left t">
+                        已有
+                        <span class="color">18154</span> 位业主免费申请
+                    </div>
+
+                    <label class="aui-pull-right t">
+                        <input type="checkbox">
+                        <span>资料保密</span>
+                    </label>
+                </div>
+                <div class="">
+                    <input type="submit" value="立即申请免费">
+                </div>
+
+                <div class="t">
+                    我们的客服将在提交订单15分钟内与您联系
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 广告 -->
+    <div id="ad">
+        <div class="w">
+            <div class="clear box">
+                <div class=" clear first tran">
+                    <div class="aui-col-xs-8">
+                        <p class="t">装修攻略</p>
+                        <p class="txt">提供全方位装修指导</p>
+                    </div>
+                    <div class="aui-col-xs-4 aui-text-center">
+                        <img src="../img/ad1.png" alt="">
+                    </div>
+                </div>
+                <div class=" clear tran">
+                    <div class="aui-col-xs-8">
+                        <p class="t">装修攻略</p>
+                        <p class="txt">提供全方位装修指导</p>
+                    </div>
+                    <div class="aui-col-xs-4 aui-text-center">
+                        <img src="../img/ad2.png" alt="">
+                    </div>
+                </div>
+                <div class="clear tran">
+                    <div class="aui-col-xs-8">
+                        <p class="t">装修攻略</p>
+                        <p class="txt">提供全方位装修指导</p>
+                    </div>
+                    <div class="aui-col-xs-4 aui-text-center">
+                        <img src="../img/ad3.png" alt="">
+                    </div>
+                </div>
+                <div class=" clear tran last">
+                    <div class="aui-col-xs-8">
+                        <p class="t">装修攻略</p>
+                        <p class="txt">提供全方位装修指导</p>
+                    </div>
+                    <div class="aui-col-xs-4 aui-text-center">
+                        <img src="../img/ad4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="w ad">
+                <img src="../img/ad5.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 找装修 -->
+    <div id="look">
+        <div class="title aui-text-center">
+            <h2>找装修</h2>
+            <p>甄选城中优质装修公司，丰富选择实现理想家</p>
+        </div>
+        <div class="w clear ">
+            <div class=" aui-text-center acitve">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+            <div class="aui-text-center acitve_">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+            <div class="aui-text-center ">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+            <div class="aui-text-center ">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+            <div class="aui-text-center ">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+            <div class="aui-text-center ">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+            <div class="aui-text-center ">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+            <div class="aui-text-center ">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+            <div class="aui-text-center ">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+            <div class="aui-text-center ">
+                <p class=""></p>
+                <img src="../img/gongsi.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 案例 -->
+    <div id="case">
+
+        <div class="title aui-text-center">
+            <h2>厦门精选设计案例</h2>
+            <p>看别人的家，装自己的窝</p>
+        </div>
+        <div class="w">
+            <div class="aui-row key aui-text-center">
+                <span class="active">小户行</span>
+                <span>小户行</span>
+                <span>小户行</span>
+                <span>小户行</span>
+                <span>小户行</span>
+                <span>小户行</span>
+            </div>
+            <div class="aui-row box">
+                <div class="aui-col-xs-3">
+                    <img src="../img/case.png" alt="">
+                    <p>天涯风格</p>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="../img/case.png" alt="">
+                    <p>天涯风格</p>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="../img/case.png" alt="">
+                    <p>天涯风格</p>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="../img/case.png" alt="">
+                    <p>天涯风格</p>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="../img/case.png" alt="">
+                    <p>天涯风格</p>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="../img/case.png" alt="">
+                    <p>天涯风格</p>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="../img/case.png" alt="">
+                    <p>天涯风格</p>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="../img/case.png" alt="">
+                    <p>天涯风格</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 最新签约 -->
+    <div id="sign">
+        <div class="title aui-text-center">
+            <h2>最新签约</h2>
+            <p>他们都选择了华闽美家</p>
+        </div>
+        <div class="w aui-row tab_wrap">
+            <div class="aui-row tab_row">
+                <div class="tab aui-pull-left bor-r">订单日期</div>
+                <div class="tab aui-pull-left bor-r">业主</div>
+                <div class="tab aui-pull-left bor-r">户型</div>
+                <div class="tab aui-pull-left bor-r">装修类型</div>
+                <div class="tab aui-pull-left bor-r">面积</div>
+                <div class="tab aui-pull-left">预算</div>
+            </div>
+            <div class="aui-row tab_row text">
+                <div class="tab aui-pull-left bor-r">[15小时前]</div>
+                <div class="tab aui-pull-left bor-r">龙**</div>
+                <div class="tab aui-pull-left bor-r">三室一厅</div>
+                <div class="tab aui-pull-left bor-r">家庭类型</div>
+                <div class="tab aui-pull-left bor-r">100(面积)</div>
+                <div class="tab aui-pull-left">具体面议价格</div>
+            </div>
+            <div class="aui-row tab_row text">
+                <div class="tab aui-pull-left bor-r">[15小时前]</div>
+                <div class="tab aui-pull-left bor-r">龙**</div>
+                <div class="tab aui-pull-left bor-r">三室一厅</div>
+                <div class="tab aui-pull-left bor-r">家庭类型</div>
+                <div class="tab aui-pull-left bor-r">100(面积)</div>
+                <div class="tab aui-pull-left">具体面议价格</div>
+            </div>
+            <div class="aui-row tab_row text">
+                <div class="tab aui-pull-left bor-r">[15小时前]</div>
+                <div class="tab aui-pull-left bor-r">龙**</div>
+                <div class="tab aui-pull-left bor-r">三室一厅</div>
+                <div class="tab aui-pull-left bor-r">家庭类型</div>
+                <div class="tab aui-pull-left bor-r">100(面积)</div>
+                <div class="tab aui-pull-left">具体面议价格</div>
+            </div>
+            <div class="aui-row tab_row text">
+                <div class="tab aui-pull-left bor-r">[15小时前]</div>
+                <div class="tab aui-pull-left bor-r">龙**</div>
+                <div class="tab aui-pull-left bor-r">三室一厅</div>
+                <div class="tab aui-pull-left bor-r">家庭类型</div>
+                <div class="tab aui-pull-left bor-r">100(面积)</div>
+                <div class="tab aui-pull-left">具体面议价格</div>
+            </div>
+            <div class="aui-row tab_row text">
+                <div class="tab aui-pull-left bor-r">[15小时前]</div>
+                <div class="tab aui-pull-left bor-r">龙**</div>
+                <div class="tab aui-pull-left bor-r">三室一厅</div>
+                <div class="tab aui-pull-left bor-r">家庭类型</div>
+                <div class="tab aui-pull-left bor-r">100(面积)</div>
+                <div class="tab aui-pull-left">具体面议价格</div>
+            </div>
+            <div class="aui-row tab_row text">
+                <div class="tab aui-pull-left bor-r">[15小时前]</div>
+                <div class="tab aui-pull-left bor-r">龙**</div>
+                <div class="tab aui-pull-left bor-r">三室一厅</div>
+                <div class="tab aui-pull-left bor-r">家庭类型</div>
+                <div class="tab aui-pull-left bor-r">100(面积)</div>
+                <div class="tab aui-pull-left">具体面议价格</div>
+            </div>
+        </div>
+        <div class="w aui-row aui-margin-t-15 company">
+            <div class="aui-pull-left t">
+                最新中标装修公司
+            </div>
+            <div class=" company_box  aui-pull-left aui-row">
+                <div class="aui-col-xs-4 aui-row">
+                    <div class="clear borb">
+                        <p>置青春装饰在华闽美家装修网签获才子城黄先生订单</p>
+                        <div class="aui-col-xs-7 aui-text-center">
+                            <img src="../img/gongsi.png" alt="">
+                        </div>
+                        <div class="aui-col-xs-5 money">
+                            <span>10</span> 万元
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <p>置青春装饰在华闽美家装修网签获才子城黄先生订单</p>
+                        <div class="aui-col-xs-7 aui-text-center">
+                            <img src="../img/gongsi.png" alt="">
+                        </div>
+                        <div class="aui-col-xs-5 money">
+                            <span>10</span> 万元
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-col-xs-4 aui-row">
+                    <div class="clear borb">
+                        <p>置青春装饰在华闽美家装修网签获才子城黄先生订单</p>
+                        <div class="aui-col-xs-7 aui-text-center">
+                            <img src="../img/gongsi.png" alt="">
+                        </div>
+                        <div class="aui-col-xs-5 money">
+                            <span>10</span> 万元
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <p>置青春装饰在华闽美家装修网签获才子城黄先生订单</p>
+                        <div class="aui-col-xs-7 aui-text-center">
+                            <img src="../img/gongsi.png" alt="">
+                        </div>
+                        <div class="aui-col-xs-5 money">
+                            <span>10</span> 万元
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-col-xs-4 aui-row">
+                    <div class="clear borb">
+                        <p>置青春装饰在华闽美家装修网签获才子城黄先生订单</p>
+                        <div class="aui-col-xs-7 aui-text-center">
+                            <img src="../img/gongsi.png" alt="">
+                        </div>
+                        <div class="aui-col-xs-5 money">
+                            <span>10</span> 万元
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <p>置青春装饰在华闽美家装修网签获才子城黄先生订单</p>
+                        <div class="aui-col-xs-7 aui-text-center">
+                            <img src="../img/gongsi.png" alt="">
+                        </div>
+                        <div class="aui-col-xs-5 money">
+                            <span>10</span> 万元
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w ad">
+            <img src="../img/ad6.png" alt="">
+        </div>
+    </div>
+
+    <!-- 装修资讯 -->
+    <div id="news">
+        <div class="title aui-text-center">
+            <h2>装修资讯</h2>
+            <p>拥有商家优惠资讯的第一信息，在这里你能看到未来的世界</p>
+        </div>
+        <div class="w aui-row">
+            <div class="left aui-pull-left">
+                <img src="../img/news.png" alt="">
+            </div>
+            <div class="aui-row right aui-pull-left">
+                <div class=" box">
+                    <div class="">
+                        <img src="../img/news_.png" alt="">
+                    </div>
+                    <div class="aui-padded-l-15">
+                        <h3 class="aui-ellipsis-1">拥有商家优惠资讯的第一信息，在这里你能看到未来的世界</h3>
+                        <p class="aui-ellipsis-3">拥有商家优惠资讯的第一信息，在这里你能看到未来的世界拥有商家优惠资讯的第一信息，在这里你能看到未来的世界拥有商家优惠资讯的第一信息，在这里你能看到未来的世界</p>
+                    </div>
+                </div>
+                <div class=" box">
+                    <div class="">
+                        <img src="../img/news_.png" alt="">
+                    </div>
+                    <div class="aui-padded-l-15">
+                        <h3 class="aui-ellipsis-1">拥有商家优惠资讯的第一信息，在这里你能看到未来的世界</h3>
+                        <p class="aui-ellipsis-3">拥有商家优惠资讯的第一信息，在这里你能看到未来的世界拥有商家优惠资讯的第一信息，在这里你能看到未来的世界拥有商家优惠资讯的第一信息，在这里你能看到未来的世界</p>
+                    </div>
+                </div>
+                <div class=" box">
+                    <div class="">
+                        <img src="../img/news_.png" alt="">
+                    </div>
+                    <div class="aui-padded-l-15">
+                        <h3 class="aui-ellipsis-1">拥有商家优惠资讯的第一信息，在这里你能看到未来的世界</h3>
+                        <p class="aui-ellipsis-3">拥有商家优惠资讯的第一信息，在这里你能看到未来的世界拥有商家优惠资讯的第一信息，在这里你能看到未来的世界拥有商家优惠资讯的第一信息，在这里你能看到未来的世界</p>
+                    </div>
+                </div>
+                <div class=" box">
+                    <div class="">
+                        <img src="../img/news_.png" alt="">
+                    </div>
+                    <div class="aui-padded-l-15">
+                        <h3 class="aui-ellipsis-1">拥有商家优惠资讯的第一信息，在这里你能看到未来的世界</h3>
+                        <p class="aui-ellipsis-3">拥有商家优惠资讯的第一信息，在这里你能看到未来的世界拥有商家优惠资讯的第一信息，在这里你能看到未来的世界拥有商家优惠资讯的第一信息，在这里你能看到未来的世界</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- 装修效果图 -->
+    <div id="Success">
+        <div class="title aui-text-center">
+            <h2>装修效果图</h2>
+            <p>看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+        </div>
+        <div class="w">
+            <img src="../img/case_.png" alt="">
+        </div>
+    </div>
+    <!-- 看攻略 -->
+    <div id="Strategy">
+        <div class="title aui-text-center">
+            <h2>看攻略</h2>
+            <p>学习装修经验与交流装修问题，小白晋级达人就靠它</p>
+        </div>
+        <div class="w aui-row box">
+            <div class="child tran">
+                <div class="head">
+                    <p>
+                        <i class="hua h-xxx"></i> 装修流程 </p>
+                </div>
+                <div class="txt">
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div class="aui-text-right aui-padded-t-10">
+                        <i class="hua h-xiangzuo"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="child tran">
+                <div class="head">
+                    <p>
+                        <i class="hua h-xxx"></i> 装修流程 </p>
+                </div>
+                <div class="txt">
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div class="aui-text-right aui-padded-t-10">
+                        <i class="hua h-xiangzuo"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="child tran">
+                <div class="head">
+                    <p>
+                        <i class="hua h-xxx"></i> 装修流程 </p>
+                </div>
+                <div class="txt">
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div class="aui-text-right aui-padded-t-10">
+                        <i class="hua h-xiangzuo"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="child tran">
+                <div class="head">
+                    <p>
+                        <i class="hua h-xxx"></i> 装修流程 </p>
+                </div>
+                <div class="txt">
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div>
+                        <div class="aui-row show  ">
+                            <div class="aui-col-xs-4">
+                                <img src="../img/case.png" alt="">
+                            </div>
+                            <div class="aui-col-xs-8 aui-padded-l-15">
+                                <p class="aui-ellipsis-1 ">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                                <p class="aui-padded-t-15">
+                                    <time>2017年5月</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="aui-ellipsis-1 hide aui-padded-t-10 aui-margin-b-10">看有灵魂的效果图，TA们正在装一个有灵魂的家！</p>
+                    </div>
+                    <div class="aui-text-right aui-padded-t-10">
+                        <i class="hua h-xiangzuo"></i>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- 优秀装修设计师 -->
+    <div id="Design">
+        <div class="title aui-text-center">
+            <h2>优秀装修设计师</h2>
+            <p>装修专家达人都在这里！是否有你的一席之地？</p>
+        </div>
+        <div class="w aui-row aui-text-center ">
+            <div class=" child tran">
+                <div class="bg">
+                    <img class="head_bg" src="../img/Design_head.png" alt="">
+                    <img class="head" src="../img/head.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <p class="name">你好</p>
+                    <p>普通设计师</p>
+                    <p class="aui-ellipsis-2 aui-text-left text">装修专家达人都在这里！是否有你的一席之地？</p>
+                </div>
+                <div class="aui-text-center">
+                    <span class="xiangzuo">
+                        <i class="hua h-xiangzuo"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="child tran">
+                <div class="bg">
+                    <img class="head_bg" src="../img/Design_head.png" alt="">
+                    <img class="head" src="../img/head.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <p class="name">你好</p>
+                    <p>普通设计师</p>
+                    <p class="aui-ellipsis-2 aui-text-left text">装修专家达人都在这里！是否有你的一席之地？</p>
+                </div>
+                <div class="aui-text-center">
+                    <span class="xiangzuo">
+                        <i class="hua h-xiangzuo"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="tran child">
+                <div class="bg">
+                    <img class="head_bg" src="../img/Design_head.png" alt="">
+                    <img class="head" src="../img/head.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <p class="name">你好</p>
+                    <p>普通设计师</p>
+                    <p class="aui-ellipsis-2 aui-text-left text">装修专家达人都在这里！是否有你的一席之地？</p>
+                </div>
+                <div class="aui-text-center">
+                    <span class="xiangzuo">
+                        <i class="hua h-xiangzuo"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="tran child">
+                <div class="bg">
+                    <img class="head_bg" src="../img/Design_head.png" alt="">
+                    <img class="head" src="../img/head.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <p class="name">你好</p>
+                    <p>普通设计师</p>
+                    <p class="aui-ellipsis-2 aui-text-left text">装修专家达人都在这里！是否有你的一席之地？</p>
+                </div>
+                <div class="aui-text-center">
+                    <span class="xiangzuo">
+                        <i class="hua h-xiangzuo"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="aui-text-center" id="Side">
+        <p>
+            <img src="../img/log1.png" alt="">
+        </p>
+        <div>
+            <p>
+                <i class="hua h-telephone"></i>
+            </p>
+            <p>电话</p>
+
+        </div>
+        <div>
+            <p>
+                <i class="hua h-saoma"></i>
+            </p>
+            <p>关注</p>
+            <div class="hide er tran aui-padded-t-15 aui-padded-r-10 aui-padded-l-10 aui-padded-b-15">
+                <p>
+                    <img class="er" src="../img/er.png" alt="">
+                </p>
+                <p class="aui-padded-t-10 ">扫码关注公众号</p>
+            </div>
+        </div>
+        <div>
+            <p>
+                <i class="hua h-jisuan"></i>
+            </p>
+            <p>报价</p>
+            <div class="hide baojia tran">
+                报价计算
+            </div>
+        </div>
+        <div class="return">
+            <p class="aui-padded-t-10">
+                <i class="hua h-top"></i>
+            </p>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="w">
+            <div class="aui-row link">
+                <div class="aui-pull-left acitve">友情链接</div>
+                <div class="aui-pull-left">热门城市</div>
+                <div class="aui-pull-left">附近城市</div>
+                <div class="aui-pull-left">热门标签</div>
+            </div>
+            <div class="link_a">
+                <!--                                      福州装修公司   长春家居网   福州装修网   福州装修网   福州搜房网    -->
+                <a href="">深圳房地产</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州商铺网</a>
+                <a href="">福建加盟</a>
+                <a href="">福州装修</a>
+                <a href="">上海造价信息网</a>
+                <a href="">美缝剂</a>
+                <a href="">福州装修网</a>
+                <a href="">福州婚纱摄影</a>
+                <a href="">福州房产网</a>
+                <a href="">福州住宿</a>
+                <a href="">福州装修网</a>
+                <a href="">南通招标网</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州装修网</a>
+                <a href="">福州结婚网</a>
+                <a href="">福州便民网</a>
+                <a href="">南宁装修公司</a>
+                <a href="">文化石</a>
+
+            </div>
+            <div class="aui-row footer_bxo">
+                <div class="aui-col-xs-2">
+
+                    <p class="title_ aui-margin-b-10"> 全国统一热线</p>
+                    <p class="tell">0592-5221258</p>
+                    <p class="txt">如有需要，请关注本网站！</p>
+                    <p>
+                        <i class="hua h-qq"></i>
+                        <i class="hua h-weibo"></i>
+                    </p>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_ ">新手指南</p>
+                    <a href="">如何购买</a>
+                    <a href="">注册新用户</a>
+                    <a href="">如何购买</a>
+                    <a href="">服务流程</a>
+                    <a href="">积分说明</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">装修指南 </p>
+                    <a href="">在线预约</a>
+                    <a href="">装修流程</a>
+                    <a href="">量房设计</a>
+                    <a href="">购买材料</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">合作方案</p>
+                    <a href="">协议声明</a>
+                    <a href="">技术支持</a>
+                    <a href="">合作洽谈</a>
+                    <a href="">提交需求</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">本站服务 </p>
+                    <a href="">合同范本</a>
+                    <a href="">装修保</a>
+                    <a href="">售后服务</a>
+                    <a href="">物流配送</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <div>
+                        <img class="er" src="../img/er.png" alt="">
+                    </div>
+                    <p class="title_ aui-margin-b-5">关注公众微信号</p>
+                    <div>
+                        <a href="">公司网站：http://57hmw.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate aui-text-center">
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v1.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公司信息 </p>
+                        <p>评级证书</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v2.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>经营性网站 </p>
+                        <p>备案信息</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v3.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公共信息安</p>
+                        <p>全网络监察</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v4.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>不良信息</p>
+                        <p>举报中心</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v5.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>互联网</p>
+                        <p>诚信网站</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v6.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>安全联盟 </p>
+                        <p>实名验证</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-text-center footer">
+            Copyright © 2017 http://57hmw.com All Rights Reserved ICP备案：闽ICP备17008952号
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/public.js"></script>
+    <script>
+
+        var mySwiper = new Swiper("#banner .swiper-container", {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            autoplay: 5000,
+            paginationType: 'custom',//自定义-分页器样式类型（前提）
+
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -213,6 +213,16 @@ $website->insert(['id'=>null,'name'=>'','tt'=>'','url'=>'','userid'=>$d['id'],'c
         $user->where('token',$token)->update(['skin'=>'']);
 
     }
+  public function opacity(){
+         $user = Db::name('user');
+        $token = Cookie::get('token');
+        if(isset($_POST['opacity'])){
+            $v =  intval($_POST['opacity']);
+            $user->where('token',$token)->update(['opacity'=>$v]);
+            echo 200;
+        }
+      
+    }
 
 
 

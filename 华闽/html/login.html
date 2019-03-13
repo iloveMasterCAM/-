@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/aui.css" rel="stylesheet" />
+    <link href="../css/public.css" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <link href="../iconfont/iconfont.css" rel="stylesheet" />
+    <title>登录</title>
+    <style>
+        #log .aui-col-xs-8 p {
+            line-height: 56px;
+            border-left: 1px solid #eeeeee;
+            padding-left: 20px;
+            font-size: 24px;
+            font-family: "宋体"
+        }
+
+        #login {
+            background-image: url('../img/banner1.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #login .login_box {
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #login .login_box .login {
+            width: 290px;
+            background-color: #fff;
+            float: right;
+            padding: 15px;
+            margin-top: 30px;
+            margin-bottom: 195px;
+            margin-right: 135px;
+        }
+
+        #login .login_box .login .aui-row .aui-col-xs-6 p {
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 2px solid #eeeeee;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #login .login_box .login .aui-row .aui-col-xs-6 p.active {
+            border-color: #e63337;
+            color: #e63337;
+        }
+
+        #login .login_box .login .inp {
+            border: 1px solid #eeeeee;
+            height: 45px;
+            margin-top: 20px;
+        }
+
+        #login .login_box .login .inp1 {
+            display: none;
+        }
+
+        #login .login_box .login .inp2 {
+            border: none;
+        }
+
+        #login .login_box .login .inp2>div {
+            border: 1px solid #eeeeee;
+            width: 60%;
+            display: inline-block;
+        }
+
+        #login .login_box .login .inp2 input {
+            width: 70%;
+        }
+
+        #login .login_box .login .inp2 p {
+            float: right;
+            background-color: #e8e8e8;
+            line-height: 45px;
+            padding: 0 10px;
+        }
+
+        #login .login_box .login .inp input {
+            height: 43px;
+            font-size: 14px;
+        }
+
+        #login .login_box .login .inp input::-webkit-input-placeholder {
+            color: #eeeeee;
+            font-size: 14px;
+        }
+
+        #login .login_box .login .inp .hua {
+            color: #eeeeee;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #login .warning p {
+            line-height: 60px;
+        }
+
+        #login .warning p span {
+            color: #e63337;
+        }
+
+        #login .warning p a {
+            float: right;
+        }
+
+        #login button {
+            background-color: #e63337;
+            width: 100%;
+            line-height: 40px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        #login .register {
+            font-size: 14px;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        #login .register a {
+            display: inline-block;
+            color: #e63337;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_box w aui-row">
+            <div class="aui-pull-left aui-row">
+                <div class="aui-pull-left">
+                    <i class="hua h-dizhi"></i>
+                    <span>厦门</span>
+                    <span>[切换]</span>
+                    <i class="hua h-bottom"></i>
+                </div>
+
+            </div>
+            <div class="aui-pull-right">
+                <a class="aui-pull-left longin">登录</a>
+                <a class="aui-pull-left">注册</a>
+                <a class="aui-pull-left">商家入驻</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-home1"></i> 华闽美家</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-telephone"></i> 客服热线:0592-5221258</a>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索 -->
+    <div id="log" class="aui-row w">
+        <div class="aui-col-xs-4">
+            <img class="aui-col-xs-11" src="../img/log.png" alt="">
+        </div>
+        <div class="aui-col-xs-8">
+            <p>欢迎登录</p>
+        </div>
+    </div>
+    <div id="login">
+        <div class="login_box">
+            <div class="login">
+                <div class="aui-row">
+                    <div class="aui-col-xs-6">
+                        <p class="active">账户登录</p>
+                    </div>
+                    <div class="aui-col-xs-6">
+                        <p>手机快速登录</p>
+                    </div>
+                </div>
+                <div class="inp inp0">
+                    <i class="hua h-yonghudianji"></i>
+                    <input type="text" placeholder="用户名/手机号/邮箱" />
+                </div>
+                <div class="inp inp0">
+                    <i class="hua h-mima"></i>
+                    <input type="text" placeholder="密码" />
+                </div>
+                <div class="inp inp1">
+                    <i class="hua h-shouji"></i>
+                    <input type="text" placeholder="请输入手机号" />
+                </div>
+                <div class="inp inp1 inp2">
+                    <div>
+                        <i class="hua h-mima"></i>
+                        <input type="text" placeholder="短信验证码" />
+                    </div>
+                    <p>获取验证码</p>
+                </div>
+                <div class="warning">
+                    <p>
+                        <span>注：手机号码填写错误</span>
+                        <a href="#">忘记密码</a>
+                    </p>
+                </div>
+                <button>登录</button>
+                <p class="register">还没有账号？
+                    <a href="#">立即注册</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="w">
+            <div class="aui-row link">
+                <div class="aui-pull-left acitve">友情链接</div>
+                <div class="aui-pull-left">热门城市</div>
+                <div class="aui-pull-left">附近城市</div>
+                <div class="aui-pull-left">热门标签</div>
+            </div>
+            <div class="link_a">
+                <!--                                      福州装修公司   长春家居网   福州装修网   福州装修网   福州搜房网    -->
+                <a href="">深圳房地产</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州商铺网</a>
+                <a href="">福建加盟</a>
+                <a href="">福州装修</a>
+                <a href="">上海造价信息网</a>
+                <a href="">美缝剂</a>
+                <a href="">福州装修网</a>
+                <a href="">福州婚纱摄影</a>
+                <a href="">福州房产网</a>
+                <a href="">福州住宿</a>
+                <a href="">福州装修网</a>
+                <a href="">南通招标网</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州装修网</a>
+                <a href="">福州结婚网</a>
+                <a href="">福州便民网</a>
+                <a href="">南宁装修公司</a>
+                <a href="">文化石</a>
+
+            </div>
+            <div class="aui-row footer_bxo">
+                <div class="aui-col-xs-2">
+
+                    <p class="title_ aui-margin-b-10"> 全国统一热线</p>
+                    <p class="tell">0592-5221258</p>
+                    <p class="txt">如有需要，请关注本网站！</p>
+                    <p>
+                        <i class="hua h-qq"></i>
+                        <i class="hua h-weibo"></i>
+                    </p>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_ ">新手指南</p>
+                    <a href="">如何购买</a>
+                    <a href="">注册新用户</a>
+                    <a href="">如何购买</a>
+                    <a href="">服务流程</a>
+                    <a href="">积分说明</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">装修指南 </p>
+                    <a href="">在线预约</a>
+                    <a href="">装修流程</a>
+                    <a href="">量房设计</a>
+                    <a href="">购买材料</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">合作方案</p>
+                    <a href="">协议声明</a>
+                    <a href="">技术支持</a>
+                    <a href="">合作洽谈</a>
+                    <a href="">提交需求</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">本站服务 </p>
+                    <a href="">合同范本</a>
+                    <a href="">装修保</a>
+                    <a href="">售后服务</a>
+                    <a href="">物流配送</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <div>
+                        <img class="er" src="../img/er.png" alt="">
+                    </div>
+                    <p class="title_ aui-margin-b-5">关注公众微信号</p>
+                    <div>
+                        <a href="">公司网站：http://57hmw.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate aui-text-center">
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v1.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公司信息 </p>
+                        <p>评级证书</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v2.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>经营性网站 </p>
+                        <p>备案信息</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v3.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公共信息安</p>
+                        <p>全网络监察</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v4.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>不良信息</p>
+                        <p>举报中心</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v5.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>互联网</p>
+                        <p>诚信网站</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v6.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>安全联盟 </p>
+                        <p>实名验证</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-text-center footer">
+            Copyright © 2017 http://57hmw.com All Rights Reserved ICP备案：闽ICP备17008952号
+        </div>
+    </div>
+
+
+
+
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#login .login .aui-col-xs-6 p').click(function () {
+                $('#login .login .aui-col-xs-6 p').removeClass('active');
+                $(this).addClass('active');
+                var index = $(this).index('#login .login .aui-col-xs-6 p');
+                switch (index) {
+                    case 0:
+                        $('.inp1').hide();
+                        $('.inp0').show();
+                        $('.warning').show();
+                        $('#login button').css('margin-top', '0px')
+                        break;
+                    case 1:
+                        $('.inp1').show();
+                        $('.inp0').hide();
+                        $('.warning').hide();
+                        $('#login button').css('margin-top', '60px')
+                        break;
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

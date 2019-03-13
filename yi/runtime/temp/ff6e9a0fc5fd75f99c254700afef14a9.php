@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"/data/home/qxu1146510236/htdocs/public/../application/index/view/index/register.html";i:1512138662;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"/data/home/qxu1146510236/htdocs/public/../application/index/view/index/register.html";i:1512647505;}*/ ?>
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
@@ -113,7 +113,24 @@ visibility:hidden;
         .aui-hide{
             display: none;
         }
-
+       #bg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(25,25,25,0.06);
+            z-index: 20;
+            display: none;
+        }
+        #loginload{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 21;
+            margin-left: -25px;
+            margin-top: -25px;
+        }
     </style>
 
 </head>
@@ -178,6 +195,9 @@ visibility:hidden;
         <p>©2017&nbsp;&nbsp;&nbsp;Yi-23 闽ICP备15012318号</p>
 
     </footer>
+  <div id="bg">
+        <div id="loginload"> <img src="__IMG__/show/loginload.gif" alt=""></div>
+   </div>
 
 		<script src="__JS__/TweenLite.min.js"></script>
 
@@ -236,7 +256,7 @@ visibility:hidden;
                 return;
             }
            
-
+	  $("#bg").show()
              post('index/index/email',{'name':$.trim($("#name").val())},function (r,d) {
                     if(d == '400'){
                         alert('该邮箱已经注册！')
@@ -247,6 +267,7 @@ visibility:hidden;
                         off = false;
                         email = $.trim($("#name").val())
                     }
+$("#bg").hide()
              })
             }else{
                  if(!ispasw($.trim($("#pasw").val()))){
@@ -261,10 +282,13 @@ visibility:hidden;
                     $(".imsg").eq(3).addClass('active')
                     return ;
                 };
+$("#bg").show()
                  post('index/index/validatei',{'pasw':$.trim($("#pasw").val()),'order':$.trim($("#orders").val()),'email':email},function (r,d) {
+$("#bg").hide()
                      if(d == '200'){
                          alert('恭喜您，注册成功! 前往首页')
                      }
+
              })
             }
            

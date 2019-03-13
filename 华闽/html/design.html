@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/aui.css" rel="stylesheet" />
+    <link href="../css/public.css" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <link href="../iconfont/iconfont.css" rel="stylesheet" />
+    <title>找设计师</title>
+    <style>
+        #Apply {
+            margin-top: 30px;
+            width: 100%;
+            position: static;
+            border: 1px solid #eaeaea;
+            padding: 15px;
+        }
+
+        #wrap .left {
+            width: 890px;
+        }
+
+        #wrap .right {
+            width: 290px;
+        }
+
+        #wrap .wrap .txt {
+            width: 785px;
+        }
+
+        #design_wrap {
+            border: 1px solid #eaeaea;
+            border-bottom: none;
+            margin-top: 30px;
+        }
+
+        #design_wrap .design {
+            border-bottom: 1px solid #eaeaea;
+            padding: 25px 0;
+        }
+
+        #design_wrap .design .img_box {
+            padding: 5px;
+            border: 1px solid #eaeaea;
+            border-radius: 50%;
+            margin: 0 30px;
+        }
+
+        #design_wrap .design .img_box img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            ;
+        }
+
+        #design_wrap .design .zuoping {
+            padding: 15px 20px 0;
+        }
+
+        #design_wrap .design .bor_::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: #eaeaea;
+        }
+
+        #design_wrap .design .nane {
+            font-size: 24px;
+            font-weight: 500;
+            color: #333333;
+            margin-right: 20px;
+        }
+
+        #design_wrap .design .role {
+            color: #e7691e;
+        }
+
+        #design_wrap .design .lv {
+            display: inline-block;
+            width: 30px;
+            margin-left: 40px;
+            height: 25px;
+            background: url(../img/vl3.png) no-repeat;
+            background-position: center 0;
+            background-size: cover;
+        }
+
+        #design_wrap .design .Skill,
+        .ran .Skill {
+            color: #999999;
+            margin-bottom: 5px;
+        }
+
+        #design_wrap .design .msg {
+            margin-bottom: 15px;
+        }
+
+        #design_wrap .design .anli {
+            margin-top: 15px;
+        }
+
+        #design_wrap .design .anli img {
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        #design_wrap .design .messge {
+            width: 500px;
+        }
+
+        #design_wrap .design .ping {
+            padding-right: 30px;
+            padding-top: 31px;
+            position: relative;
+        }
+
+        #design_wrap .design .ping h4 {
+            font-size: 30px;
+            color: #e7691e;
+            margin-bottom: 10px;
+        }
+
+        #design_wrap .design .ping a {
+            background: #e7691e;
+            color: #fff;
+            line-height: 45px;
+            padding: 0 25px;
+            margin-top: 30px;
+        }
+
+        #design_wrap .design .ping::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 100%;
+            background: #eaeaea;
+            position: absolute;
+            left: -30px;
+            top: 0;
+        }
+
+        #lunbo {
+            border: 1px solid #eaeaea;
+            margin: 30px 0;
+            height: 280px;
+            ;
+            position: relative;
+        }
+
+        #lunbo img {
+            height: 100%;
+        }
+
+        #lunbo .txt {
+            position: absolute;
+            line-height: 45px;
+            color: #fff;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4)
+        }
+
+        #lunbo>p {
+            position: absolute;
+            width: 30px;
+            padding: 10px 0;
+            color: #fff;
+            top: 40%;
+            z-index: 2;
+            ;
+
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        #lunbo>p.iconr {
+            right: 0;
+        }
+
+        #lunbo>p i {
+            font-size: 28px;
+        }
+
+        #lunbo li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        #lunbo li.acitve {
+
+            opacity: 1;
+        }
+
+        #wrap .tt {
+            color: #272727;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        #wrap .tt::after {
+            position: absolute;
+            content: '';
+            background: #ec1e1e;
+            width: 2px;
+            height: 20px;
+            left: 0;
+            top: 0;
+        }
+
+        #wrap .reckon .tt {
+            font-size: 16px;
+            font-weight: 700;
+
+        }
+
+        #wrap .ranking .tt,
+        #wrap .ran {
+            border-bottom: 1px solid #eaeaea;
+            padding: 0 20px;
+        }
+
+        #wrap .ran {
+            padding: 20px 10px;
+        }
+
+        #wrap .ranking .tt {
+            padding: 15px 30px
+        }
+
+        #wrap .ranking .tt::after {
+            left: 15px;
+            top: 17px;
+        }
+
+        #wrap .ranking {
+            border: 1px solid #eaeaea;
+            margin-top: 30px;
+        }
+
+        #wrap .ranking .tt .p {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        #wrap .ran:nth-child(odd) {
+            background: #f8f8f8;
+        }
+
+        #wrap .ran .r {
+            width: 50px;
+            height: 50px;
+            margin-top: 12px;
+            padding: 0 8px;
+            background: url(../img/vl1.png) no-repeat;
+            background-size: 80% 80%;
+            background-position: center center;
+            line-height: 52px;
+            color: #fff;
+            text-align: center;
+        }
+
+        #wrap .ran .r.active {
+            background: url(../img/vl2.png) no-repeat;
+            background-size: 80% 80%;
+            background-position: center center;
+        }
+
+        #wrap .ran .headimg {
+            margin-right: 11px;
+        }
+
+        #wrap .ran .headimg img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        #wrap .ran .name {
+            font-size: 15px;
+            color: #333;
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
+        #wrap .ran .evm {
+            color: #ec1e1e
+        }
+
+        #wrap .ran .txt {
+            width: 126px;
+        }
+
+        #wrap .hot {
+            margin-top: 20px;
+            width: 100%;
+            border: 1px solid #dedede;
+        }
+
+        #wrap .hot .txt {
+            color: #333333;
+            font-weight: 500;
+            line-height: 45px;
+            border-bottom: 1px dashed #dadada;
+        }
+
+        #wrap .hot .list:last-child .txt {
+            border-bottom: none
+        }
+
+        #wrap .hot .txt span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            line-height: 15px;
+            color: #333333;
+            margin-right: 10px;
+        }
+
+        #wrap .hot .txt span.active {
+            background: #d6162d;
+            color: #fff;
+        }
+
+        #wrap .hot img {
+            display: none;
+            width: 80%;
+            margin-top: 10px;
+        }
+
+        #wrap .hot .list:hover img {
+            display: block;
+        }
+
+        #wrap .hot .list {
+            padding-left: 20px;
+        }
+
+        #wrap .hot h3 {
+            border-bottom: 1px solid #dedede;
+            font-size: 18px;
+            font-weight: 500;
+            color: #3c3c3c;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            line-height: 45px;
+        }
+
+        #wrap {
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_box w aui-row">
+            <div class="aui-pull-left aui-row">
+                <div class="aui-pull-left">
+                    <i class="hua h-dizhi"></i>
+                    <span>厦门</span>
+                    <span>[切换]</span>
+                    <i class="hua h-bottom"></i>
+                </div>
+
+            </div>
+            <div class="aui-pull-right">
+                <a class="aui-pull-left longin">登录</a>
+                <a class="aui-pull-left">注册</a>
+                <a class="aui-pull-left">商家入驻</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-home1"></i> 华闽美家</a>
+                <a class="aui-pull-left">
+                    <i class="hua h-telephone"></i> 客服热线:0592-5221258</a>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索 -->
+    <div id="log" class="aui-row w">
+        <div class="aui-col-xs-4">
+            <img class="aui-col-xs-11" src="../img/log.png" alt="">
+        </div>
+        <form class="aui-col-xs-6 search aui-row">
+            <select class="">
+                <option class="aui-text-center" value="装修公司">装修公司</option>
+                <option class="aui-text-center" value="装修公司">装修公司</option>
+                <option class="aui-text-center" value="装修公司">装修公司</option>
+            </select>
+            <input type="text" class="aui-padded-l-10" value="" placeholder="搜索装修公司/问题/攻略/效果图">
+            <div class=" button">
+                <input type="submit" value="">
+            </div>
+
+        </form>
+        <div class="aui-col-xs-2 aui-padded-t-10">
+            <img class="aui-col-xs-9 aui-pull-right" src="../img/log_r.png" alt="">
+        </div>
+    </div>
+    <!-- 导航 -->
+    <div id="nav" class="aui-margin-t-15">
+        <div class="w aui-row">
+            <div class="aui-col-xs-9 nav_child">
+                <div class="aui-pull-left ">首页</div>
+                <div class="aui-pull-left acitve">效果图
+                    <i class="hua h-s_bottom"></i>
+                </div>
+                <div class="aui-pull-left">装修攻略
+                    <i class="hua h-s_bottom"></i>
+                </div>
+                <div class="aui-pull-left">设计与报价
+                    <i class="hua h-s_bottom"></i>
+                </div>
+                <div class="aui-pull-left">装修公司</div>
+                <div class="aui-pull-left">找设计师</div>
+                <div class="aui-pull-left">装修保险金</div>
+            </div>
+            <div class=" aui-col-xs-3 aui-pull-right aui-text-right right">
+                <div class=" ">
+                    <i class="hua h-mianfeibaojia"></i> 免费</div>
+                <div class=" active">
+                    <i class="hua h-home"></i> 保障</div>
+                <div class="">
+                    <i class="hua h-shengqian"></i>省钱</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="w aui-row" id="wrap">
+        <div class="left aui-pull-left">
+            <!-- 选择 -->
+            <div id="select" class="">
+                <div class="wrap">
+                    <div class="map">
+                        <a>装修效果图</a>
+                        <a>装修效果图</a>
+                        <a>共187结果</a>
+                        <a href="" class="aui-pull-right">厦门装修公司哪家强？</a>
+                    </div>
+                    <div class="aui-row list">
+                        <div class="key aui-pull-left">所在区域</div>
+                        <div class="txt aui-pull-right">
+                            <a class="active" href="">不限</a>
+                            <a href="">三居</a>
+                            <a href="">四居</a>
+                            <a href="">复试</a>
+                            <a href="">别墅</a>
+                        </div>
+                    </div>
+                    <div class="aui-row list">
+                        <div class="key aui-pull-left">擅长领域</div>
+                        <div class="txt aui-pull-right">
+                            <a href="">不限</a>
+                            <a href="">中式</a>
+                            <a href="">西式</a>
+                            <a href="">简约</a>
+                            <a class="active" href="">田园</a>
+                            <a href="">中式</a>
+                            <a href="">西式</a>
+                            <a href="">简约</a>
+                        </div>
+                    </div>
+                    <div class="aui-row list">
+                        <div class="key aui-pull-left">擅长风格</div>
+                        <div class="txt aui-pull-right">
+                            <a href="">不限</a>
+                            <a href="">卧室</a>
+                            <a class="active" href="">餐厅</a>
+                            <a href="">厨房</a>
+                            <a href="">书房</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aui-row" id="key">
+                <a href="" class="aui-pull-left acitve">热门排序</a>
+                <a href="" class="aui-pull-left">综合实力</a>
+            </div>
+            <div id="design_wrap">
+                <div class="design aui-row">
+                    <div class="headimg aui-pull-left">
+                        <div class="img_box">
+                            <img src="../img/head.jpg" alt="">
+                        </div>
+                        <div class="aui-row zuoping aui-text-center">
+                            <div class="aui-col-xs-6 bor_">
+                                <p>作品</p>
+                                <p>5</p>
+                            </div>
+                            <div class="aui-col-xs-6">
+                                <p>气人</p>
+                                <p>100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messge aui-pull-left">
+                        <div class="msg">
+                            <span class="nane">你好</span>
+                            <span class="role">设计师</span>
+                            <span class="lv"></span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="aui-row anli">
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ping aui-pull-right aui-text-center">
+                        <h4>10.2</h4>
+                        <p>综合评分</p>
+                        <a href="">免费预约设计</a>
+                    </div>
+                </div>
+                <div class="design aui-row">
+                    <div class="headimg aui-pull-left">
+                        <div class="img_box">
+                            <img src="../img/head.jpg" alt="">
+                        </div>
+                        <div class="aui-row zuoping aui-text-center">
+                            <div class="aui-col-xs-6 bor_">
+                                <p>作品</p>
+                                <p>5</p>
+                            </div>
+                            <div class="aui-col-xs-6">
+                                <p>气人</p>
+                                <p>100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messge aui-pull-left">
+                        <div class="msg">
+                            <span class="nane">你好</span>
+                            <span class="role">设计师</span>
+                            <span class="lv"></span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="aui-row anli">
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ping aui-pull-right aui-text-center">
+                        <h4>10.2</h4>
+                        <p>综合评分</p>
+                        <a href="">免费预约设计</a>
+                    </div>
+                </div>
+                <div class="design aui-row">
+                    <div class="headimg aui-pull-left">
+                        <div class="img_box">
+                            <img src="../img/head.jpg" alt="">
+                        </div>
+                        <div class="aui-row zuoping aui-text-center">
+                            <div class="aui-col-xs-6 bor_">
+                                <p>作品</p>
+                                <p>5</p>
+                            </div>
+                            <div class="aui-col-xs-6">
+                                <p>气人</p>
+                                <p>100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messge aui-pull-left">
+                        <div class="msg">
+                            <span class="nane">你好</span>
+                            <span class="role">设计师</span>
+                            <span class="lv"></span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="aui-row anli">
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ping aui-pull-right aui-text-center">
+                        <h4>10.2</h4>
+                        <p>综合评分</p>
+                        <a href="">免费预约设计</a>
+                    </div>
+                </div>
+
+                <div class="design aui-row">
+                    <div class="headimg aui-pull-left">
+                        <div class="img_box">
+                            <img src="../img/head.jpg" alt="">
+                        </div>
+                        <div class="aui-row zuoping aui-text-center">
+                            <div class="aui-col-xs-6 bor_">
+                                <p>作品</p>
+                                <p>5</p>
+                            </div>
+                            <div class="aui-col-xs-6">
+                                <p>气人</p>
+                                <p>100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messge aui-pull-left">
+                        <div class="msg">
+                            <span class="nane">你好</span>
+                            <span class="role">设计师</span>
+                            <span class="lv"></span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="aui-row anli">
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ping aui-pull-right aui-text-center">
+                        <h4>10.2</h4>
+                        <p>综合评分</p>
+                        <a href="">免费预约设计</a>
+                    </div>
+                </div>
+                <div class="design aui-row">
+                    <div class="headimg aui-pull-left">
+                        <div class="img_box">
+                            <img src="../img/head.jpg" alt="">
+                        </div>
+                        <div class="aui-row zuoping aui-text-center">
+                            <div class="aui-col-xs-6 bor_">
+                                <p>作品</p>
+                                <p>5</p>
+                            </div>
+                            <div class="aui-col-xs-6">
+                                <p>气人</p>
+                                <p>100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messge aui-pull-left">
+                        <div class="msg">
+                            <span class="nane">你好</span>
+                            <span class="role">设计师</span>
+                            <span class="lv"></span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="Skill">
+                            擅长领域：
+                            <span>住宅公寓 </span>
+                            <span>写字楼</span>
+                            <span>别墅</span>
+                        </div>
+                        <div class="aui-row anli">
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                            <div class="aui-pull-left">
+                                <img src="../img/manual1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ping aui-pull-right aui-text-center">
+                        <h4>10.2</h4>
+                        <p>综合评分</p>
+                        <a href="">免费预约设计</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right  aui-pull-right">
+            <div id="Apply" class="aui-text-center">
+                <h1>你装修，我保障</h1>
+                <p class="aui-margin-b-15">申请装修立省
+                    <span class="color">30%</span>
+                </p>
+                <form action="">
+                    <div class="aui-margin-b-15">
+                        <input type="text" value="" placeholder="您的称呼">
+                    </div>
+                    <div class="aui-margin-b-15">
+                        <input type="text" value="" placeholder="您的手机号码">
+                    </div>
+                    <div class="aui-row  aui-margin-b-15 address">
+                        <div class="aui-col-xs-6 active">
+                            <select name="" id="">
+                                <option value="厦门">厦门</option>
+                                <option value="厦门">厦门</option>
+                                <option value="厦门">厦门</option>
+
+                            </select>
+                        </div>
+                        <div class="aui-col-xs-6">
+                            <select name="" id="">
+                                <option value="厦门">厦门</option>
+                                <option value="厦门">厦门</option>
+                                <option value="厦门">厦门</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="aui-row aui-margin-b-15">
+                        <div class="aui-pull-left t">
+                            已有
+                            <span class="color">18154</span> 位业主免费申请
+                        </div>
+
+                        <label class="aui-pull-right t">
+                            <input type="checkbox">
+                            <span>资料保密</span>
+                        </label>
+                    </div>
+                    <div class="">
+                        <input type="submit" value="立即申请免费">
+                    </div>
+
+                    <div class="t">
+                        我们的客服将在提交订单15分钟内与您联系
+                    </div>
+                </form>
+            </div>
+            <div id="lunbo">
+                <p class="btn">
+                    <i class="hua h-left"></i>
+                </p>
+                <ul>
+                    <li class="acitve rel">
+                        <img src="../img/news.png" alt="">
+                        <div class="txt aui-text-center">
+                            <span>设计师</span>
+                            <span>林兴美</span>
+                            <span>综合评分：10.0</span>
+                        </div>
+                    </li>
+                    <li class="rel">
+                        <img src="../img/news.png" alt="">
+                        <div class="txt aui-text-center">
+                            <span>设计师</span>
+                            <span>林兴美</span>
+                            <span>综合评分：10.0</span>
+                        </div>
+                    </li>
+                </ul>
+                <p class="iconr btn">
+                    <i class="hua h-right"></i>
+                </p>
+            </div>
+            <div class="ranking">
+                <div class="tt">
+                    <p class="p">优秀设计师推荐</p>
+                </div>
+                <div class="ran aui-row">
+                    <div class="aui-pull-left r">
+                        1
+                    </div>
+                    <div class="aui-pull-left headimg">
+                        <img src="../img/head.jpg" alt="">
+                    </div>
+                    <div class="aui-pull-left txt">
+                        <p class="name">舍间装饰</p>
+                        <p class="Skill">擅长领域：现代风格 </p>
+                        <p class="evm">好评率100%</p>
+                    </div>
+                </div>
+                <div class="ran aui-row">
+                    <div class="aui-pull-left r">
+                        2
+                    </div>
+                    <div class="aui-pull-left headimg">
+                        <img src="../img/head.jpg" alt="">
+                    </div>
+                    <div class="aui-pull-left txt">
+                        <p class="name">舍间装饰</p>
+                        <p class="Skill">擅长领域：现代风格 </p>
+                        <p class="evm">好评率100%</p>
+                    </div>
+                </div>
+                <div class="ran aui-row">
+                    <div class="aui-pull-left r active">
+                        3
+                    </div>
+                    <div class="aui-pull-left headimg">
+                        <img src="../img/head.jpg" alt="">
+                    </div>
+                    <div class="aui-pull-left txt">
+                        <p class="name">舍间装饰</p>
+                        <p class="Skill">擅长领域：现代f格 </p>
+                        <p class="evm">好评率100%</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="hot aui-pull-left">
+                <h3>热门文章</h3>
+                <div class="list">
+                    <p class="txt">
+                        <span class="active">1</span> 家庭装修流程</p>
+                    <img src="../img/special6.png" alt="">
+                </div>
+                <div class="list">
+                    <p class="txt">
+                        <span class="active">1</span> 家庭装修流程</p>
+                    <img src="../img/special6.png" alt="">
+                </div>
+                <div class="list">
+                    <p class="txt">
+                        <span class="active">1</span> 家庭装修流程</p>
+                    <img src="../img/special6.png" alt="">
+                </div>
+                <div class="list">
+                    <p class="txt">
+                        <span>1</span> 家庭装修流程</p>
+                    <img src="../img/special6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 底部 -->
+    <div id="guarantee" class="aui-text-center">
+        <h2>
+            <span>华闽美家</span> -互联网装修—站式平台</h2>
+        <div class="number ">
+            <div>
+                <p class="title_">装修公司</p>
+                <p class="num">
+                    <span>24,781</span> 家 </p>
+            </div>
+            <div>
+                <p class="title_">发布金额</p>
+                <p class="num">
+                    <span>37,495，000,00</span> 元</p>
+            </div>
+            <div>
+                <p class="title_">开通城市</p>
+                <p class="num">
+                    <span>274</span> 个</p>
+            </div>
+        </div>
+        <div class="certificate aui-text-center">
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/bao.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">权威保障 </p>
+                    <p>你来装修 我来担保</p>
+                </div>
+            </div>
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/xing.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">自由选择 </p>
+                    <p>多家公司 自由选择</p>
+                </div>
+            </div>
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/you.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">多家公司 自由选择</p>
+                    <p>专业服务 全程伴随</p>
+                </div>
+            </div>
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/xing.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">诚信商家</p>
+                    <p>诚信商家</p>
+                </div>
+            </div>
+            <div class="certificate_box">
+                <div>
+                    <img src="../img/du.png" alt="">
+                </div>
+                <div class="test">
+                    <p class="key">业主监督</p>
+                    <p>一起消费 集体维权</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="w">
+            <div class="aui-row link">
+                <div class="aui-pull-left acitve">友情链接</div>
+                <div class="aui-pull-left">热门城市</div>
+                <div class="aui-pull-left">附近城市</div>
+                <div class="aui-pull-left">热门标签</div>
+            </div>
+            <div class="link_a">
+                <!--                                      福州装修公司   长春家居网   福州装修网   福州装修网   福州搜房网    -->
+                <a href="">深圳房地产</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州商铺网</a>
+                <a href="">福建加盟</a>
+                <a href="">福州装修</a>
+                <a href="">上海造价信息网</a>
+                <a href="">美缝剂</a>
+                <a href="">福州装修网</a>
+                <a href="">福州婚纱摄影</a>
+                <a href="">福州房产网</a>
+                <a href="">福州住宿</a>
+                <a href="">福州装修网</a>
+                <a href="">南通招标网</a>
+                <a href="">福州分类信息网</a>
+                <a href="">福州装修网</a>
+                <a href="">福州结婚网</a>
+                <a href="">福州便民网</a>
+                <a href="">南宁装修公司</a>
+                <a href="">文化石</a>
+
+            </div>
+            <div class="aui-row footer_bxo">
+                <div class="aui-col-xs-2">
+
+                    <p class="title_ aui-margin-b-10"> 全国统一热线</p>
+                    <p class="tell">0592-5221258</p>
+                    <p class="txt">如有需要，请关注本网站！</p>
+                    <p>
+                        <i class="hua h-qq"></i>
+                        <i class="hua h-weibo"></i>
+                    </p>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_ ">新手指南</p>
+                    <a href="">如何购买</a>
+                    <a href="">注册新用户</a>
+                    <a href="">如何购买</a>
+                    <a href="">服务流程</a>
+                    <a href="">积分说明</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">装修指南 </p>
+                    <a href="">在线预约</a>
+                    <a href="">装修流程</a>
+                    <a href="">量房设计</a>
+                    <a href="">购买材料</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">合作方案</p>
+                    <a href="">协议声明</a>
+                    <a href="">技术支持</a>
+                    <a href="">合作洽谈</a>
+                    <a href="">提交需求</a>
+
+
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <p class="title_">本站服务 </p>
+                    <a href="">合同范本</a>
+                    <a href="">装修保</a>
+                    <a href="">售后服务</a>
+                    <a href="">物流配送</a>
+                </div>
+                <div class="aui-col-xs-2 aui-text-center">
+                    <div>
+                        <img class="er" src="../img/er.png" alt="">
+                    </div>
+                    <p class="title_ aui-margin-b-5">关注公众微信号</p>
+                    <div>
+                        <a href="">公司网站：http://57hmw.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate aui-text-center">
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v1.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公司信息 </p>
+                        <p>评级证书</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v2.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>经营性网站 </p>
+                        <p>备案信息</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v3.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>公共信息安</p>
+                        <p>全网络监察</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v4.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>不良信息</p>
+                        <p>举报中心</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v5.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>互联网</p>
+                        <p>诚信网站</p>
+                    </div>
+                </div>
+                <div class="certificate_box">
+                    <div>
+                        <img src="../img/v6.png" alt="">
+                    </div>
+                    <div class="test">
+                        <p>安全联盟 </p>
+                        <p>实名验证</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-text-center footer">
+            Copyright © 2017 http://57hmw.com All Rights Reserved ICP备案：闽ICP备17008952号
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/public.js"></script>
+    <script>
+
+        var n = 0;
+        var len = $("#lunbo li").length;
+        $("#lunbo .btn").on('click', function () {
+            var index = $(this).index();
+            console.log(index)
+            // $("#banner a").removeClass('active')
+            $("#lunbo li").eq(n).animate({ 'opacity': '0' }, 500)
+            if (index == 1) {
+                n--;
+                if (n == 0) n = len - 1;
+            } else {
+                n++;
+                if (n == len) n = 0;
+            }
+            $("#lunbo li").eq(n).animate({ 'opacity': '1' }, 500)
+            // if()
+        })
+
+    </script>
+</body>
+
+</html>
